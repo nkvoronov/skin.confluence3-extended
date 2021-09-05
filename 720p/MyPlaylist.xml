@@ -5,15 +5,13 @@
 	<onload condition="!Skin.HasSetting(FirstTimeRun)">ActivateWindow(1112)</onload>
 	<views>50,51,506,507</views>
 	<controls>
+		<include>CommonCustomBackground</include>
 		<include>CommonBackground</include>
 		<include>ContentPanelBackgrounds</include>
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>
-			<!-- view id = 50 -->
 			<include>CommonRootView</include>
-			<!-- view id = 51 -->
 			<include>FullWidthList</include>
-			<!-- view id = 506, 507 -->
 			<include>MusicInfoListView</include>
 		</control>
 		<control type="group">

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<!-- ID: 10 -->
 	<include name="PVRGuideViewTimeline">
 		<control type="group">
 			<description>TV Guide Timeline</description>
@@ -260,13 +259,13 @@
 					<textcolor>grey</textcolor>
 				</control>
 				<control type="textbox">
-					<description>Plot value</description>
+					<description>Description</description>
 					<left>280</left>
 					<top>57</top>
 					<width>840</width>
 					<height>63</height>
 					<font>font12</font>
-					<align>justify</align>
+					<align>left</align>
 					<textcolor>grey</textcolor>
 					<autoscroll delay="10000" time="3000" repeat="6000">true</autoscroll>
 					<label>$INFO[ListItem.Plot]</label>
@@ -274,7 +273,6 @@
 			</control>
 		</control>
 	</include>
-	<!-- ID: 12 -->
 	<include name="PVRGuideViewNext">
 		<control type="group">
 			<description>TV Guide Next</description>
@@ -541,13 +539,13 @@
 							<label>$INFO[ListItem.Label]$INFO[ListItem.EpisodeName, (,)]</label>
 						</control>
 						<control type="textbox">
-							<description>Plot Value for TVShow</description>
+							<description>Description For TVShow</description>
 							<left>50</left>
 							<top>37</top>
 							<width>1000</width>
 							<height>58</height>
 							<font>font12</font>
-							<align>justify</align>
+							<align>left</align>
 							<textcolor>grey2</textcolor>
 							<shadowcolor>black</shadowcolor>
 							<pagecontrol/>

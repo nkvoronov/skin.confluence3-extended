@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">50</defaultcontrol>
+	<onload condition="String.IsEmpty(Window(Home).Property(MenuItemActive))">SetProperty(MenuItemActive,search,Home)</onload>
+	<onload condition="String.IsEmpty(Window(Home).Property(MenuBackground))">SetProperty(MenuBackground,special://skin/extras/backgrounds/search.jpg,Home)</onload>
 	<menucontrol>9999</menucontrol>
-	<views>50,51,500,550,551,560,501,508,504,503,515,505,511</views>
+	<views>50,51,500</views>
 	<onload condition="!Skin.HasSetting(FirstTimeRun)">ActivateWindow(1112)</onload>
 	<controls>
 		<control type="label" id="991">
@@ -23,37 +25,38 @@
 			<label/>
 			<font/>
 		</control>
+		<include>CommonCustomBackground</include>
 		<include>CommonBackground</include>
 		<include>ContentPanelBackgrounds</include>
 		<control type="group">
 			<visible>!Control.IsVisible(999)</visible>
 			<include>Window_OpenClose_Animation</include>
 			<!-- view id = 50 -->
-			<include>CommonRootView</include>
+			<include content="CommonRootView">
+				<param name="isMediaItemDetailBG" value="[ !String.IsEmpty(ListItem.Label2) | !String.IsEmpty(ListItem.Rating) | !String.IsEmpty(ListItem.Duration)]" />
+				<param name="Lab2" value="$VAR[GlobalSearchLabel2]" />
+				<param name="isVisibleWindows" value="Window.IsVisible(script-globalsearch.xml)" />
+				<param name="isWatching" value="!Integer.IsEqual(ListItem.Property(percentplayed),0)" />
+				<param name="isWatched" value="Integer.IsEqual(ListItem.Property(percentplayed),0) + Integer.IsGreater(ListItem.Property(playcount),0)" />
+				<param name="WatchedImage" value="OverlayWatched.png" />
+			</include>
 			<!-- view id = 51 -->
-			<include>FullWidthList</include>
+			<include content="FullWidthList">
+				<param name="IconList" value="$VAR[SearchIconWallThumb]" />
+				<param name="isMediaItemDetailBG" value="[ !String.IsEmpty(ListItem.Label2) | !String.IsEmpty(ListItem.Rating) | !String.IsEmpty(ListItem.Duration)]" />
+				<param name="Lab2" value="$VAR[GlobalSearchLabel2]" />
+				<param name="isVisibleWindows" value="Window.IsVisible(script-globalsearch.xml)" />
+				<param name="isWatching" value="!Integer.IsEqual(ListItem.Property(percentplayed),0)" />
+				<param name="isWatched" value="Integer.IsEqual(ListItem.Property(percentplayed),0) + Integer.IsGreater(ListItem.Property(playcount),0)" />
+				<param name="WatchedImage" value="OverlayWatched.png" />
+			</include>
 			<!-- view id = 500 -->
-			<include>ThumbnailView</include>
-			<!-- view id = 501 -->
-			<include>PosterWrapView</include>
-			<!-- view id = 508 -->
-			<include>PosterWrapView2_Fanart</include>
-			<!-- view id = 503 -->
-			<include>MediaListView3</include>
-			<!-- view id = 504 -->
-			<include>MediaListView2</include>
-			<!-- view id = 515 -->
-			<include>MediaListView4</include>
-			<!-- view id = 505 -->
-			<include>WideIconView</include>
-			<!-- view id = 511 -->
-			<include>MusicVideoInfoListView</include>
-			<!-- view id = 550 -->
-			<include>AddonInfoListView1</include>
-			<!-- view id = 551 -->
-			<include>AddonInfoThumbView1</include>
-			<!-- view id = 560 -->
-			<include>LiveTVView1</include>
+			<include content="ThumbnailView">
+				<param name="IconList" value="$VAR[SearchIconWallThumb]" />
+				<param name="isWatching" value="!Integer.IsEqual(ListItem.Property(percentplayed),0)" />
+				<param name="isWatched" value="Integer.IsEqual(ListItem.Property(percentplayed),0) + Integer.IsGreater(ListItem.Property(playcount),0)" />
+				<param name="WatchedImage" value="OverlayWatched.png" />
+			</include>
 		</control>
 		<control type="group">
 			<depth>DepthFooter</depth>
@@ -88,7 +91,7 @@
 				</control>
 				<control type="label">
 					<include>WindowTitleCommons</include>
-					<label>[COLOR=blue] - [/COLOR]$INFO[Window.Property(GlobalSearch.SearchString)]</label>
+					<label>$INFO[Window(Home).Property(GlobalSearch.SearchString),[COLOR=blue] - [/COLOR],]</label>
 				</control>
 			</control>
 			<include>Clock</include>
@@ -149,6 +152,15 @@
 				<ondown>9999</ondown>
 				<onback>50</onback>
 				<itemgap>0</itemgap>
+				<control type="radiobutton" id="990">
+					<description>Search button</description>
+					<include>ButtonCommonValues</include>
+					<textureradioonfocus>icon_search_home.png</textureradioonfocus>
+					<textureradioonnofocus>icon_search_home.png</textureradioonnofocus>
+					<textureradioofffocus>icon_search_home.png</textureradioofffocus>
+					<textureradiooffnofocus>icon_search_home.png</textureradiooffnofocus>
+					<label>137</label>
+				</control>
 				<control type="label" id="200">
 					<width>250</width>
 					<height>35</height>
@@ -164,15 +176,6 @@
 					<include>ButtonCommonValues</include>
 					<onclick>Container.NextViewMode</onclick>
 					<label/>
-				</control>
-				<control type="radiobutton" id="990">
-					<description>Search button</description>
-					<include>ButtonCommonValues</include>
-					<textureradioonfocus>icon_search_home.png</textureradioonfocus>
-					<textureradioonnofocus>icon_search_home.png</textureradioonnofocus>
-					<textureradioofffocus>icon_search_home.png</textureradioofffocus>
-					<textureradiooffnofocus>icon_search_home.png</textureradiooffnofocus>
-					<label>137</label>
 				</control>
 				<control type="label" id="201">
 					<width>250</width>
@@ -200,6 +203,16 @@
 							<font>font13</font>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
+						<control type="label">
+							<left>180</left>
+							<top>0</top>
+							<height>40</height>
+							<width>60</width>
+							<align>right</align>
+							<aligny>center</aligny>
+							<font>font13</font>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
 					</itemlayout>
 					<focusedlayout height="40" width="250">
 						<control type="image">
@@ -216,6 +229,16 @@
 							<aligny>center</aligny>
 							<font>font13</font>
 							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="label">
+							<left>180</left>
+							<top>0</top>
+							<height>40</height>
+							<width>60</width>
+							<align>right</align>
+							<aligny>center</aligny>
+							<font>font13</font>
+							<label>$INFO[ListItem.Label2]</label>
 						</control>
 					</focusedlayout>
 				</control>

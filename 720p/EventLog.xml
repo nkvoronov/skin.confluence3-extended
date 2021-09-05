@@ -3,8 +3,11 @@
 	<defaultcontrol always="true">570</defaultcontrol>
 	<menucontrol>9000</menucontrol>
 	<onload condition="!Skin.HasSetting(FirstTimeRun)">ActivateWindow(1112)</onload>
+	<onload condition="String.IsEmpty(Window(Home).Property(MenuItemActive))">SetProperty(MenuItemActive,settings,Home)</onload>
+	<onload condition="String.IsEmpty(Window(Home).Property(MenuBackground))">SetProperty(MenuBackground,special://skin/extras/backgrounds/settings.jpg,Home)</onload>
 	<views>570</views>
 	<controls>
+		<include>CommonCustomBackground</include>
 		<include>CommonBackground</include>
 		<include>ContentPanelBackgrounds</include>
 		<control type="group">
@@ -32,6 +35,7 @@
 				<width>1130</width>
 				<height>64</height>
 				<texture border="15">ContentPanelMirror.png</texture>
+				<visible>!Skin.HasSetting(NoFloorAll)</visible>
 			</control>
 			<control type="list" id="570">
 				<left>95</left>
@@ -76,6 +80,7 @@
 						<label>[B]$INFO[ListItem.Label][/B]</label>
 					</control>
 					<control type="textbox">
+						<description>Description</description>
 						<left>90</left>
 						<top>32</top>
 						<width>870</width>
@@ -141,6 +146,7 @@
 						<label>[B]$INFO[ListItem.Label][/B]</label>
 					</control>
 					<control type="textbox">
+						<description>Description</description>
 						<left>90</left>
 						<top>32</top>
 						<width>870</width>

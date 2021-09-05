@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
+	<onload condition="String.IsEmpty(Window(Home).Property(MenuItemActive))">SetProperty(MenuItemActive,settings,Home)</onload>
+	<onload condition="String.IsEmpty(Window(Home).Property(MenuBackground))">SetProperty(MenuBackground,special://skin/extras/backgrounds/settings.jpg,Home)</onload>
 	<controls>
+		<include>CommonCustomBackground</include>
 		<include>CommonBackground</include>
 		<control type="image">
 			<left>0</left>
@@ -11,6 +14,7 @@
 			<texture>floor.png</texture>
 			<animation effect="slide" start="0,10" end="0,0" time="150" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="slide" start="0,0" end="0,10" time="150" condition="Window.Next(Home)">WindowClose</animation>
+			<visible>!Skin.HasSetting(NoFloorAll)</visible>
 		</control>
 		<control type="group">
 			<left>90</left>
@@ -36,6 +40,7 @@
 				<width>1090</width>
 				<height>64</height>
 				<texture border="15">ContentPanelMirror.png</texture>
+				<visible>!Skin.HasSetting(NoFloorAll)</visible>
 			</control>
 			<control type="button">
 				<description>Close Window button</description>
@@ -114,57 +119,8 @@
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 				</focusedlayout>
-				<content>
-					<item id="1">
-						<label>14200</label>
-						<label2>31430</label2>
-						<onclick>ActivateWindow(PlayerSettings)</onclick>
-						<icon/>
-					</item>
-					<item id="2">
-						<label>14211</label>
-						<label2>31431</label2>
-						<onclick>ActivateWindow(MediaSettings)</onclick>
-						<icon/>
-					</item>
-					<item id="8">
-						<label>15016</label>
-						<label2>31002</label2>
-						<onclick>ActivateWindow(GameSettings)</onclick>
-						<visible>System.GetBool(gamesgeneral.enable)</visible>
-						<icon/>
-					</item>
-					<item id="3">
-						<label>14204</label>
-						<label2>31432</label2>
-						<onclick>ActivateWindow(PVRSettings)</onclick>
-						<icon>special://skin/backgrounds/tv.jpg</icon>
-					</item>
-					<item id="4">
-						<label>24001</label>
-						<label2>31433</label2>
-						<onclick>ActivateWindow(AddonBrowser)</onclick>
-						<icon/>
-					</item>
-					<item id="5">
-						<label>14036</label>
-						<label2>31434</label2>
-						<onclick>ActivateWindow(ServiceSettings)</onclick>
-						<icon/>
-					</item>
-					<item id="6">
-						<label>14206</label>
-						<label2>31436</label2>
-						<onclick>ActivateWindow(InterfaceSettings)</onclick>
-						<icon/>
-					</item>
-					<item id="7">
-						<label>13000</label>
-						<label2>31435</label2>
-						<onclick>ActivateWindow(SystemSettings)</onclick>
-						<icon/>
-					</item>
-				</content>
+				<include condition="Skin.HasSetting(SeparateBackground)">SettingsContentCustom</include>
+				<include condition="!Skin.HasSetting(SeparateBackground)">SettingsContentDefault</include>
 			</control>
 			<control type="image">
 				<left>268</left>
@@ -207,7 +163,7 @@
 				<height>446</height>
 				<aspectratio>stretch</aspectratio>
 				<fadetime>600</fadetime>
-				<texture background="true">special://skin/backgrounds/settings.jpg</texture>
+				<texture background="true">$INFO[Container(9000).ListItem.Icon]</texture>
 			</control>
 			<control type="image">
 				<left>272</left>
@@ -226,7 +182,7 @@
 				<texture border="5">black-back2.png</texture>
 			</control>
 			<control type="textbox">
-				<description>Appearance Description</description>
+				<description>Description</description>
 				<left>300</left>
 				<top>522</top>
 				<width>740</width>

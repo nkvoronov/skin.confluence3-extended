@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
+	<onload condition="String.IsEmpty(Window(Home).Property(MenuItemActive))">SetProperty(MenuItemActive,settings,Home)</onload>
+	<onload condition="String.IsEmpty(Window(Home).Property(MenuBackground))">SetProperty(MenuBackground,special://skin/extras/backgrounds/settings.jpg,Home)</onload>
 	<controls>
+		<include>CommonCustomBackground</include>
 		<include>CommonBackground</include>
 		<control type="image">
 			<left>0</left>
@@ -11,6 +14,7 @@
 			<texture>floor.png</texture>
 			<animation effect="slide" start="0,10" end="0,0" time="150" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="slide" start="0,0" end="0,10" time="150" condition="Window.Next(Home)">WindowClose</animation>
+			<visible>!Skin.HasSetting(NoFloorAll)</visible>
 		</control>
 		<control type="group">
 			<left>90</left>
@@ -36,6 +40,7 @@
 				<width>1090</width>
 				<height>64</height>
 				<texture border="15">ContentPanelMirror.png</texture>
+				<visible>!Skin.HasSetting(NoFloorAll)</visible>
 			</control>
 			<control type="button">
 				<description>Close Window button</description>
@@ -266,27 +271,27 @@
 						<colordiffuse>40FFFFFF</colordiffuse>
 					</control>
 					<control type="textbox">
-						<description>description area</description>
+						<description>Description</description>
 						<left>7</left>
 						<top>32</top>
 						<width>736</width>
 						<height>83</height>
 						<font>font12</font>
 						<label>$LOCALIZE[31422]</label>
-						<align>justify</align>
+						<align>left</align>
 						<textcolor>white</textcolor>
 						<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 						<visible>Control.Hasfocus(4)</visible>
 					</control>
 					<control type="textbox">
-						<description>description area</description>
+						<description>Description</description>
 						<left>7</left>
 						<top>32</top>
 						<width>736</width>
 						<height>83</height>
 						<font>font12</font>
 						<label>$LOCALIZE[31423]</label>
-						<align>justify</align>
+						<align>left</align>
 						<textcolor>white</textcolor>
 						<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 						<visible>Control.Hasfocus(5)</visible>

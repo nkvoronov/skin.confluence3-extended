@@ -56,7 +56,7 @@
 					<itemgap>2</itemgap>
 					<orientation>horizontal</orientation>
 					<include>VisibleFadeEffect</include>
-					<visible>!Control.IsVisible(50) + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,musicvideo)]</visible>
+					<visible>!Control.IsVisible(50) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,musicvideo)]</visible>
 					<include>VideoCodecFlaggingConditions</include>
 					<include>AudioCodecFlaggingConditions</include>
 					<include>AudioChannelsFlaggingConditions</include>
@@ -448,6 +448,7 @@
 						<bordertexture border="5" flipy="true" diffuse="diffuse_mirror2.png">button-nofocus.png</bordertexture>
 						<bordersize>4</bordersize>
 						<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">$INFO[ListItem.Icon]</texture>
+						<visible>!Skin.HasSetting(NoFloorAll)</visible>
 					</control>
 					<control type="list" id="49">
 						<left>390</left>
@@ -785,13 +786,13 @@
 					<showonepage>true</showonepage>
 				</control>
 				<control type="textbox" id="400">
-					<description>Description Value for Movies</description>
+					<description>Description For Movies</description>
 					<left>210</left>
 					<top>527</top>
 					<width>1030</width>
 					<height>120</height>
 					<font>font13</font>
-					<align>justify</align>
+					<align>left</align>
 					<textcolor>white</textcolor>
 					<pagecontrol>61</pagecontrol>
 					<label>$INFO[ListItem.Plot]</label>
@@ -874,9 +875,9 @@
 					</focusedlayout>
 				</control>
 				<control type="grouplist" id="9000">
-					<left>210</left>
+					<left>295</left>
 					<top>660</top>
-					<width>1030</width>
+					<width>860</width>
 					<height>40</height>
 					<itemgap>2</itemgap>
 					<align>center</align>
@@ -892,7 +893,7 @@
 						<alttexturefocus border="2">button-focus.png</alttexturefocus>
 						<alttexturenofocus border="2">button-nofocus.png</alttexturenofocus>
 						<altlabel>1024</altlabel>
-						<usealttexture>String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,set)</usealttexture>
+						<usealttexture>String.IsEqual(ListItem.DBTYPE,tvshow)</usealttexture>
 					</control>
 					<control type="button" id="5">
 						<description>Cast/Review</description>
@@ -928,6 +929,54 @@
 						<label>38023</label>
 						<visible>Control.IsEnabled(7)</visible>
 					</control>
+					<control type="button" id="100">
+						<description>Show ExtendedInfo</description>
+						<include>ButtonInfoDialogsCommonValues</include>
+						<label>80000</label>
+						<onclick>PreviousMenu</onclick>
+						<onclick condition="String.IsEqual(ListItem.DBType,movie)">RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[ListItem.DBID],id=$INFO[ListItem.ID])</onclick>
+						<onclick condition="String.IsEqual(ListItem.DBType,tvshow)">RunScript(script.extendedinfo,info=extendedtvinfo,dbid=$INFO[ListItem.DBID],id=$INFO[ListItem.ID])</onclick>
+						<visible>System.HasAddon(script.extendedinfo) + Skin.HasSetting(ActivateExtendedInfo) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow)]</visible>
+					</control>
+					<control type="button" id="101">
+						<description>Get Artwork</description>
+						<include>ButtonInfoDialogsCommonValues</include>
+						<label>90111</label>
+						<onclick condition="String.IsEqual(ListItem.DBType,movie)">RunScript(script.artwork.downloader.ex, mode=gui, mediatype=movie, dbid=$INFO[ListItem.DBID])</onclick>
+						<onclick condition="String.IsEqual(ListItem.DBType,tvshow)">RunScript(script.artwork.downloader.ex, mode=gui, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
+						<onclick condition="String.IsEqual(ListItem.DBType,musicvideo)">RunScript(script.artwork.downloader.ex, mode=gui, mediatype=musicvideo, dbid=$INFO[ListItem.DBID])</onclick>
+						<visible>String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,musicvideo)</visible>
+						<visible>System.HasAddon(script.artwork.downloader.ex)</visible>
+					</control>
+					<control type="button" id="102">
+						<description>Fetch TvTunes stuff</description>
+						<include>ButtonInfoDialogsCommonValues</include>
+						<label>90112</label>
+						<onclick>RunScript(script.tvtunes,mode.ex=solo&amp;tvpath=$INFO[ListItem.FilenameAndPath]&amp;tvname=$INFO[ListItem.TVShowTitle])</onclick>
+						<visible>System.HasAddon(script.tvtunes.ex) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,musicvideo)] + String.IsEmpty(Window(movieinformation).Property(TvTunes_HideVideoInfoButton))</visible>
+					</control>
+				</control>
+				<control type="button">
+					<description>left Arrow</description>
+					<left>245</left>
+					<top>660</top>
+					<width>30</width>
+					<height>40</height>
+					<texturefocus>arrow-big-left.png</texturefocus>
+					<texturenofocus>arrow-big-left.png</texturenofocus>
+					<visible>Container(9000).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="button">
+					<description>right Arrow</description>
+					<left>1175</left>
+					<top>660</top>
+					<width>30</width>
+					<height>40</height>
+					<texturefocus>arrow-big-right.png</texturefocus>
+					<texturenofocus>arrow-big-right.png</texturenofocus>
+					<visible>Container(9000).HasNext</visible>
+					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
 		</control>

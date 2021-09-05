@@ -1,7 +1,7 @@
 # Kodi Media Center language file
-# Addon Name: Confluence
-# Addon id: skin.confluence
-# Addon Provider: Jezz_X, Team Kodi
+# Addon Name: Confluence Extended Shortcuts
+# Addon id: skin.confluence-extended-s
+# Addon Provider: Jezz_X, Team Kodi, YLLOW_DRAGON, plood
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
@@ -25,8 +25,8 @@ msgid "GAMES"
 msgstr "ИГРЫ"
 
 msgctxt "#31002"
-msgid "[B]GAME SETTINGS[/B][CR][CR]Configure rewind support & options ·  Configure keyboard use and number of keyboard players"
-msgstr "[B]НАСТРОЙКА ПАРАМЕТРОВ ИГРЫ[/B][CR][CR]Настройки перемотки · Настройка конфигурации клавиатуры и числа игроков"
+msgid "[B]GAME SETTINGS[/B][CR][CR]Configure rewind support & options - Configure keyboard use and number of keyboard players"
+msgstr "[B]НАСТРОЙКА ПАРАМЕТРОВ ИГРЫ[/B][CR][CR]Настройки перемотки - Настройка конфигурации клавиатуры и числа игроков"
 
 msgctxt "#31003"
 msgid "Power options"
@@ -46,7 +46,7 @@ msgstr "Настройки просмотра"
 
 msgctxt "#31007"
 msgid "Video process information"
-msgstr "Сведения о видеопроцесе"
+msgstr "Информация о видео"
 
 msgctxt "#31008"
 msgid "Full screen"
@@ -70,7 +70,7 @@ msgstr "Декодер"
 
 msgctxt "#31013"
 msgid "Audio process information"
-msgstr "Сведения о аудиопроцесе"
+msgstr "Информация о аудио"
 
 msgctxt "#31014"
 msgid "Memory used"
@@ -78,7 +78,7 @@ msgstr "Использовано памяти"
 
 msgctxt "#31015"
 msgid "Minute"
-msgstr "Минута"
+msgstr "Минут"
 
 msgctxt "#31016"
 msgid "Elapsed time"
@@ -86,7 +86,7 @@ msgstr "Прошедшее время"
 
 msgctxt "#31017"
 msgid "Unavailable"
-msgstr "Недоступно"
+msgstr "Недоступен"
 
 msgctxt "#31023"
 msgid "Playing"
@@ -110,11 +110,11 @@ msgstr "Расположение"
 
 msgctxt "#31028"
 msgid "Poster wrap"
-msgstr "карусель постеров"
+msgstr "Карусель постеров"
 
 msgctxt "#31029"
 msgid "Fanart"
-msgstr "фанарт"
+msgstr "Фанарт"
 
 msgctxt "#31031"
 msgid "Pic thumbs"
@@ -122,7 +122,7 @@ msgstr "эскизы фото"
 
 msgctxt "#31032"
 msgid "Image wrap"
-msgstr "карусель изображений"
+msgstr "Карусель изображений"
 
 msgctxt "#31033"
 msgid "Info"
@@ -497,32 +497,32 @@ msgid "Select the profile that will be used at startup when the login screen is 
 msgstr "Выбрать профиль, используемый при запуске, если экран входа отключен."
 
 msgctxt "#31430"
-msgid "[B]PLAYER SETTINGS[/B][CR][CR]Configure actions that can be used during playback · Configure how media content is played"
-msgstr "[B]НАСТРОЙКА ПАРАМЕТРОВ ПРОИГРЫВАТЕЛЯ[/B][CR][CR]Выберите доступные действия во время игры · Настройте, как должен проигрываться медиаконтент"
+msgid "[B]PLAYER SETTINGS[/B][CR][CR]Configure actions that can be used during playback - Configure how media content is played"
+msgstr "[B]НАСТРОЙКА ПАРАМЕТРОВ ПРОИГРЫВАТЕЛЯ[/B][CR][CR]Выберите доступные действия во время игры - Настройте, как должен проигрываться медиаконтент"
 
 msgctxt "#31431"
-msgid "[B]LIBRARY SETTINGS[/B][CR][CR]Configure how the library/file views display media content ·  Configure how library lists/views are navigated · Configure the media database options"
-msgstr "[B]НАСТРОЙКА ПАРАМЕТРОВ БИБЛИОТЕК[/B][CR][CR]Настройка способа отображения медиафайлов в библиотеке · Настройка навигации по спискам/просмотра библиотек · Настройка параметров базы данных мультимедиа"
+msgid "[B]LIBRARY SETTINGS[/B][CR][CR]Configure how the library/file views display media content - Configure how library lists/views are navigated - Configure the media database options"
+msgstr "[B]НАСТРОЙКА ПАРАМЕТРОВ БИБЛИОТЕК[/B][CR][CR]Настройка способа отображения медиафайлов в библиотеке - Настройка навигации по спискам/просмотра библиотек - Настройка параметров базы данных мультимедиа"
 
 msgctxt "#31432"
-msgid "[B]PVR SETTINGS[/B][CR][CR]Configure how the channels & guide are managed  · Configure how Live TV and recordings are managed"
-msgstr "[B]НАСТРОЙКА ПАРАМЕТРОВ ТВ[/B][CR][CR]Управление ТВ и радио каналами · Настройка управления записями · Настройка отображения EPG"
+msgid "[B]PVR SETTINGS[/B][CR][CR]Configure how the channels & guide are managed - Configure how Live TV and recordings are managed"
+msgstr "[B]НАСТРОЙКА ПАРАМЕТРОВ ТВ[/B][CR][CR]Управление ТВ и радио каналами - Настройка управления записями - Настройка отображения EPG"
 
 msgctxt "#31433"
-msgid "[B]ADD-ONS SETTINGS[/B][CR][CR]Configure your installed add-ons · Browse for and install add-ons from kodi.tv"
-msgstr "[B]КОНФИГУРАЦИЯ ДОПОЛНЕНИЙ[/B][CR][CR]Настройка установлиных дополнений · Поиск и установка дополнений с kodi.tv"
+msgid "[B]ADD-ONS SETTINGS[/B][CR][CR]Configure your installed add-ons - Browse for and install add-ons from kodi.tv"
+msgstr "[B]КОНФИГУРАЦИЯ ДОПОЛНЕНИЙ[/B][CR][CR]Настройка установлиных дополнений - Поиск и установка дополнений с kodi.tv"
 
 msgctxt "#31434"
-msgid "[B]SERVICES SETTINGS[/B][CR][CR]Configure & manage media sharing services · Configure web server · Configure & manage the weather service"
-msgstr "[B]НАСТРОЙКА ПАРАМЕТРОВ СЛУЖБ[/B][CR][CR]Настройка и управление службами обмена мультимедиа · Настройка веб-сервера · Настройка и управление метеорологическим сервисом"
+msgid "[B]SERVICES SETTINGS[/B][CR][CR]Configure & manage media sharing services - Configure web server - Configure & manage the weather service"
+msgstr "[B]НАСТРОЙКА ПАРАМЕТРОВ СЛУЖБ[/B][CR][CR]Настройка и управление службами обмена мультимедиа - Настройка веб-сервера - Настройка и управление метеорологическим сервисом"
 
 msgctxt "#31435"
-msgid "[B]SYSTEM SETTINGS[/B][CR][CR]Configure display · Configure audio · Configure internet access · Configure power saving· Configure logging"
-msgstr "[B]НАСТРОЙКА ПАРАМЕТРОВ СИСТЕМЫ[/B][CR][CR]Настройка и калибровка дисплеев · Настройка вывода аудио · Настройка доступа в интернет · Настройка параметров энергосбережения · Настройка ведение журнала"
+msgid "[B]SYSTEM SETTINGS[/B][CR][CR]Configure display - Configure audio - Configure internet access - Configure power saving - Configure logging"
+msgstr "[B]НАСТРОЙКА ПАРАМЕТРОВ СИСТЕМЫ[/B][CR][CR]Настройка и калибровка дисплеев - Настройка вывода аудио - Настройка доступа в интернет - Настройка параметров энергосбережения - Настройка ведение журнала"
 
 msgctxt "#31436"
-msgid "[B]INTERFACE SETTINGS[/B][CR][CR]Configure skin · Configure region · Configure control · Configure screensaver · Configure master lock"
-msgstr "[B]НАСТРОЙКА ПАРАМЕТРОВ ИНТЕРФЕЙСА[/B][CR][CR]Настройки обложки · Региональные настройки · Настройка заставки · Настройка общей блокировки"
+msgid "[B]INTERFACE SETTINGS[/B][CR][CR]Configure skin - Configure region - Configure control - Configure screensaver - Configure master lock"
+msgstr "[B]НАСТРОЙКА ПАРАМЕТРОВ ИНТЕРФЕЙСА[/B][CR][CR]Настройки обложки - Региональные настройки - Настройка заставки - Настройка общей блокировки"
 
 msgctxt "#31501"
 msgid "Scheduled time"
@@ -618,7 +618,7 @@ msgstr "МУЗЫКА"
 
 msgctxt "#31957"
 msgid "ADD-ONS"
-msgstr "Дополнения"
+msgstr "ДОПОЛНЕНИЯ"
 
 msgctxt "#31958"
 msgid "PLAY DISC"
@@ -647,3 +647,565 @@ msgstr "Название профиля"
 msgctxt "#31964"
 msgid "Profile avatar"
 msgstr "Аватар профиля"
+
+# Extended Added Value
+
+msgctxt "#80000"
+msgid "Extended info"
+msgstr "Дополнительная информация"
+
+msgctxt "#80001"
+msgid "Show KODI logo"
+msgstr "Показывать KODI логотип"
+
+msgctxt "#80002"
+msgid "Choose weather backgrounds pack"
+msgstr "Выбрать пакет фонов для погоды"
+
+msgctxt "#80003"
+msgid "Choose home backgrounds pack"
+msgstr "Выбрать пакет фонов для главного экрана"
+
+msgctxt "#80004"
+msgid "Choose weather icons pack"
+msgstr "Выбрать пакет иконок для погоды"
+
+msgctxt "#80005"
+msgid "Alternative view"
+msgstr "Алтернативный вид"
+
+msgctxt "#80006"
+msgid "Choose genre backgrounds pack"
+msgstr "Выбрать пакет фонов для жанров"
+
+msgctxt "#80007"
+msgid "MUSIC VIDEOS"
+msgstr "МУЗ. ВИДЕО"
+
+msgctxt "#80008"
+msgid "SEARCH"
+msgstr "ПОИСК"
+
+msgctxt "#80009"
+msgid "PLAYLIST"
+msgstr "ПЛЕЙЛИСТ"
+
+msgctxt "#80010"
+msgid "FAVOURITES"
+msgstr "ИЗБРАННОЕ"
+
+msgctxt "#80011"
+msgid "PROFILE"
+msgstr "ПРОФИЛЬ"
+
+msgctxt "#80012"
+msgid "SHUTDOWN"
+msgstr "ВЫКЛЮЧЕНИЕ"
+
+msgctxt "#88002"
+msgid "Move focus main menu"
+msgstr "Переместить фокус главного меню"
+
+msgctxt "#88070"
+msgid "[B]CONFIGURE SKIN SETTINGS[/B][CR][CR]Setup the Confluence skin - Add and remove home menu items - Change skin backgrounds"
+msgstr "[B]НАСТРОЙКА ПАРАМЕТРОВ ОБЛОЖКИ[/B][CR][CR]Настройка обложки - Добавление и удаление пунктов главного меню - Изменение фона обложки"
+
+msgctxt "#88071"
+msgid "Show stats panel"
+msgstr "Показывать панель статистики"
+
+msgctxt "#88072"
+msgid "Automatic opening submenu"
+msgstr "Автоматическое раскрытие подменю"
+
+msgctxt "#88073"
+msgid "Automatic opening shortcuts submenu"
+msgstr "Автоматическое раскрытие панели ярлыков"
+
+msgctxt "#88074"
+msgid "title of shortcuts"
+msgstr "названия ярлыков"
+
+msgctxt "#88075"
+msgid "bottom line in home page"
+msgstr "нижнюю линию на главном экране"
+
+msgctxt "#88076"
+msgid "bottom line everywhere except the home page"
+msgstr "нижнюю линию везде, кроме главного экрана"
+
+msgctxt "#88077"
+msgid "Show player control panel"
+msgstr "Показывать панель управления проигрывателем"
+
+msgctxt "#88078"
+msgid "power button"
+msgstr "кнопку выключения"
+
+msgctxt "#88079"
+msgid "favorites button"
+msgstr "кнопку избранного"
+
+msgctxt "#88081"
+msgid "Backlight color"
+msgstr "Цвет подсветки"
+
+msgctxt "#88082"
+msgid "After startup KODI, move focus main menu"
+msgstr "После запуска KODI, переместить фокус главного меню"
+
+msgctxt "#88083"
+msgid "To the left"
+msgstr "Влево на"
+
+msgctxt "#88084"
+msgid "To the right"
+msgstr "Вправо на"
+
+msgctxt "#88085"
+msgid "Manually"
+msgstr "Вручную"
+
+msgctxt "#88086"
+msgid "Wrap Around Menu"
+msgstr "Бесконечное меню"
+
+msgctxt "#88087"
+msgid "Return to Start Menu Scroll"
+msgstr "Прокрутка меню"
+
+msgctxt "#88089"
+msgid "Buttons"
+msgstr "Кнопки"
+
+msgctxt "#88090"
+msgid "title of widget"
+msgstr "названия виджетов"
+
+msgctxt "#88900"
+msgid "Skin Leia"
+msgstr "Leia"
+
+msgctxt "#88910"
+msgid "Skin Leia Massive"
+msgstr "Leia Крупный шрифт"
+
+msgctxt "#88920"
+msgid "Skin Leia with no Caps"
+msgstr "Leia без ПРОПИСНЫХ"
+
+msgctxt "#88107"
+msgid "Blue"
+msgstr "Синий"
+
+msgctxt "#88108"
+msgid "Azure"
+msgstr "Голубой"
+
+msgctxt "#88109"
+msgid "White"
+msgstr "Белый"
+
+msgctxt "#88110"
+msgid "Gray"
+msgstr "Серый"
+
+msgctxt "#88111"
+msgid "Red"
+msgstr "Красный"
+
+msgctxt "#88112"
+msgid "Pink"
+msgstr "Розовый"
+
+msgctxt "#88113"
+msgid "Purple"
+msgstr "Фиолетовый"
+
+msgctxt "#88114"
+msgid "Orange"
+msgstr "Оранжевый"
+
+msgctxt "#88115"
+msgid "Yellow"
+msgstr "Жёлтый"
+
+msgctxt "#88116"
+msgid "Green"
+msgstr "Зелёный"
+
+msgctxt "#88117"
+msgid "Select color"
+msgstr "Выберите цвет"
+
+msgctxt "#88118"
+msgid "Debug"
+msgstr "Отладка"
+
+msgctxt "#88119"
+msgid "Debug infos"
+msgstr "Отладочная иформация"
+
+msgctxt "#88130"
+msgid "Widgets"
+msgstr "Виджеты"
+
+msgctxt "#88131"
+msgid "Unwatched Movies"
+msgstr "Непросмотренные фильмы"
+
+msgctxt "#88133"
+msgid "Favorites TV Channels"
+msgstr "Избранные ТВ каналы"
+
+msgctxt "#88134"
+msgid "Favorites Radio Channels"
+msgstr "Избранные Радио каналы"
+
+msgctxt "#89003"
+msgid "Shortcuts set"
+msgstr "Набор ярлыков"
+
+msgctxt "#89004"
+msgid "Widget set"
+msgstr "Виджет"
+
+msgctxt "#89013"
+msgid "Clear item"
+msgstr "Очистить элемент"
+
+msgctxt "#89023"
+msgid "Watch it Later"
+msgstr "Посмотреть позже"
+
+msgctxt "#89025"
+msgid "Recent Albums"
+msgstr "Последние альбомы"
+
+msgctxt "#89027"
+msgid "Random Albums"
+msgstr "Случайные альбомы"
+
+msgctxt "#89031"
+msgid "Recent Movies"
+msgstr "Последние фильмы"
+
+msgctxt "#89032"
+msgid "Random Movies"
+msgstr "Случайные фильмы"
+
+msgctxt "#89033"
+msgid "Recent Episodes"
+msgstr "Последние эпизоды"
+
+msgctxt "#89035"
+msgid "Random Episodes"
+msgstr "Случайные эпизоды"
+
+msgctxt "#89036"
+msgid "Recent Music Video"
+msgstr "Последнее муз. видео"
+
+msgctxt "#89038"
+msgid "Random Music Video"
+msgstr "Случайное муз. видео"
+
+msgctxt "#89041"
+msgid "LibreELEC"
+msgstr "LibreELEC"
+
+msgctxt "#89051"
+msgid "[B]CONFIGURE LIBREELEC[/B][CR][CR]Setup LibreELEC"
+msgstr "[B]НАСТРОЙКИ LIBREELEC[/B][CR][CR]Установки LibreELEC"
+
+msgctxt "#89302"
+msgid "Daily"
+msgstr "Ежедневная"
+
+msgctxt "#89303"
+msgid "Hourly"
+msgstr "Почасовая"
+
+msgctxt "#89501"
+msgid "Enable FullScreen Clock"
+msgstr "Показывать часы в полноэкранном режиме"
+
+msgctxt "#89502"
+msgid "Enable SlideShow Info"
+msgstr "Показывать информацию в слайдшоу"
+
+msgctxt "#89700"
+msgid "Select"
+msgstr "Выбрать"
+
+msgctxt "#89702"
+msgid "Favourites Window"
+msgstr "Окно избранное"
+
+msgctxt "#89703"
+msgid "No Media"
+msgstr "Нет медиа"
+
+msgctxt "#89705"
+msgid "Automatic Suggestion"
+msgstr "Автоматическое предложение"
+
+msgctxt "#89706"
+msgid "Eject or Load Disc"
+msgstr "Извлечь или загрузить диск"
+
+msgctxt "#89707"
+msgid "Shutdown Menu"
+msgstr "Меню выключения"
+
+msgctxt "#89708"
+msgid "Command"
+msgstr "Команда"
+
+msgctxt "#89709"
+msgid "Separate Backgrounds"
+msgstr "Отдельные фоны"
+
+msgctxt "#89900"
+msgid "Previous location"
+msgstr "Предидущее расположение"
+
+msgctxt "#89901"
+msgid "Next location"
+msgstr "Следующее расположение"
+
+msgctxt "#90000"
+msgid "Customize Power Menu"
+msgstr "Настрить меню выключения"
+
+msgctxt "#90001"
+msgid "Video Playlist"
+msgstr "Видео плейлист"
+
+msgctxt "#90002"
+msgid "Music Playlist"
+msgstr "Музыкальный плейлист"
+
+msgctxt "#90003"
+msgid "In-progress Movies"
+msgstr "Незавершенные фильмы"
+
+msgctxt "#90004"
+msgid "In-progress TVShows"
+msgstr "Незавершенные сериалы"
+
+msgctxt "#90005"
+msgid "Unwatched TVShows"
+msgstr "Непросмотренные сериалы"
+
+msgctxt "#90006"
+msgid "Random Artists"
+msgstr "Случайные исполнители"
+
+msgctxt "#90007"
+msgid "Unplayed Albums"
+msgstr "Непрослушанные альбомы"
+
+msgctxt "#90008"
+msgid "Most Played Albums"
+msgstr "Самые популярные альбомы"
+
+msgctxt "#90009"
+msgid "Widget Limit Items"
+msgstr "Лимит элементов"
+
+msgctxt "#90010"
+msgid "Enable Smart Shortcuts Playlists"
+msgstr "Разрешить Смарт Ярлыки для плейлистов"
+
+msgctxt "#90011"
+msgid "Enable Smart Shortcuts Favorites"
+msgstr "Разрешить Смарт Ярлыки для избранного"
+
+msgctxt "#90012"
+msgid "Enable Animated Posters"
+msgstr "Разрешить анимированные постеры"
+
+msgctxt "#90014"
+msgid "Picture Add-On"
+msgstr "Фото дополнение"
+
+msgctxt "#90015"
+msgid "TV Channel"
+msgstr "ТВ каналы"
+
+msgctxt "#90016"
+msgid "Radio Channel"
+msgstr "Радио каналы"
+
+msgctxt "#90017"
+msgid "Program"
+msgstr "Программа"
+
+msgctxt "#90018"
+msgid "Video Add-On"
+msgstr "Видео дополнение"
+
+msgctxt "#90019"
+msgid "Video Source"
+msgstr "Видео источник"
+
+msgctxt "#90020"
+msgid "Backup Skin Settings"
+msgstr "Резервная копия настроек обложки"
+
+msgctxt "#90021"
+msgid "Create"
+msgstr "Создать"
+
+msgctxt "#90022"
+msgid "Restory"
+msgstr "Восстановить"
+
+msgctxt "#90030"
+msgid "Music Source"
+msgstr "Музыкальный источник"
+
+msgctxt "#90031"
+msgid "Music Add-On"
+msgstr "Дополнение музыки"
+
+msgctxt "#90040"
+msgid "Enable splash screen (photo, video or music)"
+msgstr "Разрешить заставку (фото, видео или музыка)"
+
+msgctxt "#90041"
+msgid "Path:"
+msgstr "Путь:"
+
+msgctxt "#90042"
+msgid "Duration"
+msgstr "Длительность"
+
+msgctxt "#90044"
+msgid "Disable"
+msgstr "Запретить"
+
+msgctxt "#90050"
+msgid "Smart Shortcuts"
+msgstr "Смарт Ярлыки"
+
+msgctxt "#90051"
+msgid "Smart Widgets"
+msgstr "Смарт Виджеты"
+
+msgctxt "#90052"
+msgid "General settings applying to all areas of the skin."
+msgstr "Общие параметры, применяемые во всех местах обложки."
+
+msgctxt "#90053"
+msgid "Advanced options"
+msgstr "Дополнительные параметры"
+
+msgctxt "#90054"
+msgid "Main menu-related settings: Configure the home screen to your likings."
+msgstr "Основные настройки меню: Настройка главного экрана в соответствии с Вашими предпочтениями."
+
+msgctxt "#90055"
+msgid "User widgets"
+msgstr "Виджеты пользователя"
+
+msgctxt "#90056"
+msgid "Background options"
+msgstr "Параметры фона"
+
+msgctxt "#90057"
+msgid "Reset skin options"
+msgstr "Сброс параметров обложки"
+
+msgctxt "#90060"
+msgid "Disable"
+msgstr "Запретить"
+
+msgctxt "#90061"
+msgid "Enable"
+msgstr "Разрешить"
+
+msgctxt "#90062"
+msgid "Recent recordings"
+msgstr "Недавние записи"
+
+msgctxt "#90063"
+msgid "Recently played channels"
+msgstr "Недавно проигранные каналы"
+
+msgctxt "#90100"
+msgid "Enable Wall Backgrounds"
+msgstr "Разрешить стену фонов"
+
+msgctxt "#90101"
+msgid "Random Fanart Delay"
+msgstr "Длительность показа для случайных фонов"
+
+msgctxt "#90102"
+msgid "Enable Animated Fanarts"
+msgstr "Разрешить анимированные фоны"
+
+msgctxt "#90103"
+msgid "Icons"
+msgstr "Иконки"
+
+msgctxt "#90104"
+msgid "Choose studios icons pack"
+msgstr "Выбрать пакет иконок студий"
+
+msgctxt "#90105"
+msgid "Choose flags country icons pack"
+msgstr "Выбрать пакет иконок флагов стран"
+
+msgctxt "#90106"
+msgid "Choose movie genre icons pack"
+msgstr "Выбрать пакет иконок жанров для фильмов"
+
+msgctxt "#90107"
+msgid "Choose music genre icons pack"
+msgstr "Выбрать пакет иконок жанров для музыки"
+
+msgctxt "#90108"
+msgid "Choose background for audio"
+msgstr "Выбрать фон для аудио"
+
+msgctxt "#90109"
+msgid "Single image"
+msgstr "Одно изображение"
+
+msgctxt "#90110"
+msgid "Multi-image"
+msgstr "Набор картинок"
+
+msgctxt "#90111"
+msgid "Artwork Downloader"
+msgstr "Загрузить иллюстрации"
+
+msgctxt "#90112"
+msgid "Download Music Theme"
+msgstr "Загрузить музыкальную тему"
+
+msgctxt "#90113"
+msgid "Dharma style"
+msgstr "Dharma стиль"
+
+msgctxt "#90114"
+msgid "Search local library"
+msgstr "Искать в медиатеке"
+
+msgctxt "#90115"
+msgid "Search add-ons"
+msgstr "Поиск дополнений"
+
+msgctxt "#90116"
+msgid "Search YouTube"
+msgstr "Искать в YouTube"
+
+msgctxt "#90117"
+msgid "Search TheMovieDB"
+msgstr "Искать в TheMovieDB"
+
+msgctxt "#90118"
+msgid "Show search button"
+msgstr "Показывать кнопку поиска"

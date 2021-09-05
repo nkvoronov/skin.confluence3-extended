@@ -165,20 +165,20 @@
 			<showonepage>true</showonepage>
 		</control>
 		<control type="textbox" id="400">
-			<description>PLOT</description>
+			<description>Description</description>
 			<left>40</left>
 			<top>402</top>
 			<width>750</width>
 			<height>178</height>
 			<font>font13</font>
-			<align>justify</align>
+			<align>left</align>
 			<pagecontrol>60</pagecontrol>
 			<label fallback="31017">$INFO[ListItem.Plot]</label>
 		</control>
 		<control type="grouplist" id="9000">
-			<left>40</left>
+			<left>70</left>
 			<top>590</top>
-			<width>740</width>
+			<width>700</width>
 			<height>40</height>
 			<itemgap>5</itemgap>
 			<align>center</align>
@@ -191,13 +191,12 @@
 				<description>Timer</description>
 				<include>ButtonInfoDialogsCommonValues</include>
 				<label>19061</label>
-				<visible>Window.IsActive(PVRGuideInfo)</visible>
 			</control>
 			<control type="button" id="4">
 				<description>Find similar</description>
 				<include>ButtonInfoDialogsCommonValues</include>
 				<label>19003</label>
-				<visible>Window.IsActive(PVRRecordingInfo) | Window.IsActive(PVRGuideInfo)</visible>
+				<visible>Window.IsActive(PVRGuideInfo)</visible>
 			</control>
 			<control type="button" id="10">
 				<description>Play programme</description>
@@ -215,7 +214,7 @@
 				<description>Play recording</description>
 				<include>ButtonInfoDialogsCommonValues</include>
 				<label>19687</label>
-				<visible>Window.IsActive(PVRRecordingInfo) | Window.IsActive(PVRGuideInfo)</visible>
+				<visible>Window.IsActive(PVRGuideInfo)</visible>
 			</control>
 			<control type="button" id="6">
 				<description>Record</description>
@@ -223,17 +222,33 @@
 				<label/>
 				<visible>Window.IsActive(PVRGuideInfo)</visible>
 			</control>
-			<control type="button" id="11">
-				<description>Set reminder</description>
-				<include>ButtonInfoDialogsCommonValues</include>
-				<label>$LOCALIZE[826]</label>
-				<visible>Window.IsActive(PVRGuideInfo)</visible>
-			</control>
 			<control type="button" id="7">
 				<description>OK</description>
 				<include>ButtonInfoDialogsCommonValues</include>
 				<label>186</label>
 			</control>
+		</control>
+		<control type="button">
+			<description>left Arrow</description>
+			<left>40</left>
+			<top>590</top>
+			<width>30</width>
+			<height>40</height>
+			<texturefocus>arrow-big-left.png</texturefocus>
+			<texturenofocus>arrow-big-left.png</texturenofocus>
+			<visible>Container(9000).HasPrevious</visible>
+			<include>VisibleFadeEffect</include>
+		</control>
+		<control type="button">
+			<description>right Arrow</description>
+			<left>770</left>
+			<top>590</top>
+			<width>30</width>
+			<height>40</height>
+			<texturefocus>arrow-big-right.png</texturefocus>
+			<texturenofocus>arrow-big-right.png</texturenofocus>
+			<visible>Container(9000).HasNext</visible>
+			<include>VisibleFadeEffect</include>
 		</control>
 	</controls>
 </window>
