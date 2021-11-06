@@ -10,9 +10,13 @@
 		<include>ContentPanelBackgrounds</include>
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>
+			<!-- view id = 50 -->
 			<include>CommonRootView</include>
+			<!-- view id = 51 -->
 			<include>FullWidthList</include>
+			<!-- view id = 550 -->
 			<include>AddonInfoListView1</include>
+			<!-- view id = 551 -->
 			<include>AddonInfoThumbView1</include>
 		</control>
 		<control type="group">
@@ -51,18 +55,18 @@
 					<aligny>center</aligny>
 				</control>
 				<control type="button" id="2">
-					<description>View As Button</description>
+					<description>View As button</description>
 					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
 					<label/>
 				</control>
 				<control type="button" id="3">
-					<description>Sort By Button</description>
+					<description>Sort by button</description>
 					<include>ButtonCommonValues</include>
 					<label>103</label>
 				</control>
 				<control type="togglebutton" id="4">
-					<description>Sort ASC</description>
+					<description>Sort asc</description>
 					<include>ButtonCommonValues</include>
 					<alttexturefocus border="5">button-focus.png</alttexturefocus>
 					<alttexturenofocus/>
@@ -80,29 +84,29 @@
 					<aligny>center</aligny>
 				</control>
 				<control type="radiobutton" id="7">
-					<description>Hide Foreign</description>
+					<description>Hide foreign</description>
 					<include>ButtonCommonValues</include>
 					<label>25001</label>
 				</control>
 				<control type="radiobutton" id="8">
-					<description>Hide Broken</description>
+					<description>Hide broken</description>
 					<include>ButtonCommonValues</include>
 					<label>24999</label>
 				</control>
 				<control type="button" id="9">
-					<description>Check For Updates</description>
+					<description>Check for updates</description>
 					<include>ButtonCommonValues</include>
 					<label>24034</label>
 				</control>
 				<control type="button" id="5">
-					<description>Settings Shortcut</description>
+					<description>Settings shortcut</description>
 					<include>ButtonCommonValues</include>
 					<label>10004</label>
 				</control>
 				<include>CommonNowPlaying_Controls</include>
 			</control>
 			<control type="label">
-				<description>Last Updated Label</description>
+				<description>Last updated label</description>
 				<left>0</left>
 				<top>650</top>
 				<height>60</height>
@@ -114,7 +118,7 @@
 				<textcolor>selected</textcolor>
 			</control>
 			<control type="label">
-				<description>Last Updated</description>
+				<description>Last updated value</description>
 				<left>0</left>
 				<top>680</top>
 				<height>25</height>

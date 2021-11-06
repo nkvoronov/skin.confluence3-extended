@@ -12,15 +12,25 @@
 		<include>ContentPanelBackgrounds</include>
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>
+			<!-- view id = 50 -->
 			<include>CommonRootView</include>
+			<!-- view id = 51 -->
 			<include>FullWidthList</include>
+			<!-- view id = 500 -->
 			<include>ThumbnailView</include>
+			<!-- view id = 506, 507 -->
 			<include>MusicInfoListView</include>
+			<!-- view id = 509 -->
 			<include>AlbumWrapView2_Fanart</include>
+			<!-- view id = 511 -->
 			<include>MusicVideoInfoListView</include>
+			<!-- view id = 512 -->
 			<include>ArtistMediaListView</include>
+			<!-- view id = 513 -->
 			<include>AlbumInfoListView</include>
+			<!-- view id = 550 -->
 			<include>AddonInfoListView1</include>
+			<!-- view id = 551 -->
 			<include>AddonInfoThumbView1</include>
 		</control>
 		<control type="group">
@@ -33,7 +43,7 @@
 		<include>ScrollOffsetLabel</include>
 		<include content="CommonWindowHeader">
 			<param name="Icon" value="icon_music" />
-			<param name="Label" value="$LOCALIZE[2]" />
+			<param name="Label" value="$LOCALIZE[10516]" />
 		</include>
 		<control type="group">
 			<left>-250</left>
@@ -59,18 +69,18 @@
 					<aligny>center</aligny>
 				</control>
 				<control type="button" id="2">
-					<description>View As Button</description>
+					<description>View As button</description>
 					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
 					<label/>
 				</control>
 				<control type="button" id="3">
-					<description>Sort By Button</description>
+					<description>Sort by button</description>
 					<include>ButtonCommonValues</include>
 					<label>103</label>
 				</control>
 				<control type="togglebutton" id="4">
-					<description>Sort ASC</description>
+					<description>Sort asc</description>
 					<include>ButtonCommonValues</include>
 					<alttexturefocus border="5">button-focus.png</alttexturefocus>
 					<alttexturenofocus/>
@@ -118,7 +128,7 @@
 					<label>137</label>
 				</control>
 				<control type="radiobutton" id="16">
-					<description>Party Mode</description>
+					<description>PartyMode</description>
 					<label>589</label>
 					<include>ButtonCommonValues</include>
 				</control>
@@ -132,7 +142,7 @@
 					<aligny>center</aligny>
 				</control>
 				<control type="togglebutton" id="20">
-					<description>Update Library</description>
+					<description>Update library</description>
 					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>653</label>
@@ -142,7 +152,7 @@
 					<usealttexture>library.isscanningmusic</usealttexture>
 				</control>
 				<control type="button" id="204">
-					<description>Get More</description>
+					<description>Get more</description>
 					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>21452</label>

@@ -11,6 +11,8 @@
 	<include file="ViewsPVRGuide.xml" />
 	<include file="ViewsWeather.xml" />
 	<include file="IncludesCodecFlagging.xml" />
+	<include file="IncludesHomeRecentlyAdded.xml" />
+	<include file="IncludesHomeMenuItems.xml" />
 	<include file="IncludesPVR.xml" />
 	<include file="IncludesBackgroundBuilding.xml" />
 	<include file="IncludesHomeAddons.xml" />
@@ -635,6 +637,7 @@
 	</variable>
 	<variable name="PVRTimerIcon">
 		<value condition="ListItem.IsRecording">PVR-IsRecording.png</value>
+		<value condition="ListItem.HasReminder">PVR-HasReminder.png</value>
 		<value condition="ListItem.HasTimerSchedule + ListItem.TimerHasError">PVR-HasTimerScheduleError.png</value>
 		<value condition="ListItem.HasTimer + ListItem.TimerHasError">PVR-HasTimerError.png</value>
 		<value condition="ListItem.HasTimerSchedule + ListItem.TimerHasConflict">PVR-HasTimerScheduleConflict.png</value>

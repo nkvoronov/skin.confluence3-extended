@@ -389,7 +389,7 @@
 						<textcolor>grey</textcolor>
 					</control>
 					<control type="textbox">
-						<description>Description</description>
+						<description>Plot value</description>
 						<left>280</left>
 						<top>57</top>
 						<width>800</width>

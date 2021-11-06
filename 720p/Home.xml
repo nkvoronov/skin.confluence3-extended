@@ -43,7 +43,7 @@
 			<animation effect="slide" time="200" condition="Window.Next(Home)">WindowClose</animation>
 			<visible>!Skin.HasSetting(NoFloor)</visible>
 		</control>
-		<!-- Music and Radio Info -->
+		<!-- Music Info -->
 		<control type="group">
 			<depth>DepthMenu</depth>
 			<left>0</left>

@@ -56,7 +56,7 @@
 					<itemgap>2</itemgap>
 					<orientation>horizontal</orientation>
 					<include>VisibleFadeEffect</include>
-					<visible>!Control.IsVisible(50) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,musicvideo)]</visible>
+					<visible>!Control.IsVisible(50) + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,musicvideo)]</visible>
 					<include>VideoCodecFlaggingConditions</include>
 					<include>AudioCodecFlaggingConditions</include>
 					<include>AudioChannelsFlaggingConditions</include>
@@ -786,7 +786,7 @@
 					<showonepage>true</showonepage>
 				</control>
 				<control type="textbox" id="400">
-					<description>Description For Movies</description>
+					<description>Description Value for Movies</description>
 					<left>210</left>
 					<top>527</top>
 					<width>1030</width>
@@ -875,9 +875,9 @@
 					</focusedlayout>
 				</control>
 				<control type="grouplist" id="9000">
-					<left>295</left>
+					<left>210</left>
 					<top>660</top>
-					<width>860</width>
+					<width>1030</width>
 					<height>40</height>
 					<itemgap>2</itemgap>
 					<align>center</align>
@@ -893,7 +893,7 @@
 						<alttexturefocus border="2">button-focus.png</alttexturefocus>
 						<alttexturenofocus border="2">button-nofocus.png</alttexturenofocus>
 						<altlabel>1024</altlabel>
-						<usealttexture>String.IsEqual(ListItem.DBTYPE,tvshow)</usealttexture>
+						<usealttexture>String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,set)</usealttexture>
 					</control>
 					<control type="button" id="5">
 						<description>Cast/Review</description>
