@@ -1,14 +1,10 @@
-[B]4.7.14[/B]
-
-- Add PVR guide controls dialog
-
 [B]4.7.13[/B]
 
-- Updated language files from Transifex
+- Update language files from Transifex
 
 [B]4.7.12[/B]
 
-- Updated language files from Transifex
+- Add PVR guide controls dialog
 
 [B]4.7.11[/B]
 
