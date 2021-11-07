@@ -173,7 +173,7 @@
 						<top>28</top>
 						<width>16</width>
 						<height>16</height>
-						<texture>$VAR[PVRTimerIcon]</texture>
+						<texture>$VAR[PVRTimerIconVar]</texture>
 					</control>
 				</itemlayout>
 				<focusedlayout height="48" width="40">
@@ -208,7 +208,7 @@
 						<top>28</top>
 						<width>16</width>
 						<height>16</height>
-						<texture>$VAR[PVRTimerIcon]</texture>
+						<texture>$VAR[PVRTimerIconVar]</texture>
 					</control>
 				</focusedlayout>
 			</control>
@@ -427,7 +427,7 @@
 							<top>10</top>
 							<width>20</width>
 							<height>20</height>
-							<texture>$VAR[PVRTimerIcon]</texture>
+							<texture>$VAR[PVRTimerIconVar]</texture>
 						</control>
 						<control type="label">
 							<left>1000</left>
@@ -439,7 +439,7 @@
 							<aligny>center</aligny>
 							<textcolor>grey2</textcolor>
 							<selectedcolor>selected</selectedcolor>
-							<label>$VAR[PVRTimerLabel]</label>
+							<label>$VAR[PVRTimerLabelVar]</label>
 						</control>
 					</itemlayout>
 					<focusedlayout height="100">
@@ -556,7 +556,7 @@
 							<top>10</top>
 							<width>20</width>
 							<height>20</height>
-							<texture>$VAR[PVRTimerIcon]</texture>
+							<texture>$VAR[PVRTimerIconVar]</texture>
 						</control>
 						<control type="label">
 							<left>1000</left>
@@ -568,7 +568,7 @@
 							<aligny>center</aligny>
 							<textcolor>grey2</textcolor>
 							<selectedcolor>selected</selectedcolor>
-							<label>$VAR[PVRTimerLabel]</label>
+							<label>$VAR[PVRTimerLabelVar]</label>
 						</control>
 					</focusedlayout>
 				</control>

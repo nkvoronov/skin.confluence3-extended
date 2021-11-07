@@ -854,16 +854,16 @@ msgid "title of widget"
 msgstr "назву віджетів"
 
 msgctxt "#88900"
-msgid "Skin Leia"
-msgstr "Leia"
+msgid "Skin Matrix"
+msgstr "Matrix"
 
 msgctxt "#88910"
-msgid "Skin Leia Massive"
-msgstr "Leia Великий шрифт"
+msgid "Skin Matrix Massive"
+msgstr "Matrix Великий шрифт"
 
 msgctxt "#88920"
-msgid "Skin Leia with no Caps"
-msgstr "Leia без ПРОПИСНИХ"
+msgid "Skin Matrix with no Caps"
+msgstr "Matrix без ПРОПИСНИХ"
 
 msgctxt "#88107"
 msgid "Blue"
@@ -1228,3 +1228,15 @@ msgstr "Дозволити список доповнень користувач�
 msgctxt "#90120"
 msgid "Enable user list of TV and radio channels"
 msgstr "Дозволити список тв і радіо каналів користувача"
+
+msgctxt "#90121"
+msgid "User list of add-ons"
+msgstr "Список доповнень користувача"
+
+msgctxt "#90122"
+msgid "User list of TV and radio channels"
+msgstr "Список тв і радіо каналів користувача"
+
+msgctxt "#90123"
+msgid "Channel"
+msgstr "Канал"

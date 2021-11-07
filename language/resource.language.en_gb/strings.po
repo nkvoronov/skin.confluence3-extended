@@ -931,15 +931,15 @@ msgid "title of widget"
 msgstr ""
 
 msgctxt "#88900"
-msgid "Skin Leia"
+msgid "Skin Matrix"
 msgstr ""
 
 msgctxt "#88910"
-msgid "Skin Leia Massive"
+msgid "Skin Matrix Massive"
 msgstr ""
 
 msgctxt "#88920"
-msgid "Skin Leia with no Caps"
+msgid "Skin Matrix with no Caps"
 msgstr ""
 
 msgctxt "#88107"
@@ -1304,4 +1304,16 @@ msgstr ""
 
 msgctxt "#90120"
 msgid "Enable user list of TV and radio channels"
+msgstr ""
+
+msgctxt "#90121"
+msgid "User list of add-ons"
+msgstr ""
+
+msgctxt "#90122"
+msgid "User list of TV and radio channels"
+msgstr ""
+
+msgctxt "#90123"
+msgid "Channel"
 msgstr ""

@@ -3,7 +3,7 @@
 	<defaultcontrol always="true">10</defaultcontrol>
 	<onload condition="Skin.HasSetting(enableskindebug)">Skin.ToggleDebug</onload>
 	<include condition="!Skin.HasSetting(initialsetuprun)">DefaultInitialSetup</include>
-	<onload condition="Skin.HasSetting(enablesplashscreen) + !String.IsEmpty(Skin.String(splashscreenpath))">RunScript(script.skin.helper.service,action=splashscreen,file=$INFO[Skin.String(splashscreenpath)],duration=$VAR[SplashScreenDurationNameVar])</onload>
+	<onload condition="Skin.HasSetting(enablesplashscreen) + !String.IsEmpty(Skin.String(splashscreenpath))">RunScript(script.skin.utils,action=splashscreen,file=$INFO[Skin.String(splashscreenpath)],duration=$VAR[SplashScreenDurationNameVar])</onload>
 	<onload condition="!Skin.HasSetting(enablesplashscreen)">ReplaceWindow($INFO[System.StartupWindow])</onload>
 	<controls>
 		<!-- video control for splash -->

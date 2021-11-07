@@ -41,7 +41,7 @@
 					<width>1030</width>
 					<height>30</height>
 					<font>font24_title</font>
-					<label>$VAR[MusicInfoHeader]</label>
+					<label>$VAR[MusicInfoHeaderVar]</label>
 					<align>center</align>
 					<aligny>center</aligny>
 					<textcolor>white</textcolor>
@@ -154,7 +154,7 @@
 					<top>375</top>
 					<width>1030</width>
 					<height>122</height>
-					<label>$VAR[MusicInfoLabel]</label>
+					<label>$VAR[MusicInfoLabelVar]</label>
 					<font>font13</font>
 					<align>left</align>
 					<textcolor>white</textcolor>
@@ -175,7 +175,7 @@
 					<top>520</top>
 					<width>120</width>
 					<height>120</height>
-					<texture>$VAR[MusicInfoListThumb]</texture>
+					<texture>$VAR[MusicInfoListThumbVar]</texture>
 					<aspectratio>keep</aspectratio>
 				</control>
 				<include content="MusicInfoPanel" condition="String.IsEqual(ListItem.DBTYPE,artist) | String.IsEqual(ListItem.DBTYPE,album) | String.IsEqual(ListItem.DBTYPE,song)">

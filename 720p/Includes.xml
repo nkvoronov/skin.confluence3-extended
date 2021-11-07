@@ -11,14 +11,13 @@
 	<include file="ViewsPVRGuide.xml" />
 	<include file="ViewsWeather.xml" />
 	<include file="IncludesCodecFlagging.xml" />
-	<include file="IncludesHomeRecentlyAdded.xml" />
-	<include file="IncludesHomeMenuItems.xml" />
 	<include file="IncludesPVR.xml" />
 	<include file="IncludesBackgroundBuilding.xml" />
 	<include file="IncludesHomeAddons.xml" />
 	<include file="IncludesHomeMainMenus.xml" />
 	<include file="IncludesHomeSubMenus.xml" />
 	<include file="IncludesHomeWidgets.xml" />
+	<include file="IncludesUserWidgets.xml" />
 	<include file="script-skinshortcuts-includes.xml"/>
 	<include file="IncludesUser.xml" />
 	<include file="IncludesVariables.xml" />
@@ -46,7 +45,7 @@
 	<constant name="DepthFloor">-0.20</constant>
 	<constant name="DepthSideBlade">0.15</constant>
 	<!-- VARIABLES -->
-	<variable name="MusicRating">
+	<variable name="MusicRatingVar">
 		<value condition="Integer.IsGreater(ListItem.Rating,9.5)">10</value>
 		<value condition="Integer.IsGreater(ListItem.Rating,8.5)">9</value>
 		<value condition="Integer.IsGreater(ListItem.Rating,7.5)">8</value>
@@ -59,24 +58,24 @@
 		<value condition="Integer.IsGreater(ListItem.Rating,0.5)">1</value>
 		<value>0</value>
 	</variable>
-	<variable name="AddonInfoHeading">
+	<variable name="AddonInfoHeadingVar">
 		<value condition="!String.IsEmpty(Window(home).Property(WhatsNew))">$LOCALIZE[24054]</value>
 		<value>$LOCALIZE[21821]</value>
 	</variable>
-	<variable name="AddonInfoDescription">
+	<variable name="AddonInfoDescriptionVar">
 		<value condition="!String.IsEmpty(Window(home).Property(WhatsNew))">$INFO[ListItem.AddonNews]</value>
 		<value>$INFO[ListItem.AddonDescription]</value>
 	</variable>
-	<variable name="AddonInfoButtonLabel">
+	<variable name="AddonInfoButtonLabelVar">
 		<value condition="!String.IsEmpty(Window(home).Property(WhatsNew))">$LOCALIZE[21821]</value>
 		<value>$LOCALIZE[24054]</value>
 	</variable>
-	<variable name="GameSelectHeader">
+	<variable name="GameSelectHeaderVar">
 		<value condition="Window.IsActive(gamevideofilter)">$LOCALIZE[230]</value>
 		<value condition="Window.IsActive(gamestretchmode)">$LOCALIZE[35233]</value>
 		<value condition="Window.IsActive(gamevideorotation)">$LOCALIZE[35227]</value>
 	</variable>
-	<variable name="DurationInMinutes">
+	<variable name="DurationInMinutesVar">
 		<value condition="String.StartsWith(ListItem.Duration,01:00:)">60 $LOCALIZE[12391]</value>
 		<value condition="String.StartsWith(ListItem.Duration,01:01:)">61 $LOCALIZE[12391]</value>
 		<value condition="String.StartsWith(ListItem.Duration,01:02:)">62 $LOCALIZE[12391]</value>
@@ -438,43 +437,43 @@
 		<value condition="String.StartsWith(ListItem.Duration,58:)">58 $LOCALIZE[12391]</value>
 		<value condition="String.StartsWith(ListItem.Duration,59:)">59 $LOCALIZE[12391]</value>
 	</variable>
-	<variable name="AddonLabel2">
+	<variable name="AddonLabel2Var">
 		<value condition="!String.IsEmpty(ListItem.Property(Addon.Status))">$INFO[ListItem.Property(Addon.Status)]</value>
 		<value condition="!String.IsEmpty(ListItem.AddonSize)">$INFO[ListItem.AddonSize]</value>
 	</variable>
-	<variable name="MusicInfoHeader">
+	<variable name="MusicInfoHeaderVar">
 		<value condition="String.IsEqual(ListItem.DbType,artist)">$INFO[ListItem.Artist]</value>
 		<value condition="String.IsEqual(ListItem.DbType,album)">$INFO[ListItem.Album]</value>
 		<value condition="String.IsEqual(ListItem.DbType,song)">$INFO[ListItem.Title]</value>
 	</variable>
-	<variable name="MusicInfoLabel">
+	<variable name="MusicInfoLabelVar">
 		<value condition="String.IsEqual(ListItem.DbType,song) + !String.IsEmpty(ListItem.Comment)">$INFO[ListItem.Comment]</value>
 		<value condition="String.IsEqual(ListItem.DbType,album) + !String.IsEmpty(ListItem.Property(Album_Description))">$INFO[ListItem.Property(Album_Description)]</value>
-		<value condition="String.IsEqual(ListItem.DbType,artist)">$VAR[MusicInfoTextArtist]</value>
+		<value condition="String.IsEqual(ListItem.DbType,artist)">$VAR[MusicInfoTextArtistVar]</value>
 	</variable>
-	<variable name="MusicInfoTextArtist">
+	<variable name="MusicInfoTextArtistVar">
 		<value condition="!String.IsEmpty(ListItem.Property(Artist_Description))">$INFO[ListItem.Property(Artist_Description)]</value>
 		<value condition="String.IsEmpty(ListItem.Property(Artist_Description)) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Plot))">$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)]</value>
 	</variable>
-	<variable name="MusicInfoListViewLabel">
+	<variable name="MusicInfoListViewLabelVar">
 		<value condition="Control.IsVisible(506)">$LOCALIZE[544]</value>
 		<value condition="Control.IsVisible(507) + !Player.HasAudio">$LOCALIZE[31040]</value>
 		<value condition="Control.IsVisible(507) + Player.HasAudio">$LOCALIZE[31040]$INFO[musicplayer.Playlistposition, ]$INFO[musicplayer.Playlistlength,[COLOR blue] / [/COLOR]]</value>
 	</variable>
-	<variable name="MusicInfoListViewPanel">
+	<variable name="MusicInfoListViewPanelVar">
 		<value condition="Control.IsVisible(506) + String.IsEqual(ListItem.DbType,album)">$INFO[ListItem.Album,,[CR][CR]]$INFO[ListItem.Artist,[COLOR grey2],[/COLOR][CR]]$INFO[ListItem.Year,[B],[/B][CR]]$INFO[ListItem.Genre,[I],[/I][CR]]</value>
 		<value condition="Control.IsVisible(506) + String.IsEqual(ListItem.DbType,song)">$INFO[ListItem.TrackNumber,,. ]$INFO[ListItem.Title,,[CR][CR]]$INFO[ListItem.Artist,[COLOR grey2],[/COLOR][CR]]$INFO[ListItem.Album,[COLOR grey2],[/COLOR][CR]]$INFO[ListItem.DiscNumber,[COLOR grey2]$LOCALIZE[427] ,[/COLOR][CR]]$INFO[ListItem.Year,[B],[/B][CR]]$INFO[ListItem.Genre,[I],[/I][CR]]$INFO[ListItem.PlayCount,$LOCALIZE[567]: ,[CR]]$INFO[ListItem.Time,$LOCALIZE[180]: ,[COLOR blue] / [/COLOR]]$INFO[ListItem.Duration,,[CR]]</value>
 		<value condition="Control.IsVisible(507) + Player.HasAudio">$INFO[MusicPlayer.TrackNumber,,. ]$INFO[MusicPlayer.Title,,[CR][CR]]$INFO[MusicPlayer.Artist,[COLOR grey2],[/COLOR][CR]]$INFO[MusicPlayer.Album,[COLOR grey2],[/COLOR][CR]]$INFO[MusicPlayer.DiscNumber,[COLOR grey2]$LOCALIZE[427] ,[/COLOR][CR]]$INFO[MusicPlayer.Year,[B],[/B][CR]]$INFO[MusicPlayer.Genre,[I],[/I][CR]]$INFO[MusicPlayer.PlayCount,$LOCALIZE[567]: ,[CR]]$INFO[MusicPlayer.Time,$LOCALIZE[31016]: ,[COLOR blue] / [/COLOR]]$INFO[MusicPlayer.Duration,,[CR]]</value>
 	</variable>
-	<variable name="MusicInfoListViewtRating">
+	<variable name="MusicInfoListViewtRatingVar">
 		<value condition="Control.IsVisible(506)">$INFO[ListItem.UserRating,ratings/,.png]</value>
 		<value condition="Control.IsVisible(507) + Player.HasAudio">$INFO[MusicPlayer.UserRating,ratings/,.png]</value>
 	</variable>
-	<variable name="MusicInfoListViewThumb">
+	<variable name="MusicInfoListViewThumbVar">
 		<value condition="Control.IsVisible(506)">$INFO[ListItem.Icon]</value>
 		<value condition="Control.IsVisible(507)">$INFO[Player.Art(thumb)]</value>
 	</variable>
-	<variable name="MusicInfoListThumb">
+	<variable name="MusicInfoListThumbVar">
 		<value condition="String.IsEqual(ListItem.DbType,artist) + !String.IsEmpty(Container(50).Listitem.Icon)">$INFO[Container(50).Listitem.Icon]</value>
 		<value condition="[String.IsEqual(ListItem.DbType,album) | String.IsEqual(ListItem.DbType,song)] + !String.IsEmpty(ListItem.Art(artist.thumb))">$INFO[ListItem.Art(artist.thumb)]</value>
 		<value condition="String.IsEqual(ListItem.DbType,artist)">DefaultAlbumCover.png</value>
@@ -493,7 +492,7 @@
 		<value condition="!ListItem.IsStereoscopic">$INFO[ListItem.VideoResolution,flagging/lists/,.png]</value>
 		<value>flagging/lists/3D.png</value>
 	</variable>
-	<variable name="IconWallThumb">
+	<variable name="IconWallThumbVar">
 		<value condition="Container.Content(genres) + Window.IsActive(videos) + String.IsEqual(Skin.String(MovieGenreIcons.path),resource://resource.images.moviegenreicons.arctic.zephyr/)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.arctic.zephyr/,.png]</value>
 		<value condition="Container.Content(genres) + Window.IsActive(videos) + String.IsEqual(Skin.String(MovieGenreIcons.path),resource://resource.images.moviegenreicons.coloured/)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.coloured/,.jpg]</value>
 		<value condition="Container.Content(genres) + Window.IsActive(videos) + String.IsEqual(Skin.String(MovieGenreIcons.path),resource://resource.images.moviegenreicons.filmstrip/)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.filmstrip/,.jpg]</value>
@@ -517,24 +516,24 @@
 		<value condition="!String.IsEmpty(ListItem.Thumb)">$INFO[ListItem.Thumb]</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
-	<variable name="SearchIconWallThumb">
+	<variable name="SearchIconWallThumbVar">
 		<value condition="!String.IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
 		<value condition="!String.IsEmpty(ListItem.Thumb)">$INFO[ListItem.Thumb]</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
-	<variable name="BannerThumb">
+	<variable name="BannerThumbVar">
 		<value condition="!String.IsEmpty(ListItem.Art(banner))">$INFO[ListItem.Art(banner)]</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
-	<variable name="PosterThumb">
+	<variable name="PosterThumbVar">
 		<value condition="!String.IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
-	<variable name="PosterThumb2">
+	<variable name="PosterThumb2Var">
 		<value condition="!String.IsEmpty(Container(450).ListItem.Art(poster))">$INFO[Container(450).ListItem.Art(poster)]</value>
 		<value>$INFO[Container(450).ListItem.Icon]</value>
 	</variable>
-	<variable name="PosterThumb3">
+	<variable name="PosterThumb3Var">
 		<value condition="Container.Content(genres) + Window.IsActive(videos) + String.IsEqual(Skin.String(MovieGenreIcons.path),resource://resource.images.moviegenreicons.arctic.zephyr/)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.arctic.zephyr/,.png]</value>
 		<value condition="Container.Content(genres) + Window.IsActive(videos) + String.IsEqual(Skin.String(MovieGenreIcons.path),resource://resource.images.moviegenreicons.coloured/)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.coloured/,.jpg]</value>
 		<value condition="Container.Content(genres) + Window.IsActive(videos) + String.IsEqual(Skin.String(MovieGenreIcons.path),resource://resource.images.moviegenreicons.filmstrip/)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.filmstrip/,.jpg]</value>
@@ -554,30 +553,30 @@
 		<value condition="!String.IsEmpty(ListItem.Thumb)">$INFO[ListItem.Thumb]</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
-	<variable name="NowPlayingThumb">
+	<variable name="NowPlayingThumbVar">
 		<value condition="!String.IsEmpty(Player.Art(poster))">$INFO[Player.Art(poster)]</value>
 		<value condition="!String.IsEmpty(Player.Art(tvshow.poster))">$INFO[Player.Art(tvshow.poster)]</value>
 		<value>$INFO[Player.Icon]</value>
 	</variable>
-	<variable name="MusicInfoPanelLabel">
+	<variable name="MusicInfoPanelLabelVar">
 		<value condition="String.IsEqual(listItem.DBType,artist)">$INFO[ListItem.Label]</value>
 		<value condition="String.IsEqual(ListItem.DBType,albums)">$INFO[ListItem.Label,[COLOR=selected][B],[/B][/COLOR] - ]$INFO[ListItem.Label2]</value>
 		<value>$INFO[ListItem.TrackNumber,[B],. [/B]]$INFO[ListItem.Label]</value>
 	</variable>
-	<variable name="PlayList">
+	<variable name="PlayListVar">
 		<value condition="Window.IsActive(Videos) + !String.IsEqual(Playlist.Length(video),0)">ActivateWindow(videoplaylist)</value>
 		<value>ActivateWindow(musicplaylist)</value>
 	</variable>
-	<variable name="SelectBack">
+	<variable name="SelectBackVar">
 		<value condition="![Window.IsVisible(FullscreenVideo) | Window.IsVisible(Visualisation)]">DialogBack.png</value>
 		<value>DialogBack2.png</value>
 	</variable>
-	<variable name="PlayerTitle">
+	<variable name="PlayerTitleVar">
 		<value condition="Player.HasVideo + !String.IsEmpty(VideoPlayer.Title)">$INFO[VideoPlayer.Title]</value>
 		<value condition="Player.HasAudio + !String.EndsWith(MusicPlayer.Title,.pvr) + !String.IsEmpty(MusicPlayer.Title)">$INFO[MusicPlayer.Title]</value>
 		<value>$LOCALIZE[19055]</value>
 	</variable>
-	<variable name="typehackflagging">
+	<variable name="TypeHackFlaggingVar">
 		<value condition="[String.Contains(ListItem.FilenameAndPath,bluray) | String.Contains(ListItem.FilenameAndPath,bdrip) | String.Contains(ListItem.FilenameAndPath,brrip) | String.Contains(ListItem.FilenameAndPath,bd25) | String.Contains(ListItem.FilenameAndPath,bd50) | String.Contains(ListItem.FilenameAndPath,remux)]">bluray</value>
 		<value condition="String.Contains(ListItem.FilenameAndPath,hddvd)">hddvd</value>
 		<value condition="String.Contains(ListItem.FilenameAndPath,dvd)">dvd</value>
@@ -585,7 +584,7 @@
 		<value condition="String.Contains(ListItem.FilenameAndPath,vhs)">vhs</value>
 		<value condition="String.Contains(ListItem.FilenameAndPath,webdl) | String.Contains(ListItem.FilenameAndPath,web-dl) | String.Contains(ListItem.FilenameAndPath,webrip)">web</value>
 	</variable>
-	<variable name="rating">
+	<variable name="RatingVar">
 		<value condition="String.Contains(listitem.mpaa,Rated G)">mpaa_general</value>
 		<value condition="String.Contains(listitem.mpaa,Rated PG-13)">mpaa_pg13</value>
 		<value condition="String.Contains(listitem.mpaa,Rated PG)">mpaa_pg</value>
@@ -594,16 +593,16 @@
 		<value condition="String.Contains(Listitem.mpaa,Rated NR)">mpaa_notrated</value>
 		<value condition="String.Contains(Listitem.mpaa,Not Rated)">mpaa_notrated</value>
 	</variable>
-	<variable name="audiocodec">
+	<variable name="AudiocodecVar">
 		<value condition="String.StartsWith(ListItem.AudioCodec,mp3)">mp3</value>
 		<value>$INFO[ListItem.AudioCodec]</value>
 	</variable>
-	<variable name="videocodec">
+	<variable name="VideocodecVar">
 		<value condition="[String.StartsWith(ListItem.VideoCodec,div) | String.IsEqual(ListItem.VideoCodec,dx50)]">divx</value>
 		<value condition="String.Contains(ListItem.VideoCodec,mpeg4)">mpeg4</value>
 		<value>$INFO[ListItem.VideoCodec]</value>
 	</variable>
-	<variable name="SeekLabel">
+	<variable name="SeekLabelVar">
 		<value condition="Player.IsTempo + String.StartsWith(Player.PlaySpeed,0.)">$LOCALIZE[31045]</value>
 		<value condition="Player.IsTempo + String.StartsWith(Player.PlaySpeed,1.)">$LOCALIZE[31044]</value>
 		<value condition="Player.Playing + !Player.Seeking + !Player.DisplayAfterSeek">$LOCALIZE[31042]</value>
@@ -615,7 +614,7 @@
 		<value condition="Player.Forwarding">$LOCALIZE[31044]</value>
 		<value condition="Player.Rewinding">$LOCALIZE[31045]</value>
 	</variable>
-	<variable name="SelectLabel">
+	<variable name="SelectLabelVar">
 		<value condition="Control.IsVisible(3)">([COLOR=blue]$INFO[Container(3).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container(3).CurrentPage]/$INFO[Container(3).NumPages][/COLOR])</value>
 		<value condition="Control.IsVisible(6)">([COLOR=blue]$INFO[Container(6).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container(6).CurrentPage]/$INFO[Container(6).NumPages][/COLOR])</value>
 	</variable>
@@ -627,11 +626,11 @@
 		<value condition="Playlist.IsRepeat">OSDRepeatAllNF.png</value>
 		<value>OSDRepeatNF.png</value>
 	</variable>
-	<variable name="PVRChannelMgrHeader">
+	<variable name="PVRChannelMgrHeaderVar">
 		<value condition="!String.IsEmpty(Window.Property(IsRadio))">$LOCALIZE[19199] - $LOCALIZE[19024]</value>
 		<value>$LOCALIZE[19199] - $LOCALIZE[19023]</value>
 	</variable>
-	<variable name="PVRTimerIcon">
+	<variable name="PVRTimerIconVar">
 		<value condition="ListItem.IsRecording">PVR-IsRecording.png</value>
 		<value condition="ListItem.HasReminder">PVR-HasReminder.png</value>
 		<value condition="ListItem.HasTimerSchedule + ListItem.TimerHasError">PVR-HasTimerScheduleError.png</value>
@@ -645,7 +644,7 @@
 		<value condition="ListItem.HasTimer">PVR-HasTimer.png</value>
 		<value condition="ListItem.IsPlayable">PVR-HasArchive.png</value>
 	</variable>
-	<variable name="PVRTimerLabel">
+	<variable name="PVRTimerLabelVar">
 		<value condition="ListItem.IsRecording">$LOCALIZE[19043]</value>
 		<value condition="ListItem.HasTimer + !ListItem.TimerIsActive">$LOCALIZE[19057]</value>
 		<value condition="ListItem.HasTimer">$LOCALIZE[31510]</value>
@@ -687,7 +686,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<selectedcolor>selected</selectedcolor>
-					<label>$VAR[MusicInfoPanelLabel]</label>
+					<label>$VAR[MusicInfoPanelLabelVar]</label>
 				</control>
 				<control type="label">
 					<left>10</left>
@@ -727,7 +726,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<selectedcolor>selected</selectedcolor>
-					<label>$VAR[MusicInfoPanelLabel]</label>
+					<label>$VAR[MusicInfoPanelLabelVar]</label>
 				</control>
 				<control type="label">
 					<left>10</left>
@@ -758,7 +757,7 @@
 			<top>0</top>
 			<width>$PARAM[DialogBackgroundWidth]</width>
 			<height>$PARAM[DialogBackgroundHeight]</height>
-			<texture border="40">$VAR[SelectBack]</texture>
+			<texture border="40">$VAR[SelectBackVar]</texture>
 		</control>
 		<control type="image">
 			<description>Dialog Header image</description>
@@ -1009,7 +1008,7 @@
 				<top>53r</top>
 				<width>700</width>
 				<height>20</height>
-				<label>[COLOR=blue]$VAR[PlayerTitle][/COLOR]$INFO[VideoPlayer.Year,[COLOR=grey2] (,)[/COLOR]] - ([COLOR=white]$INFO[Player.Time][/COLOR][COLOR=white]$INFO[Player.Duration, [COLOR=blue]/[/COLOR] ][/COLOR])</label>
+				<label>[COLOR=blue]$VAR[PlayerTitleVar][/COLOR]$INFO[VideoPlayer.Year,[COLOR=grey2] (,)[/COLOR]] - ([COLOR=white]$INFO[Player.Time][/COLOR][COLOR=white]$INFO[Player.Duration, [COLOR=blue]/[/COLOR] ][/COLOR])</label>
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>font12</font>
@@ -1022,7 +1021,7 @@
 				<top>53r</top>
 				<width>700</width>
 				<height>20</height>
-				<label>[COLOR=blue]$VAR[PlayerTitle][/COLOR]$INFO[VideoPlayer.Year,[COLOR=grey2] (,)[/COLOR]] - ([COLOR=white]$INFO[PVR.EpgEventElapsedTime][/COLOR][COLOR=white]$INFO[PVR.EpgEventDuration, [COLOR=blue]/[/COLOR] ][/COLOR])</label>
+				<label>[COLOR=blue]$VAR[PlayerTitleVar][/COLOR]$INFO[VideoPlayer.Year,[COLOR=grey2] (,)[/COLOR]] - ([COLOR=white]$INFO[PVR.EpgEventElapsedTime][/COLOR][COLOR=white]$INFO[PVR.EpgEventDuration, [COLOR=blue]/[/COLOR] ][/COLOR])</label>
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>font12</font>
@@ -1184,7 +1183,7 @@
 			<top>43</top>
 			<height>30</height>
 			<width>325</width>
-			<label>$VAR[PlayerTitle]</label>
+			<label>$VAR[PlayerTitleVar]</label>
 			<align>left</align>
 			<aligny>center</aligny>
 			<font>font13_title</font>
@@ -1597,7 +1596,7 @@
 			<description>Go to playlist</description>
 			<include>ButtonCommonValues</include>
 			<label>13350</label>
-			<onclick>$VAR[PlayList]</onclick>
+			<onclick>$VAR[PlayListVar]</onclick>
 			<visible>[Window.IsActive(Videos) + !String.IsEqual(Playlist.Length(video),0)] | [Window.IsActive(Music) + !String.IsEqual(Playlist.Length(music),0)]</visible>
 		</control>
 	</include>
@@ -1879,7 +1878,7 @@
 				<top>0</top>
 				<width>860</width>
 				<height>120</height>
-				<texture border="40">$VAR[SelectBack]</texture>
+				<texture border="40">$VAR[SelectBackVar]</texture>
 			</control>
 			<control type="panel" id="5001">
 				<left>35</left>
@@ -1928,7 +1927,7 @@
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 				</focusedlayout>
-				<content>$VAR[AutoCompletionContent]</content>
+				<content>$VAR[AutoCompletionContentVar]</content>
 			</control>
 		</control>
 	</include>
@@ -2790,8 +2789,8 @@
 		<param name="top">0</param>
 		<param name="width">60</param>
 		<param name="height">60</param>
-		<param name="image_1">$VAR[CurrentWeatherIcon]</param>
-		<param name="image_multi">$VAR[CurrentWeatherIcon]</param>
+		<param name="image_1">$VAR[CurrentWeatherIconVar]</param>
+		<param name="image_multi">$VAR[CurrentWeatherIconVar]</param>
 		<definition>
 			<control type="image">
 				<description>Weather icon 1</description>

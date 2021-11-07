@@ -216,14 +216,14 @@
 								<aligny>center</aligny>
 								<textcolor>grey2</textcolor>
 								<selectedcolor>selected</selectedcolor>
-								<label>$VAR[PVRTimerLabel]</label>
+								<label>$VAR[PVRTimerLabelVar]</label>
 							</control>
 							<control type="image">
 								<left>980</left>
 								<top>10</top>
 								<width>20</width>
 								<height>20</height>
-								<texture>$VAR[PVRTimerIcon]</texture>
+								<texture>$VAR[PVRTimerIconVar]</texture>
 							</control>
 						</control>
 					</itemlayout>
@@ -323,14 +323,14 @@
 								<aligny>center</aligny>
 								<textcolor>grey2</textcolor>
 								<selectedcolor>selected</selectedcolor>
-								<label>$VAR[PVRTimerLabel]</label>
+								<label>$VAR[PVRTimerLabelVar]</label>
 							</control>
 							<control type="image">
 								<left>980</left>
 								<top>10</top>
 								<width>20</width>
 								<height>20</height>
-								<texture>$VAR[PVRTimerIcon]</texture>
+								<texture>$VAR[PVRTimerIconVar]</texture>
 							</control>
 						</control>
 					</focusedlayout>

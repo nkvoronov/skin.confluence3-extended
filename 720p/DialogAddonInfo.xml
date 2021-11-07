@@ -157,7 +157,7 @@
 					<top>140</top>
 					<width>300</width>
 					<height>25</height>
-					<label>$VAR[AddonInfoHeading]</label>
+					<label>$VAR[AddonInfoHeadingVar]</label>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font13</font>
@@ -186,7 +186,7 @@
 						<font>font13</font>
 						<align>left</align>
 						<textcolor>white</textcolor>
-						<label>$VAR[AddonInfoDescription]</label>
+						<label>$VAR[AddonInfoDescriptionVar]</label>
 						<pagecontrol>60</pagecontrol>
 					</control>
 					<control type="scrollbar" id="60">
@@ -252,7 +252,7 @@
 						<font>font13</font>
 						<align>left</align>
 						<textcolor>white</textcolor>
-						<label>$VAR[AddonInfoDescription]</label>
+						<label>$VAR[AddonInfoDescriptionVar]</label>
 						<pagecontrol>61</pagecontrol>
 					</control>
 					<control type="scrollbar" id="61">
@@ -286,7 +286,7 @@
 					<description>What's New button</description>
 					<width>220</width>
 					<height>43</height>
-					<label>$VAR[AddonInfoButtonLabel]</label>
+					<label>$VAR[AddonInfoButtonLabelVar]</label>
 					<align>center</align>
 					<font>font12_title</font>
 					<onclick condition="!String.IsEmpty(Window(home).Property(WhatsNew))">ClearProperty(WhatsNew,home)</onclick>

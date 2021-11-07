@@ -4,7 +4,7 @@
 	<onload condition="String.IsEmpty(Window(Home).Property(MenuItemActive))">SetProperty(MenuItemActive,settings,Home)</onload>
 	<onload condition="String.IsEmpty(Window(Home).Property(MenuBackground))">SetProperty(MenuBackground,special://skin/extras/backgrounds/settings.jpg,Home)</onload>
 	<onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|powermenu&amp;levels=1)</onunload>
-	<include condition="!Skin.HasSetting(InitialSetUpRun)">DefaultInitialSetup</include>
+	<include condition="!Skin.HasSetting(initialsetuprun)">DefaultInitialSetup</include>
 	<controls>
 		<include>CommonCustomBackground</include>
 		<include>CommonBackground</include>
@@ -1041,22 +1041,109 @@
 					<onright>64</onright>
 					<onup>9004</onup>
 					<ondown>9004</ondown>
-					<include content="HomeMainWidgetsItemSettings">
-						<param name="id1" value="41" />
-						<param name="title" value="$LOCALIZE[88133]" />
-						<param name="setchannelstype" value="TV" />
+					<control type="label" id="401">
+						<description>Custom List Addons</description>
+						<width>750</width>
+						<height>45</height>
+						<font>font13_title</font>
+						<label>$LOCALIZE[90121]</label>
+						<textcolor>blue</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<visible>Skin.HasSetting(customlistaddons)</visible>
+					</control>
+					<include content="HomeMainCustomWidgetsAddonsSettings">
+						<param name="id1" value="11" />
+						<param name="title" value="$LOCALIZE[1037]" />
+						<param name="flags" value="enablecustomlistaddonsvideo" />
+						<param name="addontype" value="video" />
+						<param name="type" value="xbmc.addon.video" />
+						<param name="visible" value="Skin.HasSetting(customlistaddons)" />
+					</include>
+					<include content="HomeMainCustomWidgetsAddonsSettings">
+						<param name="id1" value="12" />
+						<param name="title" value="$LOCALIZE[1038]" />
+						<param name="flags" value="enablecustomlistaddonsaudio" />
+						<param name="addontype" value="audio" />
+						<param name="type" value="xbmc.addon.audio" />
+						<param name="visible" value="Skin.HasSetting(customlistaddons)" />
+					</include>
+					<include content="HomeMainCustomWidgetsAddonsSettings">
+						<param name="id1" value="13" />
+						<param name="title" value="$LOCALIZE[35049]" />
+						<param name="flags" value="enablecustomlistaddonsgame" />
+						<param name="addontype" value="game" />
+						<param name="type" value="kodi.gameclient" />
+						<param name="visible" value="Skin.HasSetting(customlistaddons) + System.GetBool(gamesgeneral.enable)" />
+					</include>
+					<include content="HomeMainCustomWidgetsAddonsSettings">
+						<param name="id1" value="14" />
+						<param name="title" value="$LOCALIZE[1043]" />
+						<param name="flags" value="enablecustomlistaddonsprograms" />
+						<param name="addontype" value="programs" />
+						<param name="type" value="xbmc.addon.executable" />
+						<param name="visible" value="Skin.HasSetting(customlistaddons)" />
+					</include>
+					<control type="radiobutton" id="1500">
+						<description>Enable Custom List Addons Android Apps</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<label>$LOCALIZE[20244]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>						
+						<onclick>Skin.ToggleSetting(enablecustomlistaddonsapps)</onclick>
+						<selected>Skin.HasSetting(enablecustomlistaddonsapps)</selected>
+						<visible>System.Platform.Android</visible>
+					</control>
+					<include content="HomeMainCustomWidgetsAddonsSettings">
+						<param name="id1" value="16" />
+						<param name="title" value="$LOCALIZE[1039]" />
+						<param name="flags" value="enablecustomlistaddonsimage" />
+						<param name="addontype" value="image" />
+						<param name="type" value="xbmc.addon.image" />
+						<param name="visible" value="Skin.HasSetting(customlistaddons)" />
+					</include>	
+					<control type="image" id="402">
+						<description>Separator Image</description>
+						<height>2</height>
+						<texture>separator2.png</texture>
+					</control>
+					<control type="label" id="403">
+						<description>PVR Channels</description>
+						<width>750</width>
+						<height>45</height>
+						<font>font13_title</font>
+						<label>$LOCALIZE[90122]</label>
+						<textcolor>blue</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<visible>Skin.HasSetting(customlistchannels)</visible>
+					</control>
+					<include content="HomeMainCustomWidgetsChannelsSettings">
+						<param name="id1" value="21" />
+						<param name="title" value="$LOCALIZE[19020]" />
+						<param name="flags" value="enablecustomListchannelstv" />
+						<param name="channeltype" value="tv" />
 						<param name="type" value="0" />
+						<param name="visible" value="PVR.HasTVChannels + Skin.HasSetting(customlistchannels)" />
 					</include>
-					<include content="HomeMainWidgetsItemSettings">
-						<param name="id1" value="42" />
-						<param name="title" value="$LOCALIZE[88134]" />
-						<param name="setchannelstype" value="Radio" />
+					<include content="HomeMainCustomWidgetsChannelsSettings">
+						<param name="id1" value="22" />
+						<param name="title" value="$LOCALIZE[19021]" />
+						<param name="flags" value="enablecustomlistchannelsradio" />
+						<param name="channeltype" value="radio" />
 						<param name="type" value="1" />
-					</include>
+						<param name="visible" value="PVR.HasRadioChannels + Skin.HasSetting(customlistchannels)" />
+					</include>					
 					<include content="ResetSkinSettingsParams">
-						<param name="control_id1" value="4301" />
-						<param name="control_id2" value="4302" />
-						<param name="action" value="Skin.Reset(ChannelTV.1.Label)|Skin.Reset(ChannelTV.1.ChannelId)|Skin.Reset(ChannelTV.1.Icon)|Skin.Reset(ChannelTV.2.Label)|Skin.Reset(ChannelTV.2.ChannelId)|Skin.Reset(ChannelTV.2.Icon)|Skin.Reset(ChannelTV.3.Label)|Skin.Reset(ChannelTV.3.ChannelId)|Skin.Reset(ChannelTV.3.Icon)|Skin.Reset(ChannelTV.4.Label)|Skin.Reset(ChannelTV.4.ChannelId)|Skin.Reset(ChannelTV.4.Icon)|Skin.Reset(ChannelTV.5.Label)|Skin.Reset(ChannelTV.5.ChannelId)|Skin.Reset(ChannelTV.5.Icon)|Skin.Reset(ChannelTV.6.Label)|Skin.Reset(ChannelTV.6.ChannelId)|Skin.Reset(ChannelTV.6.Icon)|Skin.Reset(ChannelTV.7.Label)|Skin.Reset(ChannelTV.7.ChannelId)|Skin.Reset(ChannelTV.7.Icon)|Skin.Reset(ChannelTV.8.Label)|Skin.Reset(ChannelTV.8.ChannelId)|Skin.Reset(ChannelTV.8.Icon)|Skin.Reset(ChannelTV.9.Label)|Skin.Reset(ChannelTV.9.ChannelId)|Skin.Reset(ChannelTV.9.Icon)|Skin.Reset(ChannelTV.10.Label)|Skin.Reset(ChannelTV.10.ChannelId)|Skin.Reset(ChannelTV.10.Icon)|Skin.Reset(ChannelRadio.1.Label)|Skin.Reset(ChannelRadio.1.ChannelId)|Skin.Reset(ChannelRadio.1.Icon)|Skin.Reset(ChannelRadio.2.Label)|Skin.Reset(ChannelRadio.2.ChannelId)|Skin.Reset(ChannelRadio.2.Icon)|Skin.Reset(ChannelRadio.3.Label)|Skin.Reset(ChannelRadio.3.ChannelId)|Skin.Reset(ChannelRadio.3.Icon)|Skin.Reset(ChannelRadio.4.Label)|Skin.Reset(ChannelRadio.4.ChannelId)|Skin.Reset(ChannelRadio.4.Icon)|Skin.Reset(ChannelRadio.5.Label)|Skin.Reset(ChannelRadio.5.ChannelId)|Skin.Reset(ChannelRadio.5.Icon)|Skin.Reset(ChannelRadio.6.Label)|Skin.Reset(ChannelRadio.6.ChannelId)|Skin.Reset(ChannelRadio.6.Icon)|Skin.Reset(ChannelRadio.7.Label)|Skin.Reset(ChannelRadio.7.ChannelId)|Skin.Reset(ChannelRadio.7.Icon)|Skin.Reset(ChannelRadio.8.Label)|Skin.Reset(ChannelRadio.8.ChannelId)|Skin.Reset(ChannelRadio.8.Icon)|Skin.Reset(ChannelRadio.9.Label)|Skin.Reset(ChannelRadio.9.ChannelId)|Skin.Reset(ChannelRadio.9.Icon)|Skin.Reset(ChannelRadio.10.Label)|Skin.Reset(ChannelRadio.10.ChannelId)|Skin.Reset(ChannelRadio.10.Icon)" />
+						<param name="control_id1" value="2300" />
+						<param name="control_id2" value="2301" />
+						<param name="action" value="Skin.Reset(enablecustomlistaddonsvideo)|Skin.Reset(addonsetvideo.0.label)|Skin.Reset(addonsetvideo.0.name)|Skin.Reset(addonsetvideo.0.icon)|Skin.Reset(addonsetvideo.1.label)|Skin.Reset(addonsetvideo.1.name)|Skin.Reset(addonsetvideo.1.icon)|Skin.Reset(addonsetvideo.2.label)|Skin.Reset(addonsetvideo.2.name)|Skin.Reset(addonsetvideo.2.icon)|Skin.Reset(addonsetvideo.3.label)|Skin.Reset(addonsetvideo.3.name)|Skin.Reset(addonsetvideo.3.icon)|Skin.Reset(addonsetvideo.4.label)|Skin.Reset(addonsetvideo.4.name)|Skin.Reset(addonsetvideo.4.icon)|Skin.Reset(addonsetvideo.5.label)|Skin.Reset(addonsetvideo.5.name)|Skin.Reset(addonsetvideo.5.icon)|Skin.Reset(addonsetvideo.6.label)|Skin.Reset(addonsetvideo.6.name)|Skin.Reset(addonsetvideo.6.icon)|Skin.Reset(addonsetvideo.7.label)|Skin.Reset(addonsetvideo.7.name)|Skin.Reset(addonsetvideo.7.icon)|Skin.Reset(addonsetvideo.8.label)|Skin.Reset(addonsetvideo.8.name)|Skin.Reset(addonsetvideo.8.icon)|Skin.Reset(addonsetvideo.9.label)|Skin.Reset(addonsetvideo.9.name)|Skin.Reset(addonsetvideo.9.icon)|Skin.Reset(enablecustomlistaddonsaudio)|Skin.Reset(addonsetaudio.0.label)|Skin.Reset(addonsetaudio.0.name)|Skin.Reset(addonsetaudio.0.icon)|Skin.Reset(addonsetaudio.1.label)|Skin.Reset(addonsetaudio.1.name)|Skin.Reset(addonsetaudio.1.icon)|Skin.Reset(addonsetaudio.2.label)|Skin.Reset(addonsetaudio.2.name)|Skin.Reset(addonsetaudio.2.icon)|Skin.Reset(addonsetaudio.3.label)|Skin.Reset(addonsetaudio.3.name)|Skin.Reset(addonsetaudio.3.icon)|Skin.Reset(addonsetaudio.4.label)|Skin.Reset(addonsetaudio.4.name)|Skin.Reset(addonsetaudio.4.icon)|Skin.Reset(addonsetaudio.5.label)|Skin.Reset(addonsetaudio.5.name)|Skin.Reset(addonsetaudio.5.icon)|Skin.Reset(addonsetaudio.6.label)|Skin.Reset(addonsetaudio.6.name)|Skin.Reset(addonsetaudio.6.icon)|Skin.Reset(addonsetaudio.7.label)|Skin.Reset(addonsetaudio.7.name)|Skin.Reset(addonsetaudio.7.icon)|Skin.Reset(addonsetaudio.8.label)|Skin.Reset(addonsetaudio.8.name)|Skin.Reset(addonsetaudio.8.icon)|Skin.Reset(addonsetaudio.9.label)|Skin.Reset(addonsetaudio.9.name)|Skin.Reset(addonsetaudio.9.icon)|Skin.Reset(enablecustomlistaddonsgame)|Skin.Reset(addonsetgame.0.label)|Skin.Reset(addonsetgame.0.name)|Skin.Reset(addonsetgame.0.icon)|Skin.Reset(addonsetgame.1.label)|Skin.Reset(addonsetgame.1.name)|Skin.Reset(addonsetgame.1.icon)|Skin.Reset(addonsetgame.2.label)|Skin.Reset(addonsetgame.2.name)|Skin.Reset(addonsetgame.2.icon)|Skin.Reset(addonsetgame.3.label)|Skin.Reset(addonsetgame.3.name)|Skin.Reset(addonsetgame.3.icon)|Skin.Reset(addonsetgame.4.label)|Skin.Reset(addonsetgame.4.name)|Skin.Reset(addonsetgame.4.icon)|Skin.Reset(addonsetgame.5.label)|Skin.Reset(addonsetgame.5.name)|Skin.Reset(addonsetgame.5.icon)|Skin.Reset(addonsetgame.6.label)|Skin.Reset(addonsetgame.6.name)|Skin.Reset(addonsetgame.6.icon)|Skin.Reset(addonsetgame.7.label)|Skin.Reset(addonsetgame.7.name)|Skin.Reset(addonsetgame.7.icon)|Skin.Reset(addonsetgame.8.label)|Skin.Reset(addonsetgame.8.name)|Skin.Reset(addonsetgame.8.icon)|Skin.Reset(addonsetgame.9.label)|Skin.Reset(addonsetgame.9.name)|Skin.Reset(addonsetgame.9.icon)|Skin.Reset(enablecustomlistaddonsprograms)|Skin.Reset(addonsetprograms.0.label)|Skin.Reset(addonsetprograms.0.name)|Skin.Reset(addonsetprograms.0.icon)|Skin.Reset(addonsetprograms.1.label)|Skin.Reset(addonsetprograms.1.name)|Skin.Reset(addonsetprograms.1.icon)|Skin.Reset(addonsetprograms.2.label)|Skin.Reset(addonsetprograms.2.name)|Skin.Reset(addonsetprograms.2.icon)|Skin.Reset(addonsetprograms.3.label)|Skin.Reset(addonsetprograms.3.name)|Skin.Reset(addonsetprograms.3.icon)|Skin.Reset(addonsetprograms.4.label)|Skin.Reset(addonsetprograms.4.name)|Skin.Reset(addonsetprograms.4.icon)|Skin.Reset(addonsetprograms.5.label)|Skin.Reset(addonsetprograms.5.name)|Skin.Reset(addonsetprograms.5.icon)|Skin.Reset(addonsetprograms.6.label)|Skin.Reset(addonsetprograms.6.name)|Skin.Reset(addonsetprograms.6.icon)|Skin.Reset(addonsetprograms.7.label)|Skin.Reset(addonsetprograms.7.name)|Skin.Reset(addonsetprograms.7.icon)|Skin.Reset(addonsetprograms.8.label)|Skin.Reset(ADDONSETPROGRAMS.8.NAME)|Skin.Reset(addonsetprograms.8.icon)|Skin.Reset(addonsetprograms.9.label)|Skin.Reset(addonsetprograms.9.name)|Skin.Reset(addonsetprograms.9.icon)|Skin.Reset(enablecustomlistaddonsapps)|Skin.Reset(enablecustomlistaddonsimage)|Skin.Reset(addonsetimage.0.label)|Skin.Reset(addonsetimage.0.name)|Skin.Reset(addonsetimage.0.icon)|Skin.Reset(addonsetimage.1.label)|Skin.Reset(addonsetimage.1.name)|Skin.Reset(addonsetimage.1.icon)|Skin.Reset(addonsetimage.2.label)|Skin.Reset(addonsetimage.2.name)|Skin.Reset(addonsetimage.2.icon)|Skin.Reset(addonsetimage.3.label)|Skin.Reset(addonsetimage.3.name)|Skin.Reset(addonsetimage.3.icon)|Skin.Reset(addonsetimage.4.label)|Skin.Reset(addonsetimage.4.name)|Skin.Reset(addonsetimage.4.icon)|Skin.Reset(addonsetimage.5.label)|Skin.Reset(addonsetimage.5.name)|Skin.Reset(addonsetimage.5.icon)|Skin.Reset(addonsetimage.6.label)|Skin.Reset(addonsetimage.6.name)|Skin.Reset(addonsetimage.6.icon)|Skin.Reset(addonsetimage.7.label)|Skin.Reset(addonsetimage.7.name)|Skin.Reset(addonsetimage.7.icon)|Skin.Reset(addonsetimage.8.label)|Skin.Reset(addonsetimage.8.name)|Skin.Reset(addonsetimage.8.icon)|Skin.Reset(addonsetimage.9.label)|Skin.Reset(addonsetimage.9.name)|Skin.Reset(addonsetimage.9.icon)|Skin.Reset(enablecustomListchannelstv)|Skin.Reset(channeltv.0.label)|Skin.Reset(channeltv.0.channelid)|Skin.Reset(channeltv.0.icon)|Skin.Reset(channeltv.1.label)|Skin.Reset(channeltv.1.channelid)|Skin.Reset(channeltv.1.icon)|Skin.Reset(channeltv.2.label)|Skin.Reset(channeltv.2.channelid)|Skin.Reset(channeltv.2.icon)|Skin.Reset(channeltv.3.label)|Skin.Reset(channeltv.3.channelid)|Skin.Reset(channeltv.3.icon)|Skin.Reset(channeltv.4.label)|Skin.Reset(channeltv.4.channelid)|Skin.Reset(channeltv.4.icon)|Skin.Reset(channeltv.5.label)|Skin.Reset(channeltv.5.channelid)|Skin.Reset(channeltv.5.icon)|Skin.Reset(channeltv.6.label)|Skin.Reset(channeltv.6.channelid)|Skin.Reset(channeltv.6.icon)|Skin.Reset(channeltv.7.label)|Skin.Reset(channeltv.7.channelid)|Skin.Reset(channeltv.7.icon)|Skin.Reset(channeltv.8.label)|Skin.Reset(channeltv.8.channelid)|Skin.Reset(channeltv.8.icon)|Skin.Reset(channeltv.9.label)|Skin.Reset(channeltv.9.channelid)|Skin.Reset(channeltv.9.icon)|Skin.Reset(enablecustomlistchannelsradio)|Skin.Reset(channelradio.0.label)|Skin.Reset(channelradio.0.channelid)|Skin.Reset(channelradio.0.icon)|Skin.Reset(channelradio.1.label)|Skin.Reset(channelradio.1.channelid)|Skin.Reset(channelradio.1.icon)|Skin.Reset(channelradio.2.label)|Skin.Reset(channelradio.2.channelid)|Skin.Reset(channelradio.2.icon)|Skin.Reset(channelradio.3.label)|Skin.Reset(channelradio.3.channelid)|Skin.Reset(channelradio.3.icon)|Skin.Reset(channelradio.4.label)|Skin.Reset(channelradio.4.channelid)|Skin.Reset(channelradio.4.ICON)|Skin.Reset(channelradio.5.label)|Skin.Reset(channelradio.5.channelid)|Skin.Reset(channelradio.5.icon)|Skin.Reset(channelradio.6.label)|Skin.Reset(channelradio.6.channelid)|Skin.Reset(channelradio.6.icon)|Skin.Reset(channelradio.7.label)|Skin.Reset(channelradio.7.channelid)|Skin.Reset(channelradio.7.icon)|Skin.Reset(channelradio.8.label)|Skin.Reset(channelradio.8.channelid)|Skin.Reset(channelradio.8.icon)|Skin.Reset(channelradio.9.label)|Skin.Reset(channelradio.9.channelid)|Skin.Reset(channelradio.9.icon)" />
 					</include>
 				</control>
 				<control type="scrollbar" id="64">

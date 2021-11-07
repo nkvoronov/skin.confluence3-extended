@@ -41,7 +41,7 @@
 				<height>200</height>
 				<aspectratio align="center">keep</aspectratio>
 				<fadetime>IconCrossfadeTime</fadetime>
-				<texture>$VAR[PosterThumb]</texture>
+				<texture>$VAR[PosterThumbVar]</texture>
 				<bordertexture border="8">ThumbShadow.png</bordertexture>
 				<bordersize>8</bordersize>
 			</control>

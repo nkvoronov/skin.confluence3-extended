@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
 	<!-- AutoCompletion Content -->
-	<variable name="AutoCompletionContent">
+	<variable name="AutoCompletionContentVar">
 		<value condition="System.HasAddon(plugin.program.autocompletion) + !System.HasHiddenInput">plugin://plugin.program.autocompletion?info=autocomplete&amp;&amp;id=$INFO[Control.GetLabel(312).index(1)]&amp;&amp;limit=8</value>
 	</variable>
 	<variable name="FavoritesButtonLabelVar">
@@ -9,7 +9,7 @@
 		<value condition="!String.IsEmpty(Skin.String(UsrFavBtnCmd.Label))">$INFO[Skin.String(UsrFavBtnCmd.Label)]</value>
 		<value>$LOCALIZE[1036]</value>
 	</variable>
-	<variable name="FavoritesButtonCommand">
+	<variable name="FavoritesButtonCommandVar">
 		<value condition="Skin.String(UsrFavBtnCmd.Path,AutoSuggest) + [String.IsEqual(Container(9000).ListItem.Property(defaultID),movies) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[342])]">ActivateWindow(2125)</value>
 		<value condition="Skin.String(UsrFavBtnCmd.Path,AutoSuggest) + [String.IsEqual(Container(9000).ListItem.Property(defaultID),tvshows) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[20343])]">ActivateWindow(2124)</value>
 		<value condition="Skin.String(UsrFavBtnCmd.Path,AutoSuggest) + [String.IsEqual(Container(9000).ListItem.Property(defaultID),music) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[2])]">ActivateWindow(2123)</value>
@@ -23,12 +23,12 @@
 		<value condition="!String.IsEmpty(Skin.String(usrpwrbtncmd.Label))">$INFO[Skin.String(usrpwrbtncmd.Label)]</value>
 		<value>$LOCALIZE[89707]</value>
 	</variable>
-	<variable name="PowerButtonCommand">
+	<variable name="PowerButtonCommandVar">
 		<value condition="!String.IsEmpty(Skin.String(usrpwrbtncmd.Path))">$INFO[Skin.String(usrpwrbtncmd.Path)]</value>
 		<value>ActivateWindow(ShutdownMenu)</value>
 	</variable>
 	<!-- Stats bar -->
-	<variable name="InfoBarStats">
+	<variable name="InfoBarStatsVar">
 		<!-- Videos -->
 		<value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),video) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[3])">[B][COLOR=$INFO[Skin.String(menuColor)]]$LOCALIZE[20342]: [/COLOR][/B]$INFO[Window.Property(Movies.Count)]  [B][COLOR=$INFO[Skin.String(menuColor)]]$LOCALIZE[20343]: [/COLOR][/B]$INFO[Window.Property(TVShows.Count)]  [B][COLOR=$INFO[Skin.String(menuColor)]]$LOCALIZE[20389]: [/COLOR][/B]$INFO[Window.Property(MusicVideos.Count)]</value>
 		<!-- Movies -->
@@ -45,13 +45,13 @@
 		<!-- Weather -->
 		<value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),weather) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[8])">[B][COLOR=$INFO[Skin.String(menuColor)]]$LOCALIZE[143][/COLOR][/B] $INFO[Window(weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits]  [B][COLOR=$INFO[Skin.String(menuColor)]]$LOCALIZE[33030]: [/COLOR][/B]$INFO[Window(weather).Property(Current.Condition)]</value>
 		<!-- TV -->
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),livetv) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[19020])">[B][COLOR=$INFO[Skin.String(menuColor)]]$LOCALIZE[19019]: [/COLOR][/B] $INFO[Window(Home).Property(SkinHelper.TotalTVChannels)]</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),livetv) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[19020])">[B][COLOR=$INFO[Skin.String(menuColor)]]$LOCALIZE[19019]: [/COLOR][/B] $INFO[Window(Home).Property(SkinUtils.TotalTVChannels)]</value>
 		<!-- Radio -->
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),radio) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[19021])">[B][COLOR=$INFO[Skin.String(menuColor)]]$LOCALIZE[19019]: [/COLOR][/B] $INFO[Window(Home).Property(SkinHelper.TotalRadioChannels)]</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),radio) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[19021])">[B][COLOR=$INFO[Skin.String(menuColor)]]$LOCALIZE[19019]: [/COLOR][/B] $INFO[Window(Home).Property(SkinUtils.TotalRadioChannels)]</value>
 		<!-- Game -->
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),games) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[15016])">[B][COLOR=$INFO[Skin.String(menuColor)]]$LOCALIZE[15016]: [/COLOR][/B] $INFO[Window(Home).Property(SkinHelper.TotalGamesAddons)]</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),games) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[15016])">[B][COLOR=$INFO[Skin.String(menuColor)]]$LOCALIZE[15016]: [/COLOR][/B] $INFO[Window(Home).Property(SkinUtils.TotalGamesAddons)]</value>
 		<!-- Addons -->
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),addons) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[15016]) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[24001]) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[90017])">[B][COLOR=$INFO[Skin.String(menuColor)]]$LOCALIZE[3]: [/COLOR][/B] $INFO[Window(Home).Property(SkinHelper.TotalVideoAddons)]  [B][COLOR=$INFO[Skin.String(menuColor)]]$LOCALIZE[2]: [/COLOR][/B] $INFO[Window(Home).Property(SkinHelper.TotalAudioAddons)]  [B][COLOR=$INFO[Skin.String(menuColor)]]$LOCALIZE[15016]: [/COLOR][/B] $INFO[Window(Home).Property(SkinHelper.TotalGamesAddons)]  [B][COLOR=$INFO[Skin.String(menuColor)]]$LOCALIZE[0]: [/COLOR][/B] $INFO[Window(Home).Property(SkinHelper.TotalProgramAddons)]  [B][COLOR=$INFO[Skin.String(menuColor)]]$LOCALIZE[1]: [/COLOR][/B] $INFO[Window(Home).Property(SkinHelper.TotalPicturesAddons)]</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),addons) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[15016]) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[24001]) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[90017])">[B][COLOR=$INFO[Skin.String(menuColor)]]$LOCALIZE[3]: [/COLOR][/B] $INFO[Window(Home).Property(SkinUtils.TotalVideoAddons)]  [B][COLOR=$INFO[Skin.String(menuColor)]]$LOCALIZE[2]: [/COLOR][/B] $INFO[Window(Home).Property(SkinUtils.TotalAudioAddons)]  [B][COLOR=$INFO[Skin.String(menuColor)]]$LOCALIZE[15016]: [/COLOR][/B] $INFO[Window(Home).Property(SkinUtils.TotalGamesAddons)]  [B][COLOR=$INFO[Skin.String(menuColor)]]$LOCALIZE[0]: [/COLOR][/B] $INFO[Window(Home).Property(SkinUtils.TotalProgramAddons)]  [B][COLOR=$INFO[Skin.String(menuColor)]]$LOCALIZE[1]: [/COLOR][/B] $INFO[Window(Home).Property(SkinUtils.TotalPicturesAddons)]</value>
 		<!-- Other -->
 		<value condition="!String.Contains(System.CPUTemperature,?) + !String.Contains(System.GPUTemperature,?)">[B][COLOR=$INFO[Skin.String(menuColor)]]IP: [/COLOR][/B]$INFO[Network.IPAddress]  [B][COLOR=$INFO[Skin.String(menuColor)]]CPU: [/COLOR][/B]$INFO[System.CPUTemperature]  [B][COLOR=$INFO[Skin.String(menuColor)]]GPU: [/COLOR][/B]$INFO[System.GPUTemperature]</value>
 		<value condition="!String.Contains(System.CPUTemperature,?)">[B][COLOR=$INFO[Skin.String(menuColor)]]IP: [/COLOR][/B]$INFO[Network.IPAddress]  [B][COLOR=$INFO[Skin.String(menuColor)]]CPU: [/COLOR][/B]$INFO[System.CPUTemperature]  [B][COLOR=$INFO[Skin.String(menuColor)]]$LOCALIZE[155]: [/COLOR][/B]$INFO[System.UsedSpacePercent]</value>
@@ -162,18 +162,18 @@
 		<value>5</value>
 	</variable>
 	<!-- Current Weather Icon -->
-	<variable name="CurrentWeatherIcon">
+	<variable name="CurrentWeatherIconVar">
 		<value condition="!String.IsEmpty(Skin.String(WeatherIcons.path)) + !Skin.HasSetting(WeatherIcons.multi)">$INFO[Skin.String(WeatherIcons.path)]$INFO[Window(weather).Property(Current.FanartCode),,.png]</value>
 		<value condition="!String.IsEmpty(Skin.String(WeatherIcons.path)) + Skin.HasSetting(WeatherIcons.multi)">$INFO[Skin.String(WeatherIcons.path)]$INFO[Window(weather).Property(Current.FanartCode),,/]</value>
 		<value>$INFO[Weather.Conditions]</value>
 	</variable>
 	<!-- Fanart Background -->
-	<variable name="FanartBackground">
+	<variable name="FanartBackgroundVar">
 		<value condition="Window.IsActive(videos) + Container.Content(genres) + !String.IsEmpty(Skin.String(MovieGenreFanart.path))">$INFO[Skin.String(MovieGenreFanart.path)]$INFO[ListItem.Label]$INFO[Skin.String(MovieGenreFanart.ext)]</value>
 		<value>$INFO[ListItem.Art(fanart)]</value>
 	</variable>
 	<!-- Background Audio -->
-	<variable name="BackgroundAudio">
+	<variable name="BackgroundAudioVar">
 		<value condition="!String.IsEmpty(Skin.String(audiobackground))">$INFO[Skin.String(audiobackground)]</value>
 		<value>special://skin/extras/backgrounds/music.jpg</value>
 	</variable>
@@ -182,26 +182,26 @@
 		<value condition="!String.IsEmpty(Skin.String(audiobackground))">$INFO[Skin.String(audiobackground)]</value>
 		<value>$LOCALIZE[15109]</value>
 	</variable>
-	<variable name="GlobalSearchLabel2">
+	<variable name="GlobalSearchLabel2Var">
 		<value condition="Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)">$INFO[ListItem.Rating]</value>
 		<value condition="Container.Content(Songs) | Container.Content(LiveTV)">$INFO[ListItem.Duration]</value>
 		<value>$INFO[ListItem.Label2]</value>
 	</variable>
 	<!-- -->
-	<variable name="SkinShortcutsTitle">
+	<variable name="SkinShortcutsTitleVar">
 		<value condition="!String.IsEmpty(Window.Property(groupname)) + String.IsEqual(Window.Property(groupname),mainmenu)">[COLOR=blue] - [/COLOR]$ADDON[script.skinshortcuts 32071]</value>
 		<value condition="!String.IsEmpty(Window.Property(groupname)) + String.IsEqual(Window.Property(groupname),powermenu)">[COLOR=blue] - [/COLOR]$LOCALIZE[90000]</value>
 		<value condition="!String.IsEmpty(Window.Property(groupname)) + !String.IsEqual(Window.Property(groupname),mainmenu) + !String.IsEqual(Window.Property(groupname),powermenu) + !String.Contains(Window.Property(groupname),.)">[COLOR=blue] - [/COLOR]$ADDON[script.skinshortcuts 32072]</value>
 		<value condition="!String.IsEmpty(Window.Property(groupname)) + !String.IsEqual(Window.Property(groupname),mainmenu) + !String.IsEqual(Window.Property(groupname),powermenu) + String.EndsWith(Window.Property(groupname),.1)">[COLOR=blue] - [/COLOR]$LOCALIZE[24020] $LOCALIZE[89003]</value>
 		<value condition="!String.IsEmpty(Window.Property(groupname)) + !String.IsEqual(Window.Property(groupname),mainmenu) + !String.IsEqual(Window.Property(groupname),powermenu) + String.EndsWith(Window.Property(groupname),.2)">[COLOR=blue] - [/COLOR]$LOCALIZE[24020] $LOCALIZE[89004]</value>
 	</variable>
-	<variable name="SkinShortcutsTitleDlg">
+	<variable name="SkinShortcutsTitleDlgVar">
 		<value condition="!String.IsEmpty(Window.Property(groupname)) + String.IsEqual(Window.Property(groupname),mainmenu)">$LOCALIZE[513]</value>
 		<value condition="!String.IsEmpty(Window.Property(groupname)) + String.IsEqual(Window.Property(groupname),powermenu)">$LOCALIZE[89707]</value>
 		<value condition="!String.IsEmpty(Window.Property(groupname)) + !String.IsEqual(Window.Property(groupname),mainmenu) + !String.IsEqual(Window.Property(groupname),powermenu) + !String.Contains(Window.Property(groupname),.)">$LOCALIZE[1034] ($INFO[Window.Property(groupDisplayName)])</value>
 		<value condition="!String.IsEmpty(Window.Property(groupname)) + !String.IsEqual(Window.Property(groupname),mainmenu) + !String.IsEqual(Window.Property(groupname),powermenu) + String.EndsWith(Window.Property(groupname),.1)">$LOCALIZE[89003] ($INFO[Window.Property(groupDisplayName)])</value>
 	</variable>
-	<variable name="SkinShortcutsGrouping">
+	<variable name="SkinShortcutsGroupingVar">
 		<value condition="!String.Contains(Window.Property(groupname),.)">menus</value>
 		<value condition="String.EndsWith(Window.Property(groupname),.1)">addons</value>
 	</variable>

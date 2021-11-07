@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="utf-8"?>
+<includes>
+	<include name="HomeMainCustomWidgetsAddonsSettings">
+		<control type="radiobutton" id="$PARAM[id1]00">
+			<description>Widgets Addons Enable</description>
+			<width>750</width>
+			<height>40</height>
+			<font>font13</font>
+			<label>$PARAM[title]</label>
+			<textcolor>grey2</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<texturefocus>MenuItemFO.png</texturefocus>
+			<texturenofocus>MenuItemNF.png</texturenofocus>
+			<onclick>Skin.ToggleSetting($PARAM[flags])</onclick>
+			<selected>Skin.HasSetting($PARAM[flags])</selected>
+			<visible>$PARAM[visible]</visible>
+		</control>
+		<control type="button" id="$PARAM[id1]01">
+			<description>Widgets Addons 01</description>
+			<width>750</width>
+			<height>40</height>
+			<font>font13</font>
+			<textcolor>grey2</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<label>- $LOCALIZE[24000] [B]1[/B]</label>
+			<label2>[COLOR=selected]$INFO[Skin.String(addonset$PARAM[addontype].0.label)][/COLOR]</label2>
+			<texturefocus>MenuItemFO.png</texturefocus>
+			<texturenofocus>MenuItemNF.png</texturenofocus>
+			<include content="HomeMainCustomWidgetsSelectAddons">
+				<param name="type" value="$PARAM[type]" />
+				<param name="addontype" value="$PARAM[addontype]" />
+				<param name="id1" value="0" />
+			</include>
+			<visible>Skin.HasSetting($PARAM[flags])</visible>
+			<visible>$PARAM[visible]</visible>
+		</control>
+		<control type="button" id="$PARAM[id1]02">
+			<description>Widgets Addons 02</description>
+			<width>750</width>
+			<height>40</height>
+			<font>font13</font>
+			<textcolor>grey2</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<label>- $LOCALIZE[24000] [B]2[/B]</label>
+			<label2>[COLOR=selected]$INFO[Skin.String(addonset$PARAM[addontype].1.label)][/COLOR]</label2>
+			<texturefocus>MenuItemFO.png</texturefocus>
+			<texturenofocus>MenuItemNF.png</texturenofocus>
+			<include content="HomeMainCustomWidgetsSelectAddons">
+				<param name="type" value="$PARAM[type]" />
+				<param name="addontype" value="$PARAM[addontype]" />
+				<param name="id1" value="1" />
+			</include>
+			<visible>Skin.HasSetting($PARAM[flags])</visible>
+			<visible>!String.IsEmpty(Skin.String(addonset$PARAM[addontype].0.label))</visible>
+			<visible>$PARAM[visible]</visible>
+		</control>
+		<control type="button" id="$PARAM[id1]03">
+			<description>Widgets Addons 03</description>
+			<width>750</width>
+			<height>40</height>
+			<font>font13</font>
+			<textcolor>grey2</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<label>- $LOCALIZE[24000] [B]3[/B]</label>
+			<label2>[COLOR=selected]$INFO[Skin.String(addonset$PARAM[addontype].2.label)][/COLOR]</label2>
+			<texturefocus>MenuItemFO.png</texturefocus>
+			<texturenofocus>MenuItemNF.png</texturenofocus>
+			<include content="HomeMainCustomWidgetsSelectAddons">
+				<param name="type" value="$PARAM[type]" />
+				<param name="addontype" value="$PARAM[addontype]" />
+				<param name="id1" value="2" />
+			</include>
+			<visible>Skin.HasSetting($PARAM[flags])</visible>
+			<visible>!String.IsEmpty(Skin.String(addonset$PARAM[addontype].1.label))</visible>
+			<visible>$PARAM[visible]</visible>
+		</control>
+		<control type="button" id="$PARAM[id1]04">
+			<description>Widgets Addons 04</description>
+			<width>750</width>
+			<height>40</height>
+			<font>font13</font>
+			<textcolor>grey2</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<label>- $LOCALIZE[24000] [B]4[/B]</label>
+			<label2>[COLOR=selected]$INFO[Skin.String(addonset$PARAM[addontype].3.label)][/COLOR]</label2>
+			<texturefocus>MenuItemFO.png</texturefocus>
+			<texturenofocus>MenuItemNF.png</texturenofocus>
+			<include content="HomeMainCustomWidgetsSelectAddons">
+				<param name="type" value="$PARAM[type]" />
+				<param name="addontype" value="$PARAM[addontype]" />
+				<param name="id1" value="3" />
+			</include>
+			<visible>Skin.HasSetting($PARAM[flags])</visible>
+			<visible>!String.IsEmpty(Skin.String(addonset$PARAM[addontype].2.label))</visible>
+			<visible>$PARAM[visible]</visible>
+		</control>
+		<control type="button" id="$PARAM[id1]05">
+			<description>Widgets Addons 05</description>
+			<width>750</width>
+			<height>40</height>
+			<font>font13</font>
+			<textcolor>grey2</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<label>- $LOCALIZE[24000] [B]5[/B]</label>
+			<label2>[COLOR=selected]$INFO[Skin.String(addonset$PARAM[addontype].4.label)][/COLOR]</label2>
+			<texturefocus>MenuItemFO.png</texturefocus>
+			<texturenofocus>MenuItemNF.png</texturenofocus>
+			<include content="HomeMainCustomWidgetsSelectAddons">
+				<param name="type" value="$PARAM[type]" />
+				<param name="addontype" value="$PARAM[addontype]" />
+				<param name="id1" value="4" />
+			</include>
+			<visible>Skin.HasSetting($PARAM[flags])</visible>
+			<visible>!String.IsEmpty(Skin.String(addonset$PARAM[addontype].3.label))</visible>
+			<visible>$PARAM[visible]</visible>
+		</control>
+		<control type="button" id="$PARAM[id1]06">
+			<description>Widgets Addons 06</description>
+			<width>750</width>
+			<height>40</height>
+			<font>font13</font>
+			<textcolor>grey2</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<label>- $LOCALIZE[24000] [B]6[/B]</label>
+			<label2>[COLOR=selected]$INFO[Skin.String(addonset$PARAM[addontype].5.label)][/COLOR]</label2>
+			<texturefocus>MenuItemFO.png</texturefocus>
+			<texturenofocus>MenuItemNF.png</texturenofocus>
+			<include content="HomeMainCustomWidgetsSelectAddons">
+				<param name="type" value="$PARAM[type]" />
+				<param name="addontype" value="$PARAM[addontype]" />
+				<param name="id1" value="5" />
+			</include>
+			<visible>Skin.HasSetting($PARAM[flags])</visible>
+			<visible>!String.IsEmpty(Skin.String(addonset$PARAM[addontype].4.label))</visible>
+			<visible>$PARAM[visible]</visible>
+		</control>
+		<control type="button" id="$PARAM[id1]07">
+			<description>Widgets Addons 07</description>
+			<width>750</width>
+			<height>40</height>
+			<font>font13</font>
+			<textcolor>grey2</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<label>- $LOCALIZE[24000] [B]7[/B]</label>
+			<label2>[COLOR=selected]$INFO[Skin.String(addonset$PARAM[addontype].6.label)][/COLOR]</label2>
+			<texturefocus>MenuItemFO.png</texturefocus>
+			<texturenofocus>MenuItemNF.png</texturenofocus>
+			<include content="HomeMainCustomWidgetsSelectAddons">
+				<param name="type" value="$PARAM[type]" />
+				<param name="addontype" value="$PARAM[addontype]" />
+				<param name="id1" value="6" />
+			</include>
+			<visible>Skin.HasSetting($PARAM[flags])</visible>
+			<visible>!String.IsEmpty(Skin.String(addonset$PARAM[addontype].5.label))</visible>
+			<visible>$PARAM[visible]</visible>
+		</control>
+		<control type="button" id="$PARAM[id1]08">
+			<description>Widgets Addons 08</description>
+			<width>750</width>
+			<height>40</height>
+			<font>font13</font>
+			<textcolor>grey2</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<label>- $LOCALIZE[24000] [B]8[/B]</label>
+			<label2>[COLOR=selected]$INFO[Skin.String(addonset$PARAM[addontype].7.label)][/COLOR]</label2>
+			<texturefocus>MenuItemFO.png</texturefocus>
+			<texturenofocus>MenuItemNF.png</texturenofocus>
+			<include content="HomeMainCustomWidgetsSelectAddons">
+				<param name="type" value="$PARAM[type]" />
+				<param name="addontype" value="$PARAM[addontype]" />
+				<param name="id1" value="7" />
+			</include>
+			<visible>Skin.HasSetting($PARAM[flags])</visible>
+			<visible>!String.IsEmpty(Skin.String(addonset$PARAM[addontype].6.label))</visible>
+			<visible>$PARAM[visible]</visible>
+		</control>
+		<control type="button" id="$PARAM[id1]09">
+			<description>Widgets Addons 09</description>
+			<width>750</width>
+			<height>40</height>
+			<font>font13</font>
+			<textcolor>grey2</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<label>- $LOCALIZE[24000] [B]9[/B]</label>
+			<label2>[COLOR=selected]$INFO[Skin.String(addonset$PARAM[addontype].8.label)][/COLOR]</label2>
+			<texturefocus>MenuItemFO.png</texturefocus>
+			<texturenofocus>MenuItemNF.png</texturenofocus>
+			<include content="HomeMainCustomWidgetsSelectAddons">
+				<param name="type" value="$PARAM[type]" />
+				<param name="addontype" value="$PARAM[addontype]" />
+				<param name="id1" value="8" />
+			</include>
+			<visible>Skin.HasSetting($PARAM[flags])</visible>
+			<visible>!String.IsEmpty(Skin.String(addonset$PARAM[addontype].7.label))</visible>
+			<visible>$PARAM[visible]</visible>
+		</control>
+		<control type="button" id="$PARAM[id1]10">
+			<description>Widgets Addons 10</description>
+			<width>750</width>
+			<height>40</height>
+			<font>font13</font>
+			<textcolor>grey2</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<label>- $LOCALIZE[24000] [B]10[/B]</label>
+			<label2>[COLOR=selected]$INFO[Skin.String(addonset$PARAM[addontype].9.label)][/COLOR]</label2>
+			<texturefocus>MenuItemFO.png</texturefocus>
+			<texturenofocus>MenuItemNF.png</texturenofocus>
+			<include content="HomeMainCustomWidgetsSelectAddons">
+				<param name="type" value="$PARAM[type]" />
+				<param name="addontype" value="$PARAM[addontype]" />
+				<param name="id1" value="9" />
+			</include>
+			<visible>Skin.HasSetting($PARAM[flags])</visible>
+			<visible>!String.IsEmpty(Skin.String(addonset$PARAM[addontype].8.label))</visible>
+			<visible>$PARAM[visible]</visible>
+		</control>
+	</include>
+	<include name="HomeMainCustomWidgetsSelectAddons">
+		<onclick>Skin.Reset(usrselectaddon)</onclick>
+		<onclick>Skin.SetAddon(usrselectaddon,$PARAM[type])</onclick>
+		<onclick>Skin.SetString(addonset$PARAM[addontype].$PARAM[id1].label,$INFO[system.addontitle(Skin.String(usrselectaddon))])</onclick>
+		<onclick>Skin.SetString(addonset$PARAM[addontype].$PARAM[id1].Name,$INFO[Skin.String(usrselectaddon)])</onclick>
+		<onclick>Skin.SetString(addonset$PARAM[addontype].$PARAM[id1].icon,$INFO[system.addonicon(Skin.String(usrselectaddon))])</onclick>
+	</include>
+	<include name="HomeCustomAddonsItems">
+		<item id="1">
+			<label>$INFO[Skin.String(addonset$PARAM[id2].0.label)]</label>
+			<onclick>RunAddon($INFO[Skin.String(addonset$PARAM[id2].0.name)])</onclick>
+			<icon>$INFO[Skin.String(addonset$PARAM[id2].0.icon)]</icon>
+			<thumb>$INFO[Skin.String(addonset$PARAM[id2].0.icon)]</thumb>
+			<property name="AddonVersion">$INFO[system.addonversion(Skin.String(addonset$PARAM[id2].0.name))]</property>
+			<property name="AddonFanart">special://home/addons/$INFO[Skin.String(addonset$PARAM[id2].0.name)]/fanart.jpg</property>
+			<visible>!String.IsEmpty(Skin.String(addonset$PARAM[id2].0.name))</visible>
+		</item>
+		<item id="2">
+			<label>$INFO[Skin.String(addonset$PARAM[id2].1.label)]</label>
+			<onclick>RunAddon($INFO[Skin.String(addonset$PARAM[id2].1.name)])</onclick>
+			<icon>$INFO[Skin.String(addonset$PARAM[id2].1.icon)]</icon>
+			<thumb>$INFO[Skin.String(addonset$PARAM[id2].1.icon)]</thumb>
+			<property name="AddonVersion">$INFO[system.addonversion(Skin.String(addonset$PARAM[id2].1.name))]</property>
+			<property name="AddonFanart">special://home/addons/$INFO[Skin.String(addonset$PARAM[id2].1.name)]/fanart.jpg</property>
+			<visible>!String.IsEmpty(Skin.String(addonset$PARAM[id2].1.name))</visible>
+		</item>
+		<item id="3">
+			<label>$INFO[Skin.String(addonset$PARAM[id2].2.label)]</label>
+			<onclick>RunAddon($INFO[Skin.String(addonset$PARAM[id2].2.name)])</onclick>
+			<icon>$INFO[Skin.String(addonset$PARAM[id2].2.icon)]</icon>
+			<thumb>$INFO[Skin.String(addonset$PARAM[id2].2.icon)]</thumb>
+			<property name="AddonVersion">$INFO[system.addonversion(Skin.String(addonset$PARAM[id2].2.name))]</property>
+			<property name="AddonFanart">special://home/addons/$INFO[Skin.String(addonset$PARAM[id2].2.name)]/fanart.jpg</property>
+			<visible>!String.IsEmpty(Skin.String(addonset$PARAM[id2].2.name))</visible>
+		</item>
+		<item id="4">
+			<label>$INFO[Skin.String(addonset$PARAM[id2].3.label)]</label>
+			<onclick>RunAddon($INFO[Skin.String(addonset$PARAM[id2].3.name)])</onclick>
+			<icon>$INFO[Skin.String(addonset$PARAM[id2].3.icon)]</icon>
+			<thumb>$INFO[Skin.String(addonset$PARAM[id2].3.icon)]</thumb>
+			<property name="AddonVersion">$INFO[system.addonversion(Skin.String(addonset$PARAM[id2].3.name))]</property>
+			<property name="AddonFanart">special://home/addons/$INFO[Skin.String(addonset$PARAM[id2].3.name)]/fanart.jpg</property>
+			<visible>!String.IsEmpty(Skin.String(addonset$PARAM[id2].3.name))</visible>
+		</item>
+		<item id="5">
+			<label>$INFO[Skin.String(addonset$PARAM[id2].4.label)]</label>
+			<onclick>RunAddon($INFO[Skin.String(addonset$PARAM[id2].4.name)])</onclick>
+			<icon>$INFO[Skin.String(addonset$PARAM[id2].4.icon)]</icon>
+			<thumb>$INFO[Skin.String(addonset$PARAM[id2].4.icon)]</thumb>
+			<property name="AddonVersion">$INFO[system.addonversion(Skin.String(addonset$PARAM[id2].4.name))]</property>
+			<property name="AddonFanart">special://home/addons/$INFO[Skin.String(addonset$PARAM[id2].4.name)]/fanart.jpg</property>
+			<visible>!String.IsEmpty(Skin.String(addonset$PARAM[id2].4.name))</visible>
+		</item>
+		<item id="6">
+			<label>$INFO[Skin.String(addonset$PARAM[id2].5.label)]</label>
+			<onclick>RunAddon($INFO[Skin.String(addonset$PARAM[id2].5.name)])</onclick>
+			<icon>$INFO[Skin.String(addonset$PARAM[id2].5.icon)]</icon>
+			<thumb>$INFO[Skin.String(addonset$PARAM[id2].5.icon)]</thumb>
+			<property name="AddonVersion">$INFO[system.addonversion(Skin.String(addonset$PARAM[id2].5.name))]</property>
+			<property name="AddonFanart">special://home/addons/$INFO[Skin.String(addonset$PARAM[id2].5.name)]/fanart.jpg</property>
+			<visible>!String.IsEmpty(Skin.String(addonset$PARAM[id2].5.name))</visible>
+		</item>
+		<item id="7">
+			<label>$INFO[Skin.String(addonset$PARAM[id2].6.label)]</label>
+			<onclick>RunAddon($INFO[Skin.String(addonset$PARAM[id2].6.name)])</onclick>
+			<icon>$INFO[Skin.String(addonset$PARAM[id2].6.icon)]</icon>
+			<thumb>$INFO[Skin.String(addonset$PARAM[id2].6.icon)]</thumb>
+			<property name="AddonVersion">$INFO[system.addonversion(Skin.String(addonset$PARAM[id2].6.name))]</property>
+			<property name="AddonFanart">special://home/addons/$INFO[Skin.String(addonset$PARAM[id2].6.name)]/fanart.jpg</property>
+			<visible>!String.IsEmpty(Skin.String(addonset$PARAM[id2].6.name))</visible>
+		</item>
+		<item id="8">
+			<label>$INFO[Skin.String(addonset$PARAM[id2].7.label)]</label>
+			<onclick>RunAddon($INFO[Skin.String(addonset$PARAM[id2].7.name)])</onclick>
+			<icon>$INFO[Skin.String(addonset$PARAM[id2].7.icon)]</icon>
+			<thumb>$INFO[Skin.String(addonset$PARAM[id2].7.icon)]</thumb>
+			<property name="AddonVersion">$INFO[system.addonversion(Skin.String(addonset$PARAM[id2].7.name))]</property>
+			<property name="AddonFanart">special://home/addons/$INFO[Skin.String(addonset$PARAM[id2].7.name)]/fanart.jpg</property>
+			<visible>!String.IsEmpty(Skin.String(addonset$PARAM[id2].7.name))</visible>
+		</item>
+		<item id="9">
+			<label>$INFO[Skin.String(addonset$PARAM[id2].8.label)]</label>
+			<onclick>RunAddon($INFO[Skin.String(addonset$PARAM[id2].8.name)])</onclick>
+			<icon>$INFO[Skin.String(addonset$PARAM[id2].8.icon)]</icon>
+			<thumb>$INFO[Skin.String(addonset$PARAM[id2].8.icon)]</thumb>
+			<property name="AddonVersion">$INFO[system.addonversion(Skin.String(addonset$PARAM[id2].8.name))]</property>
+			<property name="AddonFanart">special://home/addons/$INFO[Skin.String(addonset$PARAM[id2].8.name)]/fanart.jpg</property>
+			<visible>!String.IsEmpty(Skin.String(addonset$PARAM[id2].8.name))</visible>
+		</item>
+		<item id="10">
+			<label>$INFO[Skin.String(addonset$PARAM[id2].9.label)]</label>
+			<onclick>RunAddon($INFO[Skin.String(addonset$PARAM[id2].9.name)])</onclick>
+			<icon>$INFO[Skin.String(addonset$PARAM[id2].9.icon)]</icon>
+			<thumb>$INFO[Skin.String(addonset$PARAM[id2].9.icon)]</thumb>
+			<property name="AddonVersion">$INFO[system.addonversion(Skin.String(addonset$PARAM[id2].9.name))]</property>
+			<property name="AddonFanart">special://home/addons/$INFO[Skin.String(addonset$PARAM[id2].9.name)]/fanart.jpg</property>
+			<visible>!String.IsEmpty(Skin.String(addonset$PARAM[id2].9.name))</visible>
+		</item>
+	</include>
+	<include name="CustomAddonsVideo">
+		<include content="HomeCustomAddonsItems">
+			<param name="id2" value="Video" />
+		</include>
+	</include>
+	<include name="CustomAddonsAudio">
+		<include content="HomeCustomAddonsItems">
+			<param name="id2" value="Audio" />
+		</include>
+	</include>
+	<include name="CustomAddonsGame">
+		<include content="HomeCustomAddonsItems">
+			<param name="id2" value="Game" />
+		</include>
+	</include>
+	<include name="CustomAddonsPrograms">
+		<include content="HomeCustomAddonsItems">
+			<param name="id2" value="Programs" />
+		</include>
+	</include>
+	<include name="CustomAddonsImage">
+		<include content="HomeCustomAddonsItems">
+			<param name="id2" value="Image" />
+		</include>
+	</include>
+	<include name="HomeMainCustomWidgetsChannelsSettings">
+		<control type="radiobutton" id="$PARAM[id1]00">
+			<description>Widgets Channels Enable</description>
+			<width>750</width>
+			<height>40</height>
+			<font>font13</font>
+			<label>$PARAM[title]</label>
+			<textcolor>grey2</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<texturefocus>MenuItemFO.png</texturefocus>
+			<texturenofocus>MenuItemNF.png</texturenofocus>
+			<onclick>Skin.ToggleSetting($PARAM[flags])</onclick>
+			<selected>Skin.HasSetting($PARAM[flags])</selected>
+			<visible>$PARAM[visible]</visible>
+		</control>
+		<control type="button" id="$PARAM[id1]01">
+			<description>Widgets Channels 01</description>
+			<width>750</width>
+			<height>40</height>
+			<font>font13</font>
+			<textcolor>grey2</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<label>- $LOCALIZE[90123] [B]1[/B]</label>
+			<label2>[COLOR=selected]$INFO[Skin.String(channel$PARAM[channeltype].0.label)][/COLOR]</label2>
+			<texturefocus>MenuItemFO.png</texturefocus>
+			<texturenofocus>MenuItemNF.png</texturenofocus>
+			<onclick condition="!System.HasAddon(script.skin.utils)">InstallAddon(script.skin.utils)</onclick>
+			<onclick condition="System.HasAddon(script.skin.utils) + !System.AddonIsEnabled(script.skin.utils)">EnableAddon(script.skin.utils)</onclick>
+			<onclick condition="System.AddonIsEnabled(script.skin.utils)">RunScript(script.skin.utils,action=selectchannel,typepvr=$PARAM[type],skinstring=channel$PARAM[channeltype].0)</onclick>
+			<visible>Skin.HasSetting($PARAM[flags])</visible>
+			<visible>$PARAM[visible]</visible>
+		</control>
+		<control type="button" id="$PARAM[id1]02">
+			<description>Widgets Channels 02</description>
+			<width>750</width>
+			<height>40</height>
+			<font>font13</font>
+			<textcolor>grey2</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<label>- $LOCALIZE[90123] [B]2[/B]</label>
+			<label2>[COLOR=selected]$INFO[Skin.String(channel$PARAM[channeltype].1.label)][/COLOR]</label2>
+			<texturefocus>MenuItemFO.png</texturefocus>
+			<texturenofocus>MenuItemNF.png</texturenofocus>
+			<onclick condition="!System.HasAddon(script.skin.utils)">InstallAddon(script.skin.utils)</onclick>
+			<onclick condition="System.HasAddon(script.skin.utils) + !System.AddonIsEnabled(script.skin.utils)">EnableAddon(script.skin.utils)</onclick>
+			<onclick condition="System.AddonIsEnabled(script.skin.utils)">RunScript(script.skin.utils,action=selectchannel,typepvr=$PARAM[type],skinstring=channel$PARAM[channeltype].1)</onclick>
+			<visible>Skin.HasSetting($PARAM[flags])</visible>
+			<visible>!String.IsEmpty(Skin.String(channel$PARAM[channeltype].0.label))</visible>
+			<visible>$PARAM[visible]</visible>
+		</control>
+		<control type="button" id="$PARAM[id1]03">
+			<description>Widgets Channels 03</description>
+			<width>750</width>
+			<height>40</height>
+			<font>font13</font>
+			<textcolor>grey2</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<label>- $LOCALIZE[90123] [B]3[/B]</label>
+			<label2>[COLOR=selected]$INFO[Skin.String(channel$PARAM[channeltype].2.label)][/COLOR]</label2>
+			<texturefocus>MenuItemFO.png</texturefocus>
+			<texturenofocus>MenuItemNF.png</texturenofocus>
+			<onclick condition="!System.HasAddon(script.skin.utils)">InstallAddon(script.skin.utils)</onclick>
+			<onclick condition="System.HasAddon(script.skin.utils) + !System.AddonIsEnabled(script.skin.utils)">EnableAddon(script.skin.utils)</onclick>
+			<onclick condition="System.AddonIsEnabled(script.skin.utils)">RunScript(script.skin.utils,action=selectchannel,typepvr=$PARAM[type],skinstring=channel$PARAM[channeltype].2)</onclick>
+			<visible>Skin.HasSetting($PARAM[flags])</visible>
+			<visible>!String.IsEmpty(Skin.String(channel$PARAM[channeltype].1.label))</visible>
+			<visible>$PARAM[visible]</visible>
+		</control>
+		<control type="button" id="$PARAM[id1]04">
+			<description>Widgets Channels 04</description>
+			<width>750</width>
+			<height>40</height>
+			<font>font13</font>
+			<textcolor>grey2</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<label>- $LOCALIZE[90123] [B]4[/B]</label>
+			<label2>[COLOR=selected]$INFO[Skin.String(channel$PARAM[channeltype].3.label)][/COLOR]</label2>
+			<texturefocus>MenuItemFO.png</texturefocus>
+			<texturenofocus>MenuItemNF.png</texturenofocus>
+			<onclick condition="!System.HasAddon(script.skin.utils)">InstallAddon(script.skin.utils)</onclick>
+			<onclick condition="System.HasAddon(script.skin.utils) + !System.AddonIsEnabled(script.skin.utils)">EnableAddon(script.skin.utils)</onclick>
+			<onclick condition="System.AddonIsEnabled(script.skin.utils)">RunScript(script.skin.utils,action=selectchannel,typepvr=$PARAM[type],skinstring=channel$PARAM[channeltype].3)</onclick>
+			<visible>Skin.HasSetting($PARAM[flags])</visible>
+			<visible>!String.IsEmpty(Skin.String(channel$PARAM[channeltype].2.label))</visible>
+			<visible>$PARAM[visible]</visible>
+		</control>
+		<control type="button" id="$PARAM[id1]05">
+			<description>Widgets Channels 05</description>
+			<width>750</width>
+			<height>40</height>
+			<font>font13</font>
+			<textcolor>grey2</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<label>- $LOCALIZE[90123] [B]5[/B]</label>
+			<label2>[COLOR=selected]$INFO[Skin.String(channel$PARAM[channeltype].4.label)][/COLOR]</label2>
+			<texturefocus>MenuItemFO.png</texturefocus>
+			<texturenofocus>MenuItemNF.png</texturenofocus>
+			<onclick condition="!System.HasAddon(script.skin.utils)">InstallAddon(script.skin.utils)</onclick>
+			<onclick condition="System.HasAddon(script.skin.utils) + !System.AddonIsEnabled(script.skin.utils)">EnableAddon(script.skin.utils)</onclick>
+			<onclick condition="System.AddonIsEnabled(script.skin.utils)">RunScript(script.skin.utils,action=selectchannel,typepvr=$PARAM[type],skinstring=channel$PARAM[channeltype].4)</onclick>
+			<visible>Skin.HasSetting($PARAM[flags])</visible>
+			<visible>!String.IsEmpty(Skin.String(channel$PARAM[channeltype].3.label))</visible>
+			<visible>$PARAM[visible]</visible>
+		</control>
+		<control type="button" id="$PARAM[id1]06">
+			<description>Widgets Channels 06</description>
+			<width>750</width>
+			<height>40</height>
+			<font>font13</font>
+			<textcolor>grey2</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<label>- $LOCALIZE[90123] [B]6[/B]</label>
+			<label2>[COLOR=selected]$INFO[Skin.String(channel$PARAM[channeltype].5.label)][/COLOR]</label2>
+			<texturefocus>MenuItemFO.png</texturefocus>
+			<texturenofocus>MenuItemNF.png</texturenofocus>
+			<onclick condition="!System.HasAddon(script.skin.utils)">InstallAddon(script.skin.utils)</onclick>
+			<onclick condition="System.HasAddon(script.skin.utils) + !System.AddonIsEnabled(script.skin.utils)">EnableAddon(script.skin.utils)</onclick>
+			<onclick condition="System.AddonIsEnabled(script.skin.utils)">RunScript(script.skin.utils,action=selectchannel,typepvr=$PARAM[type],skinstring=channel$PARAM[channeltype].5)</onclick>
+			<visible>Skin.HasSetting($PARAM[flags])</visible>
+			<visible>!String.IsEmpty(Skin.String(channel$PARAM[channeltype].4.label))</visible>
+			<visible>$PARAM[visible]</visible>
+		</control>
+		<control type="button" id="$PARAM[id1]07">
+			<description>Widgets Channels 07</description>
+			<width>750</width>
+			<height>40</height>
+			<font>font13</font>
+			<textcolor>grey2</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<label>- $LOCALIZE[90123] [B]7[/B]</label>
+			<label2>[COLOR=selected]$INFO[Skin.String(channel$PARAM[channeltype].6.label)][/COLOR]</label2>
+			<texturefocus>MenuItemFO.png</texturefocus>
+			<texturenofocus>MenuItemNF.png</texturenofocus>
+			<onclick condition="!System.HasAddon(script.skin.utils)">InstallAddon(script.skin.utils)</onclick>
+			<onclick condition="System.HasAddon(script.skin.utils) + !System.AddonIsEnabled(script.skin.utils)">EnableAddon(script.skin.utils)</onclick>
+			<onclick condition="System.AddonIsEnabled(script.skin.utils)">RunScript(script.skin.utils,action=selectchannel,typepvr=$PARAM[type],skinstring=channel$PARAM[channeltype].6)</onclick>
+			<visible>Skin.HasSetting($PARAM[flags])</visible>
+			<visible>!String.IsEmpty(Skin.String(channel$PARAM[channeltype].5.label))</visible>
+			<visible>$PARAM[visible]</visible>
+		</control>
+		<control type="button" id="$PARAM[id1]08">
+			<description>Widgets Channels 08</description>
+			<width>750</width>
+			<height>40</height>
+			<font>font13</font>
+			<textcolor>grey2</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<label>- $LOCALIZE[90123] [B]8[/B]</label>
+			<label2>[COLOR=selected]$INFO[Skin.String(channel$PARAM[channeltype].7.label)][/COLOR]</label2>
+			<texturefocus>MenuItemFO.png</texturefocus>
+			<texturenofocus>MenuItemNF.png</texturenofocus>
+			<onclick condition="!System.HasAddon(script.skin.utils)">InstallAddon(script.skin.utils)</onclick>
+			<onclick condition="System.HasAddon(script.skin.utils) + !System.AddonIsEnabled(script.skin.utils)">EnableAddon(script.skin.utils)</onclick>
+			<onclick condition="System.AddonIsEnabled(script.skin.utils)">RunScript(script.skin.utils,action=selectchannel,typepvr=$PARAM[type],skinstring=channel$PARAM[channeltype].7)</onclick>
+			<visible>Skin.HasSetting($PARAM[flags])</visible>
+			<visible>!String.IsEmpty(Skin.String(channel$PARAM[channeltype].6.label))</visible>
+			<visible>$PARAM[visible]</visible>
+		</control>
+		<control type="button" id="$PARAM[id1]09">
+			<description>Widgets Channels 09</description>
+			<width>750</width>
+			<height>40</height>
+			<font>font13</font>
+			<textcolor>grey2</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<label>- $LOCALIZE[90123] [B]9[/B]</label>
+			<label2>[COLOR=selected]$INFO[Skin.String(channel$PARAM[channeltype].8.label)][/COLOR]</label2>
+			<texturefocus>MenuItemFO.png</texturefocus>
+			<texturenofocus>MenuItemNF.png</texturenofocus>
+			<onclick condition="!System.HasAddon(script.skin.utils)">InstallAddon(script.skin.utils)</onclick>
+			<onclick condition="System.HasAddon(script.skin.utils) + !System.AddonIsEnabled(script.skin.utils)">EnableAddon(script.skin.utils)</onclick>
+			<onclick condition="System.AddonIsEnabled(script.skin.utils)">RunScript(script.skin.utils,action=selectchannel,typepvr=$PARAM[type],skinstring=channel$PARAM[channeltype].8)</onclick>
+			<visible>Skin.HasSetting($PARAM[flags])</visible>
+			<visible>!String.IsEmpty(Skin.String(channel$PARAM[channeltype].7.label))</visible>
+			<visible>$PARAM[visible]</visible>
+		</control>
+		<control type="button" id="$PARAM[id1]10">
+			<description>Widgets Channels 10</description>
+			<width>750</width>
+			<height>40</height>
+			<font>font13</font>
+			<textcolor>grey2</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<label>- $LOCALIZE[90123] [B]10[/B]</label>
+			<label2>[COLOR=selected]$INFO[Skin.String(channel$PARAM[channeltype].9.label)][/COLOR]</label2>
+			<texturefocus>MenuItemFO.png</texturefocus>
+			<texturenofocus>MenuItemNF.png</texturenofocus>
+			<onclick condition="!System.HasAddon(script.skin.utils)">InstallAddon(script.skin.utils)</onclick>
+			<onclick condition="System.HasAddon(script.skin.utils) + !System.AddonIsEnabled(script.skin.utils)">EnableAddon(script.skin.utils)</onclick>
+			<onclick condition="System.AddonIsEnabled(script.skin.utils)">RunScript(script.skin.utils,action=selectchannel,typepvr=$PARAM[type],skinstring=channel$PARAM[channeltype].9)</onclick>
+			<visible>Skin.HasSetting($PARAM[flags])</visible>
+			<visible>!String.IsEmpty(Skin.String(channel$PARAM[channeltype].8.label))</visible>
+			<visible>$PARAM[visible]</visible>
+		</control>
+	</include>
+	<!-- ContentChannelsWidgets -->
+	<include name="HomeCustomChannelsItems">
+		<item id="1">
+			<label>$INFO[Skin.String(channel$PARAM[id2].0.label)]</label>
+			<onclick>RunScript(script.skin.utils,action=playchannel,channelid=$INFO[Skin.String(channel$PARAM[id2].0.channelid)])</onclick>
+			<icon>$INFO[Skin.String(channel$PARAM[id2].0.icon)]</icon>
+			<thumb/>
+			<property name="Title">$INFO[Window(Home).Property(channel$PARAM[id2].0.title)]</property>
+			<visible>!String.IsEmpty(Skin.String(channel$PARAM[id2].0.channelid))</visible>
+		</item>
+		<item id="2">
+			<label>$INFO[Skin.String(channel$PARAM[id2].1.label)]</label>
+			<onclick>RunScript(script.skin.utils,action=playchannel,channelid=$INFO[Skin.String(channel$PARAM[id2].1.channelid)])</onclick>
+			<icon>$INFO[Skin.String(channel$PARAM[id2].1.icon)]</icon>
+			<thumb/>
+			<property name="Title">$INFO[Window(Home).Property(channel$PARAM[id2].1.title)]</property>
+			<visible>!String.IsEmpty(Skin.String(channel$PARAM[id2].1.channelid))</visible>
+		</item>
+		<item id="3">
+			<label>$INFO[Skin.String(channel$PARAM[id2].2.label)]</label>
+			<onclick>RunScript(script.skin.utils,action=playchannel,channelid=$INFO[Skin.String(channel$PARAM[id2].2.channelid)])</onclick>
+			<icon>$INFO[Skin.String(channel$PARAM[id2].2.icon)]</icon>
+			<thumb/>
+			<property name="Title">$INFO[Window(Home).Property(channel$PARAM[id2].2.title)]</property>
+			<visible>!String.IsEmpty(Skin.String(channel$PARAM[id2].2.channelid))</visible>
+		</item>
+		<item id="4">
+			<label>$INFO[Skin.String(channel$PARAM[id2].3.label)]</label>
+			<onclick>RunScript(script.skin.utils,action=playchannel,channelid=$INFO[Skin.String(channel$PARAM[id2].3.channelid)])</onclick>
+			<icon>$INFO[Skin.String(channel$PARAM[id2].3.icon)]</icon>
+			<thumb/>
+			<property name="Title">$INFO[Window(Home).Property(channel$PARAM[id2].3.title)]</property>
+			<visible>!String.IsEmpty(Skin.String(channel$PARAM[id2].3.channelid))</visible>
+		</item>
+		<item id="5">
+			<label>$INFO[Skin.String(channel$PARAM[id2].4.label)]</label>
+			<onclick>RunScript(script.skin.utils,action=playchannel,channelid=$INFO[Skin.String(channel$PARAM[id2].4.channelid)])</onclick>
+			<icon>$INFO[Skin.String(channel$PARAM[id2].4.icon)]</icon>
+			<thumb/>
+			<property name="Title">$INFO[Window(Home).Property(channel$PARAM[id2].4.title)]</property>
+			<visible>!String.IsEmpty(Skin.String(channel$PARAM[id2].4.channelid))</visible>
+		</item>
+		<item id="6">
+			<label>$INFO[Skin.String(channel$PARAM[id2].5.label)]</label>
+			<onclick>RunScript(script.skin.utils,action=playchannel,channelid=$INFO[Skin.String(channel$PARAM[id2].5.channelid)])</onclick>
+			<icon>$INFO[Skin.String(channel$PARAM[id2].5.icon)]</icon>
+			<thumb/>
+			<property name="Title">$INFO[Window(Home).Property(channel$PARAM[id2].5.title)]</property>
+			<visible>!String.IsEmpty(Skin.String(channel$PARAM[id2].5.channelid))</visible>
+		</item>
+		<item id="7">
+			<label>$INFO[Skin.String(channel$PARAM[id2].6.label)]</label>
+			<onclick>RunScript(script.skin.utils,action=playchannel,channelid=$INFO[Skin.String(channel$PARAM[id2].5.channelid)])</onclick>
+			<icon>$INFO[Skin.String(channel$PARAM[id2].6.icon)]</icon>
+			<thumb/>
+			<property name="Title">$INFO[Window(Home).Property(channel$PARAM[id2].6.title)]</property>
+			<visible>!String.IsEmpty(Skin.String(channel$PARAM[id2].6.channelid))</visible>
+		</item>
+		<item id="8">
+			<label>$INFO[Skin.String(channel$PARAM[id2].7.label)]</label>
+			<onclick>RunScript(script.skin.utils,action=playchannel,channelid=$INFO[Skin.String(channel$PARAM[id2].7.channelid)])</onclick>
+			<icon>$INFO[Skin.String(channel$PARAM[id2].7.icon)]</icon>
+			<thumb/>
+			<property name="Title">$INFO[Window(Home).Property(channel$PARAM[id2].7.title)]</property>
+			<visible>!String.IsEmpty(Skin.String(channel$PARAM[id2].7.channelid))</visible>
+		</item>
+		<item id="9">
+			<label>$INFO[Skin.String(channel$PARAM[id2].8.label)]</label>
+			<onclick>RunScript(script.skin.utils,action=playchannel,channelid=$INFO[Skin.String(channel$PARAM[id2].8.channelid)])</onclick>
+			<icon>$INFO[Skin.String(channel$PARAM[id2].8.icon)]</icon>
+			<thumb/>
+			<property name="Title">$INFO[Window(Home).Property(channel$PARAM[id2].8.title)]</property>
+			<visible>!String.IsEmpty(Skin.String(channel$PARAM[id2].8.channelid))</visible>
+		</item>
+		<item id="10">
+			<label>$INFO[Skin.String(channel$PARAM[id2].9.label)]</label>
+			<onclick>RunScript(script.skin.utils,action=playchannel,channelid=$INFO[Skin.String(channel$PARAM[id2].9.channelid)])</onclick>
+			<icon>$INFO[Skin.String(channel$PARAM[id2].9.icon)]</icon>
+			<thumb/>
+			<property name="Title">$INFO[Window(Home).Property(channel$PARAM[id2].9.title)]</property>
+			<visible>!String.IsEmpty(Skin.String(channel$PARAM[id2].9.channelid))</visible>
+		</item>
+	</include>
+</includes>

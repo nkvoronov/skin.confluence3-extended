@@ -34,7 +34,7 @@
 			<!-- view id = 50 -->
 			<include content="CommonRootView">
 				<param name="isMediaItemDetailBG" value="[ !String.IsEmpty(ListItem.Label2) | !String.IsEmpty(ListItem.Rating) | !String.IsEmpty(ListItem.Duration)]" />
-				<param name="Lab2" value="$VAR[GlobalSearchLabel2]" />
+				<param name="Lab2" value="$VAR[GlobalSearchLabel2Var]" />
 				<param name="isVisibleWindows" value="Window.IsVisible(script-globalsearch.xml)" />
 				<param name="isWatching" value="!Integer.IsEqual(ListItem.Property(percentplayed),0)" />
 				<param name="isWatched" value="Integer.IsEqual(ListItem.Property(percentplayed),0) + Integer.IsGreater(ListItem.Property(playcount),0)" />
@@ -42,9 +42,9 @@
 			</include>
 			<!-- view id = 51 -->
 			<include content="FullWidthList">
-				<param name="IconList" value="$VAR[SearchIconWallThumb]" />
+				<param name="IconList" value="$VAR[SearchIconWallThumbVar]" />
 				<param name="isMediaItemDetailBG" value="[ !String.IsEmpty(ListItem.Label2) | !String.IsEmpty(ListItem.Rating) | !String.IsEmpty(ListItem.Duration)]" />
-				<param name="Lab2" value="$VAR[GlobalSearchLabel2]" />
+				<param name="Lab2" value="$VAR[GlobalSearchLabel2Var]" />
 				<param name="isVisibleWindows" value="Window.IsVisible(script-globalsearch.xml)" />
 				<param name="isWatching" value="!Integer.IsEqual(ListItem.Property(percentplayed),0)" />
 				<param name="isWatched" value="Integer.IsEqual(ListItem.Property(percentplayed),0) + Integer.IsGreater(ListItem.Property(playcount),0)" />
@@ -52,7 +52,7 @@
 			</include>
 			<!-- view id = 500 -->
 			<include content="ThumbnailView">
-				<param name="IconList" value="$VAR[SearchIconWallThumb]" />
+				<param name="IconList" value="$VAR[SearchIconWallThumbVar]" />
 				<param name="isWatching" value="!Integer.IsEqual(ListItem.Property(percentplayed),0)" />
 				<param name="isWatched" value="Integer.IsEqual(ListItem.Property(percentplayed),0) + Integer.IsGreater(ListItem.Property(playcount),0)" />
 				<param name="WatchedImage" value="OverlayWatched.png" />

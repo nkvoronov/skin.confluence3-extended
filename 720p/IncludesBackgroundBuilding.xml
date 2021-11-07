@@ -52,7 +52,7 @@
 			<depth>DepthBackground</depth>
 			<include>BackgroundDimensions</include>
 			<aspectratio>scale</aspectratio>
-			<texture background="true">$VAR[FanartBackground]</texture>
+			<texture background="true">$VAR[FanartBackgroundVar]</texture>
 			<include>backgroundfade</include>
 			<fadetime>FanartCrossfadeTime</fadetime>
 			<visible>!Skin.HasSetting(hidebackgroundfanart)</visible>

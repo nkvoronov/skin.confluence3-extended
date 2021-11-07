@@ -148,7 +148,7 @@
 					<height>240</height>
 					<aspectratio aligny="bottom">keep</aspectratio>
 					<fadetime>IconCrossfadeTime</fadetime>
-					<texture fallback="DefaultAlbumCover.png" background="true">$VAR[MusicInfoListViewThumb]</texture>
+					<texture fallback="DefaultAlbumCover.png" background="true">$VAR[MusicInfoListViewThumbVar]</texture>
 					<bordertexture border="8">ThumbShadow.png</bordertexture>
 					<bordersize>8</bordersize>
 				</control>
@@ -160,7 +160,7 @@
 						<top>240</top>
 						<width>290</width>
 						<height>20</height>
-						<label>$VAR[MusicInfoListViewLabel]</label>
+						<label>$VAR[MusicInfoListViewLabelVar]</label>
 						<align>center</align>
 						<aligny>center</aligny>
 						<font>font12_title</font>
@@ -172,14 +172,14 @@
 						<top>280</top>
 						<width>168</width>
 						<height>20</height>
-						<texture fallback="ratings/0.png">$VAR[MusicInfoListViewtRating]</texture>
+						<texture fallback="ratings/0.png">$VAR[MusicInfoListViewtRatingVar]</texture>
 					</control>
 					<control type="label">
 						<left>10</left>
 						<top>320</top>
 						<width>290</width>
 						<height>200</height>
-						<label>$VAR[MusicInfoListViewPanel]</label>
+						<label>$VAR[MusicInfoListViewPanelVar]</label>
 						<wrapmultiline>true</wrapmultiline>
 						<scroll>true</scroll>
 						<align>left</align>
@@ -447,7 +447,7 @@
 					<align>left</align>
 					<pagecontrol/>
 					<textcolor>white</textcolor>
-					<label>$VAR[MusicInfoLabel]</label>
+					<label>$VAR[MusicInfoLabelVar]</label>
 					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 				</control>
 			</control>
@@ -881,7 +881,7 @@
 						<font>font13</font>
 						<align>left</align>
 						<textcolor>white</textcolor>
-						<label>$VAR[MusicInfoLabel]</label>
+						<label>$VAR[MusicInfoLabelVar]</label>
 						<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 					</control>
 				</control>
@@ -1046,7 +1046,7 @@
 						<align>left</align>
 						<pagecontrol/>
 						<textcolor>white</textcolor>
-						<label>$VAR[MusicInfoLabel]</label>
+						<label>$VAR[MusicInfoLabelVar]</label>
 						<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 					</control>
 				</control>

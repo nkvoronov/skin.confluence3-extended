@@ -7,7 +7,7 @@
 			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
-			<imagepath background="true">$VAR[BackgroundAudio]</imagepath>
+			<imagepath background="true">$VAR[BackgroundAudioVar]</imagepath>
 			<timeperimage>10000</timeperimage>
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
@@ -178,7 +178,7 @@
 						<font>font30</font>
 						<align>left</align>
 						<aligny>center</aligny>
-						<label>$VAR[PlayerTitle]</label>
+						<label>$VAR[PlayerTitleVar]</label>
 						<textcolor>blue</textcolor>
 						<scroll>true</scroll>
 					</control>

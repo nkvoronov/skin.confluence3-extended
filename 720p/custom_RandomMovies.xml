@@ -11,7 +11,7 @@
 			<param name="dlg_title" value="$LOCALIZE[89032]" />
 			<param name="id_win" value="2125" />
 			<param name="fallback_pic" value="DefaultMovies.png" />
-			<param name="list_pic" value="$VAR[PosterThumb2]" />
+			<param name="list_pic" value="$VAR[PosterThumb2Var]" />
 			<param name="list_label" value="$INFO[ListItem.Label]" />
 			<param name="include_name" value="RandomMoviesContent" />
 		</include>

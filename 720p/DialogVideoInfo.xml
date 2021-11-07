@@ -120,7 +120,7 @@
 						<aspectratio>stretch</aspectratio>
 						<bordertexture border="5">button-nofocus.png</bordertexture>
 						<bordersize>4</bordersize>
-						<texture background="true">$VAR[PosterThumb]</texture>
+						<texture background="true">$VAR[PosterThumbVar]</texture>
 					</control>
 					<control type="image">
 						<left>4</left>
@@ -237,7 +237,7 @@
 							</item>
 							<item>
 								<label>$LOCALIZE[2050]:</label>
-								<label2>$VAR[DurationInMinutes]</label2>
+								<label2>$VAR[DurationInMinutesVar]</label2>
 								<visible>!String.IsEmpty(ListItem.Duration)</visible>
 							</item>
 							<item>
@@ -294,7 +294,7 @@
 						<aspectratio>stretch</aspectratio>
 						<bordertexture border="5">button-nofocus.png</bordertexture>
 						<bordersize>4</bordersize>
-						<texture background="true">$VAR[PosterThumb]</texture>
+						<texture background="true">$VAR[PosterThumbVar]</texture>
 					</control>
 					<control type="image">
 						<left>4</left>
@@ -566,7 +566,7 @@
 							</item>
 							<item>
 								<label>$LOCALIZE[2050]:</label>
-								<label2>$VAR[DurationInMinutes]</label2>
+								<label2>$VAR[DurationInMinutesVar]</label2>
 								<visible>!String.IsEmpty(ListItem.Duration)</visible>
 							</item>
 							<item>
@@ -720,7 +720,7 @@
 							</item>
 							<item>
 								<label>$LOCALIZE[2050]:</label>
-								<label2>$VAR[DurationInMinutes]</label2>
+								<label2>$VAR[DurationInMinutesVar]</label2>
 								<visible>!String.IsEmpty(ListItem.Duration)</visible>
 							</item>
 							<item>

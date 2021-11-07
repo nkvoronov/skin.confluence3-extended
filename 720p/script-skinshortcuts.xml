@@ -3,7 +3,7 @@
 	<defaultcontrol>90010</defaultcontrol>
 	<onload condition="String.IsEmpty(Window(Home).Property(MenuItemActive))">SetProperty(MenuItemActive,settings,Home)</onload>
 	<onload condition="String.IsEmpty(Window(Home).Property(MenuBackground))">SetProperty(MenuBackground,special://skin/extras/backgrounds/settings.jpg,Home)</onload>
-	<onload>SetProperty(custom-grouping,$VAR[SkinShortcutsGrouping])</onload>
+	<onload>SetProperty(custom-grouping,$VAR[SkinShortcutsGroupingVar])</onload>
 	<controls>
 		<include>CommonCustomBackground</include>
 		<include>CommonBackground</include>
@@ -187,7 +187,7 @@
 				<width>726</width>
 				<height>30</height>
 				<font>font16</font>
-				<label>$VAR[SkinShortcutsTitleDlg] - $INFO[Container(211).ListItem.Label]</label>
+				<label>$VAR[SkinShortcutsTitleDlgVar] - $INFO[Container(211).ListItem.Label]</label>
 				<align>center</align>
 				<aligny>center</aligny>
 				<textcolor>white</textcolor>
@@ -216,7 +216,7 @@
 						<focusedcolor>white</focusedcolor>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
-						<onclick>SetProperty(custom-grouping,$VAR[SkinShortcutsGrouping])</onclick>
+						<onclick>SetProperty(custom-grouping,$VAR[SkinShortcutsGroupingVar])</onclick>
 					</control>
 					<control type="button" id="307">
 						<description>Change Action</description>
@@ -229,7 +229,7 @@
 						<focusedcolor>white</focusedcolor>
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
-						<onclick>SetProperty(custom-grouping,$VAR[SkinShortcutsGrouping])</onclick>
+						<onclick>SetProperty(custom-grouping,$VAR[SkinShortcutsGroupingVar])</onclick>
 					</control>
 					<control type="button" id="305">
 						<description>Change Label</description>
@@ -440,7 +440,7 @@
 		<include>MainWindowMouseButtons</include>
 		<include content="CommonWindowHeader">
 			<param name="Icon" value="icon_system" />
-			<param name="Label" value="$LOCALIZE[5][COLOR=blue] - [/COLOR]$LOCALIZE[166]$VAR[SkinShortcutsTitle]" />
+			<param name="Label" value="$LOCALIZE[5][COLOR=blue] - [/COLOR]$LOCALIZE[166]$VAR[SkinShortcutsTitleVar]" />
 		</include>
 	</controls>
 </window>

@@ -81,7 +81,7 @@
 				<top>285</top>
 				<height>30</height>
 				<width>1000</width>
-				<label>$VAR[PlayerTitle]</label>
+				<label>$VAR[PlayerTitleVar]</label>
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>font13_title</font>
@@ -330,7 +330,7 @@
 					<top>285</top>
 					<height>30</height>
 					<width>1000</width>
-					<label>$VAR[PlayerTitle]$INFO[VideoPlayer.Year,[COLOR=grey2] (,)[/COLOR]]</label>
+					<label>$VAR[PlayerTitleVar]$INFO[VideoPlayer.Year,[COLOR=grey2] (,)[/COLOR]]</label>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font13_title</font>
@@ -859,7 +859,7 @@
 				<top>7</top>
 				<height>20</height>
 				<width>500</width>
-				<label>$VAR[InfoBarStats]</label>
+				<label>$VAR[InfoBarStatsVar]</label>
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>font12_title</font>
@@ -986,7 +986,7 @@
 				<height>45</height>
 				<label>31003</label>
 				<font/>
-				<onclick>$VAR[PowerButtonCommand]</onclick>
+				<onclick>$VAR[PowerButtonCommandVar]</onclick>
 				<texturefocus border="5">floor_buttonFO.png</texturefocus>
 				<texturenofocus border="5">floor_button.png</texturenofocus>
 				<onleft>22</onleft>
@@ -1014,7 +1014,7 @@
 				<height>45</height>
 				<label>1036</label>
 				<font/>
-				<onclick>$VAR[FavoritesButtonCommand]</onclick>
+				<onclick>$VAR[FavoritesButtonCommandVar]</onclick>
 				<texturefocus border="5">floor_buttonFO.png</texturefocus>
 				<texturenofocus border="5">floor_button.png</texturenofocus>
 				<onleft>20</onleft>
@@ -1042,7 +1042,7 @@
 				<height>45</height>
 				<label>1036</label>
 				<font/>
-				<onclick>$VAR[PowerButtonCommand]</onclick>
+				<onclick>$VAR[PowerButtonCommandVar]</onclick>
 				<texturefocus border="5">floor_buttonFO.png</texturefocus>
 				<texturenofocus border="5">floor_button.png</texturenofocus>
 				<onleft>21</onleft>
@@ -1088,8 +1088,8 @@
 					<param name="top" value="0" />
 					<param name="width" value="60" />
 					<param name="height" value="60" />
-					<param name="image_1" value="$VAR[CurrentWeatherIcon]" />
-					<param name="image_multi" value="$VAR[CurrentWeatherIcon]" />
+					<param name="image_1" value="$VAR[CurrentWeatherIconVar]" />
+					<param name="image_multi" value="$VAR[CurrentWeatherIconVar]" />
 				</include>
 				<control type="label">
 					<description>Location label</description>
