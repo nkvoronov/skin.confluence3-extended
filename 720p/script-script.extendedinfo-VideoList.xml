@@ -168,7 +168,7 @@
 						<width>430</width>
 						<height>64</height>
 						<texture border="15">ContentPanelMirror.png</texture>
-						<visible>!Skin.HasSetting(NoFloorAll)</visible>
+						<visible>!Skin.HasSetting(nofloorall)</visible>
 					</control>
 					<control type="image">
 						<left>895</left>
@@ -261,7 +261,7 @@
 						<align>left</align>
 						<textcolor>white</textcolor>
 						<label fallback="416">$INFO[ListItem.Plot,,[CR][CR]]</label>
-						<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+						<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 					</control>
 				</control>
 				<control type="button" id="600">

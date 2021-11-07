@@ -86,7 +86,7 @@
 				<pulseonselect>no</pulseonselect>
 				<font>font13</font>
 				<label>$LOCALIZE[90114]</label>
-				<visible>Skin.HasSetting(ActivateGlobalSearch)</visible>
+				<visible>Skin.HasSetting(enableglobalsearch)</visible>
 			</control>
 			<control type="button" id="3">
 				<description>Search Addons</description>
@@ -137,7 +137,7 @@
 				<pulseonselect>no</pulseonselect>
 				<font>font13</font>
 				<label>$LOCALIZE[90117]</label>
-				<visible>Skin.HasSetting(ActivateExtendedInfo)</visible>
+				<visible>Skin.HasSetting(enableextendedinfo)</visible>
 			</control>
 			<control type="image" id="6">
 				<description>background bottom image</description>

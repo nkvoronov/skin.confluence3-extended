@@ -105,7 +105,7 @@
 			<aspectratio>stretch</aspectratio>
 			<animation effect="slide" start="0,10" end="0,0" time="150" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="slide" start="0,0" end="0,10" time="150" condition="Window.Next(Home)">WindowClose</animation>
-			<visible>!Skin.HasSetting(NoFloorAll)</visible>
+			<visible>!Skin.HasSetting(nofloorall)</visible>
 		</control>
 		<control type="image">
 			<description>Section header image</description>
@@ -160,7 +160,7 @@
 					<width>300</width>
 					<height>64</height>
 					<texture border="15">ContentPanelMirror.png</texture>
-					<visible>!Skin.HasSetting(NoFloorAll)</visible>
+					<visible>!Skin.HasSetting(nofloorall)</visible>
 				</control>
 				<control type="label">
 					<left>20</left>
@@ -204,7 +204,7 @@
 					<width>300</width>
 					<height>64</height>
 					<texture border="15">ContentPanelMirror.png</texture>
-					<visible>!Skin.HasSetting(NoFloorAll)</visible>
+					<visible>!Skin.HasSetting(nofloorall)</visible>
 				</control>
 				<control type="label">
 					<left>20</left>
@@ -248,7 +248,7 @@
 					<width>300</width>
 					<height>64</height>
 					<texture border="15">ContentPanelMirror.png</texture>
-					<visible>!Skin.HasSetting(NoFloorAll)</visible>
+					<visible>!Skin.HasSetting(nofloorall)</visible>
 				</control>
 				<control type="label">
 					<left>20</left>
@@ -292,7 +292,7 @@
 					<width>300</width>
 					<height>64</height>
 					<texture border="15">ContentPanelMirror.png</texture>
-					<visible>!Skin.HasSetting(NoFloorAll)</visible>
+					<visible>!Skin.HasSetting(nofloorall)</visible>
 				</control>
 				<control type="label">
 					<left>20</left>
@@ -336,7 +336,7 @@
 					<width>300</width>
 					<height>64</height>
 					<texture border="15">ContentPanelMirror.png</texture>
-					<visible>!Skin.HasSetting(NoFloorAll)</visible>
+					<visible>!Skin.HasSetting(nofloorall)</visible>
 				</control>
 				<control type="label">
 					<left>20</left>
@@ -380,7 +380,7 @@
 					<width>300</width>
 					<height>64</height>
 					<texture border="15">ContentPanelMirror.png</texture>
-					<visible>!Skin.HasSetting(NoFloorAll)</visible>
+					<visible>!Skin.HasSetting(nofloorall)</visible>
 				</control>
 				<control type="label">
 					<left>20</left>
@@ -424,7 +424,7 @@
 					<width>300</width>
 					<height>64</height>
 					<texture border="15">ContentPanelMirror.png</texture>
-					<visible>!Skin.HasSetting(NoFloorAll)</visible>
+					<visible>!Skin.HasSetting(nofloorall)</visible>
 				</control>
 				<control type="label">
 					<left>20</left>

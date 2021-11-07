@@ -14,7 +14,7 @@
 			<texture>floor.png</texture>
 			<animation effect="fade" time="200" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="fade" time="200" condition="Window.Next(Home)">WindowClose</animation>
-			<visible>!Skin.HasSetting(NoFloorAll)</visible>
+			<visible>!Skin.HasSetting(nofloorall)</visible>
 		</control>
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>
@@ -34,7 +34,7 @@
 					<width>840</width>
 					<height>64</height>
 					<texture border="15">ContentPanelMirror.png</texture>
-					<visible>!Skin.HasSetting(NoFloorAll)</visible>
+					<visible>!Skin.HasSetting(nofloorall)</visible>
 				</control>
 				<control type="image">
 					<left>900</left>
@@ -49,7 +49,7 @@
 					<width>330</width>
 					<height>64</height>
 					<texture border="15">ContentPanelMirror.png</texture>
-					<visible>!Skin.HasSetting(NoFloorAll)</visible>
+					<visible>!Skin.HasSetting(nofloorall)</visible>
 				</control>
 			</control>
 		</control>
@@ -265,7 +265,7 @@
 					<align>left</align>
 					<textcolor>white</textcolor>
 					<label>$INFO[Container(50).ListItem.Plot]</label>
-					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 				</control>
 				<control type="label">
 					<description>Disk usage text</description>

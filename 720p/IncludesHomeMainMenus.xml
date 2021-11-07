@@ -22,8 +22,8 @@
 		<onright condition="!Skin.HasSetting(FixedEndingMenu)">9000</onright>
 		<onleft condition="Skin.HasSetting(FixedEndingMenu)">noop</onleft>
 		<onright condition="Skin.HasSetting(FixedEndingMenu)">noop</onright>
-		<onup condition="System.HasAddon(script.globalsearch) + Skin.HasSetting(ActivateGlobalSearch)">608</onup>
-		<onup condition="!System.HasAddon(script.globalsearch) | !Skin.HasSetting(ActivateGlobalSearch)">603</onup>
+		<onup condition="System.HasAddon(script.globalsearch) + Skin.HasSetting(enableglobalsearch)">608</onup>
+		<onup condition="!System.HasAddon(script.globalsearch) | !Skin.HasSetting(enableglobalsearch)">603</onup>
 		<ondown>9001</ondown>
 		<pagecontrol/>
 		<scrolltime>300</scrolltime>
@@ -102,12 +102,12 @@
 		</content>
 	</include>
 	<include name="DefaultInitialSetup">
-		<onload>Skin.SetBool(EnableWidgetsTitle)</onload>
-		<onload>Skin.SetString(WidgetLimitItems,10,)</onload>
-		<onload>Skin.SetString(DurationSplashScreen,5,)</onload>
-		<onload>Skin.SetBool(SingleGlobalBackground)</onload>
-		<onload>Skin.SetString(UsrFavBtnCmd.Path,ActivateWindow(Favourites))</onload>
-		<onload>Skin.SetString(UsrPwrBtnCmd.Path,ActivateWindow(ShutdownMenu))</onload>
-		<onload>Skin.SetBool(InitialSetUpRun)</onload>
+		<onload>Skin.SetBool(enablewidgetstitle)</onload>
+		<onload>Skin.SetString(widgetlimititems,10,)</onload>
+		<onload>Skin.SetString(splashscreenduration,5,)</onload>
+		<onload>Skin.SetBool(singleglobalbackground)</onload>
+		<onload>Skin.SetString(usrfavbtncmd.Path,ActivateWindow(Favourites))</onload>
+		<onload>Skin.SetString(usrpwrbtncmd.Path,ActivateWindow(ShutdownMenu))</onload>
+		<onload>Skin.SetBool(initialsetuprun)</onload>
 	</include>
 </includes>

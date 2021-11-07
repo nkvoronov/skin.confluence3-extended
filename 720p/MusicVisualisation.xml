@@ -12,7 +12,7 @@
 			<randomize>true</randomize>
 			<fadetime>1000</fadetime>
 			<include>VisibleFadeEffect</include>
-			<visible>String.IsEmpty(Player.Art(fanart)) | Skin.HasSetting(HideVisualizationFanart)</visible>
+			<visible>String.IsEmpty(Player.Art(fanart)) | Skin.HasSetting(hidevisualizationfanart)</visible>
 		</control>
 		<control type="visualisation" id="2">
 			<!-- FIX ME Music Visualization needs to have an id of 2 in this window to be able to lock or change preset -->
@@ -31,7 +31,7 @@
 			<aspectratio>scale</aspectratio>
 			<texture background="true">$INFO[Player.Art(fanart)]</texture>
 			<colordiffuse>AAFFFFFF</colordiffuse>
-			<visible>!String.IsEmpty(Player.Art(fanart)) + !Skin.HasSetting(HideVisualizationFanart)</visible>
+			<visible>!String.IsEmpty(Player.Art(fanart)) + !Skin.HasSetting(hidevisualizationfanart)</visible>
 			<fadetime>600</fadetime>
 		</control>
 		<control type="label">
@@ -47,7 +47,7 @@
 			<shadowcolor>black</shadowcolor>
 			<label>$INFO[System.Time]</label>
 			<animation effect="slide" start="0,0" end="-30,0" time="0" condition="Player.Muted">conditional</animation>
-			<visible>Skin.HasSetting(FullScreenClock) + ![Player.ShowInfo | Window.IsActive(MusicOSD)]</visible>
+			<visible>Skin.HasSetting(fullscreenclock) + ![Player.ShowInfo | Window.IsActive(MusicOSD)]</visible>
 		</control>
 		<!-- media infos -->
 		<control type="group">

@@ -14,7 +14,7 @@
 			<texture>floor.png</texture>
 			<animation effect="fade" time="200" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="fade" time="200" condition="Window.Next(Home)">WindowClose</animation>
-			<visible>!Skin.HasSetting(NoFloorAll)</visible>
+			<visible>!Skin.HasSetting(nofloorall)</visible>
 		</control>
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>
@@ -35,7 +35,7 @@
 				<width>450</width>
 				<height>64</height>
 				<texture border="15">ContentPanelMirror.png</texture>
-				<visible>!Skin.HasSetting(NoFloorAll)</visible>
+				<visible>!Skin.HasSetting(nofloorall)</visible>
 			</control>
 			<control type="image">
 				<left>510</left>
@@ -50,7 +50,7 @@
 				<width>730</width>
 				<height>64</height>
 				<texture border="15">ContentPanelMirror.png</texture>
-				<visible>!Skin.HasSetting(NoFloorAll)</visible>
+				<visible>!Skin.HasSetting(nofloorall)</visible>
 			</control>
 		</control>
 		<control type="group">
@@ -71,7 +71,7 @@
 					<width>1170</width>
 					<height>64</height>
 					<texture border="15">ContentPanelMirror.png</texture>
-					<visible>!Skin.HasSetting(NoFloorAll)</visible>
+					<visible>!Skin.HasSetting(nofloorall)</visible>
 				</control>
 			</control>
 		</control>
@@ -129,7 +129,7 @@
 			<control type="group">
 				<left>530</left>
 				<top>490</top>
-				<visible>![Control.IsVisible(50) + !String.IsEmpty(Window.Property(IsRadio)) + System.GetBool(PVRPlayback.EnableRadioRDS) + !Skin.HasSetting(HideEPGwithRDS) + RDS.HasRDS]</visible>
+				<visible>![Control.IsVisible(50) + !String.IsEmpty(Window.Property(IsRadio)) + System.GetBool(PVRPlayback.EnableRadioRDS) + !Skin.HasSetting(hideepgwithrds) + RDS.HasRDS]</visible>
 				<visible>!Control.IsVisible(51)</visible>
 				<control type="label">
 					<left>0</left>
@@ -734,7 +734,7 @@
 			<control type="group">
 				<left>530</left>
 				<top>490</top>
-				<visible>Control.IsVisible(50) + !String.IsEmpty(Window.Property(IsRadio)) + System.GetBool(PVRPlayback.EnableRadioRDS) + !Skin.HasSetting(HideEPGwithRDS) + RDS.HasRDS</visible>
+				<visible>Control.IsVisible(50) + !String.IsEmpty(Window.Property(IsRadio)) + System.GetBool(PVRPlayback.EnableRadioRDS) + !Skin.HasSetting(hideepgwithrds) + RDS.HasRDS</visible>
 				<control type="image">
 					<left>580</left>
 					<top>-3</top>

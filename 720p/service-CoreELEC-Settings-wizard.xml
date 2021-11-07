@@ -10,7 +10,7 @@
 			<texture>floor.png</texture>
 			<animation effect="fade" time="300">Visible</animation>
 			<animation effect="fade" time="300">Hidden</animation>
-			<visible>!Skin.HasSetting(NoFloorAll)</visible>
+			<visible>!Skin.HasSetting(nofloorall)</visible>
 		</control>
 		<control type="group">
 			<left>90</left>
@@ -43,7 +43,7 @@
 				<width>1090</width>
 				<height>64</height>
 				<texture border="15">ContentPanelMirror.png</texture>
-				<visible>!Skin.HasSetting(NoFloorAll)</visible>
+				<visible>!Skin.HasSetting(nofloorall)</visible>
 			</control>
 			<control type="image">
 				<left>268</left>

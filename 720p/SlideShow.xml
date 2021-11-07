@@ -15,7 +15,7 @@
 			<align>left</align>
 			<aligny>center</aligny>
 			<label>([COLOR=blue]$INFO[Slideshow.SlideIndex][/COLOR]) $INFO[Slideshow.Filename]</label>
-			<visible>Skin.HasSetting(SlideShowInfo)</visible>
+			<visible>Skin.HasSetting(slideshowinfo)</visible>
 		</control>
 		<control type="label">
 			<description>Clock label</description>
@@ -31,12 +31,12 @@
 			<label>$INFO[System.Time]</label>
 			<animation effect="slide" start="0,0" end="-30,0" time="0" condition="Player.Muted">conditional</animation>
 			<animation effect="slide" start="0,0" end="-40,0" time="0" condition="SlideShow.IsPaused">conditional</animation>
-			<visible>Skin.HasSetting(FullScreenClock)</visible>
+			<visible>Skin.HasSetting(fullscreenclock)</visible>
 		</control>
 		<control type="group" id="13">
 			<left>50r</left>
 			<top>2</top>
-			<visible>!Skin.HasSetting(Show_SlideShow_Paused)</visible>
+			<visible>!Skin.HasSetting(showslideshowpaused)</visible>
 			<control type="image">
 				<left>0</left>
 				<top>0</top>

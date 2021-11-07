@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include file="Defaults.xml" />
-	<include file="Includes_DialogSelect.xml" />
+	<include file="IncludesDialogSelect.xml" />
 	<include file="ViewsVideoLibrary.xml" />
 	<include file="ViewsMusicLibrary.xml" />
 	<include file="ViewsFileMode.xml" />
@@ -20,6 +20,7 @@
 	<include file="IncludesHomeSubMenus.xml" />
 	<include file="IncludesHomeWidgets.xml" />
 	<include file="script-skinshortcuts-includes.xml"/>
+	<include file="IncludesUser.xml" />
 	<include file="IncludesVariables.xml" />
 	<!-- CONSTANTS -->
 	<constant name="FanartCrossfadeTime">500</constant>
@@ -512,13 +513,11 @@
 		<value condition="Container.Content(studios) + String.IsEqual(Skin.String(StudiosImages.path),resource://resource.images.studios.users/)">$INFO[ListItem.Label,resource://resource.images.studios.users/,.png]</value>
 		<value condition="Container.Content(countries) + String.IsEqual(Skin.String(LanguageFlags.path),resource://resource.images.languageflags.colour/)">$INFO[ListItem.Label,resource://resource.images.languageflags.colour/,.png]</value>
 		<value condition="Container.Content(countries) + String.IsEqual(Skin.String(LanguageFlags.path),resource://resource.images.languageflags.users/)">$INFO[ListItem.Label,resource://resource.images.languageflags.users/,.png]</value>
-		<value condition="!String.IsEmpty(ListItem.Art(poster)) + [!String.IsEmpty(ListItem.Art(animatedposter)) + Skin.HasSetting(ActivateAnimatedPosters)]">$INFO[ListItem.Art(animatedposter)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
 		<value condition="!String.IsEmpty(ListItem.Thumb)">$INFO[ListItem.Thumb]</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
 	<variable name="SearchIconWallThumb">
-		<value condition="!String.IsEmpty(ListItem.Art(poster)) + [!String.IsEmpty(ListItem.Art(animatedposter)) + Skin.HasSetting(ActivateAnimatedPosters)]">$INFO[ListItem.Art(animatedposter)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
 		<value condition="!String.IsEmpty(ListItem.Thumb)">$INFO[ListItem.Thumb]</value>
 		<value>$INFO[ListItem.Icon]</value>
@@ -528,12 +527,10 @@
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
 	<variable name="PosterThumb">
-		<value condition="!String.IsEmpty(ListItem.Art(poster)) + [!String.IsEmpty(ListItem.Art(animatedposter)) + Skin.HasSetting(ActivateAnimatedPosters)]">$INFO[ListItem.Art(animatedposter)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
 	<variable name="PosterThumb2">
-		<value condition="!String.IsEmpty(Container(450).ListItem.Art(poster)) + [!String.IsEmpty(Container(450).ListItem.Art(animatedposter)) + Skin.HasSetting(ActivateAnimatedPosters)]">$INFO[Container(450).ListItem.Art(animatedposter)]</value>
 		<value condition="!String.IsEmpty(Container(450).ListItem.Art(poster))">$INFO[Container(450).ListItem.Art(poster)]</value>
 		<value>$INFO[Container(450).ListItem.Icon]</value>
 	</variable>
@@ -553,7 +550,6 @@
 		<value condition="Container.Content(studios) + String.IsEqual(Skin.String(StudiosImages.path),resource://resource.images.studios.white/)">$INFO[ListItem.Label,resource://resource.images.studios.white/,.png]</value>
 		<value condition="Container.Content(studios) + String.IsEqual(Skin.String(StudiosImages.path),resource://resource.images.studios.coloured/)">$INFO[ListItem.Label,resource://resource.images.studios.coloured/,.png]</value>
 		<value condition="Container.Content(countries) + String.IsEqual(Skin.String(LanguageFlags.path),resource://resource.images.languageflags.colour/)">$INFO[ListItem.Label,resource://resource.images.languageflags.colour/,.png]</value>
-		<value condition="!String.IsEmpty(ListItem.Art(poster)) + [!String.IsEmpty(ListItem.Art(animatedposter)) + Skin.HasSetting(ActivateAnimatedPosters)]">$INFO[ListItem.Art(animatedposter)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
 		<value condition="!String.IsEmpty(ListItem.Thumb)">$INFO[ListItem.Thumb]</value>
 		<value>$INFO[ListItem.Icon]</value>
@@ -655,8 +651,8 @@
 		<value condition="ListItem.HasTimer">$LOCALIZE[31510]</value>
 	</variable>
 	<variable name="ProfileIdentificationLabel2Var">
-		<value condition="Skin.HasSetting(show_profilename)">$LOCALIZE[31963]</value>
-		<value condition="Skin.HasSetting(show_profileavatar)">$LOCALIZE[31964]</value>
+		<value condition="Skin.HasSetting(showprofilename)">$LOCALIZE[31963]</value>
+		<value condition="Skin.HasSetting(showprofileavatar)">$LOCALIZE[31964]</value>
 		<value>$LOCALIZE[16018]</value>
 	</variable>
 	<!-- INCLUDES -->
@@ -2641,103 +2637,104 @@
 		</control>
 	</include>
 	<include name="RandomAlbumContent">
-		<content target="music" limit="$VAR[WidgetLimitItemsName]">special://skin/extras/playlists/random_albums.xsp</content>
+		<content target="music" limit="$VAR[WidgetLimitItemsNameVar]">special://skin/extras/playlists/random_albums.xsp</content>
 	</include>
 	<include name="RandomEpisodesContent">
-		<content target="videos" limit="$VAR[WidgetLimitItemsName]">special://skin/extras/playlists/random_episodes.xsp</content>
+		<content target="videos" limit="$VAR[WidgetLimitItemsNameVar]">special://skin/extras/playlists/random_episodes.xsp</content>
 	</include>
 	<include name="RandomMoviesContent">
-		<content target="videos" limit="$VAR[WidgetLimitItemsName]">special://skin/extras/playlists/random_movies.xsp</content>
+		<content target="videos" limit="$VAR[WidgetLimitItemsNameVar]">special://skin/extras/playlists/random_movies.xsp</content>
 	</include>
 	<include name="RandomMusicVideoContent">
-		<content target="videos" limit="$VAR[WidgetLimitItemsName]">special://skin/extras/playlists/random_musicvideos.xsp</content>
+		<content target="videos" limit="$VAR[WidgetLimitItemsNameVar]">special://skin/extras/playlists/random_musicvideos.xsp</content>
 	</include>
 	<include name="ItemMenuColors">
 		<content>
 			<item id="1">
 				<description>MenuColor0</description>
 				<label>[COLOR=FF0084FF]$LOCALIZE[88107][/COLOR]</label>
-				<onclick>Skin.SetString(MenuColor,FF0084FF,)</onclick>
-				<onclick>Skin.SetString(MenuColorName,$LOCALIZE[88107],)</onclick>
+				<onclick>Skin.SetString(menucolor,FF0084FF,)</onclick>
+				<onclick>Skin.SetString(menucolorname,$LOCALIZE[88107],)</onclick>
 				<onclick>PreviousMenu</onclick>
 			</item>
 			<item id="2">
 				<description>MenuColor1</description>
 				<label>[COLOR=FF03D6D9]$LOCALIZE[88108][/COLOR]</label>
-				<onclick>Skin.SetString(MenuColor,FF03D6D9,)</onclick>
-				<onclick>Skin.SetString(MenuColorName,$LOCALIZE[88108],)</onclick>
+				<onclick>Skin.SetString(menucolor,FF03D6D9,)</onclick>
+				<onclick>Skin.SetString(menucolorname,$LOCALIZE[88108],)</onclick>
 				<onclick>PreviousMenu</onclick>
 			</item>
 			<item id="3">
 				<description>MenuColor2</description>
 				<label>[COLOR=FFFFFFFF]$LOCALIZE[88109][/COLOR]</label>
-				<onclick>Skin.SetString(MenuColor,FFFFFFFF,)</onclick>
-				<onclick>Skin.SetString(MenuColorName,$LOCALIZE[88109],)</onclick>
+				<onclick>Skin.SetString(menucolor,FFFFFFFF,)</onclick>
+				<onclick>Skin.SetString(menucolorname,$LOCALIZE[88109],)</onclick>
 				<onclick>PreviousMenu</onclick>
 			</item>
 			<item id="4">
 				<description>MenuColor3</description>
 				<label>[COLOR=FF999999]$LOCALIZE[88110][/COLOR]</label>
-				<onclick>Skin.SetString(MenuColor,FF999999,)</onclick>
-				<onclick>Skin.SetString(MenuColorName,$LOCALIZE[88110],)</onclick>
+				<onclick>Skin.SetString(menucolor,FF999999,)</onclick>
+				<onclick>Skin.SetString(menucolorname,$LOCALIZE[88110],)</onclick>
 				<onclick>PreviousMenu</onclick>
 			</item>
 			<item id="5">
 				<description>MenuColor4</description>
 				<label>[COLOR=FFEC0000]$LOCALIZE[88111][/COLOR]</label>
-				<onclick>Skin.SetString(MenuColor,FFEC0000,)</onclick>
-				<onclick>Skin.SetString(MenuColorName,$LOCALIZE[88111],)</onclick>
+				<onclick>Skin.SetString(menucolor,FFEC0000,)</onclick>
+				<onclick>Skin.SetString(menucolorname,$LOCALIZE[88111],)</onclick>
 				<onclick>PreviousMenu</onclick>
 			</item>
 			<item id="6">
 				<description>MenuColor5</description>
 				<label>[COLOR=84FF00FF]$LOCALIZE[88112][/COLOR]</label>
-				<onclick>Skin.SetString(MenuColor,84FF00FF,)</onclick>
-				<onclick>Skin.SetString(MenuColorName,$LOCALIZE[88112],)</onclick>
+				<onclick>Skin.SetString(menucolor,84FF00FF,)</onclick>
+				<onclick>Skin.SetString(menucolorname,$LOCALIZE[88112],)</onclick>
 				<onclick>PreviousMenu</onclick>
 			</item>
 			<item id="7">
 				<description>MenuColor6</description>
 				<label>[COLOR=FF7F2BAA]$LOCALIZE[88113][/COLOR]</label>
-				<onclick>Skin.SetString(MenuColor,FF7F2BAA,)</onclick>
-				<onclick>Skin.SetString(MenuColorName,$LOCALIZE[88113],)</onclick>
+				<onclick>Skin.SetString(menucolor,FF7F2BAA,)</onclick>
+				<onclick>Skin.SetString(menucolorname,$LOCALIZE[88113],)</onclick>
 				<onclick>PreviousMenu</onclick>
 			</item>
 			<item id="8">
 				<description>MenuColor7</description>
 				<label>[COLOR=FFFF8C00]$LOCALIZE[88114][/COLOR]</label>
-				<onclick>Skin.SetString(MenuColor,FFFF8C00,)</onclick>
-				<onclick>Skin.SetString(MenuColorName,$LOCALIZE[88114],)</onclick>
+				<onclick>Skin.SetString(menucolor,FFFF8C00,)</onclick>
+				<onclick>Skin.SetString(menucolorname,$LOCALIZE[88114],)</onclick>
 				<onclick>PreviousMenu</onclick>
 			</item>
 			<item id="9">
 				<description>MenuColor8</description>
 				<label>[COLOR=FFFFFF00]$LOCALIZE[88115][/COLOR]</label>
-				<onclick>Skin.SetString(MenuColor,FFFFFF00,)</onclick>
-				<onclick>Skin.SetString(MenuColorName,$LOCALIZE[88115],)</onclick>
+				<onclick>Skin.SetString(menucolor,FFFFFF00,)</onclick>
+				<onclick>Skin.SetString(menucolorname,$LOCALIZE[88115],)</onclick>
 				<onclick>PreviousMenu</onclick>
 			</item>
 			<item id="10">
 				<description>MenuColor9</description>
 				<label>[COLOR=FF6DF300]$LOCALIZE[88116][/COLOR]</label>
-				<onclick>Skin.SetString(MenuColor,FF6DF300,)</onclick>
-				<onclick>Skin.SetString(MenuColorName,$LOCALIZE[88116],)</onclick>
+				<onclick>Skin.SetString(menucolor,FF6DF300,)</onclick>
+				<onclick>Skin.SetString(menucolorname,$LOCALIZE[88116],)</onclick>
 				<onclick>PreviousMenu</onclick>
 			</item>
 			<item id="11">
 				<description>MenuColor Default</description>
 				<label>[COLOR=blue]$LOCALIZE[571][/COLOR]</label>
-				<onclick>Skin.SetString(MenuColor,blue,)</onclick>
-				<onclick>Skin.Reset(MenuColorName)</onclick>
+				<onclick>Skin.SetString(menucolor,blue,)</onclick>
+				<onclick>Skin.Reset(menucolorname)</onclick>
 				<onclick>PreviousMenu</onclick>
 			</item>
 			<item id="12">
 				<description>MenuColor Manual</description>
 				<label>[COLOR=$VAR[MenuColorVar]]$LOCALIZE[88085][/COLOR]</label>
-				<onclick>RunScript(script.skin.helper.colorpicker,skinstring=MenuColor,header=$ADDON[script.skin.helper.colorpicker 32011])</onclick>
-				<onclick>Skin.SetString(MenuColorName,$LOCALIZE[88085],)</onclick>
+				<onclick condition="!System.HasAddon(script.skin.utils)">InstallAddon(script.skin.utils)</onclick>
+				<onclick condition="System.HasAddon(script.skin.utils) + !System.AddonIsEnabled(script.skin.utils)">EnableAddon(script.skin.utils)</onclick>
+				<onclick condition="System.AddonIsEnabled(script.skin.utils)">RunScript(script.skin.utils,action=selectcolor,header=$LOCALIZE[88085],skinstring=menucolor,defcolor=menucolor)</onclick>
+				<onclick>Skin.SetString(menucolorname,$LOCALIZE[88085],)</onclick>
 				<onclick>PreviousMenu</onclick>
-				<visible>System.HasAddon(script.skin.helper.colorpicker)</visible>
 			</item>
 		</content>
 	</include>
@@ -2746,43 +2743,44 @@
 			<item id="1">
 				<description>Focus -2</description>
 				<label>$LOCALIZE[88083] 2</label>
-				<onclick>Skin.SetString(CustomFocus,-2,)</onclick>
-				<onclick>Skin.SetString(CustomFocusName,$LOCALIZE[88083] 2,)</onclick>
+				<onclick>Skin.SetString(customfocus,-2,)</onclick>
+				<onclick>Skin.SetString(customfocusname,$LOCALIZE[88083] 2,)</onclick>
 				<onclick>PreviousMenu</onclick>
 			</item>
 			<item id="2">
 				<description>Focus -1</description>
 				<label>$LOCALIZE[88083] 1</label>
-				<onclick>Skin.SetString(CustomFocus,-1,)</onclick>
-				<onclick>Skin.SetString(CustomFocusName,$LOCALIZE[88083] 1,)</onclick>
+				<onclick>Skin.SetString(customfocus,-1,)</onclick>
+				<onclick>Skin.SetString(customfocusname,$LOCALIZE[88083] 1,)</onclick>
 				<onclick>PreviousMenu</onclick>
 			</item>
 			<item id="3">
 				<description>Focus 0</description>
 				<label>$LOCALIZE[571]</label>
-				<onclick>Skin.Reset(CustomFocus)</onclick>
-				<onclick>Skin.Reset(CustomFocusName)</onclick>
+				<onclick>Skin.Reset(customfocus)</onclick>
+				<onclick>Skin.Reset(customfocusname)</onclick>
 				<onclick>PreviousMenu</onclick>
 			</item>
 			<item id="4">
 				<description>Focus 1</description>
 				<label>$LOCALIZE[88084] 1</label>
-				<onclick>Skin.SetString(CustomFocus,1,)</onclick>
-				<onclick>Skin.SetString(CustomFocusName,$LOCALIZE[88084] 1,)</onclick>
+				<onclick>Skin.SetString(customfocus,1,)</onclick>
+				<onclick>Skin.SetString(customfocusname,$LOCALIZE[88084] 1,)</onclick>
 				<onclick>PreviousMenu</onclick>
 			</item>
 			<item id="5">
 				<description>Focus 2</description>
 				<label>$LOCALIZE[88084] 2</label>
-				<onclick>Skin.SetString(CustomFocus,2,)</onclick>
-				<onclick>Skin.SetString(CustomFocusName,$LOCALIZE[88084] 2,)</onclick>
+				<onclick>Skin.SetString(customfocus,2,)</onclick>
+				<onclick>Skin.SetString(customfocusname,$LOCALIZE[88084] 2,)</onclick>
 				<onclick>PreviousMenu</onclick>
 			</item>
 			<item id="6">
 				<description>Focus Manual</description>
 				<label>$LOCALIZE[88085]</label>
-				<onclick>Skin.SetNumeric(CustomFocus)</onclick>
-				<onclick>Skin.SetString(CustomFocusName,$LOCALIZE[88085],)</onclick>
+				<onclick>Skin.SetString(customfocus,0,)</onclick>
+				<onclick>Skin.SetNumeric(customfocus)</onclick>
+				<onclick>Skin.SetString(customfocusname,$LOCALIZE[88085],)</onclick>
 				<onclick>PreviousMenu</onclick>
 			</item>
 		</content>
@@ -2911,251 +2909,6 @@
 				<include>VisibleFadeEffect</include>
 				<animation effect="fade" time="150">WindowClose</animation>
 				<visible>!String.IsEmpty(Skin.String(WeatherIcons.path)) + Skin.HasSetting(WeatherIcons.multi)</visible>
-			</control>
-		</definition>
-	</include>
-	<!-- Backgrounds Select Value -->
-	<include name="BackgroundsSelVal">
-		<content>
-			<item id="1">
-				<description>Reset Background</description>
-				<icon>DefaultAddon.png</icon>
-				<label>$LOCALIZE[15109]</label>
-				<label2/>
-				<onclick>Skin.Reset($INFO[Window(home).Property(setbackgrounds)])</onclick>
-				<onclick>PreviousMenu</onclick>
-			</item>
-			<item id="2">
-				<description>Own Background</description>
-				<icon>DefaultFile.png</icon>
-				<label>$LOCALIZE[90109]</label>
-				<label2/>
-				<onclick>Skin.SetImage($INFO[Window(home).Property(setbackgrounds)])</onclick>
-				<onclick>PreviousMenu</onclick>
-			</item>
-			<item id="3">
-				<description>Multi Background</description>
-				<icon>DefaultFolder.png</icon>
-				<label>$LOCALIZE[90110]</label>
-				<label2/>
-				<onclick>Skin.SetPath($INFO[Window(home).Property(setbackgrounds)])</onclick>
-				<onclick>PreviousMenu</onclick>
-			</item>
-		</content>
-	</include>
-	<!-- Dialog Select Value -->
-	<include name="DialogSelectValue">
-		<definition>
-			<control type="group">
-				<control type="image">
-					<description>background image</description>
-					<left>0</left>
-					<top>0</top>
-					<width>850</width>
-					<height>550</height>
-					<texture border="40">$VAR[SelectBack]</texture>
-				</control>
-				<control type="image">
-					<description>Dialog Header image</description>
-					<left>40</left>
-					<top>16</top>
-					<width>770</width>
-					<height>40</height>
-					<texture>dialogheader.png</texture>
-				</control>
-				<control type="label" id="1">
-					<description>header label</description>
-					<left>40</left>
-					<top>20</top>
-					<width>770</width>
-					<height>30</height>
-					<font>font13_title</font>
-					<label>$PARAM[dialogheaderlabel]</label>
-					<align>center</align>
-					<aligny>center</aligny>
-					<textcolor>selected</textcolor>
-					<shadowcolor>black</shadowcolor>
-				</control>
-				<control type="label" id="4">
-					<description>No Settings Label</description>
-					<left>20</left>
-					<top>120</top>
-					<width>550</width>
-					<align>center</align>
-					<font>font13</font>
-				</control>
-				<control type="button">
-					<description>Close Window button</description>
-					<left>760</left>
-					<top>15</top>
-					<width>64</width>
-					<height>32</height>
-					<label/>
-					<font/>
-					<onclick>PreviousMenu</onclick>
-					<texturefocus>DialogCloseButton-focus.png</texturefocus>
-					<texturenofocus>DialogCloseButton.png</texturenofocus>
-					<visible>system.getbool(input.enablemouse)</visible>
-				</control>
-				<control type="list" id="6">
-					<left>20</left>
-					<top>67</top>
-					<width>550</width>
-					<height>460</height>
-					<onup>6</onup>
-					<ondown>6</ondown>
-					<onleft>7</onleft>
-					<onright>61</onright>
-					<pagecontrol>61</pagecontrol>
-					<scrolltime>200</scrolltime>
-					<itemlayout height="92" width="550">
-						<control type="image">
-							<left>0</left>
-							<top>0</top>
-							<width>550</width>
-							<height>86</height>
-							<texture border="5">button-nofocus.png</texture>
-						</control>
-						<control type="image">
-							<left>2</left>
-							<top>3</top>
-							<width>80</width>
-							<height>80</height>
-							<texture>$INFO[Listitem.Icon]</texture>
-							<aspectratio>keep</aspectratio>
-							<bordertexture border="3">black-back2.png</bordertexture>
-							<bordersize>2</bordersize>
-						</control>
-						<control type="label">
-							<left>90</left>
-							<top>2</top>
-							<width>450</width>
-							<height>30</height>
-							<font>font13</font>
-							<textcolor>grey</textcolor>
-							<selectedcolor>selected</selectedcolor>
-							<align>left</align>
-							<aligny>center</aligny>
-							<label>[B]$INFO[ListItem.Label][/B]</label>
-						</control>
-						<control type="textbox">
-							<left>90</left>
-							<top>34</top>
-							<width>450</width>
-							<height>48</height>
-							<font>font12</font>
-							<textcolor>grey</textcolor>
-							<selectedcolor>selected</selectedcolor>
-							<align>left</align>
-							<label>$INFO[ListItem.Label2]</label>
-						</control>
-					</itemlayout>
-					<focusedlayout height="92" width="550">
-						<control type="image">
-							<left>0</left>
-							<top>0</top>
-							<width>550</width>
-							<height>86</height>
-							<texture border="5">button-nofocus.png</texture>
-							<visible>!Control.HasFocus(6)</visible>
-							<include>VisibleFadeEffect</include>
-						</control>
-						<control type="image">
-							<left>0</left>
-							<top>0</top>
-							<width>550</width>
-							<height>86</height>
-							<texture border="5">button-focus2.png</texture>
-							<visible>Control.HasFocus(6)</visible>
-							<include>VisibleFadeEffect</include>
-						</control>
-						<control type="image">
-							<left>2</left>
-							<top>3</top>
-							<width>80</width>
-							<height>80</height>
-							<texture>$INFO[Listitem.Icon]</texture>
-							<aspectratio>keep</aspectratio>
-							<bordertexture border="3">black-back2.png</bordertexture>
-							<bordersize>2</bordersize>
-						</control>
-						<control type="label">
-							<left>90</left>
-							<top>2</top>
-							<width>450</width>
-							<height>30</height>
-							<font>font13</font>
-							<textcolor>white</textcolor>
-							<selectedcolor>selected</selectedcolor>
-							<align>left</align>
-							<aligny>center</aligny>
-							<label>[B]$INFO[ListItem.Label][/B]</label>
-						</control>
-						<control type="textbox">
-							<left>90</left>
-							<top>34</top>
-							<width>450</width>
-							<height>48</height>
-							<font>font12</font>
-							<textcolor>grey</textcolor>
-							<selectedcolor>selected</selectedcolor>
-							<align>left</align>
-							<label>$INFO[ListItem.Label2]</label>
-						</control>
-					</focusedlayout>
-					<include content="$PARAM[dialogincludeselectval]">
-						<param name="dialogsettingval" value="$PARAM[dialogsettingval]" />
-					</include>
-				</control>
-				<control type="scrollbar" id="61">
-					<left>570</left>
-					<top>65</top>
-					<width>25</width>
-					<height>464</height>
-					<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
-					<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
-					<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
-					<textureslidernib>ScrollBarNib.png</textureslidernib>
-					<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
-					<onleft condition="Control.IsVisible(3)">3</onleft>
-					<onleft condition="Control.IsVisible(6)">6</onleft>
-					<onright>90</onright>
-					<ondown>61</ondown>
-					<onup>61</onup>
-					<showonepage>false</showonepage>
-					<orientation>vertical</orientation>
-				</control>
-				<control type="group">
-					<control type="label">
-						<description>number of files/pages in list text label</description>
-						<left>592</left>
-						<top>490</top>
-						<width>240</width>
-						<height>35</height>
-						<font>font12</font>
-						<align>center</align>
-						<aligny>center</aligny>
-						<textcolor>grey</textcolor>
-						<label>$VAR[SelectLabel]</label>
-					</control>
-					<control type="grouplist" id="90">
-						<left>612</left>
-						<top>100</top>
-						<onleft>6</onleft>
-						<onright>6</onright>
-						<control type="button" id="7">
-							<description>Cancel button</description>
-							<width>200</width>
-							<height>40</height>
-							<label>$LOCALIZE[222]</label>
-							<font>font12_title</font>
-							<textcolor>white</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<align>center</align>
-							<onclick>PreviousMenu</onclick>
-						</control>
-					</control>
-				</control>
 			</control>
 		</definition>
 	</include>

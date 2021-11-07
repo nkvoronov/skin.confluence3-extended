@@ -33,7 +33,7 @@
 				<texturefocus border="5">button-focus.png</texturefocus>
 				<label>$LOCALIZE[89023]</label>
 				<onclick>RunPlugin(plugin://script.simpleplaylists/?mode=addCurrentUrl)</onclick>
-				<visible>Skin.HasSetting(ActivateWatchitLater) + [Container.Content(Episodes) | Container.Content(Movies) | Container.Content(Songs)]</visible>
+				<visible>Skin.HasSetting(enablewatchitlater) + [Container.Content(Episodes) | Container.Content(Movies) | Container.Content(Songs)]</visible>
 			</control>
 		</control>
 		<control type="button">

@@ -583,7 +583,7 @@
 		<param name="content_name"></param>
 		<param name="content_target"></param>
 		<param name="content_path"></param>
-		<param name="content_limit">$VAR[WidgetLimitItemsName]</param>
+		<param name="content_limit">$VAR[WidgetLimitItemsNameVar]</param>
 		<param name="fallback_image">DefaultFolder.png</param>
 		<param name="icon">$INFO[ListItem.Icon]</param>
 		<param name="label">$INFO[ListItem.Label]</param>
@@ -609,7 +609,7 @@
 					<font>font12_title</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
-					<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) + Skin.HasSetting(EnableWidgetsTitle)</visible>
+					<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) + Skin.HasSetting(enablewidgetstitle)</visible>
 				</control>
 				<control type="list" id="$PARAM[list_id]">
 					<include content="$PARAM[animation_name_include]">
@@ -1797,12 +1797,12 @@
 	</include>
 	<!-- Other -->
 	<include name="HomeWidgetUpDown">
-		<onup condition="!Skin.HasSetting(HidePowerButton) + Skin.HasSetting(HideFavoritesButton)">22</onup>
-		<onup condition="Skin.HasSetting(HidePowerButton) + !Skin.HasSetting(HideFavoritesButton)">21</onup>
+		<onup condition="!Skin.HasSetting(hidepowerbutton) + Skin.HasSetting(hidefavoritesbutton)">22</onup>
+		<onup condition="Skin.HasSetting(hidepowerbutton) + !Skin.HasSetting(hidefavoritesbutton)">21</onup>
 		<onup>20</onup>
-		<ondown condition="!Skin.HasSetting(LowerMenu) + System.HasAddon(script.globalsearch) + Skin.HasSetting(ActivateGlobalSearch)">608</ondown>
-		<ondown condition="!Skin.HasSetting(LowerMenu) + [!System.HasAddon(script.globalsearch) | !Skin.HasSetting(ActivateGlobalSearch)]">603</ondown>
-		<ondown condition="Skin.HasSetting(LowerMenu)">9002</ondown>
+		<ondown condition="!Skin.HasSetting(lowermenu) + System.HasAddon(script.globalsearch) + Skin.HasSetting(enableglobalsearch)">608</ondown>
+		<ondown condition="!Skin.HasSetting(lowermenu) + [!System.HasAddon(script.globalsearch) | !Skin.HasSetting(enableglobalsearch)]">603</ondown>
+		<ondown condition="Skin.HasSetting(lowermenu)">9002</ondown>
 	</include>
 	<!-- User Widget -->
 	<include name="HomeMainWidgetsItemSettings">

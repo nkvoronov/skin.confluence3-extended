@@ -448,7 +448,7 @@
 						<bordertexture border="5" flipy="true" diffuse="diffuse_mirror2.png">button-nofocus.png</bordertexture>
 						<bordersize>4</bordersize>
 						<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">$INFO[ListItem.Icon]</texture>
-						<visible>!Skin.HasSetting(NoFloorAll)</visible>
+						<visible>!Skin.HasSetting(nofloorall)</visible>
 					</control>
 					<control type="list" id="49">
 						<left>390</left>
@@ -796,7 +796,7 @@
 					<textcolor>white</textcolor>
 					<pagecontrol>61</pagecontrol>
 					<label>$INFO[ListItem.Plot]</label>
-					<autoscroll time="3000" delay="4000" repeat="5000">!Control.HasFocus(61) + Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll time="3000" delay="4000" repeat="5000">!Control.HasFocus(61) + Skin.HasSetting(autoscroll)</autoscroll>
 					<visible>!Control.IsVisible(50)</visible>
 				</control>
 				<control type="image">
@@ -914,14 +914,14 @@
 						<description>Play Trailer</description>
 						<include>ButtonInfoDialogsCommonValues</include>
 						<label>20410</label>
-						<visible>!String.IsEmpty(ListItem.Trailer) + !Skin.HasSetting(WindowedTrailer)</visible>
+						<visible>!String.IsEmpty(ListItem.Trailer) + !Skin.HasSetting(windowedtrailer)</visible>
 					</control>
 					<control type="button" id="15">
 						<description>Play Trailer Windowed</description>
 						<include>ButtonInfoDialogsCommonValues</include>
 						<label>20410</label>
 						<onclick>PlayMedia($INFO[ListItem.Trailer],1)</onclick>
-						<visible>!String.IsEmpty(ListItem.Trailer) + Skin.HasSetting(WindowedTrailer)</visible>
+						<visible>!String.IsEmpty(ListItem.Trailer) + Skin.HasSetting(windowedtrailer)</visible>
 					</control>
 					<control type="button" id="7">
 						<description>Set my rating</description>
@@ -936,7 +936,7 @@
 						<onclick>PreviousMenu</onclick>
 						<onclick condition="String.IsEqual(ListItem.DBType,movie)">RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[ListItem.DBID],id=$INFO[ListItem.ID])</onclick>
 						<onclick condition="String.IsEqual(ListItem.DBType,tvshow)">RunScript(script.extendedinfo,info=extendedtvinfo,dbid=$INFO[ListItem.DBID],id=$INFO[ListItem.ID])</onclick>
-						<visible>System.HasAddon(script.extendedinfo) + Skin.HasSetting(ActivateExtendedInfo) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow)]</visible>
+						<visible>System.HasAddon(script.extendedinfo) + Skin.HasSetting(enableextendedinfo) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow)]</visible>
 					</control>
 					<control type="button" id="101">
 						<description>Get Artwork</description>

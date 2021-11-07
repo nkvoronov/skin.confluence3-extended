@@ -15,7 +15,7 @@
 			<shadowcolor>black</shadowcolor>
 			<label>$INFO[System.Time]</label>
 			<animation effect="slide" start="0,0" end="-30,0" time="0" condition="Player.Muted">conditional</animation>
-			<visible>Skin.HasSetting(FullScreenClock) + ![Player.ShowInfo | Window.IsActive(VideoOSD)]</visible>
+			<visible>Skin.HasSetting(fullscreenclock) + ![Player.ShowInfo | Window.IsActive(VideoOSD)]</visible>
 		</control>
 		<!-- view mode, sizing, screen resolution -->
 		<control type="group" id="0">

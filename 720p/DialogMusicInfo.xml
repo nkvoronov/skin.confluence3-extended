@@ -158,7 +158,7 @@
 					<font>font13</font>
 					<align>left</align>
 					<textcolor>white</textcolor>
-					<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 				</control>
 				<control type="image">
 					<left>210</left>
@@ -224,7 +224,7 @@
 						<onclick>PreviousMenu</onclick>
 						<onclick condition="!String.IsEqual(ListItem.DBType,song)">RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Artist] $INFO[ListItem.Album])</onclick>
 						<onclick condition="String.IsEqual(ListItem.DBType,song)">RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Artist] $INFO[ListItem.Title])</onclick>
-						<visible>System.hasAddon(script.extendedinfo) + Skin.HasSetting(ActivateExtendedInfo)</visible>
+						<visible>System.hasAddon(script.extendedinfo) + Skin.HasSetting(enableextendedinfo)</visible>
 					</control>
 				</control>
 			</control>

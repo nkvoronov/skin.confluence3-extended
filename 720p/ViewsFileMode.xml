@@ -212,7 +212,7 @@
 						<aspectratio aligny="top">keep</aspectratio>
 						<fadetime>IconCrossfadeTime</fadetime>
 						<texture diffuse="diffuse_mirror3.png" flipy="true" background="true" fallback="DefaultFolder.png">$VAR[PosterThumb3]</texture>
-						<visible>!Skin.HasSetting(NoFloorAll)</visible>
+						<visible>!Skin.HasSetting(nofloorall)</visible>
 					</control>
 				</control>
 			</control>

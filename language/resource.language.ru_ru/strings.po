@@ -1,20 +1,29 @@
 # Kodi Media Center language file
-# Addon Name: Confluence Extended Shortcuts
-# Addon id: skin.confluence-extended-s
+# Addon Name: Confluence v3 Extended Shortcuts
+# Addon id: skin.confluence3-extended-s
 # Addon Provider: Jezz_X, Team Kodi, YLLOW_DRAGON, plood
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
-"Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
+"Report-Msgid-Bugs-To: translations@kodi.tv\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Kodi Translation Team\n"
-"Language-Team: Russian (Russia) (http://www.transifex.com/projects/p/kodi-main/language/ru_RU/)\n"
+"PO-Revision-Date: 2021-09-26 13:30+0000\n"
+"Last-Translator: Christian Gade <gade@kodi.tv>\n"
+"Language-Team: Russian <https://kodi.weblate.cloud/projects/kodi-add-ons-skins/skin-confluence/ru_ru/>\n"
+"Language: ru_ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ru_RU\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.8\n"
+
+msgctxt "Addon Summary"
+msgid "Confluence skin by Jezz_X."
+msgstr "Обложка Confluence Extended Shortcuts. Авторы: Jezz_X, Team XBMC, YLLOW_DRAGON, plood."
+
+msgctxt "Addon Description"
+msgid "Confluence Extended Shortcuts is the modernized skin for KODI. It is a combination of concepts from many popular skins, and attempts to embrace and integrate their good ideas into a skin that should be easy for first time Kodi users to understand and use."
+msgstr "Confluence Extended Shortcuts — это модернизированная обложка KODI. Она представляет собой сочетание концепций, взятых из многих популярных обложек, в попытке интегрировать их удачные идеи в обложке, которая была простой для использования и понимания новыми пользователями KODI."
 
 msgctxt "#31000"
 msgid "Change your"
@@ -46,7 +55,7 @@ msgstr "Настройки просмотра"
 
 msgctxt "#31007"
 msgid "Video process information"
-msgstr "Информация о видео"
+msgstr "Сведения о видеопроцесе"
 
 msgctxt "#31008"
 msgid "Full screen"
@@ -70,7 +79,7 @@ msgstr "Декодер"
 
 msgctxt "#31013"
 msgid "Audio process information"
-msgstr "Информация о аудио"
+msgstr "Сведения об аудиопроцесе"
 
 msgctxt "#31014"
 msgid "Memory used"
@@ -134,7 +143,7 @@ msgstr "Действия"
 
 msgctxt "#31040"
 msgid "Now playing"
-msgstr "Сейчас воспроизводится:"
+msgstr "Сейчас воспроизводится"
 
 msgctxt "#31042"
 msgid "PLAYING"
@@ -229,8 +238,8 @@ msgid "Enable custom background"
 msgstr "Использовать собственный фон"
 
 msgctxt "#31110"
-msgid "Background path:"
-msgstr "Путь к фоновой картинке:"
+msgid "Background path"
+msgstr "Путь к фоновой картинке"
 
 msgctxt "#31111"
 msgid "Hide"
@@ -241,8 +250,8 @@ msgid "Options"
 msgstr "Параметры"
 
 msgctxt "#31113"
-msgid "Background path Master:"
-msgstr "Фоновый путь мастера:"
+msgid "Background path Master"
+msgstr "Фоновый путь мастера"
 
 msgctxt "#31114"
 msgid "System"
@@ -260,6 +269,7 @@ msgctxt "#31117"
 msgid "Show recently added videos"
 msgstr "Показывать последнее добавленное видео"
 
+#. In main language strings its used as submenu
 msgctxt "#31118"
 msgid "Home page \"Add-ons\" submenu"
 msgstr "Страница \"Дополнений\" подменю"
@@ -268,10 +278,12 @@ msgctxt "#31119"
 msgid "Hide background fanart"
 msgstr "Скрыть фоновый фанарт"
 
+#. In main language strings its used as submenu
 msgctxt "#31120"
 msgid "Home page \"Games\" submenu"
 msgstr "Страница \"Игры\" подменю"
 
+#. Boolean settings value
 msgctxt "#31122"
 msgid "Hide EPG if RDS is present on channel window"
 msgstr "Скрыть EPG если на каналe присутствует RDS"
@@ -296,6 +308,7 @@ msgctxt "#31132"
 msgid "Lyrics add-on"
 msgstr "Дополнение текстов песен"
 
+#. In main language strings its used as submenu
 msgctxt "#31134"
 msgid "Home page \"Videos\" submenu"
 msgstr "Подменю \"Видео\" главного экрана"
@@ -327,6 +340,18 @@ msgstr "плейлист"
 msgctxt "#31145"
 msgid "playlist path"
 msgstr "путь к плейлисту"
+
+msgctxt "#31146"
+msgid "Hide home screen buttons"
+msgstr "Скрыть кнопки главного экрана"
+
+msgctxt "#31147"
+msgid "Hide - Favourites"
+msgstr "Скрыть \"Избранное\""
+
+msgctxt "#31148"
+msgid "Hide - Search"
+msgstr "Скрыть \"Поиск\""
 
 msgctxt "#31200"
 msgid "Shortcuts"
@@ -636,19 +661,70 @@ msgctxt "#31961"
 msgid "Timeshift"
 msgstr "Таймшифт"
 
+#. Choose profile identifier
 msgctxt "#31962"
 msgid "Choose kind of profile identification"
 msgstr "Выбрать вид идентификации профиля"
 
+#. Label for the kind of profile identification
 msgctxt "#31963"
 msgid "Profile name"
 msgstr "Название профиля"
 
+#. Label for the kind of profile identification
 msgctxt "#31964"
 msgid "Profile avatar"
 msgstr "Аватар профиля"
 
 # Extended Added Value
+
+msgctxt "#32000"
+msgid "General settings applying to all areas of the skin."
+msgstr "Общие параметры, применяемые во всех местах обложки."
+
+msgctxt "#32001"
+msgid "Advanced options"
+msgstr "Дополнительные параметры"
+
+msgctxt "#32002"
+msgid "Main menu-related settings: Configure the home screen to your likings."
+msgstr "Основные настройки меню: Настройка главного экрана в соответствии с Вашими предпочтениями."
+
+msgctxt "#32003"
+msgid "User widgets"
+msgstr "Виджеты пользователя"
+
+msgctxt "#32004"
+msgid "Background options"
+msgstr "Параметры фона"
+
+msgctxt "#32005"
+msgid "Addons options"
+msgstr "Параметры дополнений"
+
+msgctxt "#32006"
+msgid "Reset skin options"
+msgstr "Сброс параметров обложки"
+
+msgctxt "#32007"
+msgid "Alternative view"
+msgstr "Алтернативный вид"
+
+msgctxt "#32008"
+msgid "Enable splash screen (photo, video or music)"
+msgstr "Разрешить заставку (фото, видео или музыка)"
+
+msgctxt "#32009"
+msgid "Path"
+msgstr "Путь"
+
+msgctxt "#32010"
+msgid "Duration"
+msgstr "Длительность"
+
+msgctxt "#32011"
+msgid "Widgets"
+msgstr "Виджеты"
 
 msgctxt "#80000"
 msgid "Extended info"
@@ -669,10 +745,6 @@ msgstr "Выбрать пакет фонов для главного экран�
 msgctxt "#80004"
 msgid "Choose weather icons pack"
 msgstr "Выбрать пакет иконок для погоды"
-
-msgctxt "#80005"
-msgid "Alternative view"
-msgstr "Алтернативный вид"
 
 msgctxt "#80006"
 msgid "Choose genre backgrounds pack"
@@ -846,10 +918,6 @@ msgctxt "#88119"
 msgid "Debug infos"
 msgstr "Отладочная иформация"
 
-msgctxt "#88130"
-msgid "Widgets"
-msgstr "Виджеты"
-
 msgctxt "#88131"
 msgid "Unwatched Movies"
 msgstr "Непросмотренные фильмы"
@@ -1014,18 +1082,6 @@ msgctxt "#90009"
 msgid "Widget Limit Items"
 msgstr "Лимит элементов"
 
-msgctxt "#90010"
-msgid "Enable Smart Shortcuts Playlists"
-msgstr "Разрешить Смарт Ярлыки для плейлистов"
-
-msgctxt "#90011"
-msgid "Enable Smart Shortcuts Favorites"
-msgstr "Разрешить Смарт Ярлыки для избранного"
-
-msgctxt "#90012"
-msgid "Enable Animated Posters"
-msgstr "Разрешить анимированные постеры"
-
 msgctxt "#90014"
 msgid "Picture Add-On"
 msgstr "Фото дополнение"
@@ -1070,18 +1126,6 @@ msgctxt "#90031"
 msgid "Music Add-On"
 msgstr "Дополнение музыки"
 
-msgctxt "#90040"
-msgid "Enable splash screen (photo, video or music)"
-msgstr "Разрешить заставку (фото, видео или музыка)"
-
-msgctxt "#90041"
-msgid "Path:"
-msgstr "Путь:"
-
-msgctxt "#90042"
-msgid "Duration"
-msgstr "Длительность"
-
 msgctxt "#90044"
 msgid "Disable"
 msgstr "Запретить"
@@ -1093,30 +1137,6 @@ msgstr "Смарт Ярлыки"
 msgctxt "#90051"
 msgid "Smart Widgets"
 msgstr "Смарт Виджеты"
-
-msgctxt "#90052"
-msgid "General settings applying to all areas of the skin."
-msgstr "Общие параметры, применяемые во всех местах обложки."
-
-msgctxt "#90053"
-msgid "Advanced options"
-msgstr "Дополнительные параметры"
-
-msgctxt "#90054"
-msgid "Main menu-related settings: Configure the home screen to your likings."
-msgstr "Основные настройки меню: Настройка главного экрана в соответствии с Вашими предпочтениями."
-
-msgctxt "#90055"
-msgid "User widgets"
-msgstr "Виджеты пользователя"
-
-msgctxt "#90056"
-msgid "Background options"
-msgstr "Параметры фона"
-
-msgctxt "#90057"
-msgid "Reset skin options"
-msgstr "Сброс параметров обложки"
 
 msgctxt "#90060"
 msgid "Disable"
@@ -1134,17 +1154,9 @@ msgctxt "#90063"
 msgid "Recently played channels"
 msgstr "Недавно проигранные каналы"
 
-msgctxt "#90100"
-msgid "Enable Wall Backgrounds"
-msgstr "Разрешить стену фонов"
-
 msgctxt "#90101"
 msgid "Random Fanart Delay"
 msgstr "Длительность показа для случайных фонов"
-
-msgctxt "#90102"
-msgid "Enable Animated Fanarts"
-msgstr "Разрешить анимированные фоны"
 
 msgctxt "#90103"
 msgid "Icons"
@@ -1209,3 +1221,11 @@ msgstr "Искать в TheMovieDB"
 msgctxt "#90118"
 msgid "Show search button"
 msgstr "Показывать кнопку поиска"
+
+msgctxt "#90119"
+msgid "Enable user list of add-ons"
+msgstr "Разрешить пользовательский список дополнений"
+
+msgctxt "#90120"
+msgid "Enable user list of TV and radio channels"
+msgstr "Разрешить пользовательский список тв и радио каналов"

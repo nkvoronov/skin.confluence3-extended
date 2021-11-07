@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<includes>
+	<include name="BackgroundSelect">
+		<param name="header">$LOCALIZE[22080]</param>
+		<param name="enable">true</param>
+		<param name="reload">false</param>
+		<definition>
+			<control type="button" id="$PARAM[control_id]">
+				<description>Select Background</description>
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<label>- $PARAM[label]</label>
+				<label2>$PARAM[label2]</label2>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick condition="!System.HasAddon(script.skin.utils)">InstallAddon(script.skin.utils)</onclick>
+				<onclick condition="System.HasAddon(script.skin.utils) + !System.AddonIsEnabled(script.skin.utils)">EnableAddon(script.skin.utils)</onclick>
+				<onclick condition="System.AddonIsEnabled(script.skin.utils)">RunScript(script.skin.utils,action=setbackground,header=$PARAM[header] - $PARAM[label],skinstring=$PARAM[property])</onclick>
+				<enable>$PARAM[enable]</enable>
+			</control>
+		</definition>
+	</include>
+	<include name="ResetSkinSettingsParams">
+		<param name="header">$LOCALIZE[13007]</param>
+		<param name="text">$LOCALIZE[10042]</param>
+		<param name="action"></param>
+		<definition>
+			<control type="image" id="$PARAM[control_id1]">
+				<description>Separator Image</description>
+				<height>2</height>
+				<texture>separator2.png</texture>
+			</control>
+			<control type="button" id="$PARAM[control_id2]">
+				<description>Reset Section</description>
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<label>$LOCALIZE[10041]</label>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick condition="!System.HasAddon(script.skin.utils)">InstallAddon(script.skin.utils)</onclick>
+				<onclick condition="System.HasAddon(script.skin.utils) + !System.AddonIsEnabled(script.skin.utils)">EnableAddon(script.skin.utils)</onclick>
+				<onclick condition="System.AddonIsEnabled(script.skin.utils)">RunScript(script.skin.utils,action=dialogyesno,header=$PARAM[header],message=$PARAM[text],yesaction=$PARAM[action])</onclick>				
+			</control>
+		</definition>
+	</include>
+	<include name="ResourceSelect">
+		<param name="enable">true</param>
+		<definition>
+			<control type="button" id="$PARAM[control_id]">
+				<description>Resource Select</description>
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<label>$PARAM[label]</label>
+				<label2>$PARAM[label2]</label2>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick condition="!System.HasAddon(script.skin.utils)">InstallAddon(script.skin.utils)</onclick>
+				<onclick condition="System.HasAddon(script.skin.utils) + !System.AddonIsEnabled(script.skin.utils)">EnableAddon(script.skin.utils)</onclick>
+				<onclick condition="System.AddonIsEnabled(script.skin.utils)">RunScript(script.skin.utils,action=setresourceaddon,skinstring=$PARAM[property],addontype=$PARAM[type],header=$PARAM[label])</onclick>											
+				<enable>$PARAM[enable]</enable>
+			</control>
+		</definition>
+	</include>
+</includes>

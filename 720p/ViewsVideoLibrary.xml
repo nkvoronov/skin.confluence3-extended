@@ -380,7 +380,7 @@
 						<bordersize>4</bordersize>
 						<fadetime>200</fadetime>
 						<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">$VAR[PosterThumb]</texture>
-						<visible>!Skin.HasSetting(NoFloorAll)</visible>
+						<visible>!Skin.HasSetting(nofloorall)</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout height="310" width="120">
@@ -409,7 +409,7 @@
 						<bordersize>4</bordersize>
 						<fadetime>200</fadetime>
 						<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">$VAR[PosterThumb]</texture>
-						<visible>!Skin.HasSetting(NoFloorAll)</visible>
+						<visible>!Skin.HasSetting(nofloorall)</visible>
 					</control>
 					<control type="image">
 						<depth>DepthContentPopout</depth>
@@ -775,7 +775,7 @@
 					<align>left</align>
 					<textcolor>white</textcolor>
 					<label>$INFO[ListItem.Plot]</label>
-					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 				</control>
 			</control>
 			<control type="group">
@@ -792,7 +792,7 @@
 					<align>left</align>
 					<textcolor>white</textcolor>
 					<label>$INFO[ListItem.Plot]</label>
-					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 				</control>
 				<control type="textbox">
 					<description>Description For Movie</description>
@@ -804,7 +804,7 @@
 					<align>left</align>
 					<textcolor>white</textcolor>
 					<label>$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)]</label>
-					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 					<visible>String.IsEmpty(ListItem.Plot)</visible>
 				</control>
 			</control>
@@ -1103,7 +1103,7 @@
 					<align>left</align>
 					<textcolor>white</textcolor>
 					<label>$INFO[ListItem.Plot]</label>
-					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 				</control>
 			</control>
 			<control type="group">
@@ -1167,7 +1167,7 @@
 					<align>left</align>
 					<textcolor>white</textcolor>
 					<label>$INFO[ListItem.Plot]</label>
-					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 				</control>
 			</control>
 			<control type="group">
@@ -1195,7 +1195,7 @@
 					<align>left</align>
 					<textcolor>white</textcolor>
 					<label>$INFO[Container.ShowPlot]</label>
-					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 					<visible>String.IsEqual(ListItem.DBType,season)</visible>
 				</control>
 				<control type="label">
@@ -1252,7 +1252,7 @@
 					<align>left</align>
 					<textcolor>white</textcolor>
 					<label>$INFO[ListItem.Plot]</label>
-					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 				</control>
 				<control type="textbox">
 					<description>Description For Movie</description>
@@ -1264,7 +1264,7 @@
 					<align>left</align>
 					<textcolor>white</textcolor>
 					<label>$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)]</label>
-					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 					<visible>String.IsEmpty(ListItem.Plot)</visible>
 				</control>
 			</control>
@@ -1549,7 +1549,7 @@
 					<align>left</align>
 					<textcolor>white</textcolor>
 					<label>$INFO[ListItem.Plot]</label>
-					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 				</control>
 				<control type="textbox">
 					<description>Description For Video</description>
@@ -1561,7 +1561,7 @@
 					<align>left</align>
 					<textcolor>white</textcolor>
 					<label>$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)]</label>
-					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 					<visible>String.IsEmpty(ListItem.Plot)</visible>
 				</control>
 			</control>
@@ -1668,7 +1668,7 @@
 					<align>left</align>
 					<textcolor>white</textcolor>
 					<label>$INFO[ListItem.Plot]</label>
-					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 				</control>
 			</control>
 		</control>
@@ -1827,7 +1827,7 @@
 					<align>left</align>
 					<textcolor>white</textcolor>
 					<label>$INFO[ListItem.Plot]</label>
-					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 				</control>
 				<control type="textbox">
 					<description>Description For Video</description>
@@ -1839,7 +1839,7 @@
 					<align>left</align>
 					<textcolor>white</textcolor>
 					<label>$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)]</label>
-					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 					<visible>String.IsEmpty(ListItem.Plot)</visible>
 				</control>
 				<control type="grouplist">
@@ -1905,7 +1905,7 @@
 					<align>left</align>
 					<textcolor>white</textcolor>
 					<label>$INFO[ListItem.Plot]</label>
-					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 				</control>
 				<control type="image">
 					<depth>DepthContent+</depth>
@@ -1955,7 +1955,7 @@
 					<align>left</align>
 					<textcolor>white</textcolor>
 					<label>$INFO[Container.ShowPlot]</label>
-					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 				</control>
 				<control type="image">
 					<depth>DepthContent+</depth>
@@ -2005,7 +2005,7 @@
 					<align>left</align>
 					<textcolor>white</textcolor>
 					<label>$INFO[ListItem.Plot]</label>
-					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 				</control>
 				<control type="grouplist">
 					<description>Media Codec Flagging Images</description>
@@ -2223,7 +2223,7 @@
 						<fadetime>200</fadetime>
 						<texture background="true" flipy="true" >$VAR[PosterThumb]</texture>
 						<colordiffuse>33FFFFFF</colordiffuse>
-						<visible>!Skin.HasSetting(NoFloorAll)</visible>
+						<visible>!Skin.HasSetting(nofloorall)</visible>
 					</control>
 				</control>
 			</control>
@@ -2266,7 +2266,7 @@
 						<fadetime>200</fadetime>
 						<texture background="true" flipy="true" >$VAR[PosterThumb]</texture>
 						<colordiffuse>33FFFFFF</colordiffuse>
-						<visible>!Skin.HasSetting(NoFloorAll)</visible>
+						<visible>!Skin.HasSetting(nofloorall)</visible>
 					</control>
 				</control>
 				<control type="label">
@@ -2348,7 +2348,7 @@
 						<fadetime>200</fadetime>
 						<texture background="true" flipy="true" >$VAR[PosterThumb]</texture>
 						<colordiffuse>33FFFFFF</colordiffuse>
-						<visible>!Skin.HasSetting(NoFloorAll)</visible>
+						<visible>!Skin.HasSetting(nofloorall)</visible>
 					</control>
 				</control>
 				<control type="label">
@@ -2465,7 +2465,7 @@
 					<align>left</align>
 					<textcolor>white</textcolor>
 					<label>$INFO[ListItem.Plot]</label>
-					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 				</control>
 			</control>
 			<control type="group">
@@ -2507,7 +2507,7 @@
 						<fadetime>200</fadetime>
 						<texture background="true" flipy="true" >$VAR[PosterThumb]</texture>
 						<colordiffuse>33FFFFFF</colordiffuse>
-						<visible>!Skin.HasSetting(NoFloorAll)</visible>
+						<visible>!Skin.HasSetting(nofloorall)</visible>
 					</control>
 				</control>
 				<control type="grouplist">
@@ -2535,7 +2535,7 @@
 					<align>left</align>
 					<textcolor>white</textcolor>
 					<label>$INFO[ListItem.Plot]</label>
-					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 				</control>
 				<control type="textbox">
 					<description>Description For Movie</description>
@@ -2547,7 +2547,7 @@
 					<align>left</align>
 					<textcolor>white</textcolor>
 					<label>$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)]</label>
-					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 					<visible>String.IsEmpty(ListItem.Plot)</visible>
 				</control>
 			</control>

@@ -14,7 +14,7 @@
 			<height>100</height>
 			<texture>floor.png</texture>
 			<include>VisibleFadeEffect</include>
-			<visible>!Skin.HasSetting(NoFloorAll)</visible>
+			<visible>!Skin.HasSetting(nofloorall)</visible>
 		</control>
 		<control type="group">
 			<left>90</left>
@@ -40,7 +40,7 @@
 				<width>1090</width>
 				<height>64</height>
 				<texture border="15">ContentPanelMirror.png</texture>
-				<visible>!Skin.HasSetting(NoFloorAll)</visible>
+				<visible>!Skin.HasSetting(nofloorall)</visible>
 			</control>
 			<control type="button">
 				<description>Close Window button</description>
@@ -211,7 +211,7 @@
 						<height>40</height>
 						<font>font13</font>
 						<label>$ADDON[script.skinshortcuts 32048]</label>
-						<label2>$INFO[Container(211).ListItem.Label]</label2>
+						<label2>[COLOR=selected]$INFO[Container(211).ListItem.Label][/COLOR]</label2>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<texturefocus>MenuItemFO.png</texturefocus>
@@ -224,7 +224,7 @@
 						<height>40</height>
 						<font>font13</font>
 						<label>$ADDON[script.skinshortcuts 32027]</label>
-						<label2>$INFO[Container(211).ListItem.Property(displaypath)]</label2>
+						<label2>[COLOR=selected]$INFO[Container(211).ListItem.Property(displaypath)][/COLOR]</label2>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<texturefocus>MenuItemFO.png</texturefocus>
@@ -237,7 +237,7 @@
 						<height>40</height>
 						<font>font13</font>
 						<label>$ADDON[script.skinshortcuts 32025]</label>
-						<label2>$INFO[Container(211).ListItem.Label]</label2>
+						<label2>[COLOR=selected]$INFO[Container(211).ListItem.Label][/COLOR]</label2>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<texturefocus>MenuItemFO.png</texturefocus>
@@ -249,7 +249,7 @@
 						<height>40</height>
 						<font>font13</font>
 						<label>$ADDON[script.skinshortcuts 32045]</label>
-						<label2>$INFO[Container(211).ListItem.Property(background)]</label2>
+						<label2>[COLOR=selected]$INFO[Container(211).ListItem.Property(background)][/COLOR]</label2>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<texturefocus>MenuItemFO.png</texturefocus>
@@ -286,7 +286,7 @@
 						<height>40</height>
 						<font>font13</font>
 						<label>$ADDON[script.skinshortcuts 32099]</label>
-						<label2>$INFO[Container(211).ListItem.Property(widgetName)]</label2>
+						<label2>[COLOR=selected]$INFO[Container(211).ListItem.Property(widgetName)][/COLOR]</label2>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<texturefocus>MenuItemFO.png</texturefocus>

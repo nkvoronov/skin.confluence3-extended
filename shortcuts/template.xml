@@ -37,7 +37,7 @@
 					<param name="list_id" value="$PYTHON[700+int($SKINSHORTCUTS[id])]" />
 				</include>
 				<skinshortcuts>visibility</skinshortcuts>
-				<visible>!Skin.HasSetting(LowerMenu) | !Player.HasMedia | Skin.HasSetting(HomePageVideoInfo) | Skin.HasSetting(HomePageMusicInfo)</visible>
+				<visible>!Skin.HasSetting(lowermenu) | !Player.HasMedia | Skin.HasSetting(homepagevideoinfo) | Skin.HasSetting(homepagemusicinfo)</visible>
 				<onleft>$PYTHON[700+int($SKINSHORTCUTS[id])]</onleft>
 				<onright>$PYTHON[700+int($SKINSHORTCUTS[id])]</onright>
 				<include>HomeAddonUpDown</include>
@@ -51,7 +51,7 @@
 					<param name="list_id" value="$PYTHON[700+int($SKINSHORTCUTS[id])]" />
 				</include>
 				<skinshortcuts>visibility</skinshortcuts>
-				<visible>Skin.HasSetting(LowerMenu) + Player.HasMedia + ![Skin.HasSetting(HomePageVideoInfo) | Skin.HasSetting(HomePageMusicInfo)]</visible>
+				<visible>Skin.HasSetting(lowermenu) + Player.HasMedia + ![Skin.HasSetting(homepagevideoinfo) | Skin.HasSetting(homepagemusicinfo)]</visible>
 				<onleft>$PYTHON[700+int($SKINSHORTCUTS[id])]</onleft>
 				<onright>$PYTHON[700+int($SKINSHORTCUTS[id])]</onright>
 				<include>HomeAddonUpDown</include>

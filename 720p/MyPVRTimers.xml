@@ -14,7 +14,7 @@
 			<texture>floor.png</texture>
 			<animation effect="fade" time="200" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="fade" time="200" condition="Window.Next(Home)">WindowClose</animation>
-			<visible>!Skin.HasSetting(NoFloorAll)</visible>
+			<visible>!Skin.HasSetting(nofloorall)</visible>
 		</control>
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>
@@ -26,7 +26,7 @@
 				<texture>floor.png</texture>
 				<animation effect="fade" time="200" condition="Window.Previous(Home)">WindowOpen</animation>
 				<animation effect="fade" time="200" condition="Window.Next(Home)">WindowClose</animation>
-				<visible>!Skin.HasSetting(NoFloorAll)</visible>
+				<visible>!Skin.HasSetting(nofloorall)</visible>
 			</control>
 			<control type="group">
 				<include>Window_OpenClose_Animation</include>
@@ -45,7 +45,7 @@
 						<width>1170</width>
 						<height>64</height>
 						<texture border="15">ContentPanelMirror.png</texture>
-						<visible>!Skin.HasSetting(NoFloorAll)</visible>
+						<visible>!Skin.HasSetting(nofloorall)</visible>
 					</control>
 				</control>
 			</control>

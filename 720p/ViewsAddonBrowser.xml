@@ -216,7 +216,7 @@
 						<align>left</align>
 						<textcolor>white</textcolor>
 						<label>$INFO[ListItem.AddonDescription]</label>
-						<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+						<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 					</control>
 				</control>
 			</control>
@@ -448,7 +448,7 @@
 						<align>left</align>
 						<textcolor>white</textcolor>
 						<label>$INFO[ListItem.AddonDescription]</label>
-						<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+						<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 					</control>
 				</control>
 			</control>

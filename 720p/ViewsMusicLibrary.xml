@@ -274,7 +274,7 @@
 						<bordersize>4</bordersize>
 						<fadetime>200</fadetime>
 						<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">$INFO[ListItem.Icon]</texture>
-						<visible>!Skin.HasSetting(NoFloorAll)</visible>
+						<visible>!Skin.HasSetting(nofloorall)</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout height="200" width="160">
@@ -448,7 +448,7 @@
 					<pagecontrol/>
 					<textcolor>white</textcolor>
 					<label>$VAR[MusicInfoLabel]</label>
-					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 				</control>
 			</control>
 		</control>
@@ -882,7 +882,7 @@
 						<align>left</align>
 						<textcolor>white</textcolor>
 						<label>$VAR[MusicInfoLabel]</label>
-						<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+						<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 					</control>
 				</control>
 			</control>
@@ -1047,7 +1047,7 @@
 						<pagecontrol/>
 						<textcolor>white</textcolor>
 						<label>$VAR[MusicInfoLabel]</label>
-						<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+						<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 					</control>
 				</control>
 			</control>
