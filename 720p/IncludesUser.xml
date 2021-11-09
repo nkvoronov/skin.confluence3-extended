@@ -70,4 +70,42 @@
 			</control>
 		</definition>
 	</include>
+	<include name="ColorSkinSetting">
+		<definition>
+			<control type="button" id="$PARAM[control_id1]">
+				<description>Color Value</description>
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<label>$PARAM[label]</label>
+				<label2>$PARAM[label2]</label2>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick condition="!System.HasAddon(script.skin.utils)">InstallAddon(script.skin.utils)</onclick>
+				<onclick condition="System.HasAddon(script.skin.utils) + !System.AddonIsEnabled(script.skin.utils)">EnableAddon(script.skin.utils)</onclick>
+				<onclick condition="System.AddonIsEnabled(script.skin.utils)">RunScript(script.skin.utils,action=selectcolor,header=$PARAM[label],skinstring=$PARAM[property],defcolor=$PARAM[defcolor])</onclick>
+			</control>
+		</definition>
+	</include>
+	<include name="SetSkinSetting">
+		<definition>
+			<control type="button" id="$PARAM[control_id]">
+				<description>Set Skin Setting</description>
+				<width>750</width>
+				<height>40</height>
+				<font>font13</font>
+				<label>$PARAM[label]</label>
+				<label2>$PARAM[label2]</label2>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<texturefocus>MenuItemFO.png</texturefocus>
+				<texturenofocus>MenuItemNF.png</texturenofocus>
+				<onclick condition="!System.HasAddon(script.skin.utils)">InstallAddon(script.skin.utils)</onclick>
+				<onclick condition="System.HasAddon(script.skin.utils) + !System.AddonIsEnabled(script.skin.utils)">EnableAddon(script.skin.utils)</onclick>
+				<onclick condition="System.AddonIsEnabled(script.skin.utils)">RunScript(script.skin.utils,action=setskinsetting,setting=$PARAM[property],header=$PARAM[header])</onclick>
+			</control>
+		</definition>
+	</include>
 </includes>

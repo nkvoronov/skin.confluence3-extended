@@ -2731,7 +2731,7 @@
 				<label>[COLOR=$VAR[MenuColorVar]]$LOCALIZE[32081][/COLOR]</label>
 				<onclick condition="!System.HasAddon(script.skin.utils)">InstallAddon(script.skin.utils)</onclick>
 				<onclick condition="System.HasAddon(script.skin.utils) + !System.AddonIsEnabled(script.skin.utils)">EnableAddon(script.skin.utils)</onclick>
-				<onclick condition="System.AddonIsEnabled(script.skin.utils)">RunScript(script.skin.utils,action=selectcolor,header=$LOCALIZE[32081],skinstring=menucolor,defcolor=menucolor)</onclick>
+				<onclick condition="System.AddonIsEnabled(script.skin.utils)">RunScript(script.skin.utils,action=selectcolor,header=$LOCALIZE[32081],skinstring=menucolor,defcolor=blue)</onclick>
 				<onclick>Skin.SetString(menucolorname,$LOCALIZE[32081],)</onclick>
 				<onclick>PreviousMenu</onclick>
 			</item>
