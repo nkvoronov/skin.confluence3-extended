@@ -1351,7 +1351,7 @@
 		<include>BehindDialogFadeOut</include>
 		<include content="CommonWindowHeader">
 			<param name="Icon" value="icon_system" />
-			<param name="Label" value="$LOCALIZE[5][COLOR blue] - [/COLOR]$LOCALIZE[89041]" />
+			<param name="Label" value="$LOCALIZE[5][COLOR blue] - [/COLOR]$LOCALIZE[32060]" />
 		</include>
 	</controls>
 </window>

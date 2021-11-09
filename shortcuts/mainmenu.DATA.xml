@@ -57,7 +57,7 @@
 		<action>ActivateWindow(videos,videodb://tvshows/titles/,return)</action>
 	</shortcut>
 	<shortcut>
-		<label>80007</label>
+		<label>31965</label>
 		<label2>20389</label2>
 		<defaultID>musicvideos</defaultID>
 		<icon>DefaultMusicVideos.png</icon>

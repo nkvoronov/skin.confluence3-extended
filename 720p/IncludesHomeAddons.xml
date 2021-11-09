@@ -266,68 +266,68 @@
 		<content>
 			<item>
 				<description>Favourites Window</description>
-				<label>$LOCALIZE[89702]</label>
+				<label>$LOCALIZE[32086]</label>
 				<onclick>Dialog.Close($PARAM[id_win])</onclick>
 				<onclick>Skin.SetString(usrfavbtncmd.Path,ActivateWindow(Favourites),return)</onclick>
-				<onclick>Skin.SetString(usrfavbtncmd.Label,$LOCALIZE[89702])</onclick>
+				<onclick>Skin.SetString(usrfavbtncmd.Label,$LOCALIZE[32086])</onclick>
 				<onclick>ClearProperty(usrselectbtn,Home)</onclick>
 				<visible>String.IsEqual(Window(Home).Property(usrselectbtn),usrfavbtncmd)</visible>
 			</item>
 			<item>
 				<description>Random Movies</description>
-				<label>$LOCALIZE[89032]</label>
+				<label>$LOCALIZE[32087]</label>
 				<onclick>Dialog.Close($PARAM[id_win])</onclick>
 				<onclick>Skin.SetString(usrfavbtncmd.Path,ActivateWindow(2125))</onclick>
-				<onclick>Skin.SetString(usrfavbtncmd.Label,$LOCALIZE[89032])</onclick>
+				<onclick>Skin.SetString(usrfavbtncmd.Label,$LOCALIZE[32087])</onclick>
 				<onclick>ClearProperty(usrselectbtn,Home)</onclick>
 				<visible>String.IsEqual(Window(Home).Property(usrselectbtn),usrfavbtncmd)</visible>
 				<visible>Library.HasContent(Movies)</visible>
 			</item>
 			<item>
 				<description>Random Episodes</description>
-				<label>$LOCALIZE[89035]</label>
+				<label>$LOCALIZE[32088]</label>
 				<onclick>Dialog.Close($PARAM[id_win])</onclick>
 				<onclick>Skin.SetString(usrfavbtncmd.Path,ActivateWindow(2124))</onclick>
-				<onclick>Skin.SetString(usrfavbtncmd.Label,$LOCALIZE[89035])</onclick>
+				<onclick>Skin.SetString(usrfavbtncmd.Label,$LOCALIZE[32088])</onclick>
 				<onclick>ClearProperty(usrselectbtn,Home)</onclick>
 				<visible>String.IsEqual(Window(Home).Property(usrselectbtn),usrfavbtncmd)</visible>
 				<visible>Library.HasContent(TVShows)</visible>
 			</item>
 			<item>
 				<description>Random Albums</description>
-				<label>$LOCALIZE[89027]</label>
+				<label>$LOCALIZE[32089]</label>
 				<onclick>Dialog.Close($PARAM[id_win])</onclick>
 				<onclick>Skin.SetString(usrfavbtncmd.Path,ActivateWindow(2123))</onclick>
-				<onclick>Skin.SetString(usrfavbtncmd.Label,$LOCALIZE[89027])</onclick>
+				<onclick>Skin.SetString(usrfavbtncmd.Label,$LOCALIZE[32089])</onclick>
 				<onclick>ClearProperty(usrselectbtn,Home)</onclick>
 				<visible>String.IsEqual(Window(Home).Property(usrselectbtn),usrfavbtncmd)</visible>
 				<visible>Library.HasContent(Music)</visible>
 			</item>
 			<item>
 				<description>Random Music Video</description>
-				<label>$LOCALIZE[89038]</label>
+				<label>$LOCALIZE[32090]</label>
 				<onclick>Dialog.Close($PARAM[id_win])</onclick>
 				<onclick>Skin.SetString(usrfavbtncmd.Path,ActivateWindow(2126))</onclick>
-				<onclick>Skin.SetString(usrfavbtncmd.Label,$LOCALIZE[89038])</onclick>
+				<onclick>Skin.SetString(usrfavbtncmd.Label,$LOCALIZE[32090])</onclick>
 				<onclick>ClearProperty(usrselectbtn,Home)</onclick>
 				<visible>String.IsEqual(Window(Home).Property(usrselectbtn),usrfavbtncmd)</visible>
 				<visible>Library.HasContent(MusicVideos)</visible>
 			</item>
 			<item>
 				<description>Auto Random Media</description>
-				<label>$LOCALIZE[89705]</label>
+				<label>$LOCALIZE[32110]</label>
 				<onclick>Dialog.Close($PARAM[id_win])</onclick>
 				<onclick>Skin.SetString(usrfavbtncmd.Path,AutoSuggest)</onclick>
-				<onclick>Skin.SetString(usrfavbtncmd.Label,$LOCALIZE[89705])</onclick>
+				<onclick>Skin.SetString(usrfavbtncmd.Label,$LOCALIZE[32110])</onclick>
 				<onclick>ClearProperty(usrselectbtn,Home)</onclick>
 				<visible>String.IsEqual(Window(Home).Property(usrselectbtn),usrfavbtncmd)</visible>
 			</item>
 			<item>
 				<description>Eject DISC</description>
-				<label>$LOCALIZE[89706]</label>
+				<label>$LOCALIZE[32091]</label>
 				<onclick>Dialog.Close($PARAM[id_win])</onclick>
 				<onclick>Skin.SetString(usrfavbtncmd.Path,EjectTray())</onclick>
-				<onclick>Skin.SetString(usrfavbtncmd.Label,$LOCALIZE[89706])</onclick>
+				<onclick>Skin.SetString(usrfavbtncmd.Label,$LOCALIZE[32091])</onclick>
 				<onclick>ClearProperty(usrselectbtn,Home)</onclick>
 				<visible>String.IsEqual(Window(Home).Property(usrselectbtn),usrfavbtncmd)</visible>
 			</item>
@@ -342,19 +342,19 @@
 			</item>
 			<item>
 				<description>Shutdown Menu</description>
-				<label>$LOCALIZE[89707]</label>
+				<label>$LOCALIZE[32068]</label>
 				<onclick>Dialog.Close($PARAM[id_win])</onclick>
 				<onclick>Skin.SetString(usrfavbtncmd.Path,ActivateWindow(ShutdownMenu))</onclick>
-				<onclick>Skin.SetString(usrfavbtncmd.Label,$LOCALIZE[89707])</onclick>
+				<onclick>Skin.SetString(usrfavbtncmd.Label,$LOCALIZE[32068])</onclick>
 				<onclick>ClearProperty(usrselectbtn,Home)</onclick>
 				<visible>String.IsEqual(Window(Home).Property(usrselectbtn),usrfavbtncmd)</visible>
 			</item>
 			<item>
 				<description>Shutdown Menu</description>
-				<label>$LOCALIZE[89707]</label>
+				<label>$LOCALIZE[32068]</label>
 				<onclick>Dialog.Close($PARAM[id_win])</onclick>
 				<onclick>Skin.SetString(usrpwrbtncmd.Path,ActivateWindow(ShutdownMenu))</onclick>
-				<onclick>Skin.SetString(usrpwrbtncmd.Label,$LOCALIZE[89707])</onclick>
+				<onclick>Skin.SetString(usrpwrbtncmd.Label,$LOCALIZE[32068])</onclick>
 				<onclick>ClearProperty(usrselectbtn,Home)</onclick>
 				<visible>String.IsEqual(Window(Home).Property(usrselectbtn),usrpwrbtncmd)</visible>
 			</item>
@@ -501,10 +501,10 @@
 			</item>
 			<item>
 				<description>Watch it Later Playlist</description>
-				<label>$LOCALIZE[559] ($LOCALIZE[89023])</label>
+				<label>$LOCALIZE[559] ($LOCALIZE[32103])</label>
 				<onclick>Skin.Reset(UsrSelectAddon)</onclick>
 				<onclick>Dialog.Close($PARAM[id_win])</onclick>
-				<onclick>Skin.SetString($INFO[Window(Home).Property(usrselectbtn)].Label,$LOCALIZE[89023])</onclick>
+				<onclick>Skin.SetString($INFO[Window(Home).Property(usrselectbtn)].Label,$LOCALIZE[32103])</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(usrselectbtn)].Path,RunAddon(script.simpleplaylists))</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(usrselectbtn)].Icon,DefaultVideoPlaylists.png)</onclick>
 				<onclick>Skin.SetString($INFO[Window(Home).Property(usrselectbtn)].Label)</onclick>

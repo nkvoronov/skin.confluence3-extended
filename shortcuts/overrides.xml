@@ -24,11 +24,11 @@
 	<backgrounddefault labelID="addons">special://skin/extras/backgrounds/addons.jpg</backgrounddefault>
 	<backgrounddefault labelID="dvd">special://skin/extras/backgrounds/dvd.jpg</backgrounddefault>
 	<backgrounddefault labelID="settings">special://skin/extras/backgrounds/settings.jpg</backgrounddefault>
-	<widget label="$LOCALIZE[89302]" icon="DefaultFolder.png" type="weathers" path="weatherdaily" target="list">DailyWeather</widget>
-	<widget label="$LOCALIZE[89031]" icon="DefaultRecentlyAddedMovies.png" type="movies" path="videodb://recentlyaddedmovies/" target="videos">RecentMovies</widget>
-	<widget label="$LOCALIZE[89033]" icon="DefaultRecentlyAddedEpisodes.png" type="episodes" path="videodb://recentlyaddedepisodes/" target="videos">RecentEpisodes</widget>
-	<widget label="$LOCALIZE[89036]" icon="DefaultRecentlyAddedMusicVideos.png" type="musicvideos" path="videodb://recentlyaddedmusicvideos/" target="videos">RecentMusicVideo</widget>
-	<widget label="$LOCALIZE[89025]" icon="DefaultMusicRecentlyAdded.png" type="albums" path="musicdb://recentlyaddedalbums/" target="music">RecentAlbums</widget>
+	<widget label="$LOCALIZE[32108]" icon="DefaultFolder.png" type="weathers" path="weatherdaily" target="list">DailyWeather</widget>
+	<widget label="$LOCALIZE[32105]" icon="DefaultRecentlyAddedMovies.png" type="movies" path="videodb://recentlyaddedmovies/" target="videos">RecentMovies</widget>
+	<widget label="$LOCALIZE[32106]" icon="DefaultRecentlyAddedEpisodes.png" type="episodes" path="videodb://recentlyaddedepisodes/" target="videos">RecentEpisodes</widget>
+	<widget label="$LOCALIZE[32107]" icon="DefaultRecentlyAddedMusicVideos.png" type="musicvideos" path="videodb://recentlyaddedmusicvideos/" target="videos">RecentMusicVideo</widget>
+	<widget label="$LOCALIZE[32104]" icon="DefaultMusicRecentlyAdded.png" type="albums" path="musicdb://recentlyaddedalbums/" target="music">RecentAlbums</widget>
 	<widgetdefault labelID="weather">DailyWeather</widgetdefault>
 	<widgetdefault labelID="movies">RecentMovies</widgetdefault>
 	<widgetdefault labelID="tvshows">RecentEpisodes</widgetdefault>
@@ -38,8 +38,8 @@
 		<enableon>211</enableon>
 		<item control="303">$ADDON[script.skinshortcuts 32002]</item>
 		<item control="304">$ADDON[script.skinshortcuts 32003]</item>
-		<item control="313" condition="String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),False)">$LOCALIZE[90060]</item>
-		<item control="313" condition="String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)">$LOCALIZE[90061]</item>
+		<item control="313" condition="String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),False)">$LOCALIZE[32053]</item>
+		<item control="313" condition="String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)">$LOCALIZE[32062]</item>
 		<item control="301">$ADDON[script.skinshortcuts 32000]</item>
 		<item control="302">$ADDON[script.skinshortcuts 32001]</item>
 		<item control="308">$ADDON[script.skinshortcuts 32028]</item>
@@ -48,8 +48,8 @@
 		<node label="8">
 			<shortcut label="8" type="8" icon="DefaultFolder.png">ActivateWindow(Weather)</shortcut>
 			<shortcut label="184" type="8" icon="DefaultFolder.png">Weather.Refresh</shortcut>
-			<shortcut label="89900" type="8" icon="DefaultFolder.png">Weather.LocationPrevious</shortcut>
-			<shortcut label="89901" type="8" icon="DefaultFolder.png">Weather.LocationNext</shortcut>
+			<shortcut label="32111" type="8" icon="DefaultFolder.png">Weather.LocationPrevious</shortcut>
+			<shortcut label="32112" type="8" icon="DefaultFolder.png">Weather.LocationNext</shortcut>
 			<shortcut label="8" type="10004" icon="DefaultFolder.png">ActivateWindow(servicesettings,weather)</shortcut>
 		</node>
 		<node label="1">
@@ -262,7 +262,7 @@
 		</node>
 		<!-- Power -->
 		<node label="13005">
-			<shortcut label="89707" type="13005" icon="DefaultFolder.png">ActivateWindow(shutdownmenu)</shortcut>
+			<shortcut label="32068" type="13005" icon="DefaultFolder.png">ActivateWindow(shutdownmenu)</shortcut>
 			<shortcut label="13012" type="13005" icon="DefaultFolder.png" condition="System.ShowExitButton">Quit()</shortcut>
 			<shortcut label="13005" type="13005" icon="DefaultFolder.png" condition="System.HasShutdown">Shutdown()</shortcut>
 			<shortcut label="13016" type="13005" icon="DefaultFolder.png" condition="System.CanPowerDown">Powerdown()</shortcut>
@@ -311,21 +311,21 @@
 		</node>
 		<!-- Weather -->
 		<node label="8">
-			<shortcut label="89302" type="8" icon="DefaultFolder.png" widget="DailyWeather" widgetType="weather" widgetTarget="list">weatherdaily</shortcut>
-			<shortcut label="89303" type="8" icon="DefaultFolder.png" widget="HourlyWeather" widgetType="weather" widgetTarget="list">weatherhourly</shortcut>
+			<shortcut label="32108" type="8" icon="DefaultFolder.png" widget="DailyWeather" widgetType="weather" widgetTarget="list">weatherdaily</shortcut>
+			<shortcut label="32109" type="8" icon="DefaultFolder.png" widget="HourlyWeather" widgetType="weather" widgetTarget="list">weatherhourly</shortcut>
 			<shortcut label="33034" type="8" icon="DefaultFolder.png" widget="H36Weather" widgetType="weatherh36" widgetTarget="list" condition="Skin.HasSetting(lowermenu)">weatherh36</shortcut>
 		</node>
 		<!-- LiveTV -->
 		<node label="19020" condition="PVR.HasTVChannels">
-			<shortcut label="90063" type="19020" icon="DefaultTVShows.png" widget="Library" widgetType="pvrchannel" widgetTarget="pvr">pvr://channels/tv/*?view=lastplayed</shortcut>
-			<shortcut label="90062" type="19020" icon="DefaultTVShows.png" widget="Library" widgetType="pvrrecording" widgetTarget="pvr">pvr://recordings/tv/active?view=flat</shortcut>
-			<shortcut label="88133" type="19020" icon="DefaultTVShows.png" widget="Custom" widgetType="custpvrchannel" widgetTarget="TV">HomeCustomChannelsItems</shortcut>
+			<shortcut label="32123" type="19020" icon="DefaultTVShows.png" widget="Library" widgetType="pvrchannel" widgetTarget="pvr">pvr://channels/tv/*?view=lastplayed</shortcut>
+			<shortcut label="32122" type="19020" icon="DefaultTVShows.png" widget="Library" widgetType="pvrrecording" widgetTarget="pvr">pvr://recordings/tv/active?view=flat</shortcut>
+			<shortcut label="32101" type="19020" icon="DefaultTVShows.png" widget="Custom" widgetType="custpvrchannel" widgetTarget="TV">HomeCustomChannelsItems</shortcut>
 		</node>
 		<!-- Radio -->
 		<node label="19021" condition="PVR.HasRadioChannels">
-			<shortcut label="90063" type="19021" icon="DefaultTVShows.png" widget="Library" widgetType="pvrchannel" widgetTarget="pvr">pvr://channels/radio/*?view=lastplayed</shortcut>
-			<shortcut label="90062" type="19021" icon="DefaultTVShows.png" widget="Library" widgetType="pvrrecording" widgetTarget="pvr">pvr://recordings/radio/active?view=flat</shortcut>
-			<shortcut label="88134" type="19021" icon="DefaultTVShows.png" widget="Custom" widgetType="custpvrchannel" widgetTarget="Radio">HomeCustomChannelsItems</shortcut>
+			<shortcut label="32123" type="19021" icon="DefaultTVShows.png" widget="Library" widgetType="pvrchannel" widgetTarget="pvr">pvr://channels/radio/*?view=lastplayed</shortcut>
+			<shortcut label="32122" type="19021" icon="DefaultTVShows.png" widget="Library" widgetType="pvrrecording" widgetTarget="pvr">pvr://recordings/radio/active?view=flat</shortcut>
+			<shortcut label="32102" type="19021" icon="DefaultTVShows.png" widget="Custom" widgetType="custpvrchannel" widgetTarget="Radio">HomeCustomChannelsItems</shortcut>
 		</node>
 		<!-- Video -->
 		<node label="3">

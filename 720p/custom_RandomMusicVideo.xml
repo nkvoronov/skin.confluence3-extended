@@ -8,7 +8,7 @@
 	</coordinates>
 	<controls>
 		<include content="CustomRandomDialog">
-			<param name="dlg_title" value="$LOCALIZE[89038]" />
+			<param name="dlg_title" value="$LOCALIZE[32090]" />
 			<param name="id_win" value="2126" />
 			<param name="fallback_pic" value="DefaultMusicVideos.png" />
 			<param name="list_pic" value="$INFO[Container(450).ListItem.Thumb]" />

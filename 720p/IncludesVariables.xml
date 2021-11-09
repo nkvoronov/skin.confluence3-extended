@@ -19,9 +19,9 @@
 		<value>ActivateWindow(Favourites)</value>
 	</variable>
 	<variable name="PowerButtonLabelVar">
-		<value condition="String.IsEmpty(Skin.String(usrpwrbtncmd.Label))">$LOCALIZE[89707]</value>
+		<value condition="String.IsEmpty(Skin.String(usrpwrbtncmd.Label))">$LOCALIZE[32068]</value>
 		<value condition="!String.IsEmpty(Skin.String(usrpwrbtncmd.Label))">$INFO[Skin.String(usrpwrbtncmd.Label)]</value>
-		<value>$LOCALIZE[89707]</value>
+		<value>$LOCALIZE[32068]</value>
 	</variable>
 	<variable name="PowerButtonCommandVar">
 		<value condition="!String.IsEmpty(Skin.String(usrpwrbtncmd.Path))">$INFO[Skin.String(usrpwrbtncmd.Path)]</value>
@@ -51,7 +51,7 @@
 		<!-- Game -->
 		<value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),games) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[15016])">[B][COLOR=$INFO[Skin.String(menuColor)]]$LOCALIZE[15016]: [/COLOR][/B] $INFO[Window(Home).Property(SkinUtils.TotalGamesAddons)]</value>
 		<!-- Addons -->
-		<value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),addons) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[15016]) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[24001]) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[90017])">[B][COLOR=$INFO[Skin.String(menuColor)]]$LOCALIZE[3]: [/COLOR][/B] $INFO[Window(Home).Property(SkinUtils.TotalVideoAddons)]  [B][COLOR=$INFO[Skin.String(menuColor)]]$LOCALIZE[2]: [/COLOR][/B] $INFO[Window(Home).Property(SkinUtils.TotalAudioAddons)]  [B][COLOR=$INFO[Skin.String(menuColor)]]$LOCALIZE[15016]: [/COLOR][/B] $INFO[Window(Home).Property(SkinUtils.TotalGamesAddons)]  [B][COLOR=$INFO[Skin.String(menuColor)]]$LOCALIZE[0]: [/COLOR][/B] $INFO[Window(Home).Property(SkinUtils.TotalProgramAddons)]  [B][COLOR=$INFO[Skin.String(menuColor)]]$LOCALIZE[1]: [/COLOR][/B] $INFO[Window(Home).Property(SkinUtils.TotalPicturesAddons)]</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.Property(defaultID),addons) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[15016]) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[24001]) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[32118])">[B][COLOR=$INFO[Skin.String(menuColor)]]$LOCALIZE[3]: [/COLOR][/B] $INFO[Window(Home).Property(SkinUtils.TotalVideoAddons)]  [B][COLOR=$INFO[Skin.String(menuColor)]]$LOCALIZE[2]: [/COLOR][/B] $INFO[Window(Home).Property(SkinUtils.TotalAudioAddons)]  [B][COLOR=$INFO[Skin.String(menuColor)]]$LOCALIZE[15016]: [/COLOR][/B] $INFO[Window(Home).Property(SkinUtils.TotalGamesAddons)]  [B][COLOR=$INFO[Skin.String(menuColor)]]$LOCALIZE[0]: [/COLOR][/B] $INFO[Window(Home).Property(SkinUtils.TotalProgramAddons)]  [B][COLOR=$INFO[Skin.String(menuColor)]]$LOCALIZE[1]: [/COLOR][/B] $INFO[Window(Home).Property(SkinUtils.TotalPicturesAddons)]</value>
 		<!-- Other -->
 		<value condition="!String.Contains(System.CPUTemperature,?) + !String.Contains(System.GPUTemperature,?)">[B][COLOR=$INFO[Skin.String(menuColor)]]IP: [/COLOR][/B]$INFO[Network.IPAddress]  [B][COLOR=$INFO[Skin.String(menuColor)]]CPU: [/COLOR][/B]$INFO[System.CPUTemperature]  [B][COLOR=$INFO[Skin.String(menuColor)]]GPU: [/COLOR][/B]$INFO[System.GPUTemperature]</value>
 		<value condition="!String.Contains(System.CPUTemperature,?)">[B][COLOR=$INFO[Skin.String(menuColor)]]IP: [/COLOR][/B]$INFO[Network.IPAddress]  [B][COLOR=$INFO[Skin.String(menuColor)]]CPU: [/COLOR][/B]$INFO[System.CPUTemperature]  [B][COLOR=$INFO[Skin.String(menuColor)]]$LOCALIZE[155]: [/COLOR][/B]$INFO[System.UsedSpacePercent]</value>
@@ -61,42 +61,42 @@
 	<variable name="HomeBackgroundVar">
 		<value condition="!String.IsEmpty(Container(9000).ListItem.Property(background))">$INFO[Container(9000).ListItem.Property(background)]</value>
 		<value condition="String.IsEmpty(Container(9000).ListItem.Property(background)) + String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[8])">special://skin/extras/backgrounds/weather.jpg</value>
-		<value condition="String.IsEmpty(Container(9000).ListItem.Property(background)) + [String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[1]) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[90014])]">special://skin/extras/backgrounds/pictures.jpg</value>
-		<value condition="String.IsEmpty(Container(9000).ListItem.Property(background)) + [String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[19020]) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[90015])]">special://skin/extras/backgrounds/livetv.jpg</value>
-		<value condition="String.IsEmpty(Container(9000).ListItem.Property(background)) + [String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[19021]) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[90016])]">special://skin/extras/backgrounds/radio.jpg</value>
-		<value condition="String.IsEmpty(Container(9000).ListItem.Property(background)) + [String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[3]) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[90018]) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[90018])]">special://skin/extras/backgrounds/video.jpg</value>
+		<value condition="String.IsEmpty(Container(9000).ListItem.Property(background)) + [String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[1]) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[32115])]">special://skin/extras/backgrounds/pictures.jpg</value>
+		<value condition="String.IsEmpty(Container(9000).ListItem.Property(background)) + [String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[19020]) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[32116])]">special://skin/extras/backgrounds/livetv.jpg</value>
+		<value condition="String.IsEmpty(Container(9000).ListItem.Property(background)) + [String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[19021]) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[32117])]">special://skin/extras/backgrounds/radio.jpg</value>
+		<value condition="String.IsEmpty(Container(9000).ListItem.Property(background)) + [String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[3]) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[32118]) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[32119])]">special://skin/extras/backgrounds/video.jpg</value>
 		<value condition="String.IsEmpty(Container(9000).ListItem.Property(background)) + String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[342])">special://skin/extras/backgrounds/movies.jpg</value>
 		<value condition="String.IsEmpty(Container(9000).ListItem.Property(background)) + String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[20343])">special://skin/extras/backgrounds/tvshows.jpg</value>
 		<value condition="String.IsEmpty(Container(9000).ListItem.Property(background)) + String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[20389])">special://skin/extras/backgrounds/musicvideos.jpg</value>
-		<value condition="String.IsEmpty(Container(9000).ListItem.Property(background)) + [String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[2]) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[90030]) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[90031])]">special://skin/extras/backgrounds/music.jpg</value>
+		<value condition="String.IsEmpty(Container(9000).ListItem.Property(background)) + [String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[2]) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[32120]) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[32121])]">special://skin/extras/backgrounds/music.jpg</value>
 		<value condition="String.IsEmpty(Container(9000).ListItem.Property(background)) + String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[446])">special://skin/extras/backgrounds/dvd.jpg</value>
-		<value condition="String.IsEmpty(Container(9000).ListItem.Property(background)) + [String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[24001]) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[90017])]">special://skin/extras/backgrounds/addons.jpg</value>
+		<value condition="String.IsEmpty(Container(9000).ListItem.Property(background)) + [String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[24001]) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[32118])]">special://skin/extras/backgrounds/addons.jpg</value>
 		<value condition="String.IsEmpty(Container(9000).ListItem.Property(background)) + String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[10004])">special://skin/extras/backgrounds/settings.jpg</value>
 		<value condition="String.IsEmpty(Container(9000).ListItem.Property(background)) + String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[13200])">special://skin/extras/backgrounds/profile.jpg</value>
 		<value condition="String.IsEmpty(Container(9000).ListItem.Property(background)) + String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[13005])">special://skin/extras/backgrounds/power.jpg</value>
 		<value condition="String.IsEmpty(Container(9000).ListItem.Property(background)) + String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[1036])">special://skin/extras/backgrounds/favourites.jpg</value>
-		<value condition="String.IsEmpty(Container(9000).ListItem.Property(background)) + [String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[90001]) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[90002])]">special://skin/extras/backgrounds/playlists.jpg</value>
+		<value condition="String.IsEmpty(Container(9000).ListItem.Property(background)) + [String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[32113]) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[32114])]">special://skin/extras/backgrounds/playlists.jpg</value>
 		<value condition="String.IsEmpty(Container(9000).ListItem.Property(background)) + String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[15016])">special://skin/extras/backgrounds/games.jpg</value>
 		<value>$INFO[Skin.CurrentTheme,special://skin/extras/themes/,.jpg]</value>
 	</variable>
 	<!-- HomeMenuType -->
 	<variable name="HomeMenuTypeVar">
 		<value condition="String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[8])">weather</value>
-		<value condition="String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[1]) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[90014])">pictures</value>
-		<value condition="String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[19020]) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[90015])">livetv</value>
-		<value condition="String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[19021]) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[90016])">radio</value>
-		<value condition="String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[3]) | String.IsEmpty(Container(9000).ListItem.label2,$LOCALIZE[90018]) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[90019])">video</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[1]) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[32115])">pictures</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[19020]) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[32116])">livetv</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[19021]) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[32117])">radio</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[3]) | String.IsEmpty(Container(9000).ListItem.label2,$LOCALIZE[32118]) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[32119])">video</value>
 		<value condition="String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[342])">movies</value>
 		<value condition="String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[20343])">tvshows</value>
 		<value condition="String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[20389])">musicvideos</value>
-		<value condition="String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[2]) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[90030]) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[90031])">music</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[2]) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[32120]) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[32121])">music</value>
 		<value condition="String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[446])">dvd</value>
-		<value condition="String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[24001]) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[90017])">addons</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[24001]) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[32118])">addons</value>
 		<value condition="String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[10004])">settings</value>
 		<value condition="String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[13200])">profile</value>
 		<value condition="String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[13005])">power</value>
 		<value condition="String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[1036])">favourites</value>
-		<value condition="String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[90001]) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[90002])">playlists</value>
+		<value condition="String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[32113]) | String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[32114])">playlists</value>
 		<value condition="String.IsEqual(Container(9000).ListItem.label2,$LOCALIZE[15016])">games</value>
 		<value>$INFO[Container(9000).ListItem.Property(defaultID)]</value>
 	</variable>
@@ -142,16 +142,18 @@
 	</variable>
 	<variable name="MenuColorNameVar">
 		<value condition="!String.IsEmpty(Skin.String(menucolorname))">[COLOR=$INFO[Skin.String(menucolor)]]$INFO[Skin.String(menucolorname)][/COLOR]</value>
-		<value>[COLOR=selected]$LOCALIZE[571][/COLOR]</value>
+		<value>[COLOR=blue]$LOCALIZE[571][/COLOR]</value>
 	</variable>
 	<variable name="MenuColorVar">
 		<value condition="!String.IsEmpty(Skin.String(menucolor))">$INFO[Skin.String(menucolor)]</value>
 		<value>blue</value>
 	</variable>
 	<variable name="MenuFocusNameVar">
-		<value condition="!String.IsEmpty(Skin.String(customfocusname)) + String.IsEqual(Skin.String(customfocusname),$LOCALIZE[88085])">[COLOR=selected]$INFO[Skin.String(customfocus)][/COLOR]</value>
-		<value condition="!String.IsEmpty(Skin.String(customfocusname))">[COLOR=selected]$INFO[Skin.String(customfocusname)][/COLOR]</value>
-		<value>[COLOR=selected]$LOCALIZE[571][/COLOR]</value>
+		<value condition="!String.IsEmpty(Skin.String(customfocusname)) + String.IsEqual(Skin.String(customfocusname),$LOCALIZE[32081]) + Integer.IsGreater(Skin.String(customfocus),0)">$LOCALIZE[32084] $INFO[Skin.String(customfocus)]</value>
+		<value condition="!String.IsEmpty(Skin.String(customfocusname)) + String.IsEqual(Skin.String(customfocusname),$LOCALIZE[32081]) + Integer.IsLess(Skin.String(customfocus),0)">$LOCALIZE[32083] $INFO[Skin.String(customfocus)]</value>
+		<value condition="!String.IsEmpty(Skin.String(customfocusname)) + String.IsEqual(Skin.String(customfocusname),$LOCALIZE[32081]) + Integer.IsEqual(Skin.String(customfocus),0)">$LOCALIZE[571]</value>
+		<value condition="!String.IsEmpty(Skin.String(customfocusname)) + !String.IsEqual(Skin.String(customfocusname),$LOCALIZE[32081])">$INFO[Skin.String(customfocusname)]</value>
+		<value>$LOCALIZE[571]</value>
 	</variable>
 	<variable name="WidgetLimitItemsNameVar">
 		<value condition="!String.IsEmpty(Skin.String(widgetlimititems))">$INFO[Skin.String(widgetlimititems)]</value>
@@ -190,16 +192,16 @@
 	<!-- -->
 	<variable name="SkinShortcutsTitleVar">
 		<value condition="!String.IsEmpty(Window.Property(groupname)) + String.IsEqual(Window.Property(groupname),mainmenu)">[COLOR=blue] - [/COLOR]$ADDON[script.skinshortcuts 32071]</value>
-		<value condition="!String.IsEmpty(Window.Property(groupname)) + String.IsEqual(Window.Property(groupname),powermenu)">[COLOR=blue] - [/COLOR]$LOCALIZE[90000]</value>
+		<value condition="!String.IsEmpty(Window.Property(groupname)) + String.IsEqual(Window.Property(groupname),powermenu)">[COLOR=blue] - [/COLOR]$LOCALIZE[32039]</value>
 		<value condition="!String.IsEmpty(Window.Property(groupname)) + !String.IsEqual(Window.Property(groupname),mainmenu) + !String.IsEqual(Window.Property(groupname),powermenu) + !String.Contains(Window.Property(groupname),.)">[COLOR=blue] - [/COLOR]$ADDON[script.skinshortcuts 32072]</value>
-		<value condition="!String.IsEmpty(Window.Property(groupname)) + !String.IsEqual(Window.Property(groupname),mainmenu) + !String.IsEqual(Window.Property(groupname),powermenu) + String.EndsWith(Window.Property(groupname),.1)">[COLOR=blue] - [/COLOR]$LOCALIZE[24020] $LOCALIZE[89003]</value>
-		<value condition="!String.IsEmpty(Window.Property(groupname)) + !String.IsEqual(Window.Property(groupname),mainmenu) + !String.IsEqual(Window.Property(groupname),powermenu) + String.EndsWith(Window.Property(groupname),.2)">[COLOR=blue] - [/COLOR]$LOCALIZE[24020] $LOCALIZE[89004]</value>
+		<value condition="!String.IsEmpty(Window.Property(groupname)) + !String.IsEqual(Window.Property(groupname),mainmenu) + !String.IsEqual(Window.Property(groupname),powermenu) + String.EndsWith(Window.Property(groupname),.1)">[COLOR=blue] - [/COLOR]$LOCALIZE[32069]</value>
+		<value condition="!String.IsEmpty(Window.Property(groupname)) + !String.IsEqual(Window.Property(groupname),mainmenu) + !String.IsEqual(Window.Property(groupname),powermenu) + String.EndsWith(Window.Property(groupname),.2)">[COLOR=blue] - [/COLOR]$LOCALIZE[24020] $LOCALIZE[32067]</value>
 	</variable>
 	<variable name="SkinShortcutsTitleDlgVar">
 		<value condition="!String.IsEmpty(Window.Property(groupname)) + String.IsEqual(Window.Property(groupname),mainmenu)">$LOCALIZE[513]</value>
-		<value condition="!String.IsEmpty(Window.Property(groupname)) + String.IsEqual(Window.Property(groupname),powermenu)">$LOCALIZE[89707]</value>
+		<value condition="!String.IsEmpty(Window.Property(groupname)) + String.IsEqual(Window.Property(groupname),powermenu)">$LOCALIZE[32068]</value>
 		<value condition="!String.IsEmpty(Window.Property(groupname)) + !String.IsEqual(Window.Property(groupname),mainmenu) + !String.IsEqual(Window.Property(groupname),powermenu) + !String.Contains(Window.Property(groupname),.)">$LOCALIZE[1034] ($INFO[Window.Property(groupDisplayName)])</value>
-		<value condition="!String.IsEmpty(Window.Property(groupname)) + !String.IsEqual(Window.Property(groupname),mainmenu) + !String.IsEqual(Window.Property(groupname),powermenu) + String.EndsWith(Window.Property(groupname),.1)">$LOCALIZE[89003] ($INFO[Window.Property(groupDisplayName)])</value>
+		<value condition="!String.IsEmpty(Window.Property(groupname)) + !String.IsEqual(Window.Property(groupname),mainmenu) + !String.IsEqual(Window.Property(groupname),powermenu) + String.EndsWith(Window.Property(groupname),.1)">$LOCALIZE[32066] ($INFO[Window.Property(groupDisplayName)])</value>
 	</variable>
 	<variable name="SkinShortcutsGroupingVar">
 		<value condition="!String.Contains(Window.Property(groupname),.)">menus</value>

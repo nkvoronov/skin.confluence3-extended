@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
 	<include name="BackgroundSelect">
-		<param name="header">$LOCALIZE[22080]</param>
+		<param name="header">$LOCALIZE[32038]</param>
 		<param name="enable">true</param>
 		<param name="reload">false</param>
 		<definition>

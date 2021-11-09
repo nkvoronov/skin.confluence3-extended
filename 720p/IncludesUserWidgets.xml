@@ -23,7 +23,7 @@
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
 			<label>- $LOCALIZE[24000] [B]1[/B]</label>
-			<label2>[COLOR=selected]$INFO[Skin.String(addonset$PARAM[addontype].0.label)][/COLOR]</label2>
+			<label2>$INFO[Skin.String(addonset$PARAM[addontype].0.label)]</label2>
 			<texturefocus>MenuItemFO.png</texturefocus>
 			<texturenofocus>MenuItemNF.png</texturenofocus>
 			<include content="HomeMainCustomWidgetsSelectAddons">
@@ -42,7 +42,7 @@
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
 			<label>- $LOCALIZE[24000] [B]2[/B]</label>
-			<label2>[COLOR=selected]$INFO[Skin.String(addonset$PARAM[addontype].1.label)][/COLOR]</label2>
+			<label2>$INFO[Skin.String(addonset$PARAM[addontype].1.label)]</label2>
 			<texturefocus>MenuItemFO.png</texturefocus>
 			<texturenofocus>MenuItemNF.png</texturenofocus>
 			<include content="HomeMainCustomWidgetsSelectAddons">
@@ -62,7 +62,7 @@
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
 			<label>- $LOCALIZE[24000] [B]3[/B]</label>
-			<label2>[COLOR=selected]$INFO[Skin.String(addonset$PARAM[addontype].2.label)][/COLOR]</label2>
+			<label2>$INFO[Skin.String(addonset$PARAM[addontype].2.label)]</label2>
 			<texturefocus>MenuItemFO.png</texturefocus>
 			<texturenofocus>MenuItemNF.png</texturenofocus>
 			<include content="HomeMainCustomWidgetsSelectAddons">
@@ -82,7 +82,7 @@
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
 			<label>- $LOCALIZE[24000] [B]4[/B]</label>
-			<label2>[COLOR=selected]$INFO[Skin.String(addonset$PARAM[addontype].3.label)][/COLOR]</label2>
+			<label2>$INFO[Skin.String(addonset$PARAM[addontype].3.label)]</label2>
 			<texturefocus>MenuItemFO.png</texturefocus>
 			<texturenofocus>MenuItemNF.png</texturenofocus>
 			<include content="HomeMainCustomWidgetsSelectAddons">
@@ -102,7 +102,7 @@
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
 			<label>- $LOCALIZE[24000] [B]5[/B]</label>
-			<label2>[COLOR=selected]$INFO[Skin.String(addonset$PARAM[addontype].4.label)][/COLOR]</label2>
+			<label2>$INFO[Skin.String(addonset$PARAM[addontype].4.label)]</label2>
 			<texturefocus>MenuItemFO.png</texturefocus>
 			<texturenofocus>MenuItemNF.png</texturenofocus>
 			<include content="HomeMainCustomWidgetsSelectAddons">
@@ -122,7 +122,7 @@
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
 			<label>- $LOCALIZE[24000] [B]6[/B]</label>
-			<label2>[COLOR=selected]$INFO[Skin.String(addonset$PARAM[addontype].5.label)][/COLOR]</label2>
+			<label2>$INFO[Skin.String(addonset$PARAM[addontype].5.label)]</label2>
 			<texturefocus>MenuItemFO.png</texturefocus>
 			<texturenofocus>MenuItemNF.png</texturenofocus>
 			<include content="HomeMainCustomWidgetsSelectAddons">
@@ -142,7 +142,7 @@
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
 			<label>- $LOCALIZE[24000] [B]7[/B]</label>
-			<label2>[COLOR=selected]$INFO[Skin.String(addonset$PARAM[addontype].6.label)][/COLOR]</label2>
+			<label2>$INFO[Skin.String(addonset$PARAM[addontype].6.label)]</label2>
 			<texturefocus>MenuItemFO.png</texturefocus>
 			<texturenofocus>MenuItemNF.png</texturenofocus>
 			<include content="HomeMainCustomWidgetsSelectAddons">
@@ -162,7 +162,7 @@
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
 			<label>- $LOCALIZE[24000] [B]8[/B]</label>
-			<label2>[COLOR=selected]$INFO[Skin.String(addonset$PARAM[addontype].7.label)][/COLOR]</label2>
+			<label2>$INFO[Skin.String(addonset$PARAM[addontype].7.label)]</label2>
 			<texturefocus>MenuItemFO.png</texturefocus>
 			<texturenofocus>MenuItemNF.png</texturenofocus>
 			<include content="HomeMainCustomWidgetsSelectAddons">
@@ -182,7 +182,7 @@
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
 			<label>- $LOCALIZE[24000] [B]9[/B]</label>
-			<label2>[COLOR=selected]$INFO[Skin.String(addonset$PARAM[addontype].8.label)][/COLOR]</label2>
+			<label2>$INFO[Skin.String(addonset$PARAM[addontype].8.label)]</label2>
 			<texturefocus>MenuItemFO.png</texturefocus>
 			<texturenofocus>MenuItemNF.png</texturenofocus>
 			<include content="HomeMainCustomWidgetsSelectAddons">
@@ -202,7 +202,7 @@
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
 			<label>- $LOCALIZE[24000] [B]10[/B]</label>
-			<label2>[COLOR=selected]$INFO[Skin.String(addonset$PARAM[addontype].9.label)][/COLOR]</label2>
+			<label2>$INFO[Skin.String(addonset$PARAM[addontype].9.label)]</label2>
 			<texturefocus>MenuItemFO.png</texturefocus>
 			<texturenofocus>MenuItemNF.png</texturenofocus>
 			<include content="HomeMainCustomWidgetsSelectAddons">
@@ -361,8 +361,8 @@
 			<font>font13</font>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
-			<label>- $LOCALIZE[90123] [B]1[/B]</label>
-			<label2>[COLOR=selected]$INFO[Skin.String(channel$PARAM[channeltype].0.label)][/COLOR]</label2>
+			<label>- $LOCALIZE[32047] [B]1[/B]</label>
+			<label2>$INFO[Skin.String(channel$PARAM[channeltype].0.label)]</label2>
 			<texturefocus>MenuItemFO.png</texturefocus>
 			<texturenofocus>MenuItemNF.png</texturenofocus>
 			<onclick condition="!System.HasAddon(script.skin.utils)">InstallAddon(script.skin.utils)</onclick>
@@ -378,8 +378,8 @@
 			<font>font13</font>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
-			<label>- $LOCALIZE[90123] [B]2[/B]</label>
-			<label2>[COLOR=selected]$INFO[Skin.String(channel$PARAM[channeltype].1.label)][/COLOR]</label2>
+			<label>- $LOCALIZE[32047] [B]2[/B]</label>
+			<label2>$INFO[Skin.String(channel$PARAM[channeltype].1.label)]</label2>
 			<texturefocus>MenuItemFO.png</texturefocus>
 			<texturenofocus>MenuItemNF.png</texturenofocus>
 			<onclick condition="!System.HasAddon(script.skin.utils)">InstallAddon(script.skin.utils)</onclick>
@@ -396,8 +396,8 @@
 			<font>font13</font>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
-			<label>- $LOCALIZE[90123] [B]3[/B]</label>
-			<label2>[COLOR=selected]$INFO[Skin.String(channel$PARAM[channeltype].2.label)][/COLOR]</label2>
+			<label>- $LOCALIZE[32047] [B]3[/B]</label>
+			<label2>$INFO[Skin.String(channel$PARAM[channeltype].2.label)]</label2>
 			<texturefocus>MenuItemFO.png</texturefocus>
 			<texturenofocus>MenuItemNF.png</texturenofocus>
 			<onclick condition="!System.HasAddon(script.skin.utils)">InstallAddon(script.skin.utils)</onclick>
@@ -414,8 +414,8 @@
 			<font>font13</font>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
-			<label>- $LOCALIZE[90123] [B]4[/B]</label>
-			<label2>[COLOR=selected]$INFO[Skin.String(channel$PARAM[channeltype].3.label)][/COLOR]</label2>
+			<label>- $LOCALIZE[32047] [B]4[/B]</label>
+			<label2>$INFO[Skin.String(channel$PARAM[channeltype].3.label)]</label2>
 			<texturefocus>MenuItemFO.png</texturefocus>
 			<texturenofocus>MenuItemNF.png</texturenofocus>
 			<onclick condition="!System.HasAddon(script.skin.utils)">InstallAddon(script.skin.utils)</onclick>
@@ -432,8 +432,8 @@
 			<font>font13</font>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
-			<label>- $LOCALIZE[90123] [B]5[/B]</label>
-			<label2>[COLOR=selected]$INFO[Skin.String(channel$PARAM[channeltype].4.label)][/COLOR]</label2>
+			<label>- $LOCALIZE[32047] [B]5[/B]</label>
+			<label2>$INFO[Skin.String(channel$PARAM[channeltype].4.label)]</label2>
 			<texturefocus>MenuItemFO.png</texturefocus>
 			<texturenofocus>MenuItemNF.png</texturenofocus>
 			<onclick condition="!System.HasAddon(script.skin.utils)">InstallAddon(script.skin.utils)</onclick>
@@ -450,8 +450,8 @@
 			<font>font13</font>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
-			<label>- $LOCALIZE[90123] [B]6[/B]</label>
-			<label2>[COLOR=selected]$INFO[Skin.String(channel$PARAM[channeltype].5.label)][/COLOR]</label2>
+			<label>- $LOCALIZE[32047] [B]6[/B]</label>
+			<label2>$INFO[Skin.String(channel$PARAM[channeltype].5.label)]</label2>
 			<texturefocus>MenuItemFO.png</texturefocus>
 			<texturenofocus>MenuItemNF.png</texturenofocus>
 			<onclick condition="!System.HasAddon(script.skin.utils)">InstallAddon(script.skin.utils)</onclick>
@@ -468,8 +468,8 @@
 			<font>font13</font>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
-			<label>- $LOCALIZE[90123] [B]7[/B]</label>
-			<label2>[COLOR=selected]$INFO[Skin.String(channel$PARAM[channeltype].6.label)][/COLOR]</label2>
+			<label>- $LOCALIZE[32047] [B]7[/B]</label>
+			<label2>$INFO[Skin.String(channel$PARAM[channeltype].6.label)]</label2>
 			<texturefocus>MenuItemFO.png</texturefocus>
 			<texturenofocus>MenuItemNF.png</texturenofocus>
 			<onclick condition="!System.HasAddon(script.skin.utils)">InstallAddon(script.skin.utils)</onclick>
@@ -486,8 +486,8 @@
 			<font>font13</font>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
-			<label>- $LOCALIZE[90123] [B]8[/B]</label>
-			<label2>[COLOR=selected]$INFO[Skin.String(channel$PARAM[channeltype].7.label)][/COLOR]</label2>
+			<label>- $LOCALIZE[32047] [B]8[/B]</label>
+			<label2>$INFO[Skin.String(channel$PARAM[channeltype].7.label)]</label2>
 			<texturefocus>MenuItemFO.png</texturefocus>
 			<texturenofocus>MenuItemNF.png</texturenofocus>
 			<onclick condition="!System.HasAddon(script.skin.utils)">InstallAddon(script.skin.utils)</onclick>
@@ -504,8 +504,8 @@
 			<font>font13</font>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
-			<label>- $LOCALIZE[90123] [B]9[/B]</label>
-			<label2>[COLOR=selected]$INFO[Skin.String(channel$PARAM[channeltype].8.label)][/COLOR]</label2>
+			<label>- $LOCALIZE[32047] [B]9[/B]</label>
+			<label2>$INFO[Skin.String(channel$PARAM[channeltype].8.label)]</label2>
 			<texturefocus>MenuItemFO.png</texturefocus>
 			<texturenofocus>MenuItemNF.png</texturenofocus>
 			<onclick condition="!System.HasAddon(script.skin.utils)">InstallAddon(script.skin.utils)</onclick>
@@ -522,8 +522,8 @@
 			<font>font13</font>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
-			<label>- $LOCALIZE[90123] [B]10[/B]</label>
-			<label2>[COLOR=selected]$INFO[Skin.String(channel$PARAM[channeltype].9.label)][/COLOR]</label2>
+			<label>- $LOCALIZE[32047] [B]10[/B]</label>
+			<label2>$INFO[Skin.String(channel$PARAM[channeltype].9.label)]</label2>
 			<texturefocus>MenuItemFO.png</texturefocus>
 			<texturenofocus>MenuItemNF.png</texturenofocus>
 			<onclick condition="!System.HasAddon(script.skin.utils)">InstallAddon(script.skin.utils)</onclick>

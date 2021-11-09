@@ -8,7 +8,7 @@
 	</coordinates>
 	<controls>
 		<include content="CustomSlideDialog">
-			<param name="dlg_title" value="$LOCALIZE[88002]" />
+			<param name="dlg_title" value="$LOCALIZE[32082]" />
 			<param name="id_win" value="2211" />
 			<param name="include_name" value="ItemMenuFocus" />
 		</include>

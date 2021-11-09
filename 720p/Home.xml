@@ -5,7 +5,7 @@
 	<onload>RunScript(script.skin.utils,action=updateproperties)</onload>
 	<onload condition="System.AddonIsEnabled(script.skin.utils) + Skin.HasSetting(customlistchannels) + [Skin.HasSetting(enablecustomListchannelstv) | Skin.HasSetting(enablecustomlistchannelsradio)]">RunScript(script.skin.utils,action=updatechannel)</onload>
 	<!-- -->
-	<include condition="!Skin.HasSetting(InitialSetUpRun)">DefaultInitialSetup</include>
+	<include condition="!Skin.HasSetting(initialsetuprun)">DefaultInitialSetup</include>
 	<onload condition="!String.IsEmpty(Window(Home).Property(MenuItemActive))">ClearProperty(MenuItemActive,Home)</onload>
 	<onload condition="!String.IsEmpty(Window(Home).Property(MenuBackground))">ClearProperty(MenuBackground,Home)</onload>
 	<onload condition="Window.Previous(Startup)">Control.Move(9000,$INFO[Skin.String(customfocus)])</onload>

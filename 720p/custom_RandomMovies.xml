@@ -8,7 +8,7 @@
 	</coordinates>
 	<controls>
 		<include content="CustomRandomDialog">
-			<param name="dlg_title" value="$LOCALIZE[89032]" />
+			<param name="dlg_title" value="$LOCALIZE[32087]" />
 			<param name="id_win" value="2125" />
 			<param name="fallback_pic" value="DefaultMovies.png" />
 			<param name="list_pic" value="$VAR[PosterThumb2Var]" />

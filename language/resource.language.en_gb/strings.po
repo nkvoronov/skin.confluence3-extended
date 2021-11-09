@@ -233,7 +233,7 @@ msgid "Show \"Paused\" in picture slideshow"
 msgstr ""
 
 msgctxt "#31104"
-msgid "Play trailers in a window [COLOR=grey3](Video information dialogue only)[/COLOR]"
+msgid "Play trailers in information dialogue"
 msgstr ""
 
 #empty string with id 31105
@@ -243,7 +243,7 @@ msgid "Miscellaneous options"
 msgstr ""
 
 msgctxt "#31107"
-msgid "Hide flagging read from video filenames [COLOR=grey3](e.g. Blu-ray, HD-DVD)[/COLOR]"
+msgid "Hide flagging read from video filenames"
 msgstr ""
 
 msgctxt "#31108"
@@ -754,6 +754,10 @@ msgstr ""
 
 # Extended Added Value
 
+msgctxt "#31965"
+msgid "MUSIC VIDEOS"
+msgstr ""
+
 msgctxt "#32000"
 msgid "General settings applying to all areas of the skin."
 msgstr ""
@@ -802,518 +806,438 @@ msgctxt "#32011"
 msgid "Widgets"
 msgstr ""
 
-msgctxt "#80000"
-msgid "Extended info"
-msgstr ""
-
-msgctxt "#80001"
-msgid "Show KODI logo"
-msgstr ""
-
-msgctxt "#80002"
-msgid "Choose weather backgrounds pack"
-msgstr ""
-
-msgctxt "#80003"
-msgid "Choose home backgrounds pack"
-msgstr ""
-
-msgctxt "#80004"
-msgid "Choose weather icons pack"
-msgstr ""
-
-msgctxt "#80006"
-msgid "Choose genre backgrounds pack"
-msgstr ""
-
-msgctxt "#80007"
-msgid "MUSIC VIDEOS"
-msgstr ""
-
-msgctxt "#80008"
-msgid "SEARCH"
-msgstr ""
-
-msgctxt "#80009"
-msgid "PLAYLIST"
-msgstr ""
-
-msgctxt "#80010"
-msgid "FAVOURITES"
-msgstr ""
-
-msgctxt "#80011"
-msgid "PROFILE"
-msgstr ""
-
-msgctxt "#80012"
-msgid "SHUTDOWN"
-msgstr ""
-
-msgctxt "#88002"
-msgid "Move focus main menu"
-msgstr ""
-
-msgctxt "#88070"
-msgid "[B]CONFIGURE SKIN SETTINGS[/B][CR][CR]Setup the Confluence skin - Add and remove home menu items - Change skin backgrounds"
-msgstr ""
-
-msgctxt "#88071"
-msgid "Show stats panel"
-msgstr ""
-
-msgctxt "#88072"
-msgid "Automatic opening submenu"
-msgstr ""
-
-msgctxt "#88073"
-msgid "Automatic opening shortcuts submenu"
-msgstr ""
-
-msgctxt "#88074"
-msgid "title of shortcuts"
-msgstr ""
-
-msgctxt "#88075"
-msgid "bottom line in home page"
-msgstr ""
-
-msgctxt "#88076"
-msgid "bottom line everywhere except the home page"
-msgstr ""
-
-msgctxt "#88077"
-msgid "Show player control panel"
-msgstr ""
-
-msgctxt "#88078"
-msgid "power button"
-msgstr ""
-
-msgctxt "#88079"
-msgid "favorites button"
-msgstr ""
-
-msgctxt "#88081"
-msgid "Backlight color"
-msgstr ""
-
-msgctxt "#88082"
-msgid "After startup KODI, move focus main menu"
-msgstr ""
-
-msgctxt "#88083"
-msgid "To the left"
-msgstr ""
-
-msgctxt "#88084"
-msgid "To the right"
-msgstr ""
-
-msgctxt "#88085"
-msgid "Manually"
-msgstr ""
-
-msgctxt "#88086"
-msgid "Wrap Around Menu"
-msgstr ""
-
-msgctxt "#88087"
-msgid "Return to Start Menu Scroll"
-msgstr ""
-
-msgctxt "#88089"
-msgid "Buttons"
-msgstr ""
-
-msgctxt "#88090"
-msgid "title of widget"
-msgstr ""
-
-msgctxt "#88900"
-msgid "Skin Matrix"
-msgstr ""
-
-msgctxt "#88910"
-msgid "Skin Matrix Massive"
-msgstr ""
-
-msgctxt "#88920"
-msgid "Skin Matrix with no Caps"
-msgstr ""
-
-msgctxt "#88107"
-msgid "Blue"
-msgstr ""
-
-msgctxt "#88108"
-msgid "Azure"
-msgstr ""
-
-msgctxt "#88109"
-msgid "White"
-msgstr ""
-
-msgctxt "#88110"
-msgid "Gray"
-msgstr ""
-
-msgctxt "#88111"
-msgid "Red"
-msgstr ""
-
-msgctxt "#88112"
-msgid "Pink"
-msgstr ""
-
-msgctxt "#88113"
-msgid "Purple"
-msgstr ""
-
-msgctxt "#88114"
-msgid "Orange"
-msgstr ""
-
-msgctxt "#88115"
-msgid "Yellow"
-msgstr ""
-
-msgctxt "#88116"
-msgid "Green"
-msgstr ""
-
-msgctxt "#88117"
-msgid "Select color"
-msgstr ""
-
-msgctxt "#88118"
-msgid "Debug"
-msgstr ""
-
-msgctxt "#88119"
-msgid "Debug infos"
-msgstr ""
-
-msgctxt "#88131"
-msgid "Unwatched Movies"
-msgstr ""
-
-msgctxt "#88133"
-msgid "Favorites TV Channels"
-msgstr ""
-
-msgctxt "#88134"
-msgid "Favorites Radio Channels"
-msgstr ""
-
-msgctxt "#89003"
-msgid "Shortcuts set"
-msgstr ""
-
-msgctxt "#89004"
-msgid "Widget set"
-msgstr ""
-
-msgctxt "#89013"
-msgid "Clear item"
-msgstr ""
-
-msgctxt "#89023"
-msgid "Watch it Later"
-msgstr ""
-
-msgctxt "#89025"
-msgid "Recent Albums"
-msgstr ""
-
-msgctxt "#89027"
-msgid "Random Albums"
-msgstr ""
-
-msgctxt "#89031"
-msgid "Recent Movies"
-msgstr ""
-
-msgctxt "#89032"
-msgid "Random Movies"
-msgstr ""
-
-msgctxt "#89033"
-msgid "Recent Episodes"
-msgstr ""
-
-msgctxt "#89035"
-msgid "Random Episodes"
-msgstr ""
-
-msgctxt "#89036"
-msgid "Recent Music Video"
-msgstr ""
-
-msgctxt "#89038"
-msgid "Random Music Video"
-msgstr ""
-
-msgctxt "#89041"
-msgid "LibreELEC"
-msgstr ""
-
-msgctxt "#89051"
-msgid "[B]CONFIGURE LIBREELEC[/B][CR][CR]Setup LibreELEC"
-msgstr ""
-
-msgctxt "#89302"
-msgid "Daily"
-msgstr ""
-
-msgctxt "#89303"
-msgid "Hourly"
-msgstr ""
-
-msgctxt "#89501"
+msgctxt "#32012"
 msgid "Enable FullScreen Clock"
 msgstr ""
 
-msgctxt "#89502"
+msgctxt "#32013"
 msgid "Enable SlideShow Info"
 msgstr ""
 
-msgctxt "#89700"
-msgid "Select"
+msgctxt "#32014"
+msgid "Show KODI logo"
 msgstr ""
 
-msgctxt "#89702"
-msgid "Favourites Window"
+msgctxt "#32015"
+msgid "Show player control panel"
 msgstr ""
 
-msgctxt "#89703"
-msgid "No Media"
+msgctxt "#32016"
+msgid "Show stats panel"
 msgstr ""
 
-msgctxt "#89705"
-msgid "Automatic Suggestion"
-msgstr ""
-
-msgctxt "#89706"
-msgid "Eject or Load Disc"
-msgstr ""
-
-msgctxt "#89707"
-msgid "Shutdown Menu"
-msgstr ""
-
-msgctxt "#89708"
-msgid "Command"
-msgstr ""
-
-msgctxt "#89709"
-msgid "Separate Backgrounds"
-msgstr ""
-
-msgctxt "#89900"
-msgid "Previous location"
-msgstr ""
-
-msgctxt "#89901"
-msgid "Next location"
-msgstr ""
-
-msgctxt "#90000"
-msgid "Customize Power Menu"
-msgstr ""
-
-msgctxt "#90001"
-msgid "Video Playlist"
-msgstr ""
-
-msgctxt "#90002"
-msgid "Music Playlist"
-msgstr ""
-
-msgctxt "#90003"
-msgid "In-progress Movies"
-msgstr ""
-
-msgctxt "#90004"
-msgid "In-progress TVShows"
-msgstr ""
-
-msgctxt "#90005"
-msgid "Unwatched TVShows"
-msgstr ""
-
-msgctxt "#90006"
-msgid "Random Artists"
-msgstr ""
-
-msgctxt "#90007"
-msgid "Unplayed Albums"
-msgstr ""
-
-msgctxt "#90008"
-msgid "Most Played Albums"
-msgstr ""
-
-msgctxt "#90009"
-msgid "Widget Limit Items"
-msgstr ""
-
-msgctxt "#90014"
-msgid "Picture Add-On"
-msgstr ""
-
-msgctxt "#90015"
-msgid "TV Channel"
-msgstr ""
-
-msgctxt "#90016"
-msgid "Radio Channel"
-msgstr ""
-
-msgctxt "#90017"
-msgid "Program"
-msgstr ""
-
-msgctxt "#90018"
-msgid "Video Add-On"
-msgstr ""
-
-msgctxt "#90019"
-msgid "Video Source"
-msgstr ""
-
-msgctxt "#90020"
-msgid "Backup Skin Settings"
-msgstr ""
-
-msgctxt "#90021"
-msgid "Create"
-msgstr ""
-
-msgctxt "#90022"
-msgid "Restory"
-msgstr ""
-
-msgctxt "#90030"
-msgid "Music Source"
-msgstr ""
-
-msgctxt "#90031"
-msgid "Music Add-On"
-msgstr ""
-
-msgctxt "#90044"
-msgid "Disable"
-msgstr ""
-
-msgctxt "#90050"
-msgid "Smart Shortcuts"
-msgstr ""
-
-msgctxt "#90051"
-msgid "Smart Widgets"
-msgstr ""
-
-msgctxt "#90060"
-msgid "Disable"
-msgstr ""
-
-msgctxt "#90061"
-msgid "Enable"
-msgstr ""
-
-msgctxt "#90062"
-msgid "Recent recordings"
-msgstr ""
-
-msgctxt "#90063"
-msgid "Recently played channels"
-msgstr ""
-
-msgctxt "#90101"
-msgid "Random Fanart Delay"
-msgstr ""
-
-msgctxt "#90103"
-msgid "Icons"
-msgstr ""
-
-msgctxt "#90104"
-msgid "Choose studios icons pack"
-msgstr ""
-
-msgctxt "#90105"
-msgid "Choose flags country icons pack"
-msgstr ""
-
-msgctxt "#90106"
-msgid "Choose movie genre icons pack"
-msgstr ""
-
-msgctxt "#90107"
-msgid "Choose music genre icons pack"
-msgstr ""
-
-msgctxt "#90108"
-msgid "Choose background for audio"
-msgstr ""
-
-msgctxt "#90109"
-msgid "Single image"
-msgstr ""
-
-msgctxt "#90110"
-msgid "Multi-image"
-msgstr ""
-
-msgctxt "#90111"
-msgid "Artwork Downloader"
-msgstr ""
-
-msgctxt "#90112"
-msgid "Download Music Theme"
-msgstr ""
-
-msgctxt "#90113"
-msgid "Dharma style"
-msgstr ""
-
-msgctxt "#90114"
-msgid "Search local library"
-msgstr ""
-
-msgctxt "#90115"
-msgid "Search add-ons"
-msgstr ""
-
-msgctxt "#90116"
-msgid "Search YouTube"
-msgstr ""
-
-msgctxt "#90117"
-msgid "Search TheMovieDB"
-msgstr ""
-
-msgctxt "#90118"
+msgctxt "#32017"
 msgid "Show search button"
 msgstr ""
 
-msgctxt "#90119"
+msgctxt "#32018"
+msgid "bottom line in home page"
+msgstr ""
+
+msgctxt "#32019"
+msgid "bottom line everywhere except the home page"
+msgstr ""
+
+msgctxt "#32020"
+msgid "Icons"
+msgstr ""
+
+msgctxt "#32021"
+msgid "Choose studios icons pack"
+msgstr ""
+
+msgctxt "#32022"
+msgid "Choose flags country icons pack"
+msgstr ""
+
+msgctxt "#32023"
+msgid "Choose movie genre icons pack"
+msgstr ""
+
+msgctxt "#32024"
+msgid "Choose music genre icons pack"
+msgstr ""
+
+msgctxt "#32025"
+msgid "Choose weather icons pack"
+msgstr ""
+
+msgctxt "#32026"
+msgid "Automatic opening shortcuts submenu"
+msgstr ""
+
+msgctxt "#32027"
+msgid "title of shortcuts"
+msgstr ""
+
+msgctxt "#32028"
+msgid "title of widget"
+msgstr ""
+
+msgctxt "#32029"
+msgid "Widget Limit Items"
+msgstr ""
+
+msgctxt "#32030"
 msgid "Enable user list of add-ons"
 msgstr ""
 
-msgctxt "#90120"
+msgctxt "#32031"
 msgid "Enable user list of TV and radio channels"
 msgstr ""
 
-msgctxt "#90121"
+msgctxt "#32032"
+msgid "Buttons"
+msgstr ""
+
+msgctxt "#32033"
+msgid "power button"
+msgstr ""
+
+msgctxt "#32034"
+msgid "favorites button"
+msgstr ""
+
+msgctxt "#32035"
+msgid "Command"
+msgstr ""
+
+msgctxt "#32036"
+msgid "Debug"
+msgstr ""
+
+msgctxt "#32037"
+msgid "Debug infos"
+msgstr ""
+
+msgctxt "#32038"
+msgid "Select background"
+msgstr ""
+
+msgctxt "#32039"
+msgid "Customize Power Menu"
+msgstr ""
+
+msgctxt "#32040"
+msgid "Wrap Around Menu"
+msgstr ""
+
+msgctxt "#32041"
+msgid "Return to Start Menu Scroll"
+msgstr ""
+
+msgctxt "#32042"
+msgid "Automatic opening submenu"
+msgstr ""
+
+msgctxt "#32043"
+msgid "Backlight color"
+msgstr ""
+
+msgctxt "#32044"
+msgid "After startup KODI, move focus main menu"
+msgstr ""
+
+msgctxt "#32045"
 msgid "User list of add-ons"
 msgstr ""
 
-msgctxt "#90122"
+msgctxt "#32046"
 msgid "User list of TV and radio channels"
 msgstr ""
 
-msgctxt "#90123"
+msgctxt "#32047"
 msgid "Channel"
+msgstr ""
+
+msgctxt "#32048"
+msgid "Separate Backgrounds"
+msgstr ""
+
+msgctxt "#32049"
+msgid "Choose background for audio"
+msgstr ""
+
+msgctxt "#32050"
+msgid "Choose home backgrounds pack"
+msgstr ""
+
+msgctxt "#32051"
+msgid "Choose genre backgrounds pack"
+msgstr ""
+
+msgctxt "#32052"
+msgid "Choose weather backgrounds pack"
+msgstr ""
+
+msgctxt "#32053"
+msgid "Enable"
+msgstr ""
+
+msgctxt "#32054"
+msgid "Backup Skin Settings"
+msgstr ""
+
+msgctxt "#32055"
+msgid "Create"
+msgstr ""
+
+msgctxt "#32056"
+msgid "Restory"
+msgstr ""
+
+msgctxt "#32057"
+msgid "[B]CONFIGURE SKIN SETTINGS[/B][CR][CR]Setup the Confluence skin - Add and remove home menu items - Change skin backgrounds"
+msgstr ""
+
+msgctxt "#32058"
+msgid "LibreELEC"
+msgstr ""
+
+msgctxt "#32059"
+msgid "[B]CONFIGURE LIBREELEC[/B][CR][CR]Setup LibreELEC"
+msgstr ""
+
+msgctxt "#32060"
+msgid "CoreELEC"
+msgstr ""
+
+msgctxt "#32061"
+msgid "[B]CONFIGURE COREELEC[/B][CR][CR]Setup CoreELEC"
+msgstr ""
+
+msgctxt "#32062"
+msgid "Disable"
+msgstr ""
+
+msgctxt "#32063"
+msgid "Skin Matrix"
+msgstr ""
+
+msgctxt "#32064"
+msgid "Skin Matrix Massive"
+msgstr ""
+
+msgctxt "#32065"
+msgid "Skin Matrix with no Caps"
+msgstr ""
+
+msgctxt "#32066"
+msgid "Shortcuts set"
+msgstr ""
+
+msgctxt "#32067"
+msgid "Widget set"
+msgstr ""
+
+msgctxt "#32068"
+msgid "Shutdown Menu"
+msgstr ""
+
+msgctxt "#32069"
+msgid "Configure shortcuts set"
+msgstr ""
+
+msgctxt "#32070"
+msgid "Select color"
+msgstr ""
+
+msgctxt "#32071"
+msgid "Blue"
+msgstr ""
+
+msgctxt "#32072"
+msgid "Azure"
+msgstr ""
+
+msgctxt "#32073"
+msgid "White"
+msgstr ""
+
+msgctxt "#32074"
+msgid "Grey"
+msgstr ""
+
+msgctxt "#32075"
+msgid "Red"
+msgstr ""
+
+msgctxt "#32076"
+msgid "Pink"
+msgstr ""
+
+msgctxt "#32077"
+msgid "Purple"
+msgstr ""
+
+msgctxt "#32078"
+msgid "Orange"
+msgstr ""
+
+msgctxt "#32079"
+msgid "Yellow"
+msgstr ""
+
+msgctxt "#32080"
+msgid "Green"
+msgstr ""
+
+msgctxt "#32081"
+msgid "Manually"
+msgstr ""
+
+msgctxt "#32082"
+msgid "Move focus main menu"
+msgstr ""
+
+msgctxt "#32083"
+msgid "To the left"
+msgstr ""
+
+msgctxt "#32084"
+msgid "To the right"
+msgstr ""
+
+msgctxt "#32085"
+msgid "Select"
+msgstr ""
+
+msgctxt "#32086"
+msgid "Favourites Window"
+msgstr ""
+
+msgctxt "#32087"
+msgid "Random Movies"
+msgstr ""
+
+msgctxt "#32088"
+msgid "Random Episodes"
+msgstr ""
+
+msgctxt "#32089"
+msgid "Random Albums"
+msgstr ""
+
+msgctxt "#32090"
+msgid "Random Music Video"
+msgstr ""
+
+msgctxt "#32091"
+msgid "Eject or Load Disc"
+msgstr ""
+
+msgctxt "#32092"
+msgid "Search local library"
+msgstr ""
+
+msgctxt "#32093"
+msgid "Search add-ons"
+msgstr ""
+
+msgctxt "#32094"
+msgid "Search YouTube"
+msgstr ""
+
+msgctxt "#32095"
+msgid "Search TheMovieDB"
+msgstr ""
+
+msgctxt "#32096"
+msgid "Extended info"
+msgstr ""
+
+msgctxt "#32097"
+msgid "Dharma style"
+msgstr ""
+
+msgctxt "#32101"
+msgid "Favorites TV Channels"
+msgstr ""
+
+msgctxt "#32102"
+msgid "Favorites Radio Channels"
+msgstr ""
+
+msgctxt "#32103"
+msgid "Watch it Later"
+msgstr ""
+
+msgctxt "#32104"
+msgid "Recent Albums"
+msgstr ""
+
+msgctxt "#32105"
+msgid "Recent Movies"
+msgstr ""
+
+msgctxt "#32106"
+msgid "Recent Episodes"
+msgstr ""
+
+msgctxt "#32107"
+msgid "Recent Music Video"
+msgstr ""
+
+msgctxt "#32108"
+msgid "Daily"
+msgstr ""
+
+msgctxt "#32109"
+msgid "Hourly"
+msgstr ""
+
+msgctxt "#32110"
+msgid "Automatic Suggestion"
+msgstr ""
+
+msgctxt "#32111"
+msgid "Previous location"
+msgstr ""
+
+msgctxt "#32112"
+msgid "Next location"
+msgstr ""
+
+msgctxt "#32113"
+msgid "Video Playlist"
+msgstr ""
+
+msgctxt "#32114"
+msgid "Music Playlist"
+msgstr ""
+
+msgctxt "#32115"
+msgid "Picture Add-On"
+msgstr ""
+
+msgctxt "#32116"
+msgid "TV Channel"
+msgstr ""
+
+msgctxt "#32117"
+msgid "Radio Channel"
+msgstr ""
+
+msgctxt "#32118"
+msgid "Program"
+msgstr ""
+
+msgctxt "#32119"
+msgid "Video Add-On"
+msgstr ""
+
+msgctxt "#32120"
+msgid "Music Source"
+msgstr ""
+
+msgctxt "#32121"
+msgid "Music Add-On"
+msgstr ""
+
+msgctxt "#32122"
+msgid "Recent recordings"
+msgstr ""
+
+msgctxt "#32123"
+msgid "Recently played channels"
 msgstr ""
