@@ -875,9 +875,9 @@
 					</focusedlayout>
 				</control>
 				<control type="grouplist" id="9000">
-					<left>210</left>
+					<left>295</left>
 					<top>660</top>
-					<width>1030</width>
+					<width>860</width>
 					<height>40</height>
 					<itemgap>2</itemgap>
 					<align>center</align>

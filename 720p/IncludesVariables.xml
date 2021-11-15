@@ -19,9 +19,9 @@
 		<value>ActivateWindow(Favourites)</value>
 	</variable>
 	<variable name="PowerButtonLabelVar">
-		<value condition="String.IsEmpty(Skin.String(usrpwrbtncmd.Label))">$LOCALIZE[32068]</value>
+		<value condition="String.IsEmpty(Skin.String(usrpwrbtncmd.Label))">$LOCALIZE[33113]</value>
 		<value condition="!String.IsEmpty(Skin.String(usrpwrbtncmd.Label))">$INFO[Skin.String(usrpwrbtncmd.Label)]</value>
-		<value>$LOCALIZE[32068]</value>
+		<value>$LOCALIZE[33113]</value>
 	</variable>
 	<variable name="PowerButtonCommandVar">
 		<value condition="!String.IsEmpty(Skin.String(usrpwrbtncmd.Path))">$INFO[Skin.String(usrpwrbtncmd.Path)]</value>
@@ -102,57 +102,55 @@
 	</variable>
 	<!-- HomeFanart Name -->
 	<variable name="HomeFanartNameVar">
-		<value condition="!String.IsEmpty(Skin.String(HomeFanart.name))">$INFO[Skin.String(HomeFanart.name)]</value>
+		<value condition="!String.IsEmpty(Skin.String(homefanart.name))">$INFO[Skin.String(homefanart.name)]</value>
 		<value>$LOCALIZE[231]</value>
 	</variable>
 	<!-- MovieGenreFanart Name -->
 	<variable name="MovieGenreFanartNameVar">
-		<value condition="!String.IsEmpty(Skin.String(MovieGenreFanart.name))">$INFO[Skin.String(MovieGenreFanart.name)]</value>
+		<value condition="!String.IsEmpty(Skin.String(moviegenrefanart.name))">$INFO[Skin.String(moviegenrefanart.name)]</value>
 		<value>$LOCALIZE[231]</value>
 	</variable>
 	<!-- WeatherFanart Name -->
 	<variable name="WeatherFanartNameVar">
-		<value condition="!String.IsEmpty(Skin.String(WeatherFanart.name))">$INFO[Skin.String(WeatherFanart.name)]</value>
+		<value condition="!String.IsEmpty(Skin.String(weatherfanart.name))">$INFO[Skin.String(weatherfanart.name)]</value>
 		<value>$LOCALIZE[231]</value>
 	</variable>
 	<!-- StudiosImages Name -->
 	<variable name="StudiosImagesNameVar">
-		<value condition="!String.IsEmpty(Skin.String(StudiosImages.name))">$INFO[Skin.String(StudiosImages.name)]</value>
+		<value condition="!String.IsEmpty(Skin.String(studiosimages.name))">$INFO[Skin.String(studiosimages.name)]</value>
 		<value>$LOCALIZE[231]</value>
 	</variable>
 	<!-- LanguageFlags Name -->
 	<variable name="LanguageFlagsNameVar">
-		<value condition="!String.IsEmpty(Skin.String(LanguageFlags.name))">$INFO[Skin.String(LanguageFlags.name)]</value>
+		<value condition="!String.IsEmpty(Skin.String(languageflags.name))">$INFO[Skin.String(languageflags.name)]</value>
 		<value>$LOCALIZE[231]</value>
 	</variable>
 	<!-- MovieGenreIcons Name -->
 	<variable name="MovieGenreIconsNameVar">
-		<value condition="!String.IsEmpty(Skin.String(MovieGenreIcons.name))">$INFO[Skin.String(MovieGenreIcons.name)]</value>
+		<value condition="!String.IsEmpty(Skin.String(moviegenreicons.name))">$INFO[Skin.String(moviegenreicons.name)]</value>
 		<value>$LOCALIZE[231]</value>
 	</variable>
 	<!-- MusicGenreIcons Name -->
 	<variable name="MusicGenreIconsNameVar">
-		<value condition="!String.IsEmpty(Skin.String(MusicGenreIcons.name))">$INFO[Skin.String(MusicGenreIcons.name)]</value>
+		<value condition="!String.IsEmpty(Skin.String(musicgenreicons.name))">$INFO[Skin.String(musicgenreicons.name)]</value>
 		<value>$LOCALIZE[231]</value>
 	</variable>
 	<!-- WeatherIcons Name -->
 	<variable name="WeatherIconsNameVar">
-		<value condition="!String.IsEmpty(Skin.String(WeatherIcons.name))">$INFO[Skin.String(WeatherIcons.name)]</value>
+		<value condition="!String.IsEmpty(Skin.String(weathericons.name))">$INFO[Skin.String(weathericons.name)]</value>
 		<value>$LOCALIZE[231]</value>
 	</variable>
 	<variable name="MenuColorNameVar">
-		<value condition="!String.IsEmpty(Skin.String(menucolorname))">[COLOR=$INFO[Skin.String(menucolor)]]$INFO[Skin.String(menucolorname)][/COLOR]</value>
-		<value>[COLOR=blue]$LOCALIZE[571][/COLOR]</value>
+		<value condition="String.IsEqual(Skin.String(menucolor), blue)">$LOCALIZE[571]</value>	
+		<value condition="!String.IsEmpty(Skin.String(menucolor))">$INFO[Skin.String(menucolor)]</value>		
+		<value>$LOCALIZE[571]</value>
 	</variable>
 	<variable name="MenuColorVar">
 		<value condition="!String.IsEmpty(Skin.String(menucolor))">$INFO[Skin.String(menucolor)]</value>
 		<value>blue</value>
 	</variable>
 	<variable name="MenuFocusNameVar">
-		<value condition="!String.IsEmpty(Skin.String(customfocusname)) + String.IsEqual(Skin.String(customfocusname),$LOCALIZE[32081]) + Integer.IsGreater(Skin.String(customfocus),0)">$LOCALIZE[32084] $INFO[Skin.String(customfocus)]</value>
-		<value condition="!String.IsEmpty(Skin.String(customfocusname)) + String.IsEqual(Skin.String(customfocusname),$LOCALIZE[32081]) + Integer.IsLess(Skin.String(customfocus),0)">$LOCALIZE[32083] $INFO[Skin.String(customfocus)]</value>
-		<value condition="!String.IsEmpty(Skin.String(customfocusname)) + String.IsEqual(Skin.String(customfocusname),$LOCALIZE[32081]) + Integer.IsEqual(Skin.String(customfocus),0)">$LOCALIZE[571]</value>
-		<value condition="!String.IsEmpty(Skin.String(customfocusname)) + !String.IsEqual(Skin.String(customfocusname),$LOCALIZE[32081])">$INFO[Skin.String(customfocusname)]</value>
+		<value condition="!String.IsEmpty(Skin.String(customfocus))">$INFO[Skin.String(customfocus)]</value>
 		<value>$LOCALIZE[571]</value>
 	</variable>
 	<variable name="WidgetLimitItemsNameVar">
@@ -165,14 +163,19 @@
 	</variable>
 	<!-- Current Weather Icon -->
 	<variable name="CurrentWeatherIconVar">
-		<value condition="!String.IsEmpty(Skin.String(WeatherIcons.path)) + !Skin.HasSetting(WeatherIcons.multi)">$INFO[Skin.String(WeatherIcons.path)]$INFO[Window(weather).Property(Current.FanartCode),,.png]</value>
-		<value condition="!String.IsEmpty(Skin.String(WeatherIcons.path)) + Skin.HasSetting(WeatherIcons.multi)">$INFO[Skin.String(WeatherIcons.path)]$INFO[Window(weather).Property(Current.FanartCode),,/]</value>
+		<value condition="!String.IsEmpty(Skin.String(weathericons.path)) + !Skin.HasSetting(weathericons.multi)">$INFO[Skin.String(weathericons.path)]$INFO[Window(weather).Property(Current.FanartCode),,.png]</value>
+		<value condition="!String.IsEmpty(Skin.String(weathericons.path)) + Skin.HasSetting(weathericons.multi)">$INFO[Skin.String(weathericons.path)]$INFO[Window(weather).Property(Current.FanartCode),,/]</value>
 		<value>$INFO[Weather.Conditions]</value>
 	</variable>
 	<!-- Fanart Background -->
 	<variable name="FanartBackgroundVar">
-		<value condition="Window.IsActive(videos) + Container.Content(genres) + !String.IsEmpty(Skin.String(MovieGenreFanart.path))">$INFO[Skin.String(MovieGenreFanart.path)]$INFO[ListItem.Label]$INFO[Skin.String(MovieGenreFanart.ext)]</value>
+		<value condition="Window.IsActive(videos) + Container.Content(genres) + !String.IsEmpty(Skin.String(moviegenrefanart.path))">$INFO[Skin.String(moviegenrefanart.path)]$INFO[ListItem.Label]$INFO[Skin.String(moviegenrefanart.ext)]</value>	
 		<value>$INFO[ListItem.Art(fanart)]</value>
+	</variable>
+	<!-- Weather Fanart -->
+	<variable name="WeatherFanartValueVar">
+		<value condition="!Skin.HasSetting(weatherfanart.multi)">$INFO[Skin.String(weatherfanart.path)]$INFO[ListItem.Property(FanartCode)]$INFO[Skin.String(weatherfanart.ext)]</value>
+		<value condition="Skin.HasSetting(weatherfanart.multi)">$INFO[Skin.String(weatherfanart.path)]$INFO[ListItem.Property(FanartCode)]</value>
 	</variable>
 	<!-- Background Audio -->
 	<variable name="BackgroundAudioVar">
@@ -199,7 +202,7 @@
 	</variable>
 	<variable name="SkinShortcutsTitleDlgVar">
 		<value condition="!String.IsEmpty(Window.Property(groupname)) + String.IsEqual(Window.Property(groupname),mainmenu)">$LOCALIZE[513]</value>
-		<value condition="!String.IsEmpty(Window.Property(groupname)) + String.IsEqual(Window.Property(groupname),powermenu)">$LOCALIZE[32068]</value>
+		<value condition="!String.IsEmpty(Window.Property(groupname)) + String.IsEqual(Window.Property(groupname),powermenu)">$LOCALIZE[33113]</value>
 		<value condition="!String.IsEmpty(Window.Property(groupname)) + !String.IsEqual(Window.Property(groupname),mainmenu) + !String.IsEqual(Window.Property(groupname),powermenu) + !String.Contains(Window.Property(groupname),.)">$LOCALIZE[1034] ($INFO[Window.Property(groupDisplayName)])</value>
 		<value condition="!String.IsEmpty(Window.Property(groupname)) + !String.IsEqual(Window.Property(groupname),mainmenu) + !String.IsEqual(Window.Property(groupname),powermenu) + String.EndsWith(Window.Property(groupname),.1)">$LOCALIZE[32066] ($INFO[Window.Property(groupDisplayName)])</value>
 	</variable>

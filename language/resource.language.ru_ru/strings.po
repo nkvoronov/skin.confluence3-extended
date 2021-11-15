@@ -859,8 +859,8 @@ msgid "Backlight color"
 msgstr "Цвет подсветки"
 
 msgctxt "#32044"
-msgid "After startup KODI, move focus main menu"
-msgstr "После запуска KODI, переместить фокус главного меню"
+msgid "Move focus main menu"
+msgstr "Переместить фокус главного меню"
 
 msgctxt "#32045"
 msgid "User list of add-ons"
@@ -954,73 +954,9 @@ msgctxt "#32067"
 msgid "Widget set"
 msgstr "Виджет"
 
-msgctxt "#32068"
-msgid "Shutdown Menu"
-msgstr "Меню выключения"
-
 msgctxt "#32069"
 msgid "Configure shortcuts set"
 msgstr "Настроить набор ярлыков"
-
-msgctxt "#32070"
-msgid "Select color"
-msgstr "Выберите цвет"
-
-msgctxt "#32071"
-msgid "Blue"
-msgstr "Синий"
-
-msgctxt "#32072"
-msgid "Azure"
-msgstr "Голубой"
-
-msgctxt "#32073"
-msgid "White"
-msgstr "Белый"
-
-msgctxt "#32074"
-msgid "Grey"
-msgstr "Серый"
-
-msgctxt "#32075"
-msgid "Red"
-msgstr "Красный"
-
-msgctxt "#32076"
-msgid "Pink"
-msgstr "Розовый"
-
-msgctxt "#32077"
-msgid "Purple"
-msgstr "Фиолетовый"
-
-msgctxt "#32078"
-msgid "Orange"
-msgstr "Оранжевый"
-
-msgctxt "#32079"
-msgid "Yellow"
-msgstr "Жёлтый"
-
-msgctxt "#32080"
-msgid "Green"
-msgstr "Зелёный"
-
-msgctxt "#32081"
-msgid "Manually"
-msgstr "Вручную"
-
-msgctxt "#32082"
-msgid "Move focus main menu"
-msgstr "Переместить фокус главного меню"
-
-msgctxt "#32083"
-msgid "To the left"
-msgstr "Влево на"
-
-msgctxt "#32084"
-msgid "To the right"
-msgstr "Вправо на"
 
 msgctxt "#32085"
 msgid "Select"
@@ -1074,14 +1010,6 @@ msgctxt "#32097"
 msgid "Dharma style"
 msgstr "Dharma стиль"
 
-msgctxt "#32101"
-msgid "Favorites TV Channels"
-msgstr "Избранные ТВ каналы"
-
-msgctxt "#32102"
-msgid "Favorites Radio Channels"
-msgstr "Избранные Радио каналы"
-
 msgctxt "#32103"
 msgid "Watch it Later"
 msgstr "Посмотреть позже"
@@ -1102,25 +1030,9 @@ msgctxt "#32107"
 msgid "Recent Music Video"
 msgstr "Последние клипы"
 
-msgctxt "#32108"
-msgid "Daily"
-msgstr "Ежедневная"
-
-msgctxt "#32109"
-msgid "Hourly"
-msgstr "Почасовая"
-
 msgctxt "#32110"
 msgid "Automatic Suggestion"
 msgstr "Автоматическое предложение"
-
-msgctxt "#32111"
-msgid "Previous location"
-msgstr "Предидущее расположение"
-
-msgctxt "#32112"
-msgid "Next location"
-msgstr "Следующее расположение"
 
 msgctxt "#32113"
 msgid "Video Playlist"
@@ -1158,10 +1070,49 @@ msgctxt "#32121"
 msgid "Music Add-On"
 msgstr "Дополнение музыки"
 
-msgctxt "#32122"
+msgctxt "#33111"
+msgid "Previous location"
+msgstr "Предидущее расположение"
+
+msgctxt "#33112"
+msgid "Next location"
+msgstr "Следующее расположение"
+
+msgctxt "#33113"
+msgid "Shutdown Menu"
+msgstr "Меню выключения"
+
+msgctxt "#33114"
+msgid "Daily"
+msgstr "Ежедневная"
+
+msgctxt "#33115"
+msgid "Hourly"
+msgstr "Почасовая"
+
+msgctxt "#33116"
 msgid "Recent recordings"
 msgstr "Недавние записи"
 
-msgctxt "#32123"
+msgctxt "#33117"
 msgid "Recently played channels"
 msgstr "Недавно проигранные каналы"
+
+msgctxt "#33118"
+msgid "Favorites TV Channels"
+msgstr "Избранные ТВ каналы"
+
+msgctxt "#33119"
+msgid "Favorites Radio Channels"
+msgstr "Избранные радио каналы"
+
+msgctxt "#33120"
+msgid "To the left"
+msgstr "Влево на"
+
+msgctxt "#33121"
+msgid "To the right"
+msgstr "Вправо на"
+
+
+

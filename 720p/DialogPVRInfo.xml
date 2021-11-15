@@ -176,9 +176,9 @@
 			<label fallback="31017">$INFO[ListItem.Plot]</label>
 		</control>
 		<control type="grouplist" id="9000">
-			<left>40</left>
+			<left>70</left>
 			<top>590</top>
-			<width>740</width>
+			<width>700</width>
 			<height>40</height>
 			<itemgap>5</itemgap>
 			<align>center</align>

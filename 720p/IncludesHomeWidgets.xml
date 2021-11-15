@@ -12,25 +12,33 @@
 			<include>skinshortcuts-template-widgets</include>
 		</control>
 	</include>
+	<include name="HomeWidgetUpDown">
+		<onup condition="!Skin.HasSetting(hidepowerbutton) + Skin.HasSetting(hidefavoritesbutton)">22</onup>
+		<onup condition="Skin.HasSetting(hidepowerbutton) + !Skin.HasSetting(hidefavoritesbutton)">21</onup>
+		<onup>20</onup>
+		<ondown condition="!Skin.HasSetting(lowermenu) + System.HasAddon(script.globalsearch) + Skin.HasSetting(enableglobalsearch)">608</ondown>
+		<ondown condition="!Skin.HasSetting(lowermenu) + [!System.HasAddon(script.globalsearch) | !Skin.HasSetting(enableglobalsearch)]">603</ondown>
+		<ondown condition="Skin.HasSetting(lowermenu)">9002</ondown>
+	</include>
 	<!-- WEATHER -->
 	<!-- Weather Daily Or Hourly -->
-	<include name="include-Widgets-Weather">
-		<include content="CommonWidgetInclude">
+	<include name="include-widgets-weather">
+		<include content="common-widget-include">
 			<param name="left_widget" value="140" />
 			<param name="visible" value="!IsEmpty(Weather.Plugin) + Weather.IsFetched + $PARAM[visible]" />
 			<param name="label_title" value="$LOCALIZE[$PARAM[widget_name]] $INFO[Window(weather).Property(Location)]" />
 			<param name="list_id" value="$PARAM[list_id]" />
-			<param name="animation_name_include" value="AnimationWidgetCommon" />
-			<param name="item_layout_name_include" value="WeatherWidgetItemsLayout" />
+			<param name="animation_name_include" value="animation-widget-common" />
+			<param name="item_layout_name_include" value="weather-widget-layout" />
 			<param name="width_widget" value="1000" />
 			<param name="width_widget_item" value="200" />
 			<param name="left_widget_ra" value="1010" />
-			<param name="content_name" value="CommonIncludeContents" />
+			<param name="content_name" value="common-contents-include" />
 			<param name="content_path" value="$PARAM[widget_patch]-contents" />
 		</include>
 	</include>
 	<!-- Weather 36h -->
-	<include name="include-Widgets-WeatherH36">
+	<include name="include-widgets-weatherh36">
 		<control type="group">
 			<animation type="Visible">
 				<effect type="slide" start="0,-600" end="0,0" time="600" tween="cubic" easing="out" />
@@ -284,18 +292,18 @@
 		</control>
 	</include>
 	<!-- ADDONS -->
-	<include name="include-Widgets-Addons">
-		<include content="CommonWidgetInclude">
+	<include name="include-widgets-addons">
+		<include content="common-widget-include">
 			<param name="left_widget" value="140" />
 			<param name="visible" value="$PARAM[visible]" />
 			<param name="label_title" value="$PARAM[widget_name]" />
 			<param name="list_id" value="$PARAM[list_id]" />
-			<param name="animation_name_include" value="AnimationWidgetCommon" />
-			<param name="item_layout_name_include" value="SquareWidgetItemsLayout" />
+			<param name="animation_name_include" value="animation-widget-common" />
+			<param name="item_layout_name_include" value="square-widget-layout" />
 			<param name="width_widget" value="1000" />
 			<param name="width_widget_item" value="200" />
 			<param name="left_widget_ra" value="1010" />
-			<param name="content_name" value="CommonIncludeContents3" />
+			<param name="content_name" value="common-contents3-include" />
 			<param name="content_target" value="$PARAM[widget_target]" />
 			<param name="content_path" value="$PARAM[widget_patch]" />
 			<param name="sortby" value="lastused"/>
@@ -305,18 +313,18 @@
 		</include>
 	</include>
 	<!-- PVRCHANNELS -->
-	<include name="include-Widgets-PVRChannels">
-		<include content="CommonWidgetInclude">
+	<include name="include-widgets-pvrchannels">
+		<include content="common-widget-include">
 			<param name="left_widget" value="140" />
 			<param name="visible" value="$PARAM[visible] + System.HasPVRAddon" />
 			<param name="label_title" value="$PARAM[widget_name]" />
 			<param name="list_id" value="$PARAM[list_id]" />
-			<param name="animation_name_include" value="AnimationWidgetCommon" />
-			<param name="item_layout_name_include" value="PVRWidgetItemsLayout" />
+			<param name="animation_name_include" value="animation-widget-common" />
+			<param name="item_layout_name_include" value="pvr-widget-layout" />
 			<param name="width_widget" value="1000" />
 			<param name="width_widget_item" value="200" />
 			<param name="left_widget_ra" value="1010" />
-			<param name="content_name" value="CommonIncludeContents3" />
+			<param name="content_name" value="common-contents3-include" />
 			<param name="content_target" value="$PARAM[widget_target]" />
 			<param name="content_path" value="$PARAM[widget_patch]" />
 			<param name="sortby" value="lastplayed"/>
@@ -326,18 +334,18 @@
 		</include>
 	</include>
 	<!-- PVRRECORDINGS -->
-	<include name="include-Widgets-PVRRecordings">
-		<include content="CommonWidgetInclude">
+	<include name="include-widgets-pvrrecordings">
+		<include content="common-widget-include">
 			<param name="left_widget" value="140" />
 			<param name="visible" value="$PARAM[visible] + System.HasPVRAddon" />
 			<param name="label_title" value="$PARAM[widget_name]" />
 			<param name="list_id" value="$PARAM[list_id]" />
-			<param name="animation_name_include" value="AnimationWidgetCommon" />
-			<param name="item_layout_name_include" value="PVRWidgetItemsLayout" />
+			<param name="animation_name_include" value="animation-widget-common" />
+			<param name="item_layout_name_include" value="pvr-widget-layout" />
 			<param name="width_widget" value="1000" />
 			<param name="width_widget_item" value="200" />
 			<param name="left_widget_ra" value="1010" />
-			<param name="content_name" value="CommonIncludeContents3" />
+			<param name="content_name" value="common-contents3-include" />
 			<param name="content_target" value="$PARAM[widget_target]" />
 			<param name="content_path" value="$PARAM[widget_patch]" />
 			<param name="sortby" value="date"/>
@@ -348,18 +356,18 @@
 		</include>
 	</include>
 	<!-- PVRCHANNELSCUSTOM -->
-	<include name="include-Widgets-PVRChannelsCustom">
-		<include content="CommonWidgetInclude">
+	<include name="include-widgets-pvrchannels-custom">
+		<include content="common-widget-include">
 			<param name="left_widget" value="140" />
 			<param name="visible" value="$PARAM[visible] + System.HasPVRAddon" />
 			<param name="label_title" value="$PARAM[widget_name]" />
 			<param name="list_id" value="$PARAM[list_id]" />
-			<param name="animation_name_include" value="AnimationWidgetCommon" />
-			<param name="item_layout_name_include" value="PVRWidgetItemsLayout" />
+			<param name="animation_name_include" value="animation-widget-common" />
+			<param name="item_layout_name_include" value="pvr-widget-layout" />
 			<param name="width_widget" value="1000" />
 			<param name="width_widget_item" value="200" />
 			<param name="left_widget_ra" value="1010" />
-			<param name="content_name" value="CommonIncludeContents" />
+			<param name="content_name" value="common-contents3-include" />
 			<param name="content_target" value="$PARAM[widget_target]" />
 			<param name="content_path" value="$PARAM[widget_patch]" />
 			<param name="label2" value="$INFO[ListItem.Property(Title)]"/>
@@ -367,18 +375,18 @@
 		</include>
 	</include>
 	<!-- PLAYLIST -->
-	<include name="include-Widgets-Playlists">
-		<include content="CommonWidgetInclude">
+	<include name="include-widgets-playlists">
+		<include content="common-widget-include">
 			<param name="left_widget" value="140" />
 			<param name="visible" value="$PARAM[visible]" />
 			<param name="label_title" value="$PARAM[widget_name]" />
 			<param name="list_id" value="$PARAM[list_id]" />
-			<param name="animation_name_include" value="AnimationWidgetCommon" />
-			<param name="item_layout_name_include" value="SquareWidgetItemsLayout" />
+			<param name="animation_name_include" value="animation-widget-common" />
+			<param name="item_layout_name_include" value="square-widget-layout" />
 			<param name="width_widget" value="1000" />
 			<param name="width_widget_item" value="200" />
 			<param name="left_widget_ra" value="1010" />
-			<param name="content_name" value="CommonIncludeContents3" />
+			<param name="content_name" value="common-contents3-include" />
 			<param name="content_target" value="$PARAM[widget_target]" />
 			<param name="content_path" value="$PARAM[widget_patch]" />
 			<param name="sortby" value="lastused"/>
@@ -388,18 +396,18 @@
 		</include>
 	</include>
 	<!-- MOVIES -->
-	<include name="include-Widgets-Movies">
-		<include content="CommonWidgetInclude">
+	<include name="include-widgets-movies">
+		<include content="common-widget-include">
 			<param name="left_widget" value="190" />
 			<param name="visible" value="Library.HasContent(Movies) + $PARAM[visible]" />
 			<param name="label_title" value="$PARAM[widget_name]" />
 			<param name="list_id" value="$PARAM[list_id]" />
-			<param name="animation_name_include" value="AnimationWidgetCommon2" />
-			<param name="item_layout_name_include" value="MoviesWidgetItemsLayout" />
+			<param name="animation_name_include" value="animation2-widget-common" />
+			<param name="item_layout_name_include" value="movies-widget-layout" />
 			<param name="width_widget" value="900" />
 			<param name="width_widget_item" value="180" />
 			<param name="left_widget_ra" value="910" />
-			<param name="content_name" value="CommonIncludeContents3" />
+			<param name="content_name" value="common-contents3-include" />
 			<param name="content_target" value="$PARAM[widget_target]" />
 			<param name="content_path" value="$PARAM[widget_patch]" />
 			<param name="icon" value="$VAR[PosterThumbVar]"/>
@@ -407,18 +415,18 @@
 		</include>
 	</include>
 	<!-- TVSHOWS -->
-	<include name="include-Widgets-TVShows">
-		<include content="CommonWidgetInclude">
+	<include name="include-widgets-tvshows">
+		<include content="common-widget-include">
 			<param name="left_widget" value="190" />
 			<param name="visible" value="Library.HasContent(Movies) + $PARAM[visible]" />
 			<param name="label_title" value="$PARAM[widget_name]" />
 			<param name="list_id" value="$PARAM[list_id]" />
-			<param name="animation_name_include" value="AnimationWidgetCommon2" />
-			<param name="item_layout_name_include" value="TVShowsWidgetItemsLayout" />
+			<param name="animation_name_include" value="animation2-widget-common" />
+			<param name="item_layout_name_include" value="tvshows-widget-layout" />
 			<param name="width_widget" value="900" />
 			<param name="width_widget_item" value="180" />
 			<param name="left_widget_ra" value="910" />
-			<param name="content_name" value="CommonIncludeContents3" />
+			<param name="content_name" value="common-contents3-include" />
 			<param name="content_target" value="$PARAM[widget_target]" />
 			<param name="content_path" value="$PARAM[widget_patch]" />
 			<param name="icon" value="$VAR[PosterThumbVar]"/>
@@ -426,18 +434,18 @@
 		</include>
 	</include>
 	<!-- EPISODES -->
-	<include name="include-Widgets-Episodes">
-		<include content="CommonWidgetInclude">
+	<include name="include-widgets-episodes">
+		<include content="common-widget-include">
 			<param name="left_widget" value="160" />
 			<param name="visible" value="Library.HasContent(TVShows) + $PARAM[visible]" />
 			<param name="label_title" value="$PARAM[widget_name]" />
 			<param name="list_id" value="$PARAM[list_id]" />
-			<param name="animation_name_include" value="AnimationWidgetCommon3" />
-			<param name="item_layout_name_include" value="EpisodesWidgetItemsLayout" />
+			<param name="animation_name_include" value="animation3-widget-common" />
+			<param name="item_layout_name_include" value="episodes-widget-layout" />
 			<param name="width_widget" value="960" />
 			<param name="width_widget_item" value="240" />
 			<param name="left_widget_ra" value="970" />
-			<param name="content_name" value="CommonIncludeContents3" />
+			<param name="content_name" value="common-contents3-include" />
 			<param name="content_target" value="$PARAM[widget_target]" />
 			<param name="content_path" value="$PARAM[widget_patch]" />
 			<param name="label2" value="$INFO[ListItem.TVShowTitle]"/>
@@ -445,18 +453,18 @@
 		</include>
 	</include>
 	<!-- MUSICVIDEO -->
-	<include name="include-Widgets-MusicVideos">
-		<include content="CommonWidgetInclude">
+	<include name="include-widgets-musicvideos">
+		<include content="common-widget-include">
 			<param name="left_widget" value="240" />
 			<param name="visible" value="Library.HasContent(MusicVideos) + $PARAM[visible]" />
 			<param name="label_title" value="$PARAM[widget_name]" />
 			<param name="list_id" value="$PARAM[list_id]" />
-			<param name="animation_name_include" value="AnimationWidgetCommon4" />
-			<param name="item_layout_name_include" value="AlbumsWidgetItemsLayout" />
+			<param name="animation_name_include" value="animation4-widget-common" />
+			<param name="item_layout_name_include" value="albums-widget-layout" />
 			<param name="width_widget" value="800" />
 			<param name="width_widget_item" value="200" />
 			<param name="left_widget_ra" value="810" />
-			<param name="content_name" value="CommonIncludeContents3" />
+			<param name="content_name" value="common-contents3-include" />
 			<param name="content_target" value="$PARAM[widget_target]" />
 			<param name="content_path" value="$PARAM[widget_patch]" />
 			<param name="label2" value="$INFO[ListItem.Artist]"/>
@@ -464,18 +472,18 @@
 		</include>
 	</include>
 	<!-- ALBUMS -->
-	<include name="include-Widgets-Albums">
-		<include content="CommonWidgetInclude">
+	<include name="include-widgets-albums">
+		<include content="common-widget-include">
 			<param name="left_widget" value="240" />
 			<param name="visible" value="Library.HasContent(Music) + $PARAM[visible]" />
 			<param name="label_title" value="$PARAM[widget_name]" />
 			<param name="list_id" value="$PARAM[list_id]" />
-			<param name="animation_name_include" value="AnimationWidgetCommon4" />
-			<param name="item_layout_name_include" value="AlbumsWidgetItemsLayout" />
+			<param name="animation_name_include" value="animation4-widget-common" />
+			<param name="item_layout_name_include" value="albums-widget-layout" />
 			<param name="width_widget" value="800" />
 			<param name="width_widget_item" value="200" />
 			<param name="left_widget_ra" value="810" />
-			<param name="content_name" value="CommonIncludeContents3" />
+			<param name="content_name" value="common-contents3-include" />
 			<param name="content_target" value="$PARAM[widget_target]" />
 			<param name="content_path" value="$PARAM[widget_patch]" />
 			<param name="label2" value="$INFO[ListItem.Artist]"/>
@@ -483,18 +491,18 @@
 		</include>
 	</include>
 	<!-- ARTIST -->
-	<include name="include-Widgets-Artists">
-		<include content="CommonWidgetInclude">
+	<include name="include-widgets-artists">
+		<include content="common-widget-include">
 			<param name="left_widget" value="190" />
 			<param name="visible" value="Library.HasContent(Movies) + $PARAM[visible]" />
 			<param name="label_title" value="$PARAM[widget_name]" />
 			<param name="list_id" value="$PARAM[list_id]" />
-			<param name="animation_name_include" value="AnimationWidgetCommon2" />
-			<param name="item_layout_name_include" value="MoviesWidgetItemsLayout" />
+			<param name="animation_name_include" value="animation2-widget-common" />
+			<param name="item_layout_name_include" value="movies-widget-layout" />
 			<param name="width_widget" value="900" />
 			<param name="width_widget_item" value="180" />
 			<param name="left_widget_ra" value="910" />
-			<param name="content_name" value="CommonIncludeContents3" />
+			<param name="content_name" value="common-contents3-include" />
 			<param name="content_target" value="$PARAM[widget_target]" />
 			<param name="content_path" value="$PARAM[widget_patch]" />
 			<param name="icon" value="$VAR[PosterThumbVar]"/>
@@ -502,18 +510,18 @@
 		</include>
 	</include>
 	<!-- SONGS -->
-	<include name="include-Widgets-Songs">
-		<include content="CommonWidgetInclude">
+	<include name="include-widgets-songs">
+		<include content="common-widget-include">
 			<param name="left_widget" value="240" />
 			<param name="visible" value="Library.HasContent(Music) + $PARAM[visible]" />
 			<param name="label_title" value="$PARAM[widget_name]" />
 			<param name="list_id" value="$PARAM[list_id]" />
-			<param name="animation_name_include" value="AnimationWidgetCommon4" />
-			<param name="item_layout_name_include" value="AlbumsWidgetItemsLayout" />
+			<param name="animation_name_include" value="animation4-widget-common" />
+			<param name="item_layout_name_include" value="albums-widget-layout" />
 			<param name="width_widget" value="800" />
 			<param name="width_widget_item" value="200" />
 			<param name="left_widget_ra" value="810" />
-			<param name="content_name" value="CommonIncludeContents3" />
+			<param name="content_name" value="common-contents3-include" />
 			<param name="content_target" value="$PARAM[widget_target]" />
 			<param name="content_path" value="$PARAM[widget_patch]" />
 			<param name="label2" value="$INFO[ListItem.Artist]"/>
@@ -521,18 +529,18 @@
 		</include>
 	</include>
 	<!-- MIXED -->
-	<include name="include-Widgets-Mixed">
-		<include content="CommonWidgetInclude">
+	<include name="include-widgets-mixed">
+		<include content="common-widget-include">
 			<param name="left_widget" value="240" />
 			<param name="visible" value="Library.HasContent(Music) + $PARAM[visible]" />
 			<param name="label_title" value="$PARAM[widget_name]" />
 			<param name="list_id" value="$PARAM[list_id]" />
-			<param name="animation_name_include" value="AnimationWidgetCommon4" />
-			<param name="item_layout_name_include" value="AlbumsWidgetItemsLayout" />
+			<param name="animation_name_include" value="animation4-widget-common" />
+			<param name="item_layout_name_include" value="albums-widget-layout" />
 			<param name="width_widget" value="800" />
 			<param name="width_widget_item" value="200" />
 			<param name="left_widget_ra" value="810" />
-			<param name="content_name" value="CommonIncludeContents3" />
+			<param name="content_name" value="common-contents3-include" />
 			<param name="content_target" value="$PARAM[widget_target]" />
 			<param name="content_path" value="$PARAM[widget_patch]" />
 			<param name="label2" value="$INFO[ListItem.Artist]"/>
@@ -540,18 +548,18 @@
 		</include>
 	</include>
 	<!-- FAVOURITES -->
-	<include name="include-Widgets-Favourites">
-		<include content="CommonWidgetInclude">
+	<include name="include-widgets-favourites">
+		<include content="common-widget-include">
 			<param name="left_widget" value="140" />
 			<param name="visible" value="$PARAM[visible]" />
 			<param name="label_title" value="$PARAM[widget_name]" />
 			<param name="list_id" value="$PARAM[list_id]" />
-			<param name="animation_name_include" value="AnimationWidgetCommon" />
-			<param name="item_layout_name_include" value="SquareWidgetItemsLayout" />
+			<param name="animation_name_include" value="animation-widget-common" />
+			<param name="item_layout_name_include" value="square-widget-layout" />
 			<param name="width_widget" value="1000" />
 			<param name="width_widget_item" value="200" />
 			<param name="left_widget_ra" value="1010" />
-			<param name="content_name" value="CommonIncludeContents3" />
+			<param name="content_name" value="common-contents3-include" />
 			<param name="content_target" value="$PARAM[widget_target]" />
 			<param name="content_path" value="$PARAM[widget_patch]" />
 			<param name="favourites" value="true" />
@@ -559,25 +567,25 @@
 		</include>
 	</include>
 	<!-- OTHER -->
-	<include name="include-Widgets-Other">
-		<include content="CommonWidgetInclude">
+	<include name="include-widgets-other">
+		<include content="common-widget-include">
 			<param name="left_widget" value="140" />
 			<param name="visible" value="$PARAM[visible]" />
 			<param name="label_title" value="$PARAM[widget_name]" />
 			<param name="list_id" value="$PARAM[list_id]" />
-			<param name="animation_name_include" value="AnimationWidgetCommon" />
-			<param name="item_layout_name_include" value="SquareWidgetItemsLayout" />
+			<param name="animation_name_include" value="animation-widget-common" />
+			<param name="item_layout_name_include" value="square-widget-layout" />
 			<param name="width_widget" value="1000" />
 			<param name="width_widget_item" value="200" />
 			<param name="left_widget_ra" value="1010" />
-			<param name="content_name" value="CommonIncludeContents3" />
+			<param name="content_name" value="common-contents3-include" />
 			<param name="content_target" value="$PARAM[widget_target]" />
 			<param name="content_path" value="$PARAM[widget_patch]" />
 			<param name="icon" value="$VAR[PosterThumb3Var]"/>
 		</include>
 	</include>
 	<!-- Common Widget -->
-	<include name="CommonWidgetInclude">
+	<include name="common-widget-include">
 		<param name="height_widget_item">220</param>
 		<param name="left_widget_la">-40</param>
 		<param name="content_name"></param>
@@ -676,44 +684,44 @@
 		</definition>
 	</include>
 	<!-- Common Includes -->
-	<include name="CommonIncludeContents">
+	<include name="common-contents-include">
 		<content>
 			<include content="$PARAM[content_path]">
 				<param name="id2" value="$PARAM[content_target]" />
 			</include>
 		</content>
 	</include>
-	<include name="CommonIncludeContents2">
+	<include name="common-contents2-include">
 		<content>$PARAM[content_path]</content>
 	</include>
-	<include name="CommonIncludeContents3">
+	<include name="common-contents3-include">
 		<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" target="$PARAM[content_target]" limit="$PARAM[content_limit]">$PARAM[content_path]</content>
 	</include>
 	<!-- Animation Widget -->
-	<include name="AnimationWidgetCommon">
+	<include name="animation-widget-common">
 		<animation effect="slide" start="0,0" end="100,0" time="0" condition="Integer.IsEqual(Container($PARAM[list_id]).NumItems,4)">conditional</animation>
 		<animation effect="slide" start="0,0" end="200,0" time="0" condition="Integer.IsEqual(Container($PARAM[list_id]).NumItems,3)">conditional</animation>
 		<animation effect="slide" start="0,0" end="300,0" time="0" condition="Integer.IsEqual(Container($PARAM[list_id]).NumItems,2)">conditional</animation>
 		<animation effect="slide" start="0,0" end="400,0" time="0" condition="Integer.IsEqual(Container($PARAM[list_id]).NumItems,1)">conditional</animation>
 	</include>
-	<include name="AnimationWidgetCommon2">
+	<include name="animation2-widget-common">
 		<animation effect="slide" start="0,0" end="90,0" time="0" condition="Integer.IsEqual(Container($PARAM[list_id]).NumItems,4)">conditional</animation>
 		<animation effect="slide" start="0,0" end="180,0" time="0" condition="Integer.IsEqual(Container($PARAM[list_id]).NumItems,3)">conditional</animation>
 		<animation effect="slide" start="0,0" end="270,0" time="0" condition="Integer.IsEqual(Container($PARAM[list_id]).NumItems,2)">conditional</animation>
 		<animation effect="slide" start="0,0" end="360,0" time="0" condition="Integer.IsEqual(Container($PARAM[list_id]).NumItems,1)">conditional</animation>
 	</include>
-	<include name="AnimationWidgetCommon3">
+	<include name="animation3-widget-common">
 		<animation effect="slide" start="0,0" end="120,0" time="0" condition="Integer.IsEqual(Container($PARAM[list_id]).NumItems,3)">conditional</animation>
 		<animation effect="slide" start="0,0" end="240,0" time="0" condition="Integer.IsEqual(Container($PARAM[list_id]).NumItems,2)">conditional</animation>
 		<animation effect="slide" start="0,0" end="360,0" time="0" condition="Integer.IsEqual(Container($PARAM[list_id]).NumItems,1)">conditional</animation>
 	</include>
-	<include name="AnimationWidgetCommon4">
+	<include name="animation4-widget-common">
 		<animation effect="slide" start="0,0" end="100,0" time="0" condition="Integer.IsEqual(Container($PARAM[list_id]).NumItems,3)">conditional</animation>
 		<animation effect="slide" start="0,0" end="200,0" time="0" condition="Integer.IsEqual(Container($PARAM[list_id]).NumItems,2)">conditional</animation>
 		<animation effect="slide" start="0,0" end="300,0" time="0" condition="Integer.IsEqual(Container($PARAM[list_id]).NumItems,1)">conditional</animation>
 	</include>
 	<!-- Widget Items Layout -->
-	<include name="WeatherWidgetItemsLayout">
+	<include name="weather-widget-layout">
 		<param name="height_widget_item">220</param>
 		<param name="width_widget_item">200</param>
 		<definition>
@@ -777,7 +785,7 @@
 			</itemlayout>
 			<focusedlayout height="$PARAM[height_widget_item]" width="$PARAM[width_widget_item]">
 				<control type="button">
-					<onfocus>SetProperty(weatherfanartcode,$INFO[Container($PARAM[list_id]).ListItem.Property(FanartCode)],home)</onfocus>
+					<onfocus>SetProperty(weatherfanartcode,$INFO[ListItem.Property(FanartCode)],home)</onfocus>
 					<texturenofocus/>
 					<texturefocus/>
 				</control>
@@ -796,7 +804,18 @@
 					<param name="height" value="150" />
 					<param name="image_1" value="$INFO[ListItem.Thumb]" />
 					<param name="image_multi" value="$INFO[ListItem.Thumb]" />
+					<param name="image_border" value="button-nofocus.png" />
+					<param name="visible" value="!Control.HasFocus($PARAM[list_id])" />
+				</include>
+				<include content="WeatherIconsWidgets">
+					<param name="left" value="10" />
+					<param name="top" value="10" />
+					<param name="width" value="180" />
+					<param name="height" value="150" />
+					<param name="image_1" value="$INFO[ListItem.Thumb]" />
+					<param name="image_multi" value="$INFO[ListItem.Thumb]" />
 					<param name="image_border" value="folder-focus.png" />
+					<param name="visible" value="Control.HasFocus($PARAM[list_id])" />
 				</include>
 				<control type="label">
 					<left>10</left>
@@ -853,7 +872,7 @@
 			</focusedlayout>
 		</definition>
 	</include>
-	<include name="SquareWidgetItemsLayout">
+	<include name="square-widget-layout">
 		<param name="height_widget_item">220</param>
 		<param name="width_widget_item">200</param>
 		<param name="icon"></param>
@@ -894,12 +913,6 @@
 				</control>
 			</itemlayout>
 			<focusedlayout height="$PARAM[height_widget_item]" width="$PARAM[width_widget_item]">
-				<control type="button">
-					<onfocus>SetProperty(mediaartfanart,$INFO[Container($PARAM[list_id]).ListItem.Art(fanart)],home)</onfocus>
-					<onfocus>SetProperty(SkinHelper.WidgetContainer,$PARAM[list_id])</onfocus>
-					<texturenofocus/>
-					<texturefocus/>
-				</control>
 				<control type="image">
 					<description>Background</description>
 					<left>0</left>
@@ -959,7 +972,7 @@
 			</focusedlayout>
 		</definition>
 	</include>
-	<include name="MoviesWidgetItemsLayout">
+	<include name="movies-widget-layout">
 		<param name="height_widget_item">220</param>
 		<param name="width_widget_item">180</param>
 		<param name="icon"></param>
@@ -1008,12 +1021,6 @@
 				</control>
 			</itemlayout>
 			<focusedlayout height="$PARAM[height_widget_item]" width="$PARAM[width_widget_item]">
-				<control type="button">
-					<onfocus>SetProperty(mediaartfanart,$INFO[Container($PARAM[list_id]).ListItem.Art(fanart)],home)</onfocus>
-					<onfocus>SetProperty(SkinHelper.WidgetContainer,$PARAM[list_id])</onfocus>
-					<texturenofocus/>
-					<texturefocus/>
-				</control>
 				<control type="image">
 					<description>Background</description>
 					<left>0</left>
@@ -1082,7 +1089,7 @@
 			</focusedlayout>
 		</definition>
 	</include>
-	<include name="EpisodesWidgetItemsLayout">
+	<include name="episodes-widget-layout">
 		<param name="height_widget_item">220</param>
 		<param name="width_widget_item">240</param>
 		<param name="icon"></param>
@@ -1136,12 +1143,6 @@
 				</control>
 			</itemlayout>
 			<focusedlayout height="$PARAM[height_widget_item]" width="$PARAM[width_widget_item]">
-				<control type="button">
-					<onfocus>SetProperty(mediaartfanart,$INFO[Container($PARAM[list_id]).ListItem.Art(fanart)],home)</onfocus>
-					<onfocus>SetProperty(SkinHelper.WidgetContainer,$PARAM[list_id])</onfocus>
-					<texturenofocus/>
-					<texturefocus/>
-				</control>
 				<control type="image">
 					<description>Background</description>
 					<left>0</left>
@@ -1215,7 +1216,7 @@
 			</focusedlayout>
 		</definition>
 	</include>
-	<include name="TVShowsWidgetItemsLayout">
+	<include name="tvshows-widget-layout">
 		<param name="height_widget_item">220</param>
 		<param name="width_widget_item">180</param>
 		<param name="icon"></param>
@@ -1269,12 +1270,6 @@
 				</control>
 			</itemlayout>
 			<focusedlayout height="$PARAM[height_widget_item]" width="$PARAM[width_widget_item]">
-				<control type="button">
-					<onfocus>SetProperty(mediaartfanart,$INFO[Container($PARAM[list_id]).ListItem.Art(fanart)],home)</onfocus>
-					<onfocus>SetProperty(SkinHelper.WidgetContainer,$PARAM[list_id])</onfocus>
-					<texturenofocus/>
-					<texturefocus/>
-				</control>
 				<control type="image">
 					<description>background</description>
 					<left>0</left>
@@ -1348,7 +1343,7 @@
 			</focusedlayout>
 		</definition>
 	</include>
-	<include name="AlbumsWidgetItemsLayout">
+	<include name="albums-widget-layout">
 		<param name="height_widget_item">220</param>
 		<param name="width_widget_item">200</param>
 		<param name="icon"></param>
@@ -1402,12 +1397,6 @@
 				</control>
 			</itemlayout>
 			<focusedlayout height="$PARAM[height_widget_item]" width="$PARAM[width_widget_item]">
-				<control type="button">
-					<onfocus>SetProperty(mediaartfanart,$INFO[Container($PARAM[list_id]).ListItem.Art(fanart)],home)</onfocus>
-					<onfocus>SetProperty(SkinHelper.WidgetContainer,$PARAM[list_id])</onfocus>
-					<texturenofocus/>
-					<texturefocus/>
-				</control>
 				<control type="image">
 					<description>Background</description>
 					<left>0</left>
@@ -1480,7 +1469,7 @@
 			</focusedlayout>
 		</definition>
 	</include>
-	<include name="PVRWidgetItemsLayout">
+	<include name="pvr-widget-layout">
 		<param name="height_widget_item">220</param>
 		<param name="width_widget_item">200</param>
 		<param name="icon"></param>
@@ -1534,11 +1523,6 @@
 				</control>
 			</itemlayout>
 			<focusedlayout height="$PARAM[height_widget_item]" width="$PARAM[width_widget_item]">
-				<control type="button">
-					<onfocus>SetProperty(SkinHelper.WidgetContainer,$PARAM[list_id])</onfocus>
-					<texturenofocus/>
-					<texturefocus/>
-				</control>
 				<control type="image">
 					<description>Background</description>
 					<left>0</left>
@@ -1612,196 +1596,193 @@
 		</definition>
 	</include>
 	<!-- Widget Contents -->
-	<include name="weatherdaily-contents">
-		<include content="WeatherDailyWidgetItem">
+	<include name="weather-daily-contents">
+		<include content="weather-daily-item">
 			<param name="item_id" value="1" />
 		</include>
-		<include content="WeatherDailyWidgetItem">
+		<include content="weather-daily-item">
 			<param name="item_id" value="2" />
 		</include>
-		<include content="WeatherDailyWidgetItem">
+		<include content="weather-daily-item">
 			<param name="item_id" value="3" />
 		</include>
-		<include content="WeatherDailyWidgetItem">
+		<include content="weather-daily-item">
 			<param name="item_id" value="4" />
 		</include>
-		<include content="WeatherDailyWidgetItem">
+		<include content="weather-daily-item">
 			<param name="item_id" value="5" />
 		</include>
-		<include content="WeatherDailyWidgetItem">
+		<include content="weather-daily-item">
 			<param name="item_id" value="6" />
 		</include>
-		<include content="WeatherDailyWidgetItem">
+		<include content="weather-daily-item">
 			<param name="item_id" value="7" />
 		</include>
-		<include content="WeatherDailyWidgetItem">
+		<include content="weather-daily-item">
 			<param name="item_id" value="8" />
 		</include>
-		<include content="WeatherDailyWidgetItem">
+		<include content="weather-daily-item">
 			<param name="item_id" value="9" />
 		</include>
-		<include content="WeatherDailyWidgetItem">
+		<include content="weather-daily-item">
 			<param name="item_id" value="10" />
 		</include>
-		<include content="WeatherDailyWidgetItem">
+		<include content="weather-daily-item">
 			<param name="item_id" value="11" />
 		</include>
-		<include content="WeatherDailyWidgetItem">
+		<include content="weather-daily-item">
 			<param name="item_id" value="12" />
 		</include>
-		<include content="WeatherDailyWidgetItem">
+		<include content="weather-daily-item">
 			<param name="item_id" value="13" />
 		</include>
-		<include content="WeatherDailyWidgetItem">
+		<include content="weather-daily-item">
 			<param name="item_id" value="14" />
 		</include>
 	</include>
-	<include name="weatherhourly-contents">
-		<include content="WeatherHourlyWidgetItem">
+	<include name="weather-hourly-contents">
+		<include content="weather-hourly-item">
 			<param name="item_id" value="1" />
 		</include>
-		<include content="WeatherHourlyWidgetItem">
+		<include content="weather-hourly-item">
 			<param name="item_id" value="2" />
 		</include>
-		<include content="WeatherHourlyWidgetItem">
+		<include content="weather-hourly-item">
 			<param name="item_id" value="3" />
 		</include>
-		<include content="WeatherHourlyWidgetItem">
+		<include content="weather-hourly-item">
 			<param name="item_id" value="4" />
 		</include>
-		<include content="WeatherHourlyWidgetItem">
+		<include content="weather-hourly-item">
 			<param name="item_id" value="5" />
 		</include>
-		<include content="WeatherHourlyWidgetItem">
+		<include content="weather-hourly-item">
 			<param name="item_id" value="6" />
 		</include>
-		<include content="WeatherHourlyWidgetItem">
+		<include content="weather-hourly-item">
 			<param name="item_id" value="7" />
 		</include>
-		<include content="WeatherHourlyWidgetItem">
+		<include content="weather-hourly-item">
 			<param name="item_id" value="8" />
 		</include>
-		<include content="WeatherHourlyWidgetItem">
+		<include content="weather-hourly-item">
 			<param name="item_id" value="9" />
 		</include>
-		<include content="WeatherHourlyWidgetItem">
+		<include content="weather-hourly-item">
 			<param name="item_id" value="10" />
 		</include>
-		<include content="WeatherHourlyWidgetItem">
+		<include content="weather-hourly-item">
 			<param name="item_id" value="11" />
 		</include>
-		<include content="WeatherHourlyWidgetItem">
+		<include content="weather-hourly-item">
 			<param name="item_id" value="12" />
 		</include>
-		<include content="WeatherHourlyWidgetItem">
+		<include content="weather-hourly-item">
 			<param name="item_id" value="13" />
 		</include>
-		<include content="WeatherHourlyWidgetItem">
+		<include content="weather-hourly-item">
 			<param name="item_id" value="14" />
 		</include>
-		<include content="WeatherHourlyWidgetItem">
+		<include content="weather-hourly-item">
 			<param name="item_id" value="15" />
 		</include>
-		<include content="WeatherHourlyWidgetItem">
+		<include content="weather-hourly-item">
 			<param name="item_id" value="16" />
 		</include>
-		<include content="WeatherHourlyWidgetItem">
+		<include content="weather-hourly-item">
 			<param name="item_id" value="17" />
 		</include>
-		<include content="WeatherHourlyWidgetItem">
+		<include content="weather-hourly-item">
 			<param name="item_id" value="18" />
 		</include>
-		<include content="WeatherHourlyWidgetItem">
+		<include content="weather-hourly-item">
 			<param name="item_id" value="19" />
 		</include>
-		<include content="WeatherHourlyWidgetItem">
+		<include content="weather-hourly-item">
 			<param name="item_id" value="20" />
 		</include>
-		<include content="WeatherHourlyWidgetItem">
+		<include content="weather-hourly-item">
 			<param name="item_id" value="21" />
 		</include>
-		<include content="WeatherHourlyWidgetItem">
+		<include content="weather-hourly-item">
 			<param name="item_id" value="22" />
 		</include>
-		<include content="WeatherHourlyWidgetItem">
+		<include content="weather-hourly-item">
 			<param name="item_id" value="23" />
 		</include>
-		<include content="WeatherHourlyWidgetItem">
+		<include content="weather-hourly-item">
 			<param name="item_id" value="24" />
 		</include>
 	</include>
 	<!-- Widget Item -->
-	<include name="WeatherDailyWidgetItem">
+	<include name="weather-daily-item">
 		<item>
 			<label>$INFO[Window(weather).Property(Daily.$PARAM[item_id].ShortDay)] $INFO[Window(weather).Property(Daily.$PARAM[item_id].ShortDate)]</label>
 			<label2>$INFO[Window(weather).Property(Daily.$PARAM[item_id].Outlook)]</label2>
 			<onclick>Weather.Refresh</onclick>
 			<thumb>resource://resource.images.weathericons.default/$INFO[Window(weather).Property(Daily.$PARAM[item_id].FanartCode),,.png]</thumb>
 			<icon>-</icon>
+			<property name="FanartCode">$INFO[Window(weather).Property(Daily.$PARAM[item_id].FanartCode)]</property>
 			<property name="Infos">[COLOR=grey2]$LOCALIZE[419] : [/COLOR]$INFO[Window(weather).Property(Daily.$PARAM[item_id].HighTemperature)]  [COLOR=grey2]$LOCALIZE[418] : [/COLOR]$INFO[Window(weather).Property(Daily.$PARAM[item_id].LowTemperature)]</property>
 			<visible>!String.IsEmpty(Window(weather).Property(Daily.$PARAM[item_id].Outlook))</visible>
-			<visible>String.IsEmpty(Skin.String(WeatherIcons.path))</visible>
+			<visible>String.IsEmpty(Skin.String(weathericons.path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Window(weather).Property(Daily.$PARAM[item_id].ShortDay)] $INFO[Window(weather).Property(Daily.$PARAM[item_id].ShortDate)]</label>
 			<label2>$INFO[Window(weather).Property(Daily.$PARAM[item_id].Outlook)]</label2>
 			<onclick>Weather.Refresh</onclick>
-			<thumb>$INFO[Skin.String(WeatherIcons.path)]$INFO[Window(weather).Property(Daily.$PARAM[item_id].FanartCode),,.png]</thumb>
+			<thumb>$INFO[Skin.String(weathericons.path)]$INFO[Window(weather).Property(Daily.$PARAM[item_id].FanartCode),,.png]</thumb>
 			<icon>-</icon>
+			<property name="FanartCode">$INFO[Window(weather).Property(Daily.$PARAM[item_id].FanartCode)]</property>
 			<property name="Infos">[COLOR=grey2]$LOCALIZE[419] : [/COLOR]$INFO[Window(weather).Property(Daily.$PARAM[item_id].HighTemperature)]  [COLOR=grey2]$LOCALIZE[418] : [/COLOR]$INFO[Window(weather).Property(Daily.$PARAM[item_id].LowTemperature)]</property>
 			<visible>!String.IsEmpty(Window(weather).Property(Daily.$PARAM[item_id].Outlook))</visible>
-			<visible>!String.IsEmpty(Skin.String(WeatherIcons.path)) + !Skin.HasSetting(WeatherIcons.multi)</visible>
+			<visible>!String.IsEmpty(Skin.String(weathericons.path)) + !Skin.HasSetting(weathericons.multi)</visible>
 		</item>
 		<item>
 			<label>$INFO[Window(weather).Property(Daily.$PARAM[item_id].ShortDay)] $INFO[Window(weather).Property(Daily.$PARAM[item_id].ShortDate)]</label>
 			<label2>$INFO[Window(weather).Property(Daily.$PARAM[item_id].Outlook)]</label2>
 			<onclick>Weather.Refresh</onclick>
-			<thumb>$INFO[Skin.String(WeatherIcons.path)]$INFO[Window(weather).Property(Daily.$PARAM[item_id].FanartCode),,/]</thumb>
+			<thumb>$INFO[Skin.String(weathericons.path)]$INFO[Window(weather).Property(Daily.$PARAM[item_id].FanartCode),,/]</thumb>
 			<icon>-</icon>
+			<property name="FanartCode">$INFO[Window(weather).Property(Daily.$PARAM[item_id].FanartCode)]</property>
 			<property name="Infos">[COLOR=grey2]$LOCALIZE[419] : [/COLOR]$INFO[Window(weather).Property(Daily.$PARAM[item_id].HighTemperature)]  [COLOR=grey2]$LOCALIZE[418] : [/COLOR]$INFO[Window(weather).Property(Daily.$PARAM[item_id].LowTemperature)]</property>
 			<visible>!String.IsEmpty(Window(weather).Property(Daily.$PARAM[item_id].Outlook))</visible>
-			<visible>!String.IsEmpty(Skin.String(WeatherIcons.path)) + Skin.HasSetting(WeatherIcons.multi)</visible>
+			<visible>!String.IsEmpty(Skin.String(weathericons.path)) + Skin.HasSetting(weathericons.multi)</visible>
 		</item>
 	</include>
-	<include name="WeatherHourlyWidgetItem">
+	<include name="weather-hourly-item">
 		<item>
 			<label>$INFO[Window(weather).Property(Hourly.$PARAM[item_id].Time)] $INFO[Window(weather).Property(Hourly.$PARAM[item_id].ShortDate)]</label>
 			<label2>$INFO[Window(weather).Property(Hourly.$PARAM[item_id].Outlook)]</label2>
 			<onclick>Weather.Refresh</onclick>
 			<thumb>resource://resource.images.weathericons.default/$INFO[Window(weather).Property(Hourly.$PARAM[item_id].FanartCode),,.png]</thumb>
 			<icon>-</icon>
+			<property name="FanartCode">$INFO[Window(weather).Property(Hourly.$PARAM[item_id].FanartCode)]</property>
 			<property name="Infos">[COLOR=grey2]$LOCALIZE[401] : [/COLOR]$INFO[Window(weather).Property(Hourly.$PARAM[item_id].Temperature)]  ($INFO[Window(weather).Property(Hourly.$PARAM[item_id].FeelsLike)])</property>
 			<visible>!String.IsEmpty(Window(weather).Property(Hourly.$PARAM[item_id].Outlook))</visible>
-			<visible>String.IsEmpty(Skin.String(WeatherIcons.path))</visible>
+			<visible>String.IsEmpty(Skin.String(weathericons.path))</visible>
 		</item>
 		<item>
 			<label>$INFO[Window(weather).Property(Hourly.$PARAM[item_id].Time)] $INFO[Window(weather).Property(Hourly.$PARAM[item_id].ShortDate)]</label>
 			<label2>$INFO[Window(weather).Property(Hourly.$PARAM[item_id].Outlook)]</label2>
 			<onclick>Weather.Refresh</onclick>
-			<thumb>$INFO[Skin.String(WeatherIcons.path)]$INFO[Window(weather).Property(Hourly.$PARAM[item_id].FanartCode),,.png]</thumb>
+			<thumb>$INFO[Skin.String(weathericons.path)]$INFO[Window(weather).Property(Hourly.$PARAM[item_id].FanartCode),,.png]</thumb>
 			<icon>-</icon>
+			<property name="FanartCode">$INFO[Window(weather).Property(Hourly.$PARAM[item_id].FanartCode)]</property>
 			<property name="Infos">[COLOR=grey2]$LOCALIZE[401] : [/COLOR]$INFO[Window(weather).Property(Hourly.$PARAM[item_id].Temperature)]  ($INFO[Window(weather).Property(Hourly.$PARAM[item_id].FeelsLike)])</property>
 			<visible>!String.IsEmpty(Window(weather).Property(Hourly.$PARAM[item_id].Outlook))</visible>
-			<visible>!String.IsEmpty(Skin.String(WeatherIcons.path)) + !Skin.HasSetting(WeatherIcons.multi)</visible>
+			<visible>!String.IsEmpty(Skin.String(weathericons.path)) + !Skin.HasSetting(weathericons.multi)</visible>
 		</item>
 		<item>
 			<label>$INFO[Window(weather).Property(Hourly.$PARAM[item_id].Time)] $INFO[Window(weather).Property(Hourly.$PARAM[item_id].ShortDate)]</label>
 			<label2>$INFO[Window(weather).Property(Hourly.$PARAM[item_id].Outlook)]</label2>
 			<onclick>Weather.Refresh</onclick>
-			<thumb>$INFO[Skin.String(WeatherIcons.path)]$INFO[Window(weather).Property(Hourly.$PARAM[item_id].FanartCode),,/]</thumb>
+			<thumb>$INFO[Skin.String(weathericons.path)]$INFO[Window(weather).Property(Hourly.$PARAM[item_id].FanartCode),,/]</thumb>
 			<icon>-</icon>
+			<property name="FanartCode">$INFO[Window(weather).Property(Hourly.$PARAM[item_id].FanartCode)]</property>
 			<property name="Infos">[COLOR=grey2]$LOCALIZE[401] : [/COLOR]$INFO[Window(weather).Property(Hourly.$PARAM[item_id].Temperature)]  ($INFO[Window(weather).Property(Hourly.$PARAM[item_id].FeelsLike)])</property>
 			<visible>!String.IsEmpty(Window(weather).Property(Hourly.$PARAM[item_id].Outlook))</visible>
-			<visible>!String.IsEmpty(Skin.String(WeatherIcons.path)) + Skin.HasSetting(WeatherIcons.multi)</visible>
+			<visible>!String.IsEmpty(Skin.String(weathericons.path)) + Skin.HasSetting(weathericons.multi)</visible>
 		</item>
-	</include>
-	<!-- Other -->
-	<include name="HomeWidgetUpDown">
-		<onup condition="!Skin.HasSetting(hidepowerbutton) + Skin.HasSetting(hidefavoritesbutton)">22</onup>
-		<onup condition="Skin.HasSetting(hidepowerbutton) + !Skin.HasSetting(hidefavoritesbutton)">21</onup>
-		<onup>20</onup>
-		<ondown condition="!Skin.HasSetting(lowermenu) + System.HasAddon(script.globalsearch) + Skin.HasSetting(enableglobalsearch)">608</ondown>
-		<ondown condition="!Skin.HasSetting(lowermenu) + [!System.HasAddon(script.globalsearch) | !Skin.HasSetting(enableglobalsearch)]">603</ondown>
-		<ondown condition="Skin.HasSetting(lowermenu)">9002</ondown>
 	</include>
 </includes>

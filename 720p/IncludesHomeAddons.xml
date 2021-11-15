@@ -342,19 +342,19 @@
 			</item>
 			<item>
 				<description>Shutdown Menu</description>
-				<label>$LOCALIZE[32068]</label>
+				<label>$LOCALIZE[33113]</label>
 				<onclick>Dialog.Close($PARAM[id_win])</onclick>
 				<onclick>Skin.SetString(usrfavbtncmd.Path,ActivateWindow(ShutdownMenu))</onclick>
-				<onclick>Skin.SetString(usrfavbtncmd.Label,$LOCALIZE[32068])</onclick>
+				<onclick>Skin.SetString(usrfavbtncmd.Label,$LOCALIZE[33113])</onclick>
 				<onclick>ClearProperty(usrselectbtn,Home)</onclick>
 				<visible>String.IsEqual(Window(Home).Property(usrselectbtn),usrfavbtncmd)</visible>
 			</item>
 			<item>
 				<description>Shutdown Menu</description>
-				<label>$LOCALIZE[32068]</label>
+				<label>$LOCALIZE[33113]</label>
 				<onclick>Dialog.Close($PARAM[id_win])</onclick>
 				<onclick>Skin.SetString(usrpwrbtncmd.Path,ActivateWindow(ShutdownMenu))</onclick>
-				<onclick>Skin.SetString(usrpwrbtncmd.Label,$LOCALIZE[32068])</onclick>
+				<onclick>Skin.SetString(usrpwrbtncmd.Label,$LOCALIZE[33113])</onclick>
 				<onclick>ClearProperty(usrselectbtn,Home)</onclick>
 				<visible>String.IsEqual(Window(Home).Property(usrselectbtn),usrpwrbtncmd)</visible>
 			</item>

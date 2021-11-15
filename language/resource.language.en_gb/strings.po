@@ -935,7 +935,7 @@ msgid "Backlight color"
 msgstr ""
 
 msgctxt "#32044"
-msgid "After startup KODI, move focus main menu"
+msgid "Move focus main menu"
 msgstr ""
 
 msgctxt "#32045"
@@ -1030,72 +1030,8 @@ msgctxt "#32067"
 msgid "Widget set"
 msgstr ""
 
-msgctxt "#32068"
-msgid "Shutdown Menu"
-msgstr ""
-
 msgctxt "#32069"
 msgid "Configure shortcuts set"
-msgstr ""
-
-msgctxt "#32070"
-msgid "Select color"
-msgstr ""
-
-msgctxt "#32071"
-msgid "Blue"
-msgstr ""
-
-msgctxt "#32072"
-msgid "Azure"
-msgstr ""
-
-msgctxt "#32073"
-msgid "White"
-msgstr ""
-
-msgctxt "#32074"
-msgid "Grey"
-msgstr ""
-
-msgctxt "#32075"
-msgid "Red"
-msgstr ""
-
-msgctxt "#32076"
-msgid "Pink"
-msgstr ""
-
-msgctxt "#32077"
-msgid "Purple"
-msgstr ""
-
-msgctxt "#32078"
-msgid "Orange"
-msgstr ""
-
-msgctxt "#32079"
-msgid "Yellow"
-msgstr ""
-
-msgctxt "#32080"
-msgid "Green"
-msgstr ""
-
-msgctxt "#32081"
-msgid "Manually"
-msgstr ""
-
-msgctxt "#32082"
-msgid "Move focus main menu"
-msgstr ""
-
-msgctxt "#32083"
-msgid "To the left"
-msgstr ""
-
-msgctxt "#32084"
-msgid "To the right"
 msgstr ""
 
 msgctxt "#32085"
@@ -1150,14 +1086,6 @@ msgctxt "#32097"
 msgid "Dharma style"
 msgstr ""
 
-msgctxt "#32101"
-msgid "Favorites TV Channels"
-msgstr ""
-
-msgctxt "#32102"
-msgid "Favorites Radio Channels"
-msgstr ""
-
 msgctxt "#32103"
 msgid "Watch it Later"
 msgstr ""
@@ -1178,24 +1106,8 @@ msgctxt "#32107"
 msgid "Recent Music Video"
 msgstr ""
 
-msgctxt "#32108"
-msgid "Daily"
-msgstr ""
-
-msgctxt "#32109"
-msgid "Hourly"
-msgstr ""
-
 msgctxt "#32110"
 msgid "Automatic Suggestion"
-msgstr ""
-
-msgctxt "#32111"
-msgid "Previous location"
-msgstr ""
-
-msgctxt "#32112"
-msgid "Next location"
 msgstr ""
 
 msgctxt "#32113"
@@ -1234,10 +1146,49 @@ msgctxt "#32121"
 msgid "Music Add-On"
 msgstr ""
 
-msgctxt "#32122"
+msgctxt "#33111"
+msgid "Previous location"
+msgstr ""
+
+msgctxt "#33112"
+msgid "Next location"
+msgstr ""
+
+msgctxt "#33113"
+msgid "Shutdown Menu"
+msgstr ""
+
+msgctxt "#33114"
+msgid "Daily"
+msgstr ""
+
+msgctxt "#33115"
+msgid "Hourly"
+msgstr ""
+
+msgctxt "#33116"
 msgid "Recent recordings"
 msgstr ""
 
-msgctxt "#32123"
+msgctxt "#33117"
 msgid "Recently played channels"
 msgstr ""
+
+msgctxt "#33118"
+msgid "Favorites TV Channels"
+msgstr ""
+
+msgctxt "#33119"
+msgid "Favorites Radio Channels"
+msgstr ""
+
+msgctxt "#33120"
+msgid "To the left"
+msgstr ""
+
+msgctxt "#33121"
+msgid "To the right"
+msgstr ""
+
+
+

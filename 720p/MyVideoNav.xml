@@ -28,6 +28,8 @@
 			<include>MediaListView2</include>
 			<!-- view id = 515 -->
 			<include>MediaListView4</include>
+			<!-- -->
+			<include>MediaListView5</include>
 			<!-- view id = 505 -->
 			<include>WideIconView</include>
 			<!-- view id = 511 -->

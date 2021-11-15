@@ -1,0 +1,23 @@
+<settings>
+	<setting id="customfocus" value="-10" label="-10" condition="" icon="DefaultAddonLookAndFeel.png" description="$LOCALIZE[33120] 10"/>
+	<setting id="customfocus" value="-9" label="-9" condition="" icon="DefaultAddonLookAndFeel.png" description="$LOCALIZE[33120] 9"/>
+	<setting id="customfocus" value="-8" label="-8" condition="" icon="DefaultAddonLookAndFeel.png" description="$LOCALIZE[33120] 8"/>
+	<setting id="customfocus" value="-7" label="-7" condition="" icon="DefaultAddonLookAndFeel.png" description="$LOCALIZE[33120] 7"/>
+	<setting id="customfocus" value="-6" label="-6" condition="" icon="DefaultAddonLookAndFeel.png" description="$LOCALIZE[33120] 6"/>
+	<setting id="customfocus" value="-5" label="-5" condition="" icon="DefaultAddonLookAndFeel.png" description="$LOCALIZE[33120] 5"/>
+	<setting id="customfocus" value="-4" label="-4" condition="" icon="DefaultAddonLookAndFeel.png" description="$LOCALIZE[33120] 4"/>
+	<setting id="customfocus" value="-3" label="-3" condition="" icon="DefaultAddonLookAndFeel.png" description="$LOCALIZE[33120] 3"/>
+	<setting id="customfocus" value="-2" label="-2" condition="" icon="DefaultAddonLookAndFeel.png" description="$LOCALIZE[33120] 2"/>
+	<setting id="customfocus" value="-1" label="-1" condition="" icon="DefaultAddonLookAndFeel.png" description="$LOCALIZE[33120] 1"/>
+	<setting id="customfocus" value="" label="$LOCALIZE[15109]" condition="" icon="DefaultAddon.png" description="$LOCALIZE[15109]"/>
+	<setting id="customfocus" value="1" label="1" condition="" icon="DefaultAddonLookAndFeel.png" description="$LOCALIZE[33121] 1"/>
+	<setting id="customfocus" value="2" label="2" condition="" icon="DefaultAddonLookAndFeel.png" description="$LOCALIZE[33121] 2"/>
+	<setting id="customfocus" value="3" label="3" condition="" icon="DefaultAddonLookAndFeel.png" description="$LOCALIZE[33121] 3"/>
+	<setting id="customfocus" value="4" label="4" condition="" icon="DefaultAddonLookAndFeel.png" description="$LOCALIZE[33121] 4"/>
+	<setting id="customfocus" value="5" label="5" condition="" icon="DefaultAddonLookAndFeel.png" description="$LOCALIZE[33121] 5"/>
+	<setting id="customfocus" value="6" label="6" condition="" icon="DefaultAddonLookAndFeel.png" description="$LOCALIZE[33121] 6"/>
+	<setting id="customfocus" value="7" label="7" condition="" icon="DefaultAddonLookAndFeel.png" description="$LOCALIZE[33121] 7"/>
+	<setting id="customfocus" value="8" label="8" condition="" icon="DefaultAddonLookAndFeel.png" description="$LOCALIZE[33121] 8"/>
+	<setting id="customfocus" value="9" label="9" condition="" icon="DefaultAddonLookAndFeel.png" description="$LOCALIZE[33121] 9"/>
+	<setting id="customfocus" value="10" label="10" condition="" icon="DefaultAddonLookAndFeel.png" description="$LOCALIZE[33121] 10"/>
+</settings>

@@ -74,25 +74,25 @@
 		<property name="widget_patch" tag="property" attribute="name|widgetPath" />
 		<property name="widget_target" tag="property" attribute="name|widgetTarget" />
 		<!-- widget type 1 -->
-		<property name="widget_type" tag="property" attribute="name|widgetType" value="weather">Weather</property>
-		<property name="widget_type" tag="property" attribute="name|widgetType" value="weatherh36">WeatherH36</property>
-		<property name="widget_type" tag="property" attribute="name|widgetType" value="addon">Addons</property>
-		<property name="widget_type" tag="property" attribute="name|widgetType" value="pvrchannel">PVRChannels</property>
-		<property name="widget_type" tag="property" attribute="name|widgetType" value="custpvrchannel">PVRChannelsCustom</property>
-		<property name="widget_type" tag="property" attribute="name|widgetType" value="pvrrecording">PVRRecordings</property>
-		<property name="widget_type" tag="property" attribute="name|widgetType" value="playlist">Playlists</property>
-		<property name="widget_type" tag="property" attribute="name|widgetType" value="movies">Movies</property>
-		<property name="widget_type" tag="property" attribute="name|widgetType" value="tvshows">TVShows</property>
-		<property name="widget_type" tag="property" attribute="name|widgetType" value="episodes">Episodes</property>
-		<property name="widget_type" tag="property" attribute="name|widgetType" value="musicvideos">MusicVideos</property>
-		<property name="widget_type" tag="property" attribute="name|widgetType" value="albums">Albums</property>
-		<property name="widget_type" tag="property" attribute="name|widgetType" value="artists">Artists</property>
-		<property name="widget_type" tag="property" attribute="name|widgetType" value="songs">Songs</property>
-		<property name="widget_type" tag="property" attribute="name|widgetType" value="mixed">Mixed</property>
-		<property name="widget_type" tag="property" attribute="name|widgetType" value="favourites">Favourites</property>
-		<property name="widget_type">Other</property>
+		<property name="widget_type" tag="property" attribute="name|widgetType" value="weather">weather</property>
+		<property name="widget_type" tag="property" attribute="name|widgetType" value="weatherh36">weatherh36</property>
+		<property name="widget_type" tag="property" attribute="name|widgetType" value="addon">addons</property>
+		<property name="widget_type" tag="property" attribute="name|widgetType" value="pvrchannel">pvrchannels</property>
+		<property name="widget_type" tag="property" attribute="name|widgetType" value="custpvrchannel">pvrchannelscustom</property>
+		<property name="widget_type" tag="property" attribute="name|widgetType" value="pvrrecording">pvrrecordings</property>
+		<property name="widget_type" tag="property" attribute="name|widgetType" value="playlist">playlists</property>
+		<property name="widget_type" tag="property" attribute="name|widgetType" value="movies">movies</property>
+		<property name="widget_type" tag="property" attribute="name|widgetType" value="tvshows">tvshows</property>
+		<property name="widget_type" tag="property" attribute="name|widgetType" value="episodes">episodes</property>
+		<property name="widget_type" tag="property" attribute="name|widgetType" value="musicvideos">musicvideos</property>
+		<property name="widget_type" tag="property" attribute="name|widgetType" value="albums">albums</property>
+		<property name="widget_type" tag="property" attribute="name|widgetType" value="artists">artists</property>
+		<property name="widget_type" tag="property" attribute="name|widgetType" value="songs">songs</property>
+		<property name="widget_type" tag="property" attribute="name|widgetType" value="mixed">mixed</property>
+		<property name="widget_type" tag="property" attribute="name|widgetType" value="favourites">favourites</property>
+		<property name="widget_type">other</property>
 		<controls>
-			<include content="include-Widgets-$SKINSHORTCUTS[widget_type]">
+			<include content="include-widgets-$SKINSHORTCUTS[widget_type]">
 				<param name="submenu" value="$SKINSHORTCUTS[submenu]" />
 				<param name="visible" value="String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),$SKINSHORTCUTS[submenu])" />
 				<param name="list_id" value="$PYTHON[8100+int($SKINSHORTCUTS[id])]" />

@@ -222,7 +222,7 @@
 		<onclick>Skin.SetString(addonset$PARAM[addontype].$PARAM[id1].Name,$INFO[Skin.String(usrselectaddon)])</onclick>
 		<onclick>Skin.SetString(addonset$PARAM[addontype].$PARAM[id1].icon,$INFO[system.addonicon(Skin.String(usrselectaddon))])</onclick>
 	</include>
-	<include name="HomeCustomAddonsItems">
+	<include name="home-customaddons-items">
 		<item id="1">
 			<label>$INFO[Skin.String(addonset$PARAM[id2].0.label)]</label>
 			<onclick>RunAddon($INFO[Skin.String(addonset$PARAM[id2].0.name)])</onclick>
@@ -315,27 +315,27 @@
 		</item>
 	</include>
 	<include name="CustomAddonsVideo">
-		<include content="HomeCustomAddonsItems">
+		<include content="home-customaddons-items">
 			<param name="id2" value="Video" />
 		</include>
 	</include>
 	<include name="CustomAddonsAudio">
-		<include content="HomeCustomAddonsItems">
+		<include content="home-customaddons-items">
 			<param name="id2" value="Audio" />
 		</include>
 	</include>
 	<include name="CustomAddonsGame">
-		<include content="HomeCustomAddonsItems">
+		<include content="home-customaddons-items">
 			<param name="id2" value="Game" />
 		</include>
 	</include>
 	<include name="CustomAddonsPrograms">
-		<include content="HomeCustomAddonsItems">
+		<include content="home-customaddons-items">
 			<param name="id2" value="Programs" />
 		</include>
 	</include>
 	<include name="CustomAddonsImage">
-		<include content="HomeCustomAddonsItems">
+		<include content="home-customaddons-items">
 			<param name="id2" value="Image" />
 		</include>
 	</include>
@@ -535,7 +535,7 @@
 		</control>
 	</include>
 	<!-- ContentChannelsWidgets -->
-	<include name="HomeCustomChannelsItems">
+	<include name="home-customchannels-items">
 		<item id="1">
 			<label>$INFO[Skin.String(channel$PARAM[id2].0.label)]</label>
 			<onclick>RunScript(script.skin.utils,action=playchannel,channelid=$INFO[Skin.String(channel$PARAM[id2].0.channelid)])</onclick>

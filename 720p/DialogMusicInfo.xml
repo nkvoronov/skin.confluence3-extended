@@ -220,7 +220,7 @@
 					<control type="button" id="440">
 						<description>YouTube</description>
 						<include>ButtonInfoDialogsCommonValues</include>
-						<label>$LOCALIZE[90116]</label>
+						<label>$LOCALIZE[32094]</label>
 						<onclick>PreviousMenu</onclick>
 						<onclick condition="!String.IsEqual(ListItem.DBType,song)">RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Artist] $INFO[ListItem.Album])</onclick>
 						<onclick condition="String.IsEqual(ListItem.DBType,song)">RunScript(script.extendedinfo,info=youtubebrowser,id=$INFO[ListItem.Artist] $INFO[ListItem.Title])</onclick>

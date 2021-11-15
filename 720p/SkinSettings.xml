@@ -973,36 +973,30 @@
 						<onclick>Skin.ToggleSetting(noslide)</onclick>
 						<selected>!Skin.HasSetting(noslide)</selected>
 					</control>
-					<control type="button" id="311">
-						<description>Menu Color</description>
-						<width>750</width>
-						<height>40</height>
-						<font>font13</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<label>$LOCALIZE[32043]</label>
-						<label2>$VAR[MenuColorNameVar]</label2>
-						<texturefocus>MenuItemFO.png</texturefocus>
-						<texturenofocus>MenuItemNF.png</texturenofocus>
-						<onclick>ActivateWindow(2210)</onclick>
+					<control type="image" id="311">
+						<description>Separator Image</description>
+						<height>2</height>
+						<texture>separator2.png</texture>
 					</control>
-					<control type="button" id="312">
-						<description>Startup Focus Control</description>
-						<width>750</width>
-						<height>40</height>
-						<font>font13</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<label>$LOCALIZE[32044]</label>
-						<label2>$VAR[MenuFocusNameVar]</label2>
-						<texturefocus>MenuItemFO.png</texturefocus>
-						<texturenofocus>MenuItemNF.png</texturenofocus>
-						<onclick>ActivateWindow(2211)</onclick>
-					</control>
+					<include content="ColorSkinSetting">
+						<param name="control_id1" value="312" />
+						<param name="control_id2" value="313" />
+						<param name="label" value="$LOCALIZE[32043]" />
+						<param name="label2" value="[COLOR $VAR[MenuColorVar]]$VAR[MenuColorNameVar][/COLOR]" />
+						<param name="property" value="menucolor" />
+						<param name="defcolor" value="blue" />
+					</include>
+					<include content="SetSkinSetting">
+						<param name="control_id" value="314" />
+						<param name="label" value="$LOCALIZE[32044]" />
+						<param name="label2" value="$VAR[MenuFocusNameVar]" />
+						<param name="property" value="customfocus" />
+						<param name="header" value="$LOCALIZE[32044]" />
+					</include>
 					<include content="ResetSkinSettingsParams">
-						<param name="control_id1" value="313" />
-						<param name="control_id2" value="314" />
-						<param name="action" value="Skin.Reset(lowermenu)|Skin.Reset(wraparoundhomemenu)|Skin.Reset(fixedendingmenu)|Skin.Reset(noslide)|Skin.Reset(menucolorname)|Skin.Reset(menucolor)|Skin.Reset(menucolor.name)|Skin.Reset(menucolor.base)|Skin.Reset(customfocusname)|Skin.Reset(customfocus)" />
+						<param name="control_id1" value="315" />
+						<param name="control_id2" value="316" />
+						<param name="action" value="Skin.Reset(lowermenu)|Skin.Reset(wraparoundhomemenu)|Skin.Reset(fixedendingmenu)|Skin.Reset(noslide)|Skin.Reset(menucolor)|Skin.Reset(menucolor.name)|Skin.Reset(menucolor.base)|Skin.Reset(customfocus)" />
 					</include>
 				</control>
 				<control type="scrollbar" id="63">
@@ -1087,7 +1081,7 @@
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<texturefocus>MenuItemFO.png</texturefocus>
-						<texturenofocus>MenuItemNF.png</texturenofocus>						
+						<texturenofocus>MenuItemNF.png</texturenofocus>
 						<onclick>Skin.ToggleSetting(enablecustomlistaddonsapps)</onclick>
 						<selected>Skin.HasSetting(enablecustomlistaddonsapps)</selected>
 						<visible>System.Platform.Android</visible>
@@ -1099,7 +1093,7 @@
 						<param name="addontype" value="image" />
 						<param name="type" value="xbmc.addon.image" />
 						<param name="visible" value="Skin.HasSetting(customlistaddons)" />
-					</include>	
+					</include>
 					<control type="image" id="402">
 						<description>Separator Image</description>
 						<height>2</height>
@@ -1132,7 +1126,7 @@
 						<param name="channeltype" value="radio" />
 						<param name="type" value="1" />
 						<param name="visible" value="PVR.HasRadioChannels + Skin.HasSetting(customlistchannels)" />
-					</include>					
+					</include>
 					<include content="ResetSkinSettingsParams">
 						<param name="control_id1" value="2300" />
 						<param name="control_id2" value="2301" />

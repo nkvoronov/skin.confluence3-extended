@@ -24,28 +24,26 @@
 		<control type="group">
 			<visible>Window.IsVisible(Home) + Skin.HasSetting(separatebackground)</visible>
 			<control type="multiimage" id="90000">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>1280</width>
-				<height>720</height>
+				<depth>DepthBackground</depth>
+				<include>BackgroundDimensions</include>
+				<aspectratio>scale</aspectratio>
 				<imagepath background="true">$VAR[HomeBackgroundVar]</imagepath>
 				<timeperimage>10000</timeperimage>
 				<randomize>true</randomize>
 				<fadetime>1000</fadetime>
 				<include>VisibleFadeEffect</include>
-				<visible>String.IsEmpty(Skin.String(HomeFanart.path)) | String.IsEmpty(Control.GetLabel(90001))</visible>
+				<visible>String.IsEmpty(Skin.String(homefanart.path)) | String.IsEmpty(Control.GetLabel(90001))</visible>
 			</control>
 			<control type="multiimage" id="90001">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>1280</width>
-				<height>720</height>
-				<imagepath background="true">$INFO[Skin.String(HomeFanart.path)]$VAR[HomeMenuTypeVar]$INFO[Skin.String(HomeFanart.ext)]</imagepath>
+				<depth>DepthBackground</depth>
+				<include>BackgroundDimensions</include>
+				<aspectratio>scale</aspectratio>
+				<imagepath background="true">$INFO[Skin.String(homefanart.path)]$VAR[HomeMenuTypeVar]$INFO[Skin.String(homefanart.ext)]</imagepath>
 				<timeperimage>10000</timeperimage>
 				<randomize>true</randomize>
 				<fadetime>1000</fadetime>
 				<include>VisibleFadeEffect</include>
-				<visible>!String.IsEmpty(Skin.String(HomeFanart.path))</visible>
+				<visible>!String.IsEmpty(Skin.String(homefanart.path))</visible>
 			</control>
 		</control>
 		<control type="image">
@@ -57,6 +55,18 @@
 			<fadetime>FanartCrossfadeTime</fadetime>
 			<visible>!Skin.HasSetting(hidebackgroundfanart)</visible>
 			<include>Window_OpenClose_Animation</include>
+			<visible>![Player.HasVideo + !Skin.HasSetting(showbackgroundvideo)] | [Player.HasVideo + Window.IsActive(movieinformation)]</visible>
+		</control>
+		<control type="multiimage">
+			<depth>DepthBackground</depth>
+			<include>BackgroundDimensions</include>
+			<aspectratio>scale</aspectratio>
+			<imagepath background="true">$VAR[WeatherFanartValueVar]</imagepath>
+			<timeperimage>10000</timeperimage>
+			<randomize>true</randomize>
+			<fadetime>1000</fadetime>
+			<include>VisibleFadeEffect</include>
+			<visible>!String.IsEmpty(ListItem.Property(FanartCode))</visible>
 			<visible>![Player.HasVideo + !Skin.HasSetting(showbackgroundvideo)] | [Player.HasVideo + Window.IsActive(movieinformation)]</visible>
 		</control>
 		<control type="image">
@@ -369,7 +379,7 @@
 				<timeperimage>10000</timeperimage>
 				<randomize>true</randomize>
 				<fadetime>1000</fadetime>
-				<visible>String.IsEmpty(Skin.String(HomeFanart.path)) | String.IsEmpty(Control.GetLabel(90003))</visible>
+				<visible>String.IsEmpty(Skin.String(homefanart.path)) | String.IsEmpty(Control.GetLabel(90003))</visible>
 			</control>
 			<control type="multiimage" id="90003">
 				<description>User Separate Background Image HomeFanart</description>
@@ -377,11 +387,11 @@
 				<posy>0</posy>
 				<width>1280</width>
 				<height>720</height>
-				<imagepath background="true">$INFO[Skin.String(HomeFanart.path)]$INFO[Window(Home).Property(MenuItemActive)]$INFO[Skin.String(HomeFanart.ext)]</imagepath>
+				<imagepath background="true">$INFO[Skin.String(homefanart.path)]$INFO[Window(Home).Property(MenuItemActive)]$INFO[Skin.String(homefanart.ext)]</imagepath>
 				<timeperimage>10000</timeperimage>
 				<randomize>true</randomize>
 				<fadetime>1000</fadetime>
-				<visible>!String.IsEmpty(Skin.String(HomeFanart.path))</visible>
+				<visible>!String.IsEmpty(Skin.String(homefanart.path))</visible>
 			</control>
 		</control>
 	</include>
@@ -418,16 +428,16 @@
 					<height>390</height>
 					<texture>$INFO[Window(Home).Property(MenuBackground)]</texture>
 					<include>VisibleFadeEffect</include>
-					<visible>String.IsEmpty(Skin.String(HomeFanart.path))</visible>
+					<visible>String.IsEmpty(Skin.String(homefanart.path))</visible>
 				</control>
 				<control type="image">
 					<left>5</left>
 					<top>5</top>
 					<width>680</width>
 					<height>390</height>
-					<texture>$INFO[Skin.String(HomeFanart.path)]$INFO[Window(Home).Property(MenuItemActive)]$INFO[Skin.String(HomeFanart.ext)]</texture>
+					<texture>$INFO[Skin.String(homefanart.path)]$INFO[Window(Home).Property(MenuItemActive)]$INFO[Skin.String(homefanart.ext)]</texture>
 					<include>VisibleFadeEffect</include>
-					<visible>!String.IsEmpty(Skin.String(HomeFanart.path))</visible>
+					<visible>!String.IsEmpty(Skin.String(homefanart.path))</visible>
 				</control>
 			</control>
 		</control>
