@@ -453,7 +453,6 @@
 	</variable>
 	<variable name="MusicInfoTextArtistVar">
 		<value condition="!String.IsEmpty(ListItem.Property(Artist_Description))">$INFO[ListItem.Property(Artist_Description)]</value>
-		<value condition="String.IsEmpty(ListItem.Property(Artist_Description)) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Plot))">$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)]</value>
 	</variable>
 	<variable name="MusicInfoListViewLabelVar">
 		<value condition="Control.IsVisible(506)">$LOCALIZE[544]</value>
