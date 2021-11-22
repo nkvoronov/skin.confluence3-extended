@@ -137,11 +137,34 @@
 					<label>$LOCALIZE[31040]</label>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
-					<animation effect="slide" start="0,0" end="0,25" time="0" condition="String.IsEmpty(MusicPlayer.Artist) + String.IsEmpty(MusicPlayer.Album) + String.IsEmpty(VideoPlayer.ChannelNumberLabel) + String.IsEmpty(VideoPlayer.ChannelName) + String.IsEmpty(VideoPlayer.EpisodeName)">conditional</animation>
+					<visible>![MusicPlayer.Content(LiveTV) + [PVR.IsRecordingPlayingChannel | PVR.IsPlayingActiveRecording]]</visible>
+					<animation effect="slide" start="0,0" end="0,25" time="0" condition="String.IsEmpty(MusicPlayer.Artist) + String.IsEmpty(MusicPlayer.Album)">conditional</animation>
+				</control>
+				<control type="image" id="1">
+					<top>0</top>
+					<width>50</width>
+					<height>25</height>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<texture>PVR-IsRecording.png</texture>
+					<visible>MusicPlayer.Content(LiveTV) + [[PVR.IsRecordingPlayingChannel + !Player.ChannelPreviewActive] | PVR.IsPlayingActiveRecording]</visible>
+				</control>
+				<control type="label" id="1">
+					<description>Heading label</description>
+					<left>50</left>
+					<top>0</top>
+					<width>860</width>
+					<height>25</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font13</font>
+					<label>$LOCALIZE[19158]</label>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>MusicPlayer.Content(LiveTV) + [[PVR.IsRecordingPlayingChannel + !Player.ChannelPreviewActive] | PVR.IsPlayingActiveRecording]</visible>
 				</control>
 				<control type="label" id="1">
 					<description>Artist label</description>
-					<left>20</left>
+					<left>0</left>
 					<top>30</top>
 					<width>910</width>
 					<height>25</height>
@@ -150,23 +173,9 @@
 					<label>$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album, - ]</label>
 					<textcolor>grey2</textcolor>
 					<shadowcolor>black</shadowcolor>
-					<visible>!VideoPlayer.Content(LiveTV)</visible>
-				</control>
-				<control type="label" id="1">
-					<description>LiveTV Info label</description>
-					<left>20</left>
-					<top>30</top>
-					<width>910</width>
-					<height>25</height>
-					<align>left</align>
-					<font>font12</font>
-					<label>$INFO[VideoPlayer.ChannelNumberLabel,([COLOR=blue],[/COLOR]) ]$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.EpisodeName, (,)]</label>
-					<textcolor>grey2</textcolor>
-					<shadowcolor>black</shadowcolor>
-					<visible>VideoPlayer.Content(LiveTV)</visible>
 				</control>
 				<control type="grouplist">
-					<left>20</left>
+					<left>0</left>
 					<top>62</top>
 					<width>910</width>
 					<height>35</height>

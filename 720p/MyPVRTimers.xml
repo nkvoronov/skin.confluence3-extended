@@ -374,7 +374,7 @@
 						<top>0</top>
 						<width>800</width>
 						<height>20</height>
-						<label>[B]$INFO[ListItem.EpgEventTitle]$INFO[ListItem.EpisodeName, (,)][/B]</label>
+						<label>[B]$INFO[ListItem.EpgEventTitle][/B]</label>
 						<font>font13</font>
 						<textcolor>white</textcolor>
 						<scroll>true</scroll>

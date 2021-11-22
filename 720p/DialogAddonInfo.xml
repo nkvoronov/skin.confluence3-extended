@@ -14,7 +14,7 @@
 			<visible>!Window.isVisible(AddonSettings) + !Window.IsActive(TextViewer)</visible>
 			<include content="DialogBackgroundCommons">
 				<param name="DialogBackgroundWidth" value="920" />
-				<param name="DialogBackgroundHeight" value="639" />
+				<param name="DialogBackgroundHeight" value="685" />
 				<param name="DialogHeaderWidth" value="840" />
 				<param name="DialogHeaderLabel" value="$LOCALIZE[24003]" />
 				<param name="DialogHeaderId" value="2" />

@@ -194,7 +194,7 @@
 								<aligny>center</aligny>
 								<textcolor>grey2</textcolor>
 								<selectedcolor>selected</selectedcolor>
-								<label>$INFO[ListItem.Label]$INFO[ListItem.EpisodeName, (,)]</label>
+								<label>$INFO[ListItem.Label]</label>
 							</control>
 							<control type="label">
 								<left>750</left>
@@ -301,7 +301,7 @@
 								<aligny>center</aligny>
 								<textcolor>white</textcolor>
 								<selectedcolor>selected</selectedcolor>
-								<label>$INFO[ListItem.Label]$INFO[ListItem.EpisodeName, (,)]</label>
+								<label>$INFO[ListItem.Label]</label>
 							</control>
 							<control type="label">
 								<left>750</left>
@@ -391,7 +391,7 @@
 						<top>0</top>
 						<width>800</width>
 						<height>20</height>
-						<label>[B]$INFO[ListItem.EpgEventTitle]$INFO[ListItem.EpisodeName, (,)][/B]</label>
+						<label>[B]$INFO[ListItem.EpgEventTitle][/B]</label>
 						<font>font13</font>
 						<textcolor>white</textcolor>
 						<scroll>true</scroll>
@@ -415,7 +415,7 @@
 						<align>left</align>
 						<textcolor>grey</textcolor>
 						<autoscroll delay="10000" time="3000" repeat="6000">true</autoscroll>
-						<label>$INFO[ListItem.Plot]</label>
+						<label>$INFO[ListItem.EpisodeName,, ]$INFO[ListItem.Plot]</label>
 					</control>
 				</control>
 			</control>

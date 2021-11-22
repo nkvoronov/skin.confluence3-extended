@@ -142,7 +142,7 @@
 					<scroll>true</scroll>
 					<align>center</align>
 					<aligny>center</aligny>
-					<label>[B]$INFO[Container(50).ListItem.Title]$INFO[ListItem.EpisodeName, (,)][/B]</label>
+					<label>[B]$INFO[Container(50).ListItem.Title][/B]</label>
 				</control>
 				<control type="label">
 					<left>0</left>
@@ -188,7 +188,7 @@
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<pagecontrol/>
-					<label>$INFO[Container(50).ListItem.Plot]</label>
+					<label>$INFO[Container(50).ListItem.EpisodeName,, ]$INFO[Container(50).ListItem.Plot]</label>
 					<autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
 				</control>
 				<control type="label">
@@ -687,7 +687,7 @@
 						<top>0</top>
 						<width>840</width>
 						<height>20</height>
-						<label>[B]$INFO[ListItem.Label]$INFO[ListItem.EpisodeName, (,)][/B]</label>
+						<label>[B]$INFO[ListItem.Label][/B]</label>
 						<font>font13</font>
 						<textcolor>white</textcolor>
 					</control>
@@ -710,7 +710,7 @@
 						<align>left</align>
 						<textcolor>grey</textcolor>
 						<autoscroll delay="10000" time="3000" repeat="6000">true</autoscroll>
-						<label>$INFO[ListItem.Plot]</label>
+						<label>$INFO[ListItem.EpisodeName,, ]$INFO[ListItem.Plot]</label>
 					</control>
 				</control>
 				<control type="label">
