@@ -566,6 +566,78 @@
 			<param name="icon" value="$VAR[PosterThumb3Var]"/>
 		</include>
 	</include>
+	<!-- MOVIEGENRE -->
+	<include name="include-widgets-moviegenre">
+		<include content="common-widget-include">
+			<param name="left_widget" value="140" />
+			<param name="visible" value="$PARAM[visible]" />
+			<param name="label_title" value="$PARAM[widget_name]" />
+			<param name="list_id" value="$PARAM[list_id]" />
+			<param name="animation_name_include" value="animation-widget-common" />
+			<param name="item_layout_name_include" value="square-widget-layout" />
+			<param name="width_widget" value="1000" />
+			<param name="width_widget_item" value="200" />
+			<param name="left_widget_ra" value="1010" />
+			<param name="content_name" value="common-contents3-include" />
+			<param name="content_target" value="$PARAM[widget_target]" />
+			<param name="content_path" value="$PARAM[widget_patch]" />
+			<param name="icon" value="$VAR[PosterThumbMovieGenreVar]"/>
+		</include>
+	</include>
+	<!-- MUSICGENRE -->
+	<include name="include-widgets-musicgenre">
+		<include content="common-widget-include">
+			<param name="left_widget" value="140" />
+			<param name="visible" value="$PARAM[visible]" />
+			<param name="label_title" value="$PARAM[widget_name]" />
+			<param name="list_id" value="$PARAM[list_id]" />
+			<param name="animation_name_include" value="animation-widget-common" />
+			<param name="item_layout_name_include" value="square-widget-layout" />
+			<param name="width_widget" value="1000" />
+			<param name="width_widget_item" value="200" />
+			<param name="left_widget_ra" value="1010" />
+			<param name="content_name" value="common-contents3-include" />
+			<param name="content_target" value="$PARAM[widget_target]" />
+			<param name="content_path" value="$PARAM[widget_patch]" />
+			<param name="icon" value="$VAR[PosterThumbMusicGenreVar]"/>
+		</include>
+	</include>
+	<!-- STUDIOS -->
+	<include name="include-widgets-studios">
+		<include content="common-widget-include">
+			<param name="left_widget" value="140" />
+			<param name="visible" value="$PARAM[visible]" />
+			<param name="label_title" value="$PARAM[widget_name]" />
+			<param name="list_id" value="$PARAM[list_id]" />
+			<param name="animation_name_include" value="animation-widget-common" />
+			<param name="item_layout_name_include" value="square-widget-layout" />
+			<param name="width_widget" value="1000" />
+			<param name="width_widget_item" value="200" />
+			<param name="left_widget_ra" value="1010" />
+			<param name="content_name" value="common-contents3-include" />
+			<param name="content_target" value="$PARAM[widget_target]" />
+			<param name="content_path" value="$PARAM[widget_patch]" />
+			<param name="icon" value="$VAR[PosterThumbStudiosVar]"/>
+		</include>
+	</include>
+	<!-- COUNTRY -->
+	<include name="include-widgets-country">
+		<include content="common-widget-include">
+			<param name="left_widget" value="140" />
+			<param name="visible" value="$PARAM[visible]" />
+			<param name="label_title" value="$PARAM[widget_name]" />
+			<param name="list_id" value="$PARAM[list_id]" />
+			<param name="animation_name_include" value="animation-widget-common" />
+			<param name="item_layout_name_include" value="square-widget-layout" />
+			<param name="width_widget" value="1000" />
+			<param name="width_widget_item" value="200" />
+			<param name="left_widget_ra" value="1010" />
+			<param name="content_name" value="common-contents3-include" />
+			<param name="content_target" value="$PARAM[widget_target]" />
+			<param name="content_path" value="$PARAM[widget_patch]" />
+			<param name="icon" value="$VAR[PosterThumbCountryVar]"/>
+		</include>
+	</include>
 	<!-- OTHER -->
 	<include name="include-widgets-other">
 		<include content="common-widget-include">

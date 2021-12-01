@@ -53,7 +53,7 @@
 				<top>265</top>
 				<height>25</height>
 				<width>1000</width>
-				<label>$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album, - ]$INFO[musicplayer.discnumber, - $LOCALIZE[427]:]</label>
+				<label>$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album, - ]$INFO[MusicPlayer.DiscNumber, - $LOCALIZE[427] ]$INFO[MusicPlayer.Year, (,)]</label>
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>font12</font>
@@ -494,7 +494,7 @@
 					<top>265</top>
 					<height>25</height>
 					<width>1000</width>
-					<label>$INFO[VideoPlayer.TVShowTitle] ($INFO[VideoPlayer.Season,,x]$INFO[VideoPlayer.Episode])</label>
+					<label>$INFO[VideoPlayer.Season,,x]$INFO[VideoPlayer.Episode,, ]$INFO[VideoPlayer.TVShowTitle]</label>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font12</font>

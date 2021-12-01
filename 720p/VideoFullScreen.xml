@@ -170,7 +170,7 @@
 				<control type="label" id="1">
 					<description>Heading label</description>
 					<left>0</left>
-					<top>0</top>
+					<top>-25</top>
 					<width>910</width>
 					<height>25</height>
 					<align>left</align>
@@ -183,7 +183,7 @@
 					<animation effect="slide" start="0,0" end="0,25" time="0" condition="!VideoPlayer.Content(Movies) + !VideoPlayer.Content(Episodes) + !VideoPlayer.Content(MusicVideos) + !VideoPlayer.Content(LiveTV) + !PVR.IsPlayingRecording">conditional</animation>
 				</control>
 				<control type="image" id="1">
-					<top>0</top>
+					<top>-25</top>
 					<width>50</width>
 					<height>25</height>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
@@ -193,7 +193,7 @@
 				<control type="label" id="1">
 					<description>Heading label</description>
 					<left>50</left>
-					<top>0</top>
+					<top>-25</top>
 					<width>860</width>
 					<height>25</height>
 					<align>left</align>
@@ -207,7 +207,7 @@
 				<control type="label" id="1">
 					<description>Studio label</description>
 					<left>0</left>
-					<top>30</top>
+					<top>0</top>
 					<width>910</width>
 					<height>25</height>
 					<align>left</align>
@@ -220,12 +220,12 @@
 				<control type="label" id="1">
 					<description>TV Show label</description>
 					<left>0</left>
-					<top>30</top>
+					<top>0</top>
 					<width>910</width>
 					<height>25</height>
 					<align>left</align>
 					<font>font12</font>
-					<label>$INFO[VideoPlayer.TVShowTitle] ($INFO[VideoPlayer.Season,,x]$INFO[VideoPlayer.Episode])</label>
+					<label>$INFO[VideoPlayer.Season,,x]$INFO[VideoPlayer.Episode,, ]$INFO[VideoPlayer.TVShowTitle] </label>
 					<textcolor>grey2</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<visible>VideoPlayer.Content(Episodes)</visible>
@@ -233,7 +233,7 @@
 				<control type="label" id="1">
 					<description>Music Info label</description>
 					<left>0</left>
-					<top>30</top>
+					<top>0</top>
 					<width>910</width>
 					<height>25</height>
 					<align>left</align>
@@ -246,7 +246,7 @@
 				<control type="label" id="1">
 					<description>LiveTV Info label</description>
 					<left>0</left>
-					<top>30</top>
+					<top>0</top>
 					<width>910</width>
 					<height>25</height>
 					<align>left</align>
@@ -256,53 +256,61 @@
 					<shadowcolor>black</shadowcolor>
 					<visible>VideoPlayer.Content(LiveTV) | PVR.IsPlayingRecording</visible>
 				</control>
+				<control type="label" id="1">
+				    <top>30</top>
+					<width min="10" max="910">auto</width>
+					<height>20</height>
+					<font>font30</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[Player.Title]$INFO[VideoPlayer.Year,[COLOR=grey2] (,)[/COLOR]]</label>
+					<textcolor>blue</textcolor>
+					<scroll>true</scroll>
+				</control>				
 				<control type="grouplist" id="1">
 					<left>0</left>
-					<top>60</top>
+					<top>62</top>
 					<width>910</width>
 					<height>35</height>
 					<itemgap>5</itemgap>
+					<visible>!Player.ChannelPreviewActive</visible>
 					<orientation>horizontal</orientation>
-					<control type="label" id="1">
-						<width min="10" max="520">auto</width>
-						<height>30</height>
-						<font>font30</font>
-						<align>left</align>
-						<aligny>center</aligny>
-						<label>$INFO[Player.Title]$INFO[VideoPlayer.Year,[COLOR=grey2] (,)[/COLOR]]</label>
-						<textcolor>blue</textcolor>
-						<scroll>true</scroll>
+					<control type="image" id="1">
+						<description>Video Codec Image</description>
+						<width>60</width>
+						<height>35</height>
+						<texture>$INFO[VideoPlayer.VideoCodec,flagging/video/,.png]</texture>						
 					</control>
 					<control type="image" id="1">
 						<description>Video Resolution Image</description>
 						<width>50</width>
 						<height>35</height>
-						<aspectratio align="center">keep</aspectratio>
 						<texture>$INFO[VideoPlayer.VideoResolution,flagging/video/,.png]</texture>
-						<visible>!Player.ChannelPreviewActive</visible>
+					</control>
+					<control type="image" id="1">
+						<description>Video Resolution Image</description>
+						<width>50</width>
+						<height>35</height>
+						<texture>$INFO[VideoPlayer.VideoAspect,flagging/aspectratio/,.png]</texture>
 					</control>
 					<control type="image" id="1">
 						<description>Audio Codec Image</description>
 						<width>85</width>
 						<height>35</height>
-						<aspectratio align="center">keep</aspectratio>
-						<visible>!Player.ChannelPreviewActive</visible>
 						<texture>$INFO[VideoPlayer.AudioCodec,flagging/audio/,.png]</texture>
 					</control>
 					<control type="image" id="1">
 						<description>Audio Channels Image</description>
 						<width>50</width>
 						<height>35</height>
-						<aspectratio align="center">keep</aspectratio>
 						<texture>$INFO[VideoPlayer.AudioChannels,flagging/audio/,.png]</texture>
-						<visible>!Player.ChannelPreviewActive</visible>
 					</control>
 					<control type="group" id="1">
-						<width>85</width>
+						<width>80</width>
 						<height>35</height>
-						<visible>![String.IsEmpty(VideoPlayer.AudioLanguage) | Player.ChannelPreviewActive]</visible>
+						<visible>!String.IsEmpty(VideoPlayer.AudioLanguage)</visible>
 						<control type="image" id="1">
-							<left>5</left>
+							<left>0</left>
 							<top>0</top>
 							<description>Audio Language Image</description>
 							<width>80</width>
@@ -321,11 +329,11 @@
 						</control>
 					</control>
 					<control type="group" id="1">
-						<width>85</width>
+						<width>80</width>
 						<height>35</height>
-						<visible>![String.IsEmpty(VideoPlayer.SubtitlesLanguage) | Player.ChannelPreviewActive] + VideoPlayer.SubtitlesEnabled</visible>
+						<visible>!String.IsEmpty(VideoPlayer.SubtitlesLanguage) + VideoPlayer.SubtitlesEnabled</visible>
 						<control type="image" id="1">
-							<left>5</left>
+							<left>0</left>
 							<top>0</top>
 							<width>80</width>
 							<height>35</height>

@@ -90,6 +90,10 @@
 		<property name="widget_type" tag="property" attribute="name|widgetType" value="songs">songs</property>
 		<property name="widget_type" tag="property" attribute="name|widgetType" value="mixed">mixed</property>
 		<property name="widget_type" tag="property" attribute="name|widgetType" value="favourites">favourites</property>
+		<property name="widget_type" tag="property" attribute="name|widgetType" value="moviegenre">moviegenre</property>
+		<property name="widget_type" tag="property" attribute="name|widgetType" value="musicgenre">musicgenre</property>
+		<property name="widget_type" tag="property" attribute="name|widgetType" value="studios">studios</property>
+		<property name="widget_type" tag="property" attribute="name|widgetType" value="country">country</property>
 		<property name="widget_type">other</property>
 		<controls>
 			<include content="include-widgets-$SKINSHORTCUTS[widget_type]">
