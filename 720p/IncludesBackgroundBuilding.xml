@@ -76,19 +76,13 @@
 			<include>VisibleFadeEffect</include>
 		</control>
 		<control type="visualisation">
-			<left>0</left>
-			<top>0</top>
-			<width>1280</width>
-			<height>720</height>
+			<include>BackgroundDimensions</include>
 			<visible>Player.HasAudio + !Skin.HasSetting(showbackgroundvis)</visible>
 			<visible>String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))</visible>
 		</control>
 		<control type="videowindow">
 			<depth>DepthBackground</depth>
-			<left>0</left>
-			<top>0</top>
-			<width>1280</width>
-			<height>720</height>
+			<include>BackgroundDimensions</include>
 			<visible>Player.HasVideo + !Slideshow.IsActive + !Window.IsActive(movieinformation) + !Skin.HasSetting(showbackgroundvideo) + !Window.IsVisible(TVChannels) + !Window.IsVisible(RadioChannels)</visible>
 		</control>
 		<control type="image">

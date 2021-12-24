@@ -279,31 +279,36 @@
 						<description>Video Codec Image</description>
 						<width>60</width>
 						<height>35</height>
-						<texture>$INFO[VideoPlayer.VideoCodec,flagging/video/,.png]</texture>						
+						<texture>$INFO[VideoPlayer.VideoCodec,flagging/video/,.png]</texture>
+						<visible>!String.IsEmpty(VideoPlayer.VideoCodec)</visible>
 					</control>
 					<control type="image" id="1">
 						<description>Video Resolution Image</description>
 						<width>50</width>
 						<height>35</height>
 						<texture>$INFO[VideoPlayer.VideoResolution,flagging/video/,.png]</texture>
+						<visible>!String.IsEmpty(VideoPlayer.VideoResolution)</visible>
 					</control>
 					<control type="image" id="1">
 						<description>Video Resolution Image</description>
 						<width>50</width>
 						<height>35</height>
 						<texture>$INFO[VideoPlayer.VideoAspect,flagging/aspectratio/,.png]</texture>
+						<visible>!String.IsEmpty(VideoPlayer.VideoAspect)</visible>
 					</control>
 					<control type="image" id="1">
 						<description>Audio Codec Image</description>
 						<width>85</width>
 						<height>35</height>
 						<texture>$INFO[VideoPlayer.AudioCodec,flagging/audio/,.png]</texture>
+						<visible>!String.IsEmpty(VideoPlayer.AudioCodec)</visible>
 					</control>
 					<control type="image" id="1">
 						<description>Audio Channels Image</description>
 						<width>50</width>
 						<height>35</height>
 						<texture>$INFO[VideoPlayer.AudioChannels,flagging/audio/,.png]</texture>
+						<visible>!String.IsEmpty(VideoPlayer.AudioChannels)</visible>
 					</control>
 					<control type="group" id="1">
 						<width>80</width>
