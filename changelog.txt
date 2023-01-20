@@ -1,10 +1,18 @@
+[B]4.7.15[/B]
+
+- Fix image in select dialog
+
+[B]4.7.14[/B]
+
+- Add PVR guide controls dialog
+
 [B]4.7.13[/B]
 
-- Update language files from Transifex
+- Updated language files from Transifex
 
 [B]4.7.12[/B]
 
-- Add PVR guide controls dialog
+- Updated language files from Transifex
 
 [B]4.7.11[/B]
 
